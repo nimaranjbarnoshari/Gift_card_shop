@@ -1,0 +1,36 @@
+.topbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 26px 0;
+}
+.topbar-logo {
+  width: 151px;
+  height: 26px;
+}
+.topbar-input {
+  background-color: var(--semidark-background);
+  width: 243px;
+  height: 44px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.topbar-input__wrapper{
+    position: relative;
+}
+
+.topbar-input::placeholder {
+  font-size: 14px;
+  font-weight: 500;
+}
+.topbar-icon {
+  position: absolute;
+  fill: var(--white-color);
+  width: 25px;
+  height: 25px;
+  top: 9px;
+  left: 10px;
+}
