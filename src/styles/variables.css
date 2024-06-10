@@ -4,4 +4,5 @@
     --white-color: #fff;
     --dark-background: #31303A;
     --semidark-background: #3A3944;
+    --transition: all 300ms ease;
 }

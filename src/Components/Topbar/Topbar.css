@@ -10,7 +10,7 @@
 }
 .topbar-input {
   background-color: var(--semidark-background);
-  width: 243px;
+  width: 198px;
   height: 44px;
   border: none;
   outline: none;
@@ -33,4 +33,14 @@
   height: 25px;
   top: 9px;
   left: 10px;
+}
+
+
+@media (min-width: 992px) {
+.topbar-input{
+  width: 244px;
+}
+.topbar-input::placeholder{
+  font-size: 16px;
+}
 }
