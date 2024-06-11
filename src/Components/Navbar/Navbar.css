@@ -17,6 +17,10 @@
   text-decoration: none;
 }
 
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
 .nav-icon {
   color: var(--white-color);
   font-size: 20px;
@@ -232,8 +236,8 @@
     column-gap: 24px;
   }
   .nav-menu__list-link {
-    font-size: 16px;
-    font-weight: 900;
+    font-size: 14px;
+    font-weight: 600;
   }
   .nav-menu__list-item--active::after {
     height: 7px;
