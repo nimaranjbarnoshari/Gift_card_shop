@@ -1,0 +1,30 @@
+.services-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 2rem;
+}
+
+/* media query */
+
+
+@media (min-width: 550px) {
+  .services-wrapper {
+    column-gap: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .services-wrapper {
+    column-gap: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .services-wrapper {
+    justify-content: space-between;
+    gap: 0;
+  }
+}

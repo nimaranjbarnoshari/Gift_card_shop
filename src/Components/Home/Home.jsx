@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import { PiTag } from "react-icons/pi";
 
 import "./Home.css";
-import Service from "../Service/Service";
+
 
 export default function Home() {
   return (
@@ -177,18 +177,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-      <div className="row">
-        <Service src="images/svg/box-time.svg" title="تحویل سریع و آنی"/>
-        <Service src="images/svg/box-time.svg" title="تحویل سریع و آنی"/>
-        <Service src="images/svg/box-time.svg" title="تحویل سریع و آنی"/>
-        <Service src="images/svg/box-time.svg" title="تحویل سریع و آنی"/>
-        <Service src="images/svg/box-time.svg" title="تحویل سریع و آنی"/>
-        <Service src="images/svg/box-time.svg" title="تحویل سریع و آنی"/>
       </div>
-      </div>
-
-
     </section>
   );
 }
