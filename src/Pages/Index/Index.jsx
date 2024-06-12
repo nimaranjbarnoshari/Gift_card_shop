@@ -5,6 +5,7 @@ import Navbar from "../../Components/Navbar/Navbar";
 import Home from "../../Components/Home/Home";
 import Services from "../../Components/Services/Services";
 import ProductsCategory from "../../Components/ProductsCategory/ProductsCategory";
+import DiscountedProducts from "../../Components/DiscountedProducts/DiscountedProducts";
 export default function Index() {
   return (
     <div>
@@ -13,6 +14,7 @@ export default function Index() {
       <Home />
       <Services />
       <ProductsCategory />
+      <DiscountedProducts />
     </div>
   );
 }
