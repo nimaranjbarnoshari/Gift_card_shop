@@ -1,0 +1,66 @@
+.account-box {
+  background-color: var(--dark-background);
+  color: var(--white-color);
+  flex: 100%;
+  display: flex;
+  height: 74px;
+  border-radius: 7px;
+  overflow: hidden;
+  /* margin-top: 20px; */
+}
+.account-box__img-wrapper {
+  flex: 0 0 22%;
+  padding: 5px;
+}
+.account-box-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+.account-box__info-wrapper {
+  flex: 0 0 70%;
+  padding: 10px 15px;
+  overflow: hidden;
+}
+.account-box__info-title {
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+.account-box__info-desc {
+  color: #7b7892;
+  font-size: 12px;
+  text-wrap: nowrap;
+}
+.account-box__icon-wrapper {
+  flex: 0 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--semidark-background);
+  cursor: pointer;
+}
+.account-box__icon {
+  font-size: 25px;
+}
+
+/* media query */
+@media (min-width: 768px) {
+  .account-box {
+    flex: calc(50% - 10px);
+  }
+}
+@media (min-width: 1200px) {
+  .account-box {
+    height: 87px;
+    flex: calc(33.33% - 20px);
+  }
+
+  .account-box__info-title {
+    font-size: 18px;
+    margin-top: 6px;
+  }
+
+  .account-box__info-desc {
+    font-size: 14px;
+  }
+}

@@ -1,4 +1,25 @@
-.products-category{
-    margin: 50px 0;
-    
+.products-category {
+  margin: 50px 0;
+}
+
+.products-category__box-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+/* media query */
+@media (min-width: 768px) {
+  .products-category__box-wrapper {
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+  @media (min-width: 1200px) {
+    .products-category__box-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 30px;
+      row-gap: 30px;
+    }
+  }
 }
