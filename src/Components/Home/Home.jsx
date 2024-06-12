@@ -4,7 +4,6 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { PiTag } from "react-icons/pi";
-
 import "./Home.css";
 
 
@@ -15,7 +14,7 @@ export default function Home() {
         <div className="home-row">
           <div className="home-slider__wrapper">
             <Swiper
-              autoplay={true}
+              // autoplay={true}
               navigation={true}
               modules={[Navigation, Autoplay]}
               className="mySwiper"
