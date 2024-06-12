@@ -57,6 +57,7 @@
   height: 0;
   overflow: hidden;
   transition: var(--transition);
+  z-index: 10;
 }
 
 .show-nav {

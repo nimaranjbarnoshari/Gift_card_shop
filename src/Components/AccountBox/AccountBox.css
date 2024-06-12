@@ -40,7 +40,7 @@
   cursor: pointer;
 }
 .account-box__icon {
-  font-size: 25px;
+  font-size: 14px;
 }
 
 /* media query */
@@ -62,5 +62,9 @@
 
   .account-box__info-desc {
     font-size: 14px;
+  }
+
+  .account-box__icon {
+    font-size: 18px;
   }
 }

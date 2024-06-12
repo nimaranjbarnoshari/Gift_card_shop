@@ -1,6 +1,6 @@
 import React from "react";
 import "./ProductsCategory.css";
-import SectionHeader from "../SectionTitle/SectionHeader";
+import SectionHeader from "../SectionHeader/SectionHeader";
 import AccountBox from "../AccountBox/AccountBox";
 
 export default function ProductsCategory() {
