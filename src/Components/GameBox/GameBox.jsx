@@ -7,7 +7,7 @@ export default function GameBox(props) {
   return (
     <div className="game-box">
       <img
-        src="/images/home/steam.jpg"
+        src={props.src}
         alt="box_img"
         className="game-box__img"
       />
@@ -21,7 +21,7 @@ export default function GameBox(props) {
       )}
 
       <div className="game-box__price-wrapper">
-        {props.off ? <span className="game-box__off">۵٪ تخفیف</span> : ""}
+        {props.off ? <span className="game-box__off">{props.off}٪ تخفیف</span> : ""}
         <p className="game-box__price">
           {props.off ? (
             <>

@@ -8,6 +8,7 @@
   justify-content: space-evenly;
   align-items: center;
   gap: 25px;
+  margin-bottom: 60px;
 }
 
 .discounted-products__button {
@@ -31,12 +32,29 @@
   background-color: var(--primary-color);
 }
 
-
 /* boxes styles */
 
-.discounted-products__boxes{
+.discounted-products__boxes {
   margin-top: 40px;
 }
+
+/* swiper styles */
+
+
+.discounted-products .swiper-slide{
+  display: flex;
+  justify-content: center;
+}
+
+.discounted-products .swiper-button-next::after,
+.discounted-products .swiper-button-prev::after {
+  color: var(--white-color);
+  background-color: transparent;
+  
+  width: 36px;
+  height: 36px;
+}
+
 
 /* media query */
 
@@ -75,4 +93,7 @@
   }
 }
 @media (min-width: 1400px) {
+
+  /* swiper styles */
+  
 }

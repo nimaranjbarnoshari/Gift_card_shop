@@ -10,19 +10,19 @@
 .game-box__img {
   width: 100%;
   height: 181px;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 .game-box__title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
-  margin-top: 10px;
+  margin-top: 16px;
 }
 
 .game-box__last-price {
   position: relative;
   text-align: left;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400d;
   color: rgba(255, 255, 255, 0.34);
   margin-top: 8px;
@@ -40,7 +40,7 @@
 }
 
 .game-box__last-price--hiden {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400d;
   color: rgba(255, 255, 255, 0.34);
   margin-top: 8px;
@@ -49,7 +49,7 @@
 }
 
 .game-box__last-price span {
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .game-box__price-wrapper {
@@ -57,14 +57,14 @@
   justify-content: end;
   align-items: center;
   position: relative;
-  margin-top: 6px;
 }
 .game-box__off {
   position: absolute;
   right: 0;
   display: flex;
   justify-content: center;
-  font-size: 12px;
+  align-items: center;
+  font-size: 11px;
   width: 64px;
   height: 19px;
   border-radius: 23px;
@@ -72,12 +72,12 @@
 }
 
 .game-box__price {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 0;
 }
 
 .game-box__price span {
-  font-size: 14px;
+  font-size: 12px;
 }
 .game-box__button {
   border: none;
@@ -88,10 +88,14 @@
   justify-content: center;
   align-items: center;
   column-gap: 6px;
-  background-color: #494857;
+  background-color: #383742;
   color: var(--white-color);
   border-radius: 5px;
-  margin-top: 6px;
+  margin-top: 15px;
+  transition: var(--transition);
+}
+.game-box__button:hover{
+  background-color: #494857;
 }
 .game-box__button-icon {
   font-size: 25px;
