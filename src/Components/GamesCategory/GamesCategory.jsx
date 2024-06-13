@@ -5,31 +5,63 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import "./GamesCategory.css";
 
-import "./DiscountedProducts.css";
-
-export default function DiscountedProducts() {
+export default function GamesCategory() {
   return (
-    <div className="discounted-products">
+    <div className="games-category">
       <div className="container">
-        <SectionHeader title="محصولات تخفیف دار" off={true} />
-
+        <SectionHeader title="دسته بندی بازی ها" />
         {/* buttons */}
-        <div className="discounted-products__buttons-wrapper">
-          <button className="discounted-products__button discounted-products__button--active">
-            گیفت کارت
+        <div className="games-category__buttons-wrapper">
+          <button className="games-category__button games-category__button--active">
+            <img
+              src="/images/svg/PlayStation.svg"
+              alt="svg"
+              className="games-category__button-icon"
+            />
+            <span className="games-category__button-text">
+              بازی های پلی استیشن
+            </span>
           </button>
-          <button className="discounted-products__button">بازی ها</button>
-          <button className="discounted-products__button">
-            پول وآیتم بازی
-          </button>
-          <button className="discounted-products__button">خدمات</button>
-          <button className="discounted-products__button">نرم افزار</button>
-          <button className="discounted-products__button">کالای دیجیتال</button>
-        </div>
 
+          <button className="games-category__button">
+            <img
+              src="/images/svg/Xbox.svg"
+              alt="svg"
+              className="games-category__button-icon"
+            />
+            <span className="games-category__button-text">
+              بازی های ایکس باکس
+            </span>
+          </button>
+
+          <button className="games-category__button">
+            <img
+              src="/images/svg/mouse.svg"
+              alt="svg"
+              className="games-category__button-icon"
+            />
+            <span className="games-category__button-text">
+              بازی های کامپیوتر
+            </span>
+          </button>
+
+          <button className="games-category__button">
+            <img
+              src="/images/svg/Nintendo.svg"
+              alt="svg"
+              className="games-category__button-icon"
+            />
+            <span className="games-category__button-text">
+              بازی های نینتندو
+            </span>
+          </button>
+        </div>
         {/* games boxes */}
-        <div className="discounted-products__boxes">
+      </div>
+      <div className="games-category__boxes-wrapper">
+        <div className="container">
           <Swiper
             // autoplay={true}
             navigation={true}
@@ -57,7 +89,6 @@ export default function DiscountedProducts() {
                 offPrice="۲۴۳،۲۰۰"
               />
             </SwiperSlide>
-
             <SwiperSlide>
               <GameBox
                 src="/images/home/google_play.jpg"
@@ -67,7 +98,6 @@ export default function DiscountedProducts() {
                 offPrice="۱،۱۳۳،۰۰۰"
               />
             </SwiperSlide>
-
             <SwiperSlide>
               <GameBox
                 src="/images/home/apple.jpg"
@@ -77,7 +107,6 @@ export default function DiscountedProducts() {
                 offPrice="۶،۳۶۰،۰۰۰"
               />
             </SwiperSlide>
-
             <SwiperSlide>
               <GameBox
                 src="/images/home/amazon.jpg"
@@ -88,6 +117,7 @@ export default function DiscountedProducts() {
               />
             </SwiperSlide>
           </Swiper>
+          <button className="games-category__boxes-button">نمایش بیشتر</button>
         </div>
       </div>
     </div>

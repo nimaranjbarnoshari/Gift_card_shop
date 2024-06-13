@@ -50,9 +50,7 @@
 .discounted-products .swiper-button-prev::after {
   color: var(--white-color);
   background-color: transparent;
-  
-  width: 36px;
-  height: 36px;
+  font-size: 16px;
 }
 
 
