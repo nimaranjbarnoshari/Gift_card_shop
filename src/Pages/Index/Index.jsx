@@ -10,6 +10,7 @@ import AccountsSection from "../../Components/AccountsSection/AccountsSection";
 import Articles from "../../Components/Articles/Articles";
 
 import "./Index.css";
+import Social from "../../Components/Social/Social";
 
 export default function Index() {
   return (
@@ -23,6 +24,7 @@ export default function Index() {
       <GamesCategory />
       <AccountsSection />
       <Articles />
+      <Social />
     </div>
   );
 }

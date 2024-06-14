@@ -65,7 +65,6 @@
 
 /* left */
 .articles-left {
-  height: 720px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -77,6 +76,7 @@
 @media (min-width: 768px) {
   .articles-left {
     row-gap: 30px;
+    height: 720px;
   }
 }
 @media (min-width: 992px) {
