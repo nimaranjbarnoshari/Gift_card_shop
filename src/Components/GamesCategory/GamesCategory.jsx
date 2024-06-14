@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+
 import "./GamesCategory.css";
 
 export default function GamesCategory() {
@@ -82,37 +83,33 @@ export default function GamesCategory() {
           >
             <SwiperSlide>
               <GameBox
-                src="/images/home/steam.jpg"
-                title="گیفت کارت استیم ۵ دلاری"
+                src="/images/home/fifa24.jpg"
+                title="بازی فیفا ۲۴ (پیش خرید)"
                 price="۲۵۶،۰۰۰"
-                off="۵"
                 offPrice="۲۴۳،۲۰۰"
               />
             </SwiperSlide>
             <SwiperSlide>
               <GameBox
-                src="/images/home/google_play.jpg"
-                title="گیفت کارت گوگل پلی ۲۰ دلاری"
+                src="/images/home/jedi.jpg"
+                title="بازی JEDI Survivor"
                 price="۱،۱۸۰،۰۰۰"
-                off="۴"
                 offPrice="۱،۱۳۳،۰۰۰"
               />
             </SwiperSlide>
             <SwiperSlide>
               <GameBox
-                src="/images/home/apple.jpg"
-                title="گیفت کارت اپل ۱۰۰ دلاری"
+                src="/images/home/deadspace.jpg"
+                title="بازی Dead Space"
                 price="۶،۴۹۰،۰۰۰"
-                off="۲"
                 offPrice="۶،۳۶۰،۰۰۰"
               />
             </SwiperSlide>
             <SwiperSlide>
               <GameBox
-                src="/images/home/amazon.jpg"
-                title="گیفت کارت گوگل آمازون ۵۰ دلاری"
+                src="/images/home/warfar.jpg"
+                title="بازی Modern Warfare 2"
                 price="۳،۲۴۵،۰۰۰"
-                off="۳"
                 offPrice="۳،۱۴۸،۰۰۰"
               />
             </SwiperSlide>

@@ -1,0 +1,25 @@
+.accounts {
+  margin: 80px 0;
+}
+
+.acoounts-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+}
+
+/* media query */
+@media (min-width: 768px) {
+  .acoounts-wrapper {
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+  @media (min-width: 1200px) {
+    .acoounts-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 30px;
+      row-gap: 30px;
+    }
+  }
+}

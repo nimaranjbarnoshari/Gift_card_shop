@@ -6,7 +6,7 @@ export default function AccountBox(props) {
   return (
     <div className="account-box">
       <div className="account-box__img-wrapper">
-        <img src={props.src} alt="" className="account-box-img" />
+        <img src={props.src} alt="" className={`account-box-img ${props.svg ? "account-box__svg" : ""}`} />
       </div>
       <div className="account-box__info-wrapper">
         <h4 className="account-box__info-title">{props.title}</h4>
