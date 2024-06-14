@@ -7,6 +7,7 @@ import ProductsCategory from "../../Components/ProductsCategory/ProductsCategory
 import DiscountedProducts from "../../Components/DiscountedProducts/DiscountedProducts";
 import GamesCategory from "../../Components/GamesCategory/GamesCategory";
 import AccountsSection from "../../Components/AccountsSection/AccountsSection";
+import Articles from "../../Components/Articles/Articles";
 
 import "./Index.css";
 
@@ -21,6 +22,7 @@ export default function Index() {
       <DiscountedProducts />
       <GamesCategory />
       <AccountsSection />
+      <Articles />
     </div>
   );
 }

@@ -19,15 +19,16 @@ body {
   box-sizing: inherit;
 }
 
-a {
+a, Link{
   text-decoration: none;
   color: var(--dark-color);
   transition: all 300ms ease;
 }
 
-a:hover {
+
+/* a:hover {
   color: #1e83f0;
-}
+} */
 
 i {
   user-select: none;
