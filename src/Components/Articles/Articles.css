@@ -1,3 +1,114 @@
-.articles{
-    margin: 80px 0;
+.articles {
+  margin: 80px 0;
+}
+
+.articles-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* right */
+.articles-right {
+  display: none;
+  color: var(--white-color);
+  height: 720px;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+    url("/public/images/articles/mario.jpg") center/cover no-repeat;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.articles-title {
+  font-size: 20px;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+
+.articles-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.articles-info__date {
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+  background-color: rgba(114, 114, 114, 53%);
+  border-radius: 8px;
+}
+
+.article--info__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.articles-info__text {
+  font-size: 12px;
+}
+
+.articles-info__link {
+  width: 127px;
+  height: 44px;
+  font-size: 14px;
+  color: var(--white-color);
+  text-decoration: none;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+
+/* left */
+.articles-left {
+  height: 720px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 14px;
+}
+
+/* media query */
+
+@media (min-width: 768px) {
+  .articles-left {
+    row-gap: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .articles-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    flex: 0 0 calc(40% - 10px);
+  }
+  .articles-left {
+    flex: 0 0 calc(60% - 10px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .articles-right {
+    height: 824px;
+    flex: 0 0 calc(50% - 40px);
+  }
+
+  .articles-left {
+    height: 824px;
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media (min-width: 1400px) {
+  .articles-right {
+    flex: 0 0 calc(50% - 30px);
+  }
+
+  .articles-left {
+    flex: 0 0 calc(50% - 30px);
+  }
 }
