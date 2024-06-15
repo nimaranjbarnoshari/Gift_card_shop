@@ -8,9 +8,10 @@ import DiscountedProducts from "../../Components/DiscountedProducts/DiscountedPr
 import GamesCategory from "../../Components/GamesCategory/GamesCategory";
 import AccountsSection from "../../Components/AccountsSection/AccountsSection";
 import Articles from "../../Components/Articles/Articles";
+import Social from "../../Components/Social/Social";
+import Footer from "../../Components/Footer/Footer";
 
 import "./Index.css";
-import Social from "../../Components/Social/Social";
 
 export default function Index() {
   return (
@@ -25,6 +26,7 @@ export default function Index() {
       <AccountsSection />
       <Articles />
       <Social />
+      <Footer />
     </div>
   );
 }

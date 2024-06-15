@@ -81,7 +81,7 @@ export default function DiscountedProducts() {
             <SwiperSlide>
               <GameBox
                 src="/images/home/amazon.jpg"
-                title="گیفت کارت گوگل آمازون ۵۰ دلاری"
+                title="گیفت کارت آمازون ۵۰ دلاری"
                 price="۳،۲۴۵،۰۰۰"
                 off="۳"
                 offPrice="۳،۱۴۸،۰۰۰"

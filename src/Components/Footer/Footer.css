@@ -1,0 +1,239 @@
+.footer {
+  padding: 30px 0;
+}
+.footer-wrapper {
+  margin-bottom: 30px;
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+/* first section */
+.footer-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 15px;
+}
+
+.footer-infos__logo-img {
+  width: 150px;
+  height: 30px;
+}
+
+.footer-infos__phone-wrapper,
+.footer-infos__location-wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.footer-infos__phone-icon {
+  transform: rotateY(180deg);
+  width: 23px;
+  height: 23px;
+}
+
+.footer-infos__phone-number {
+  margin: 0;
+  font-size: 18px;
+}
+
+.footer-infos__location-icon {
+  width: 30px;
+  height: 30px;
+}
+.footer-infos__location-number {
+  margin: 0;
+  font-size: 16px;
+}
+
+.footer-newsletter__input-wrapper {
+  position: relative;
+  background-color: var(--dark-background);
+  max-width: 347px;
+  height: 46px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+.footer-newsletter__input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  height: 100%;
+  padding: 10px;
+}
+.footer-newsletter__input::placeholder {
+  font-size: 12px;
+}
+.footer-newsletter__button {
+  position: absolute;
+  width: 75px;
+  height: 38px;
+  font-size: 14px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 3px;
+  left: 4px;
+  top: 4px;
+}
+
+/* second section */
+
+.footer-lists {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+.footer-lists__wrapper {
+  flex: 0 0 calc(50%);
+}
+.footer-lists__items {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.footer-lists__item {
+  position: relative;
+  padding-right: 15px;
+  margin-bottom: 8px;
+}
+.footer-lists__item:last-child {
+  margin-bottom: 0;
+}
+.footer-lists__item::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.footer-lists__link {
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: 12px;
+  line-height: 21px;
+}
+.footer-lists__link:hover {
+  color: var(--primary-color);
+}
+
+/* last section */
+
+.footer-symbols {
+  margin-top: 14px;
+  margin-bottom: 36px;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 25px;
+  background-color: #2f2e36;
+  border-radius: 14px;
+}
+.footer-symbols__img {
+  border-radius: 10px;
+}
+.footer-socials__wrapper {
+  margin-top: 14px;
+  padding: 10px 30px;
+  background-color: #2f2e36;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-socials__icon {
+  font-size: 22px;
+  color: var(--white-color);
+  transition: var(--transition);
+}
+
+.footer-socials__icon:hover {
+  color: var(--primary-color);
+}
+
+/* copy right section */
+.footer-copyRight {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-copyRight__text {
+  color: #a5a5a5;
+  font-size: 12px;
+}
+
+/* media query */
+
+@media (min-width: 576px) {
+  .footer-socials__icon {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-copyRight__text {
+    font-size: 16px;
+  }
+  .footer-lists__wrapper {
+    flex: 0 0 calc(33.33%);
+  }
+  .footer-socials {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-socials__wrapper {
+    height: 55%;
+    border-radius: 14px;
+  }
+
+  .footer-symbols__wrapper {
+    flex: 0 0 46%;
+  }
+
+  .footer-contacts__wrapper {
+    flex: 0 0 46%;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer-lists__wrapper {
+    flex: 0 0 calc(33.33%);
+  }
+}
+@media (min-width: 1200px) {
+  .footer-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer-lists {
+    margin: 0;
+    flex: 0 0 calc(54% - 40px);
+  }
+  .footer-infos,
+  .footer-socials {
+    flex: 0 0 calc(23% - 20px);
+  }
+  .footer-lists__link {
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .footer-socials__wrapper {
+    height: auto;
+    border-radius: 6px;
+  }
+  .footer-socials {
+    display: block;
+  }
+}
+@media (min-width: 1400px) {
+}

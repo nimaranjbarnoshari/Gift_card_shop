@@ -71,6 +71,7 @@
   .social__icons-link {
     width: 60px;
     height: 63px;
+    border-radius: 7px;
   }
   .social__icons-icon {
     width: 40px;
