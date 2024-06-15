@@ -1,8 +1,7 @@
 import React from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import ArticleBox from "../ArticleBox/ArticleBox";
-import { BsClock } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import ArticlesBanner from "../ArticlesBanner/ArticlesBanner";
 
 import "./Articles.css";
 export default function Articles() {
@@ -12,21 +11,12 @@ export default function Articles() {
         <SectionHeader title="اخبار و مقالات" />
 
         <div className="articles-wrapper">
-            
           <div className="articles-right">
-            <h4 className="articles-title">
-              جزئیات آپدیت جدید بازی Fall Guys برای پلی استیشن ( آپدیت نهایی
-              بازی و رفع باگ های عجیب کاربران )
-            </h4>
-            <div className="articles-info">
-              <div className="articles-info__date">
-                <BsClock className="article--info__icon" />
-                <span className="articles-info__text">۲۳ آبان,۱۴۰۲</span>
-              </div>
-              <Link to="#" className="articles-info__link">
-                ادامه مطلب
-              </Link>
-            </div>
+            <ArticlesBanner
+              title="جزئیات آپدیت جدید بازی Fall Guys برای پلی استیشن ( آپدیت نهایی بازی و
+                    رفع باگ های عجیب کاربران )"
+              date="۲۳ آبان,۱۴۰۲"
+            />
           </div>
 
           <div className="articles-left">
