@@ -12,6 +12,7 @@ import Social from "../../Components/Social/Social";
 import Footer from "../../Components/Footer/Footer";
 
 import "./Index.css";
+import SectionHeader from "../../Components/SectionHeader/SectionHeader";
 
 export default function Index() {
   return (
@@ -24,6 +25,7 @@ export default function Index() {
       <DiscountedProducts />
       <GamesCategory />
       <AccountsSection />
+      <SectionHeader title="اخبار و مقالات"/>
       <Articles />
       <Social />
       <Footer />

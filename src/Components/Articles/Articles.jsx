@@ -1,16 +1,19 @@
 import React from "react";
-import SectionHeader from "../SectionHeader/SectionHeader";
 import ArticleBox from "../ArticleBox/ArticleBox";
 import ArticlesBanner from "../ArticlesBanner/ArticlesBanner";
 
 import "./Articles.css";
-export default function Articles() {
+export default function Articles({ reverse, marginBottom }) {
   return (
-    <section className="articles">
+    <section
+      className={`articles ${marginBottom ? "articles-custom__margin" : ""}`}
+    >
       <div className="container">
-        <SectionHeader title="اخبار و مقالات" />
-
-        <div className="articles-wrapper">
+        <div
+          className={`articles-wrapper ${
+            reverse ? "articles-wrapper__reverse" : ""
+          }`}
+        >
           <div className="articles-right">
             <ArticlesBanner
               title="جزئیات آپدیت جدید بازی Fall Guys برای پلی استیشن ( آپدیت نهایی بازی و
@@ -24,16 +27,19 @@ export default function Articles() {
               src="/images/articles/battlefield.jpg"
               title="انتظار ها به پایان رسید! انتشار بازی BattleField Mobile در اوایل
           مهرماه!"
+              date="۲۳ آبان,۱۴۰۲"
             />
 
             <ArticleBox
               src="/images/articles/outlaws.jpg"
               title="جزئیات جدید بازی outlaws از سری بازی های محبوب استاوارز!"
+              date="۲۳ آبان,۱۴۰۲"
             />
 
             <ArticleBox
               src="/images/articles/mafia.jpg"
               title="کد های تقلب بازی محبوب مافیا3 برای ایکس باکس وان"
+              date="۲۳ آبان,۱۴۰۲"
             />
           </div>
         </div>

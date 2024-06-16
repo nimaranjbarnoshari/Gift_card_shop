@@ -107,3 +107,29 @@
     font-size: 14px;
   }
 }
+
+@media (min-width: 992px) {
+  .article-box{
+    flex: calc(50% - 10px);
+    flex-grow: 0;
+  }
+
+  .article-box__info-desc {
+    justify-content: end;
+  }
+  .article-box__info-date {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .article-box{
+    flex: calc(50% - 30px);
+    flex-grow: 0;
+  }
+  .article-box__info-desc {
+    justify-content: space-between;
+  }
+  .article-box__info-date {
+    display: flex;
+  }
+}
