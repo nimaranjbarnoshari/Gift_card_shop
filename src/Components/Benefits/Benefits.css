@@ -1,9 +1,9 @@
 
-.services{
+.benefits{
   margin-top: 40px;
   margin-bottom: 80px;
 }
-.services-wrapper {
+.benefits-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -16,19 +16,19 @@
 
 
 @media (min-width: 550px) {
-  .services-wrapper {
+  .benefits-wrapper {
     column-gap: 15px;
   }
 }
 
 @media (min-width: 768px) {
-  .services-wrapper {
+  .benefits-wrapper {
     column-gap: 50px;
   }
 }
 
 @media (min-width: 992px) {
-  .services-wrapper {
+  .benefits-wrapper {
     justify-content: space-between;
     gap: 0;
   }

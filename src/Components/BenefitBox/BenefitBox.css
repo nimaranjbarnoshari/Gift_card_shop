@@ -1,4 +1,4 @@
-.service-wrapper {
+.benefitBox-wrapper {
   width: 125px;
   height: 96px;
   flex-grow: 0;
@@ -13,13 +13,13 @@
   border-radius: 6px;
 }
 
-.service-svg {
+.benefitBox-svg {
   width: 43px;
   height: 43px;
   margin-top: 6px;
 }
 
-.service-title {
+.benefitBox-title {
   color: var(--white-color);
   font-size: 12px;
   margin-top: 12px;
@@ -28,25 +28,25 @@
 /* media query */
 
 @media (min-width: 568px) {
-  .service-wrapper {
+  .benefitBox-wrapper {
     width: 140px;
     height: 105px;
   }
 }
 
 @media (min-width: 1200px) {
-  .service-wrapper {
+  .benefitBox-wrapper {
     width: 160px;
     height: 120px;
   }
 
-  .service-svg {
+  .benefitBox-svg {
     width: 55px;
     height: 55px;
     margin-top: 6px;
   }
 
-  .service-title {
+  .benefitBox-title {
     color: var(--white-color);
     font-size: 16px;
     margin-top: 12px;

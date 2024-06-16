@@ -55,22 +55,22 @@
     font-size: 20px;
   }
   .social__icons-link {
-    width: 50px;
-    height: 53px;
+    width: 48px;
+    height: 52px;
   }
   .social__icons-icon {
-    width: 35px;
-    height: 35px;
+    width: 34px;
+    height: 34px;
   }
 }
 
 @media (min-width: 1200px) {
   .social__title {
-    font-size: 24px;
+    font-size: 22px;
   }
   .social__icons-link {
-    width: 60px;
-    height: 63px;
+    width: 56px;
+    height: 60px;
     border-radius: 7px;
   }
   .social__icons-icon {

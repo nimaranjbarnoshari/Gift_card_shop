@@ -2,7 +2,7 @@ import React from "react";
 import Topbar from "../../Components/Topbar/Topbar";
 import Navbar from "../../Components/Navbar/Navbar";
 import Home from "../../Components/Home/Home";
-import Services from "../../Components/Services/Services";
+import Benefits from "../../Components/Benefits/Benefits";
 import ProductsCategory from "../../Components/ProductsCategory/ProductsCategory";
 import DiscountedProducts from "../../Components/DiscountedProducts/DiscountedProducts";
 import GamesCategory from "../../Components/GamesCategory/GamesCategory";
@@ -19,7 +19,7 @@ export default function Index() {
       <Topbar />
       <Navbar />
       <Home />
-      <Services />
+      <Benefits />
       <ProductsCategory />
       <DiscountedProducts />
       <GamesCategory />

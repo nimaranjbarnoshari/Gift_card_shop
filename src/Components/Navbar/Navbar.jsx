@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { BiMenuAltRight } from "react-icons/bi";
 import { CgShoppingBag } from "react-icons/cg";
 import { PiBellRingingBold } from "react-icons/pi";
@@ -38,40 +38,113 @@ export default function Navbar() {
               }`}
             >
               <ul className="nav-menu__list-mobile-items">
-                <li className="nav-menu__list-mobile-item nav-menu__list-mobile-item--active">
-                  <Link className="nav-menu__list-mobile-link">صفحه اصلی</Link>
+                <li className="nav-menu__list-mobile-item">
+                  <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "nav-menu__list-mobile-link nav-menu__list-mobile-link--active"
+                        : "nav-menu__list-mobile-link"
+                    }
+                  >
+                    صفحه اصلی
+                  </NavLink>
                 </li>
                 <li className="nav-menu__list-mobile-item">
-                  <Link className="nav-menu__list-mobile-link">
+                  <NavLink
+                    to="/gifts"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "nav-menu__list-mobile-link nav-menu__list-mobile-link--active"
+                        : "nav-menu__list-mobile-link"
+                    }
+                  >
                     گیفت کارت ها
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-menu__list-mobile-item">
-                  <Link className="nav-menu__list-mobile-link">
+                  <NavLink
+                    to="/games"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "nav-menu__list-mobile-link nav-menu__list-mobile-link--active"
+                        : "nav-menu__list-mobile-link"
+                    }
+                  >
                     لیست بازی ها
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-menu__list-mobile-item">
-                  <Link className="nav-menu__list-mobile-link">
+                  <NavLink
+                    to="/money"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "nav-menu__list-mobile-link nav-menu__list-mobile-link--active"
+                        : "nav-menu__list-mobile-link"
+                    }
+                  >
                     پول و آیتم بازی
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-menu__list-mobile-item">
-                  <Link className="nav-menu__list-mobile-link">خدمات</Link>
+                  <NavLink
+                    to="/services"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "nav-menu__list-mobile-link nav-menu__list-mobile-link--active"
+                        : "nav-menu__list-mobile-link"
+                    }
+                  >
+                    خدمات
+                  </NavLink>
                 </li>
                 <li className="nav-menu__list-mobile-item">
-                  <Link className="nav-menu__list-mobile-link">نرم افزار</Link>
+                  <NavLink
+                    to="/softwares"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "nav-menu__list-mobile-link nav-menu__list-mobile-link--active"
+                        : "nav-menu__list-mobile-link"
+                    }
+                  >
+                    نرم افزار
+                  </NavLink>
                 </li>
                 <li className="nav-menu__list-mobile-item">
-                  <Link className="nav-menu__list-mobile-link">
+                  <NavLink
+                    to="/digits"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "nav-menu__list-mobile-link nav-menu__list-mobile-link--active"
+                        : "nav-menu__list-mobile-link"
+                    }
+                  >
                     کالای دیجیتال
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-menu__list-mobile-item">
-                  <Link className="nav-menu__list-mobile-link">بلاگ</Link>
+                  <NavLink
+                    to="/blogs"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "nav-menu__list-mobile-link nav-menu__list-mobile-link--active"
+                        : "nav-menu__list-mobile-link"
+                    }
+                  >
+                    بلاگ
+                  </NavLink>
                 </li>
                 <li className="nav-menu__list-mobile-item">
-                  <Link className="nav-menu__list-mobile-link">تماس با ما</Link>
+                  <NavLink
+                    to="/contact-us"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "nav-menu__list-mobile-link nav-menu__list-mobile-link--active"
+                        : "nav-menu__list-mobile-link"
+                    }
+                  >
+                    تماس با ما
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -79,36 +152,118 @@ export default function Navbar() {
             {/* tablet and laptop menu */}
             <div className="nav-menu__list">
               <ul className="nav-menu__list-items">
-                <li className="nav-menu__list-item nav-menu__list-item--active">
-                  <Link className="nav-menu__list-link">صفحه اصلی</Link>
+                <li className="nav-menu__list-item">
+                  <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "nav-menu__list-link nav-menu__list-link--active"
+                        : "nav-menu__list-link"
+                    }
+                  >
+                    صفحه اصلی
+                  </NavLink>
                 </li>
                 <li className="nav-menu__list-item">
-                  <Link className="nav-menu__list-link">گیفت کارت ها</Link>
+                  <NavLink
+                    to="/gifts"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "nav-menu__list-link nav-menu__list-link--active"
+                        : "nav-menu__list-link"
+                    }
+                  >
+                    گیفت کارت ها
+                  </NavLink>
                 </li>
                 <li className="nav-menu__list-item">
-                  <Link className="nav-menu__list-link">لیست بازی ها</Link>
+                  <NavLink
+                    to="/games"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "nav-menu__list-link nav-menu__list-link--active"
+                        : "nav-menu__list-link"
+                    }
+                  >
+                    لیست بازی ها
+                  </NavLink>
                 </li>
                 <li className="nav-menu__list-item">
-                  <Link className="nav-menu__list-link">پول و آیتم بازی</Link>
+                  <NavLink
+                    to="/money"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "nav-menu__list-link nav-menu__list-link--active"
+                        : "nav-menu__list-link"
+                    }
+                  >
+                    پول و آیتم بازی
+                  </NavLink>
                 </li>
                 <li className="nav-menu__list-item">
-                  <Link className="nav-menu__list-link">خدمات</Link>
+                  <NavLink
+                    to="/Services"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "nav-menu__list-link nav-menu__list-link--active"
+                        : "nav-menu__list-link"
+                    }
+                  >
+                    خدمات
+                  </NavLink>
                 </li>
                 <li className="nav-menu__list-item">
-                  <Link className="nav-menu__list-link">نرم افزار</Link>
+                  <NavLink
+                    to="/softwares"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "nav-menu__list-link nav-menu__list-link--active"
+                        : "nav-menu__list-link"
+                    }
+                  >
+                    نرم افزار
+                  </NavLink>
                 </li>
                 <li className="nav-menu__list-item">
-                  <Link className="nav-menu__list-link">کالای دیجیتال</Link>
+                  <NavLink
+                    to="/digits"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "nav-menu__list-link nav-menu__list-link--active"
+                        : "nav-menu__list-link"
+                    }
+                  >
+                    کالای دیجیتال
+                  </NavLink>
                 </li>
                 <li className="nav-menu__list-item">
-                  <Link className="nav-menu__list-link">بلاگ</Link>
+                  <NavLink
+                    to="/blogs"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "nav-menu__list-link nav-menu__list-link--active"
+                        : "nav-menu__list-link"
+                    }
+                  >
+                    بلاگ
+                  </NavLink>
                 </li>
                 <li className="nav-menu__list-item">
-                  <Link className="nav-menu__list-link">تماس با ما</Link>
+                  <NavLink
+                    to="/contact-us"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "nav-menu__list-link nav-menu__list-link--active"
+                        : "nav-menu__list-link"
+                    }
+                  >
+                    تماس با ما
+                  </NavLink>
                 </li>
               </ul>
             </div>
           </div>
+
           <div className="nav-menu__left">
             <div className="nav-btn">
               <Link to="#" className="nav-link">
