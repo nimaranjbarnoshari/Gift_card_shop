@@ -19,6 +19,7 @@ export default function Articles({ reverse, marginBottom }) {
               title="جزئیات آپدیت جدید بازی Fall Guys برای پلی استیشن ( آپدیت نهایی بازی و
                     رفع باگ های عجیب کاربران )"
               date="۲۳ آبان,۱۴۰۲"
+              blogName="mario"
             />
           </div>
 
@@ -28,18 +29,21 @@ export default function Articles({ reverse, marginBottom }) {
               title="انتظار ها به پایان رسید! انتشار بازی BattleField Mobile در اوایل
           مهرماه!"
               date="۲۳ آبان,۱۴۰۲"
+              blogName="battlefield"
             />
 
             <ArticleBox
               src="/images/articles/outlaws.jpg"
               title="جزئیات جدید بازی outlaws از سری بازی های محبوب استاوارز!"
               date="۲۳ آبان,۱۴۰۲"
+              blogName="outlaws"
             />
 
             <ArticleBox
               src="/images/articles/mafia.jpg"
               title="کد های تقلب بازی محبوب مافیا3 برای ایکس باکس وان"
               date="۲۳ آبان,۱۴۰۲"
+              blogName="mafia"
             />
           </div>
         </div>

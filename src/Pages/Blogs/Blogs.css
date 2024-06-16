@@ -20,6 +20,9 @@
   }
 }
 @media (min-width: 992px) {
+  .blogs__header{
+    height: 140px;
+  }
   .blogs-box__container {
     flex-direction: row;
     justify-content: space-between;

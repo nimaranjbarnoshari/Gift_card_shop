@@ -26,11 +26,13 @@ export default function Blogs() {
               title="کد های تقلب بازی محبوب مافیا3 برای ایکس باکس وان"
               src="/images/articles/mafia.jpg"
               date="23 آبان,1402"
+              blogNmae="mafia"
             />
             <ArticleBox
               title="جزئیات جدید بازی outlaws از سری بازی های محبوب استاوارز!"
               src="/images/articles/outlaws.jpg"
               date="23 آبان,1402"
+              blogNmae="outlaws"
             />
           </div>
           <Articles reverse={true} />
