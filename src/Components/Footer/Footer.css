@@ -61,7 +61,10 @@
   outline: none;
   background-color: transparent;
   height: 100%;
+  width: 100%;
   padding: 10px;
+  font-size: 12px;
+  color: var(--white-color);
 }
 .footer-newsletter__input::placeholder {
   font-size: 12px;
@@ -234,6 +237,4 @@
   .footer-socials {
     display: block;
   }
-}
-@media (min-width: 1400px) {
 }
