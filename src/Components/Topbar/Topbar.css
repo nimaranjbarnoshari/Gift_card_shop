@@ -16,6 +16,8 @@
   outline: none;
   border-radius: 10px;
   padding: 10px;
+  color: var(--white-color);
+  font-size: 12px;
 }
 
 .topbar-input__wrapper{
