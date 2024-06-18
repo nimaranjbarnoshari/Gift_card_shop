@@ -13,12 +13,15 @@
 }
 
 .nav-link {
-  color: var(--white-color);
   text-decoration: none;
 }
 
 .nav-link:hover {
   color: var(--primary-color);
+}
+
+.nav-link__text {
+  color: var(--white-color);
 }
 
 .nav-icon {
@@ -81,7 +84,7 @@
   color: var(--white-color);
   font-size: 12px;
 }
-.nav-menu__list-mobile-link--active{
+.nav-menu__list-mobile-link--active {
   color: var(--primary-color);
 }
 .nav-menu__list-mobile-link--active::after {
@@ -141,7 +144,7 @@
   height: 100%;
 }
 
-.nav-menu__list-link--active  {
+.nav-menu__list-link--active {
   color: var(--primary-color);
 }
 

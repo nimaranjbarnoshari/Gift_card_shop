@@ -1,7 +1,7 @@
 import React from "react";
 import Topbar from "../../Components/Topbar/Topbar";
 import Navbar from "../../Components/Navbar/Navbar";
-import Socials from "../../Components/Social/Social";
+import Socials from "../../Components/Socials/Socials";
 import Footer from "../../Components/Footer/Footer";
 import { TiArrowBack } from "react-icons/ti";
 import { Link } from "react-router-dom";
@@ -132,10 +132,9 @@ export default function BlogInfos() {
                       type="email"
                     />
                     <Button
-                      className="blog-comment__form-button"
                       type="submit"
                       disabled={false}
-                      onclick={(event) => sendComment(event)}
+                      onClick={(event) => sendComment(event)}
                     >
                       ارسال نظر
                     </Button>

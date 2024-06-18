@@ -11,7 +11,7 @@
 }
 
 .social__title {
-  font-size: 16px;
+  font-size: 12px;
   margin: 0;
 }
 .social__icons-wrapper {
@@ -39,11 +39,27 @@
 }
 
 /* media query */
+@media (min-width: 400px) {
+  .social__title {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 576px) {
+  .social__title {
+    font-size: 16px;
+  }
+}
+
 @media (min-width: 768px) {
   .social__wrapper {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+  .social__title {
+    font-size: 18px;
+    font-weight: 700;
   }
   .social__icons-wrapper {
     margin-top: 0;

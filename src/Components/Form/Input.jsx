@@ -1,7 +1,14 @@
 import React from "react";
 import "./Input.css";
 
-export default function FormInput({ textarea, type, placeholder, label,id }) {
+export default function FormInput({
+  textarea,
+  type,
+  placeholder,
+  label,
+  id,
+  className,
+}) {
   return (
     <div className="form-input__container">
       <label htmlFor={id} className="form-input__label">
@@ -12,14 +19,14 @@ export default function FormInput({ textarea, type, placeholder, label,id }) {
           name="textarea"
           id={id}
           placeholder={placeholder}
-          className="form-textarea"
+          className={`form-textarea ${className ? className : ""}`}
         ></textarea>
       ) : (
         <input
-        id={id}
+          id={id}
           type={type}
           placeholder={placeholder}
-          className="form-input"
+          className={`form-input ${className ? className : ""}`}
         />
       )}
     </div>

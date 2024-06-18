@@ -1,0 +1,25 @@
+.communication {
+  height: 56px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 15px;
+}
+.communication:last-child {
+  margin-bottom: 0;
+}
+
+.communication__icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+.communication__title {
+  font-size: 13px;
+}
+.communication__text {
+  font-size: 14px;
+}

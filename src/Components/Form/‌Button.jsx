@@ -2,7 +2,7 @@ import React from "react";
 import "./Button.css";
 
 export default function Button({
-  onclick,
+  onClick,
   type,
   disabled,
   className,
@@ -10,9 +10,9 @@ export default function Button({
 }) {
   return (
     <button
-      className={className}
+      className={`button ${className ? className : ""}`}
       type={type}
-      onClick={onclick}
+      onClick={onClick}
       disabled={disabled}
     >
       {children}

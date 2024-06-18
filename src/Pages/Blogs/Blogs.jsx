@@ -4,7 +4,7 @@ import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
 import ArticleBox from "../../Components/ArticleBox/ArticleBox";
 import SectionHeader from "../../Components/SectionHeader/SectionHeader";
-import Socials from "../../Components/Social/Social";
+import Socials from "../../Components/Socials/Socials";
 import Articles from "../../Components/Articles/Articles";
 
 import "./Blogs.css";

@@ -112,18 +112,6 @@ export default function Navbar() {
                 </li>
                 <li className="nav-menu__list-mobile-item">
                   <NavLink
-                    to="/digits"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "nav-menu__list-mobile-link nav-menu__list-mobile-link--active"
-                        : "nav-menu__list-mobile-link"
-                    }
-                  >
-                    کالای دیجیتال
-                  </NavLink>
-                </li>
-                <li className="nav-menu__list-mobile-item">
-                  <NavLink
                     to="/blogs"
                     className={({ isActive }) =>
                       isActive
@@ -132,6 +120,18 @@ export default function Navbar() {
                     }
                   >
                     بلاگ
+                  </NavLink>
+                </li>
+                <li className="nav-menu__list-mobile-item">
+                  <NavLink
+                    to="/about-us"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "nav-menu__list-mobile-link nav-menu__list-mobile-link--active"
+                        : "nav-menu__list-mobile-link"
+                    }
+                  >
+                    درباره ما
                   </NavLink>
                 </li>
                 <li className="nav-menu__list-mobile-item">
@@ -226,18 +226,6 @@ export default function Navbar() {
                 </li>
                 <li className="nav-menu__list-item">
                   <NavLink
-                    to="/digits"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "nav-menu__list-link nav-menu__list-link--active"
-                        : "nav-menu__list-link"
-                    }
-                  >
-                    کالای دیجیتال
-                  </NavLink>
-                </li>
-                <li className="nav-menu__list-item">
-                  <NavLink
                     to="/blogs"
                     className={({ isActive }) =>
                       isActive
@@ -246,6 +234,18 @@ export default function Navbar() {
                     }
                   >
                     بلاگ
+                  </NavLink>
+                </li>
+                <li className="nav-menu__list-item">
+                  <NavLink
+                    to="/about-us"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "nav-menu__list-link nav-menu__list-link--active"
+                        : "nav-menu__list-link"
+                    }
+                  >
+                    درباره ما
                   </NavLink>
                 </li>
                 <li className="nav-menu__list-item">
@@ -277,7 +277,7 @@ export default function Navbar() {
               </Link>
             </div>
             <div className="nav-btn nav-btn__login">
-              <Link to="#" className="nav-link">
+              <Link to="/login" className="nav-link">
                 <span className="nav-link__text">ورود | عضویت</span>
                 <TiUserOutline className="nav-icon" />
               </Link>

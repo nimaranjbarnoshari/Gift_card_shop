@@ -4,7 +4,7 @@ import { AiOutlineYoutube } from "react-icons/ai";
 import { CiTwitter } from "react-icons/ci";
 import { IoLogoInstagram } from "react-icons/io";
 
-import "./Social.css";
+import "./Socials.css";
 
 export default function Socials() {
   return (
@@ -16,13 +16,13 @@ export default function Socials() {
           </h3>
           <div className="social__icons-wrapper">
             <Link to="#" className="social__icons-link">
-              <AiOutlineYoutube className="social__icons-icon"/>
+              <AiOutlineYoutube className="social__icons-icon" />
             </Link>
             <Link to="#" className="social__icons-link">
-              <CiTwitter className="social__icons-icon"/>
+              <CiTwitter className="social__icons-icon" />
             </Link>
             <Link to="#" className="social__icons-link">
-              <IoLogoInstagram className="social__icons-icon"/>
+              <IoLogoInstagram className="social__icons-icon" />
             </Link>
           </div>
         </div>

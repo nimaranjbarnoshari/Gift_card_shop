@@ -8,7 +8,7 @@ import DiscountedProducts from "../../Components/DiscountedProducts/DiscountedPr
 import GamesCategory from "../../Components/GamesCategory/GamesCategory";
 import AccountsSection from "../../Components/AccountsSection/AccountsSection";
 import Articles from "../../Components/Articles/Articles";
-import Social from "../../Components/Social/Social";
+import Socials from "../../Components/Socials/Socials";
 import Footer from "../../Components/Footer/Footer";
 
 import "./Index.css";
@@ -27,7 +27,7 @@ export default function Index() {
       <AccountsSection />
       <SectionHeader title="اخبار و مقالات"/>
       <Articles />
-      <Social />
+      <Socials />
       <Footer />
     </div>
   );
