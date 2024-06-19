@@ -10,10 +10,12 @@ export default function Button({
 }) {
   return (
     <button
-      className={`button ${className ? className : ""}`}
       type={type}
       onClick={onClick}
       disabled={disabled}
+      className={`button ${disabled ? "button-disabled" : ""} ${
+        className ? className : ""
+      }`}
     >
       {children}
     </button>

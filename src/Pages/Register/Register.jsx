@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Input from "../../Components/Form/Input";
 import Button from "../../Components/Form/‌Button";
 import { Link } from "react-router-dom";
@@ -6,6 +6,11 @@ import { Link } from "react-router-dom";
 import "./Register.css";
 
 export default function Register() {
+  const [isChecked, setIsChecked] = useState(false);
+
+//   const checkBoxHandler = (event) => {
+//     setIsChecked(!isChecked);
+//   };
   const submitFormHandler = (event) => {
     event.preventDefault();
     console.log("register");
@@ -41,23 +46,27 @@ export default function Register() {
 
               <div className="register-form__checkbox-container">
                 <label className="chaeckbox-container">
-                    <input
-                      id="check"
-                      type="checkbox"
-                      className="register-form__checkbox"
-                    />
-                    <span className="checkbox-heckmark"></span>
+                  <input
+                    onChange={() => setIsChecked(!isChecked)}
+                    id="check"
+                    type="checkbox"
+                    className="register-form__checkbox"
+                  />
+                  <span className="checkbox-heckmark"></span>
                 </label>
                 <label
                   htmlFor="check"
                   className="register-form__checkbox-label"
                 >
-                  <Link to="/rules" className="register-form__checkbox-link">شرایط و قوانین </Link>
+                  <Link to="/rules" className="register-form__checkbox-link">
+                    شرایط و قوانین{" "}
+                  </Link>
                   را می پذیرم
                 </label>
               </div>
 
               <Button
+                disabled={!isChecked}
                 children="ارسال کد"
                 type="submit"
                 onClick={(event) => submitFormHandler(event)}
