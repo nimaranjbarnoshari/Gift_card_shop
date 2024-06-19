@@ -16,11 +16,13 @@ export default function Login() {
           <div className="login-box">
             <div className="login-box__header">
               <div className="login-box__header-logo">
-                <img
-                  src="/images/logo/logo.png"
-                  alt="logo"
-                  className="login-box__header-img"
-                />
+                <Link to="/">
+                  <img
+                    src="/images/logo/logo.png"
+                    alt="logo"
+                    className="login-box__header-img"
+                  />
+                </Link>
               </div>
               <h3 className="login-box__header-title">ورود به حساب</h3>
               <p className="login-box__header-text">
@@ -40,11 +42,12 @@ export default function Login() {
                 type="password"
                 label="رمز عبور"
                 placeholder="رمز عبور خود را وارد کنید"
+                src="/images/svg/unlock.svg"
                 className="login-form__input-password"
               />
               <div className="login-form__forget">
                 <span className="login-form__forget-text">فراموشی</span>{" "}
-                <Link to="#" className="login-form__forget-link">
+                <Link to="/otp" className="login-form__forget-link">
                   رمزعبور
                 </Link>
               </div>
@@ -59,7 +62,7 @@ export default function Login() {
               <span className="login-form__foter-text">
                 حساب کاربری ندارید؟
               </span>{" "}
-              <Link to="#" className="login-form__footer-link">
+              <Link to="/register" className="login-form__footer-link">
                 ثبت نام کنید
               </Link>
             </div>

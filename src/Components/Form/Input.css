@@ -7,6 +7,9 @@
   font-size: 14px;
   line-height: 21px;
 }
+.form-input__wrapper {
+  position: relative;
+}
 .form-input,
 .form-textarea {
   width: 100%;
@@ -19,10 +22,26 @@
   font-size: 14px;
   line-height: 24px;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.form-input__svg {
+  position: absolute;
+  width: 15px;
+  height: 17px;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-.form-textarea{
-    height: 140px;
-    resize: none;
+.form-textarea {
+  height: 140px;
+  resize: none;
 }
 
 .form-input::placeholder,

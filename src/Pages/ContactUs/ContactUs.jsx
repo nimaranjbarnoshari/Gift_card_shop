@@ -57,7 +57,7 @@ export default function ContactUs() {
                   text="nimaranjbarnoshari@gmail.com"
                 />
                 <CommunicationBox
-                  src="/images/svg/phone.svg"
+                  src="/images/svg/telephone.svg"
                   title="تلفن تماس:"
                   text="09125244154"
                 />

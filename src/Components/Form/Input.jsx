@@ -8,6 +8,7 @@ export default function FormInput({
   label,
   id,
   className,
+  src,
 }) {
   return (
     <div className="form-input__container">
@@ -22,12 +23,26 @@ export default function FormInput({
           className={`form-textarea ${className ? className : ""}`}
         ></textarea>
       ) : (
-        <input
-          id={id}
-          type={type}
-          placeholder={placeholder}
-          className={`form-input ${className ? className : ""}`}
-        />
+        <>
+          {src ? (
+            <div className="form-input__wrapper">
+              <input
+                id={id}
+                type={type}
+                placeholder={placeholder}
+                className={`form-input ${className ? className : ""}`}
+              />
+              <img src={src} alt="svg" className="form-input__svg" />
+            </div>
+          ) : (
+            <input
+              id={id}
+              type={type}
+              placeholder={placeholder}
+              className={`form-input ${className ? className : ""}`}
+            />
+          )}
+        </>
       )}
     </div>
   );
