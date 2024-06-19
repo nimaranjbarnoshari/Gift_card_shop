@@ -39,6 +39,10 @@
   align-items: center;
 }
 
+.nav-btn:has(.nav-link--active) {
+  border: 2px solid var(--primary-color);
+}
+
 .nav-btn__login {
   width: 102px;
   height: 37px;

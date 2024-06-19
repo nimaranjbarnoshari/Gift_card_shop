@@ -26,7 +26,7 @@ export default function OTP() {
               </div>
               <h3 className="otp-box__header-title">فراموشی رمز عبور</h3>
               <p className="otp-box__header-text">
-                شماره تلفن خود را وارد کنید تا برای شما کد تایید ارسال شود
+                شماره تلفن خود را برای ارسال کد تایید وارد نمایید
               </p>
             </div>
             <form className="otp-form">
