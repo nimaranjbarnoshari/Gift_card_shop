@@ -31,14 +31,14 @@ export default function Login() {
             </div>
             <form className="login-form">
               <Input
-                id=""
+                id="phone"
                 type="number"
                 label="شماره تماس"
                 placeholder="۰۹**ـ***ـ****"
                 className="login-form__input-phone"
               />
               <Input
-                id=""
+                id="password"
                 type="password"
                 label="رمز عبور"
                 placeholder="رمز عبور خود را وارد کنید"

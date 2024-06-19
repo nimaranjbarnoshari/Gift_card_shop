@@ -1,0 +1,109 @@
+.register {
+  background: url("/public/images/background/bg2.jpg") center/cover no-repeat;
+}
+
+.register-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-box {
+  width: 400px;
+  height: 480px;
+  background-color: rgba(48, 47, 57, 0.9);
+  color: var(--white-color);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.register-box__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.register-box__header-logo {
+  margin-right: 60px;
+  margin-bottom: 40px;
+}
+.register-box__header-img {
+  width: 200px;
+  height: 40px;
+}
+.register-box__header-title {
+  font-size: 26px;
+  line-height: 44px;
+}
+.register-box__header-text {
+  font-size: 14px;
+  color: #cbcbcb;
+}
+.register-form {
+  width: 100%;
+}
+.register-form__input-phone {
+  direction: ltr;
+  margin-top: 5px;
+}
+
+/* start checkbox */
+
+.register-form__checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 44px;
+  margin-bottom: 20px;
+}
+.chaeckbox-container {
+  position: relative;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.register-form__checkbox {
+  display: block;
+  position: absolute;
+  opacity: 0;
+}
+.checkbox-heckmark {
+  position: absolute;
+  cursor: pointer;
+  top: -8px;
+  right: 0;
+  height: 18px;
+  width: 18px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+.register-form__checkbox:checked ~ .checkbox-heckmark {
+  background-color: var(--primary-color);
+}
+.register-form__checkbox-label {
+  margin-right: 25px;
+  font-size: 14px;
+}
+.register-form__checkbox-link{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* end checkbox */
+
+.register-form__footer {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.register-form__foter-text {
+  margin-left: 2px;
+}
+.register-form__footer-link {
+  text-decoration: none;
+  color: var(--primary-color);
+}
