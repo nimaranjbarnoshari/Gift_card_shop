@@ -8,9 +8,6 @@ import "./Register.css";
 export default function Register() {
   const [isChecked, setIsChecked] = useState(false);
 
-//   const checkBoxHandler = (event) => {
-//     setIsChecked(!isChecked);
-//   };
   const submitFormHandler = (event) => {
     event.preventDefault();
     console.log("register");

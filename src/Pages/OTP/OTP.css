@@ -1,0 +1,75 @@
+.otp {
+  background: url("/public/images/background/bg2.jpg") center/cover no-repeat;
+}
+
+.otp-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.otp-box {
+  width: 400px;
+  height: 540px;
+  background-color: rgba(48, 47, 57, 0.9);
+  color: var(--white-color);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.otp-box__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.otp-box__header-logo {
+  margin-right: 60px;
+  margin-bottom: 40px;
+}
+.otp-box__header-img {
+  width: 200px;
+  height: 40px;
+}
+.otp-box__header-title {
+  font-size: 26px;
+  line-height: 44px;
+}
+.otp-box__header-text {
+  font-size: 13fpx;
+  color: #cbcbcb;
+}
+.otp-form {
+  width: 100%;
+}
+.otp-form__input-phone {
+  direction: ltr;
+  margin-top: 5px;
+}
+
+.otp-form__button {
+  margin-top: 150px;
+}
+
+.otp-form__footer {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.otp-form__foter-text {
+  margin-left: 2px;
+}
+.otp-form__footer-link {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+.otp-form__footer-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+}

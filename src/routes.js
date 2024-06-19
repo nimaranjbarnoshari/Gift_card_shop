@@ -5,6 +5,7 @@ import ContactUs from "./Pages/ContactUs/ContactUs";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
+import OTP from "./Pages/OTP/OTP";
 
 const routes = [
     {path:"/", element: <Index />},
@@ -14,6 +15,7 @@ const routes = [
     {path:"/about-us", element: <AboutUs />},
     {path:"/login", element: <Login />},
     {path:"/Register", element: <Register />},
+    {path:"/otp", element: <OTP />},
     // {path:"/cart", element: <Cart />},
 ]
 
