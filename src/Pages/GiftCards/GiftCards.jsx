@@ -16,10 +16,11 @@ export default function GiftCards() {
     <>
       <Topbar />
       <Navbar />
+      
       <Benefits />
       <div className="container">
         <div className="gift-products">
-          <SectionHeader title="دیگر محصولات" span="مرحله اول:"/>
+          <SectionHeader title="دیگر محصولات"/>
           <Swiper
             // autoplay={true}
             navigation={true}
@@ -40,32 +41,32 @@ export default function GiftCards() {
           >
             <SwiperSlide>
               <GameBox
-                src="/images/home/steam.jpg"
-                title="گیفت کارت استیم ۵ دلاری"
+                src="/images/home/fifa24.jpg"
+                title="بازی فیفا ۲۴ (پیش خرید)"
                 price="۲۵۶،۰۰۰"
               />
             </SwiperSlide>
 
             <SwiperSlide>
               <GameBox
-                src="/images/home/google_play.jpg"
-                title="گیفت کارت گوگل پلی ۲۰ دلاری"
-                price="۱،۱۸۰،۰۰۰"
+               src="/images/home/jedi.jpg"
+               title="بازی JEDI Survivor"
+               price="۱،۱۸۰،۰۰۰"
               />
             </SwiperSlide>
 
             <SwiperSlide>
               <GameBox
-                src="/images/home/apple.jpg"
-                title="گیفت کارت اپل ۱۰۰ دلاری"
+                src="/images/home/deadspace.jpg"
+                title="بازی Dead Space"
                 price="۶،۴۹۰،۰۰۰"
               />
             </SwiperSlide>
 
             <SwiperSlide>
               <GameBox
-                src="/images/home/amazon.jpg"
-                title="گیفت کارت آمازون ۵۰ دلاری"
+                src="/images/home/warfar.jpg"
+                title="بازی Modern Warfare 2"
                 price="۳،۲۴۵،۰۰۰"
               />
             </SwiperSlide>

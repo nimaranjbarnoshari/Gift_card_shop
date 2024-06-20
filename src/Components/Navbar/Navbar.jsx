@@ -76,18 +76,6 @@ export default function Navbar() {
                 </li>
                 <li className="nav-menu__list-mobile-item">
                   <NavLink
-                    to="/money"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "nav-menu__list-mobile-link nav-menu__list-mobile-link--active"
-                        : "nav-menu__list-mobile-link"
-                    }
-                  >
-                    پول و آیتم بازی
-                  </NavLink>
-                </li>
-                <li className="nav-menu__list-mobile-item">
-                  <NavLink
                     to="/services"
                     className={({ isActive }) =>
                       isActive
@@ -188,18 +176,7 @@ export default function Navbar() {
                     لیست بازی ها
                   </NavLink>
                 </li>
-                <li className="nav-menu__list-item">
-                  <NavLink
-                    to="/money"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "nav-menu__list-link nav-menu__list-link--active"
-                        : "nav-menu__list-link"
-                    }
-                  >
-                    پول و آیتم بازی
-                  </NavLink>
-                </li>
+
                 <li className="nav-menu__list-item">
                   <NavLink
                     to="/Services"
