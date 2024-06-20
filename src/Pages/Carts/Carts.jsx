@@ -22,8 +22,14 @@ export default function Carts() {
               <div className="carts-basket__header">
                 <h3 className="carts-basket__title">آیتم های خریداری شده</h3>
               </div>
-              <BaseketCard />
-              <BaseketCard />
+              <BaseketCard
+                cardSrc="/images/svg/apple.svg"
+                flagSrc="/images/svg/usa.svg"
+              />
+              <BaseketCard
+                cardSrc="/images/svg/steam.svg"
+                flagSrc="/images/svg/usa.svg"
+              />
               <div className="carts-basket__footer">
                 <h4 className="carts-basket__footer-title">جمع کل سبد خرید:</h4>
                 <div className="carts-basket__footer-price-container">
@@ -36,10 +42,18 @@ export default function Carts() {
               <h3 className="carts-pay__title">انتخاب درگاه پرداخت</h3>
               <div className="carts-pay__items">
                 <div className="carts-pay__item">
-                  <img src="images/carts/saman.svg" alt="saman" className="carts-pay__icon" />
+                  <img
+                    src="images/svg/saman.svg"
+                    alt="saman"
+                    className="carts-pay__icon"
+                  />
                 </div>
                 <div className="carts-pay__item">
-                  <img src="images/carts/up.svg" alt="up" className="carts-pay__icon" />
+                  <img
+                    src="images/svg/up.svg"
+                    alt="up"
+                    className="carts-pay__icon"
+                  />
                 </div>
               </div>
               <Button

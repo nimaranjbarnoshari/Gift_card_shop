@@ -1,12 +1,12 @@
 import React from "react";
 import "./BaseketCard.css";
-export default function BaseketCard() {
+export default function BaseketCard({cardSrc, flagSrc}) {
   return (
     <div className="basket-card">
       <div className="basket-card-right">
         <div className="basket-card__icon-container">
           <img
-            src="/images/carts/apple.svg"
+            src={cardSrc}
             alt="apple"
             className="basket-card__icon"
           />
@@ -15,7 +15,7 @@ export default function BaseketCard() {
           <div className="basket-card__title">گیفت کارت 20 دلاری اپل</div>
           <div className="basket-card__country">
             <img
-              src="/images/carts/usa.svg"
+              src={flagSrc}
               alt="usa"
               className="basket-card__country-img"
             />
