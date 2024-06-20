@@ -7,6 +7,7 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import OTP from "./Pages/OTP/OTP";
 import Carts from "./Pages/Carts/Carts";
+import GiftCards from "./Pages/GiftCards/GiftCards";
 
 const routes = [
     {path:"/", element: <Index />},
@@ -18,6 +19,7 @@ const routes = [
     {path:"/Register", element: <Register />},
     {path:"/otp", element: <OTP />},
     {path:"/carts", element: <Carts />},
+    {path:"/gift-cards", element: <GiftCards />},
 ]
 
 export default routes

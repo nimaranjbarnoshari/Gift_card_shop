@@ -52,7 +52,7 @@ export default function Navbar() {
                 </li>
                 <li className="nav-menu__list-mobile-item">
                   <NavLink
-                    to="/gifts"
+                    to="/gift-cards"
                     className={({ isActive }) =>
                       isActive
                         ? "nav-menu__list-mobile-link nav-menu__list-mobile-link--active"
@@ -166,7 +166,7 @@ export default function Navbar() {
                 </li>
                 <li className="nav-menu__list-item">
                   <NavLink
-                    to="/gifts"
+                    to="/gift-cards"
                     className={({ isActive }) =>
                       isActive
                         ? "nav-menu__list-link nav-menu__list-link--active"

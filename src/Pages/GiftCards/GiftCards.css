@@ -1,0 +1,17 @@
+.gift-products{
+    margin-bottom: 80px;
+}
+
+/* swiper styles */
+
+.gift-products .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.gift-products .swiper-button-next::after,
+.gift-products .swiper-button-prev::after {
+  color: var(--white-color);
+  background-color: transparent;
+  font-size: 16px;
+}
