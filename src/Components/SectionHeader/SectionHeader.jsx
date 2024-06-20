@@ -1,15 +1,16 @@
 import React from "react";
 import "./SectionHeader.css";
 
-export default function SectionHeader({ title, off, footer }) {
+export default function SectionHeader({ title, off, footer, span }) {
   return (
     <div className={`section-header ${footer ? "footer-header" : ""}`}>
       <div className="section-header__wrapper">
         <h2
           className={`section-header__title ${
-            footer ? "footer-header__title" : ""
-          }`}
+            span ? "styles_for_gift_section" : ""
+          } ${footer ? "footer-header__title" : ""}`}
         >
+          {span ? <span className="gift-card__section-header">{span}</span> : ""}
           {title}
         </h2>
         {off ? (

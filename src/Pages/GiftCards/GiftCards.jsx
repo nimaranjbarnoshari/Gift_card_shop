@@ -19,7 +19,7 @@ export default function GiftCards() {
       <Benefits />
       <div className="container">
         <div className="gift-products">
-          <SectionHeader title="دیگر محصولات" />
+          <SectionHeader title="دیگر محصولات" span="مرحله اول:"/>
           <Swiper
             // autoplay={true}
             navigation={true}

@@ -17,6 +17,13 @@
   font-weight: 600;
   margin-bottom: 10px;
 }
+.styles_for_gift_section {
+  font-weight: 400;
+}
+.gift-card__section-header {
+  font-weight: 600;
+  margin-left: 5px;
+}
 .footer-header__title {
   font-size: 16px;
   font-weight: 600;
@@ -42,6 +49,9 @@
 @media (min-width: 992px) {
   .section-header__title {
     font-size: 22px;
+  }
+  .styles_for_gift_section {
+    font-size: 20px;
   }
   .section-header__svg {
     width: 23px;
