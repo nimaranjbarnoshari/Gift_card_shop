@@ -88,6 +88,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex: 0 0 30%;
+    column-gap: 40px;
   }
   .basket-card__buttons {
     flex: 0 0 50%;
