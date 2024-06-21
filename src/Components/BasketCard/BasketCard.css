@@ -16,23 +16,6 @@
   line-height: 21px;
   margin-bottom: 4px;
 }
-.basket-card__country {
-  background-color: rgba(255, 255, 255, 0.1);
-  width: 56px;
-  height: 20px;
-  border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 5px;
-}
-.basket-card__country-name {
-  font-size: 11px;
-}
-.basket-card__country-img {
-  width: 16px;
-  height: 16px;
-}
 .basket-card-left {
   display: flex;
   flex-direction: column;

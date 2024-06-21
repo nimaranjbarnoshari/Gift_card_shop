@@ -16,7 +16,9 @@ export default function GiftCards() {
     <>
       <Topbar />
       <Navbar />
-      
+      <div className="container">
+
+      </div>
       <Benefits />
       <div className="container">
         <div className="gift-products">

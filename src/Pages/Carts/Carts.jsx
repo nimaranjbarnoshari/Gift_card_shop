@@ -3,7 +3,7 @@ import Topbar from "../../Components/Topbar/Topbar";
 import Navbar from "../../Components/Navbar/Navbar";
 import Socials from "../../Components/Socials/Socials";
 import Footer from "../../Components/Footer/Footer";
-import BaseketCard from "../../Components/BaseketCard/BaseketCard";
+import BasketCard from "../../Components/BasketCard/BasketCard";
 import Button from "../../Components/Form/‌Button";
 
 import "./Carts.css";
@@ -22,11 +22,11 @@ export default function Carts() {
               <div className="carts-basket__header">
                 <h3 className="carts-basket__title">آیتم های خریداری شده</h3>
               </div>
-              <BaseketCard
+              <BasketCard
                 cardSrc="/images/svg/apple.svg"
                 flagSrc="/images/svg/usa.svg"
               />
-              <BaseketCard
+              <BasketCard
                 cardSrc="/images/svg/steam.svg"
                 flagSrc="/images/svg/usa.svg"
               />
