@@ -1,10 +1,10 @@
 import React from "react";
 import "./Flag.css";
-export default function Flag({ src, country }) {
+export default function Flag({ src, country, title }) {
   return (
-    <div className="flag">
+    <div className={`flag ${title ? "flag-title" : ""}`}>
       <img src={src} alt="flag" className="flag-img" />
-      <span className="flag-name">{country}</span>
+      <span className="flag-name">{title ? title : country}</span>
     </div>
   );
 }
