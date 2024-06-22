@@ -9,6 +9,7 @@ import GameBox from "../../Components/GameBox/GameBox";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import Flag from "../../Components/Flag/Flag";
+import GiftBox from "../../Components/GiftBox/GiftBox";
 
 import "./GiftCards.css";
 export default function GiftCards() {
@@ -196,7 +197,76 @@ export default function GiftCards() {
             </button>
           </div>
           <div className="gift-cards__body-cards">
-            
+            <GiftBox
+              flagSrc="/images/svg/usa.svg"
+              country="آمریکا"
+              src="/images/svg/apple.svg"
+              title="گیفت کارت ۲۰ دلار"
+              price="۲۵۶،۰۰۰"
+            />
+            <GiftBox
+              flagSrc="/images/svg/usa.svg"
+              country="آمریکا"
+              src="/images/svg/apple.svg"
+              title="گیفت کارت ۲۰ دلار"
+              price="۲۵۶،۰۰۰"
+            />
+            <GiftBox
+              flagSrc="/images/svg/usa.svg"
+              country="آمریکا"
+              src="/images/svg/apple.svg"
+              title="گیفت کارت ۲۰ دلار"
+              price="۲۵۶،۰۰۰"
+            />
+            <GiftBox
+              flagSrc="/images/svg/usa.svg"
+              country="آمریکا"
+              src="/images/svg/apple.svg"
+              title="گیفت کارت ۲۰ دلار"
+              price="۲۵۶،۰۰۰"
+            />
+            <GiftBox
+              flagSrc="/images/svg/usa.svg"
+              country="آمریکا"
+              src="/images/svg/apple.svg"
+              title="گیفت کارت ۲۰ دلار"
+              price="۲۵۶،۰۰۰"
+            />
+            <GiftBox
+              flagSrc="/images/svg/usa.svg"
+              country="آمریکا"
+              src="/images/svg/apple.svg"
+              title="گیفت کارت ۲۰ دلار"
+              price="۲۵۶،۰۰۰"
+            />
+            <GiftBox
+              flagSrc="/images/svg/usa.svg"
+              country="آمریکا"
+              src="/images/svg/apple.svg"
+              title="گیفت کارت ۲۰ دلار"
+              price="۲۵۶،۰۰۰"
+            />
+            <GiftBox
+              flagSrc="/images/svg/usa.svg"
+              country="آمریکا"
+              src="/images/svg/apple.svg"
+              title="گیفت کارت ۲۰ دلار"
+              price="۲۵۶،۰۰۰"
+            />
+            <GiftBox
+              flagSrc="/images/svg/usa.svg"
+              country="آمریکا"
+              src="/images/svg/apple.svg"
+              title="گیفت کارت ۲۰ دلار"
+              price="۲۵۶،۰۰۰"
+            />
+            <GiftBox
+              flagSrc="/images/svg/usa.svg"
+              country="آمریکا"
+              src="/images/svg/apple.svg"
+              title="گیفت کارت ۲۰ دلار"
+              price="۲۵۶،۰۰۰"
+            />
           </div>
         </div>
 

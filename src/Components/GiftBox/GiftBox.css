@@ -1,0 +1,62 @@
+.gift-box {
+  width: 220px;
+  height: 230px;
+  color: var(--white-color);
+  background-color: var(--semidark-background);
+  color: var(--white-color);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.gift-box__header {
+  background-color: #24232a;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  height: 70px;
+  padding: 8px;
+}
+.gift-box__body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 8px;
+}
+.gift-box__body-icon {
+  position: absolute;
+  width: 50px;
+  height: 60px;
+  top: 0;
+  transform: translateY(-50%);
+}
+.gift-box__body-title{
+    font-size: 16px;
+    margin-top: 40px;
+}
+.gift-box__price-container {
+  position: relative;
+  margin-bottom: 5px;
+}
+.gift-box__unit {
+  position: absolute;
+  font-size: 8px;
+  color: var(--primary-color);
+  right: -20px;
+}
+.gift-box__price {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.gift-box__body-buuton {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: none;
+  color: var(--white-color);
+  width: 109px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
