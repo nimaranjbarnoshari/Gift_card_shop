@@ -1,6 +1,4 @@
 import React from "react";
-
-import "./GiftCards.css";
 import Topbar from "../../Components/Topbar/Topbar";
 import Navbar from "../../Components/Navbar/Navbar";
 import Socials from "../../Components/Socials/Socials";
@@ -12,6 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import Flag from "../../Components/Flag/Flag";
 
+import "./GiftCards.css";
 export default function GiftCards() {
   return (
     <>
@@ -117,11 +116,89 @@ export default function GiftCards() {
               </div>
             </div>
           </div>
-          <div className="gift-cards__infos"></div>
+          <div className="gift-cards__infos">
+            <div className="gift-cards__infos-header">
+              <div className="gift-cards__infos-header-box">
+                <button className="gift-cards__infos-header-button gift-cards__infos-header-button--active">
+                  توضیحات
+                </button>
+              </div>
+              <div className="gift-cards__infos-header-box">
+                <button className="gift-cards__infos-header-button">
+                  خصوصیات
+                </button>
+              </div>
+              <div className="gift-cards__infos-header-box">
+                <button className="gift-cards__infos-header-button">
+                  نظرات
+                </button>
+              </div>
+              <div className="gift-cards__infos-header-box">
+                <button className="gift-cards__infos-header-button">
+                  سوالات کاربران
+                </button>
+              </div>
+              <div className="gift-cards__infos-header-box">
+                <button className="gift-cards__infos-header-button">
+                  سوالات متداول
+                </button>
+              </div>
+              <div className="gift-cards__infos-header-box">
+                <button className="gift-cards__infos-header-button">
+                  فعال سازی
+                </button>
+              </div>
+            </div>
+            <div className="gift-cards__infos-body">
+              <img
+                src="/images/background/bg3.jpeg"
+                alt="text_bg"
+                className="gift-cards__infos-body-img"
+              />
+              <p className="gift-cards__infos-text">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+                کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+                جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را
+                برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در
+                زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و
+                دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و
+                زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات
+                پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Choose gift card */}
-        <div className="gift-cards__body"></div>
+        <div className="gift-cards__body">
+          <SectionHeader title="انتخاب نوع گیفت کارت" span="مرحله اول:" />
+          <div className="gift-cards__body-buttons">
+            <button className="gift-cards__body-button">
+              <Flag country="برزیل" src="/images/svg/brazil.svg" />
+            </button>
+            <button className="gift-cards__body-button">
+              <Flag country="انگلیس" src="/images/svg/england.svg" />
+            </button>
+            <button className="gift-cards__body-button">
+              <Flag country="ترکیه" src="/images/svg/turkey.svg" />
+            </button>
+            <button className="gift-cards__body-button">
+              <Flag country="فرانسه" src="/images/svg/france.svg" />
+            </button>
+            <button className="gift-cards__body-button">
+              <Flag country="ایتالیا" src="/images/svg/italy.svg" />
+            </button>
+            <button className="gift-cards__body-button">
+              <Flag country="آمریکا" src="/images/svg/usa.svg" />
+            </button>
+          </div>
+          <div className="gift-cards__body-cards">
+            
+          </div>
+        </div>
 
         {/* Pay & Help sections*/}
         <div className="gift-cards__footer">
