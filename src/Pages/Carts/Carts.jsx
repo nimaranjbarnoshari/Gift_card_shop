@@ -5,6 +5,7 @@ import Socials from "../../Components/Socials/Socials";
 import Footer from "../../Components/Footer/Footer";
 import BasketCard from "../../Components/BasketCard/BasketCard";
 import Button from "../../Components/Form/‌Button";
+import PriceBox from "../../Components/PriceBox/PriceBox";
 
 import "./Carts.css";
 export default function Carts() {
@@ -32,10 +33,7 @@ export default function Carts() {
               />
               <div className="carts-basket__footer">
                 <h4 className="carts-basket__footer-title">جمع کل سبد خرید:</h4>
-                <div className="carts-basket__footer-price-container">
-                  <span className="carts-basket__footer-unit">تومان</span>
-                  <span className="carts-basket__footer-price">۵۱۲،۰۰۰</span>
-                </div>
+                <PriceBox price="۵۱۲،۰۰۰" isTotal={true}/>
               </div>
             </div>
             <div className="carts-pay">

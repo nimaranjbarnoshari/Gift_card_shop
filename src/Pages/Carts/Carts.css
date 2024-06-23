@@ -46,19 +46,6 @@
   line-height: 24px;
   font-weight: 700;
 }
-.carts-basket__footer-price-container {
-  position: relative;
-}
-.carts-basket__footer-unit {
-  position: absolute;
-  font-size: 9px;
-  color: var(--primary-color);
-  right: -20px;
-}
-.carts-basket__footer-price {
-  font-size: 26px;
-  line-height: 40px;
-}
 
 .carts-pay {
   margin-top: 20px;

@@ -1,6 +1,7 @@
 import React from "react";
-import "./BasketCard.css";
 import Flag from "../Flag/Flag";
+import PriceBox from "../PriceBox/PriceBox";
+import "./BasketCard.css";
 export default function BasketCard({ cardSrc, flagSrc }) {
   return (
     <div className="basket-card">
@@ -20,8 +21,7 @@ export default function BasketCard({ cardSrc, flagSrc }) {
           <button className="basket-card__button">-</button>
         </div>
         <div className="basket-card__price-container">
-          <span className="basket-card__unit">تومان</span>
-          <span className="basket-card__price">۲۵۶،۰۰۰</span>
+          <PriceBox price="۲۵۶،۰۰۰"/>
         </div>
       </div>
     </div>
