@@ -27,35 +27,6 @@
   row-gap: 6px;
 }
 
-.basket-card__buttons {
-  border: 1px solid var(--semidark-background);
-  width: 67px;
-  height: 23px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
-}
-.basket-card__button {
-  flex: 0 0 30%;
-  width: 20px;
-  height: 23px;
-  border: none;
-  color: var(--white-color);
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.basket-card__count {
-  flex: 0 0 40%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--semidark-background);
-}
-
 
 /* media query */
 @media (min-width: 768px) {

@@ -1,6 +1,7 @@
 import React from "react";
 import Flag from "../Flag/Flag";
 import PriceBox from "../PriceBox/PriceBox";
+import BasketButtons from "../BasketButtons/BasketButtons";
 import "./BasketCard.css";
 export default function BasketCard({ cardSrc, flagSrc }) {
   return (
@@ -16,12 +17,10 @@ export default function BasketCard({ cardSrc, flagSrc }) {
       </div>
       <div className="basket-card-left">
         <div className="basket-card__buttons">
-          <button className="basket-card__button">+</button>
-          <span className="basket-card__count">۲</span>
-          <button className="basket-card__button">-</button>
+          <BasketButtons count="۲"/>
         </div>
         <div className="basket-card__price-container">
-          <PriceBox price="۲۵۶،۰۰۰"/>
+          <PriceBox price="۲۵۶،۰۰۰" />
         </div>
       </div>
     </div>
