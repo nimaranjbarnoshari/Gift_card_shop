@@ -12,6 +12,9 @@
   padding: 6px;
   border-radius: 6px;
 }
+.none-bg {
+  background-color: transparent;
+}
 
 .benefitBox-svg {
   width: 43px;

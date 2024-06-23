@@ -201,13 +201,125 @@
 }
 /* Pay & Help sections */
 .gift-cards__footer {
+  color: var(--white-color);
+  margin-bottom: 80px;
 }
 .gift-cards__footer-pay {
   background-color: #2a2933;
-  padding: 24px 47px;
+  padding: 24px;
+  max-width: 625px;
+  margin: 0 auto;
+  border-radius: 20px;
 }
+
+.gift-cards__footer-pay-container {
+  margin: 50px 0 26px 0;
+}
+.gift-cards__footer-pay-right {
+  max-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 20px;
+  padding: 0 10px;
+}
+.gift-cards__footer-gift-box {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  background-color: var(--dark-background);
+  border-radius: 10px;
+}
+.gift-cards__footer-gift-box-infos {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.gift-cards__footer-gift-box-title {
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 4px;
+}
+
+.gift-cards__footer-unit-price,
+.gift-cards__footer-buttons,
+.gift-cards__footer-total-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.gift-cards__footer-unit-title,
+.gift-cards__footer-buttons-title,
+.gift-cards__footer-total-title {
+  font-size: 14px;
+}
+.gift-cards__footer-pay-left {
+  padding: 0 10px;
+  margin-top: 30px;
+}
+.gift-cards__footer-pay-choose {
+  min-height: 200px;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.gift-cards__footer-pay-choose-title {
+  font-size: 14px;
+  line-height: 21px;
+}
+.gift-cards__footer-pay-choose-items {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+.gift-cards__footer-pay-choose-item {
+  cursor: pointer;
+}
+.gift-cards__footer-pay-choose-icon {
+  width: 100%;
+}
+.gift-cards__footer-pay-choose-button {
+  max-width: 300px;
+}
+
 .gift-cards__footer-help {
   background-color: #2a2933;
+  max-width: 630px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 20px;
+  padding: 24px 3px;
+}
+.gift-cards__footer-help-header {
+  display: flex;
+  align-items: center;
+}
+.gift-cards__footer-help-icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+.gift-cards__footer-help-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+.gift-cards__footer-help-body {
+  margin-top: 30px;
+}
+.gift-cards__footer-help-list {
+  list-style: disc;
+  margin-right: 14px;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.gift-cards__footer-help-list-item {
+  font-size: 10px;
+  line-height: 44px;
 }
 /* Other products section styles */
 
@@ -237,12 +349,39 @@
   .gift-cards__body-buttons {
     max-width: 300px;
   }
+  .gift-cards__footer-help {
+    padding: 24px 5px;
+  }
 }
+
 @media (min-width: 576px) {
   .gift-cards__body-buttons {
     max-width: 540px;
   }
+  .gift-cards__footer-pay-container {
+    display: flex;
+  }
+  .gift-cards__footer-pay-right {
+    flex: 0 0 50%;
+    border-left: 1px solid rgba(58, 57, 68, 0.57);
+  }
+  .gift-cards__footer-pay-left {
+    margin-top: 0;
+    flex: 0 0 50%;
+  }
+  .gift-cards__footer-pay-choose {
+    height: 100%;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .gift-cards__footer-help {
+    padding: 24px 14px;
+  }
+  .gift-cards__footer-help-list-item {
+    font-size: 12px;
+  }
 }
+
 @media (min-width: 768px) {
   .gift-cards__header-infos-bottom-flag-boxes {
     max-width: 600px;
@@ -255,6 +394,18 @@
   }
   .gift-cards__body-cards {
     gap: 25px;
+  }
+  .gift-cards__footer-pay-right {
+    padding: 0 22px;
+  }
+  .gift-cards__footer-pay-left {
+    padding: 0 22px;
+  }
+  .gift-cards__footer-help {
+    padding: 24px;
+  }
+  .gift-cards__footer-help-list-item {
+    font-size: 14px;
   }
 }
 @media (min-width: 992px) {
@@ -317,13 +468,26 @@
   }
   .gift-cards__body-cards {
     max-width: 970px;
-
     justify-content: start;
+  }
+  .gift-cards__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .gift-cards__footer-pay {
+    margin: 0;
+    flex: 0 0 46% ;
+  }
+  .gift-cards__footer-help {
+    margin: 0;
   }
 }
 @media (min-width: 1400px) {
   .gift-cards__body-cards {
     max-width: 1320px;
     justify-content: space-between;
+  }
+  .gift-cards__footer-pay {
+    flex: 0 0 50%;
   }
 }

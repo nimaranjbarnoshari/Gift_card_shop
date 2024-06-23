@@ -10,6 +10,7 @@
   align-items: center;
   column-gap: 10px;
 }
+
 .basket-card__infos {
   display: flex;
   flex-direction: column;
@@ -23,8 +24,8 @@
 .basket-card-left {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  row-gap: 6px;
+  align-items: end;
+  row-gap: 10px;
 }
 
 

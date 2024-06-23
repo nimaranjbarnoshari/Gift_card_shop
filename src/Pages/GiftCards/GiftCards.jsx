@@ -10,7 +10,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import Flag from "../../Components/Flag/Flag";
 import GiftBox from "../../Components/GiftBox/GiftBox";
-
+import Button from "../../Components/Form/‌Button";
+import PriceBox from "../../Components/PriceBox/PriceBox";
+import BasketButtons from "../../Components/BasketButtons/BasketButtons";
 import "./GiftCards.css";
 export default function GiftCards() {
   return (
@@ -273,12 +275,112 @@ export default function GiftCards() {
         {/* Pay & Help sections*/}
         <div className="gift-cards__footer">
           <div className="gift-cards__footer-pay">
-            <SectionHeader title="تسویه حساب و خرید محصول" span="مرحله دوم:"/>
+            <SectionHeader title="تسویه حساب و خرید محصول" span="مرحله دوم:" />
+
+            <div className="gift-cards__footer-pay-container">
+              <div className="gift-cards__footer-pay-right">
+                <div className="gift-cards__footer-gift-box">
+                  <div className="gift-cards__footer-icon-container">
+                    <img
+                      src="/images/svg/apple.svg"
+                      alt="apple"
+                      className="gift-cards__footer-gift-box-icon"
+                    />
+                  </div>
+                  <div className="gift-cards__footer-gift-box-infos">
+                    <div className="gift-cards__footer-gift-box-title">
+                      گیفت کارت 20 دلاری اپل
+                    </div>
+                    <Flag country="آمریکا" src="/images/svg/usa.svg" />
+                  </div>
+                </div>
+                <div className="gift-cards__footer-unit-price">
+                  <span className="gift-cards__footer-unit-title">
+                    قیمت واحد:
+                  </span>
+                  <PriceBox price="۲۵۶،۰۰۰" />
+                </div>
+                <div className="gift-cards__footer-buttons">
+                  <span className="gift-cards__footer-buttons-title">
+                    افزودن تعداد محصول:
+                  </span>
+                  <BasketButtons count="۲" />
+                </div>
+                <div className="gift-cards__footer-total-price">
+                  <span className="gift-cards__footer-total-title">
+                    قیمت واحد:
+                  </span>
+                  <PriceBox price="۵۱۲،۰۰۰" isTotal={true} />
+                </div>
+              </div>
+              <div className="gift-cards__footer-pay-left">
+                <div className="gift-cards__footer-pay-choose">
+                  <h3 className="gift-cards__footer-pay-choose-title">
+                    انتخاب درگاه پرداخت
+                  </h3>
+                  <div className="gift-cards__footer-pay-choose-items">
+                    <div className="gift-cards__footer-pay-choose-item">
+                      <img
+                        src="images/svg/saman.svg"
+                        alt="saman"
+                        className="gift-cards__footer-pay-choose-icon"
+                      />
+                    </div>
+                    <div className="gift-cards__footer-pay-choose-item">
+                      <img
+                        src="images/svg/up.svg"
+                        alt="up"
+                        className="gift-cards__footer-pay-choose-icon"
+                      />
+                    </div>
+                  </div>
+                  <Button
+                    children="ثبت نهایی و پرداخت"
+                    className="gift-cards__footer-pay-choose-button"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="gift-cards__footer-help"></div>
+          <div className="gift-cards__footer-help">
+            <div className="gift-cards__footer-help-header">
+              <img
+                src="/images/svg/help.svg"
+                alt="help_svg"
+                className="gift-cards__footer-help-icon"
+              />
+              <h3 className="gift-cards__footer-help-title">راهنما</h3>
+            </div>
+            <div className="gift-cards__footer-help-body">
+              <ul className="gift-cards__footer-help-list">
+                <li className="gift-cards__footer-help-list-item">
+                  کلیه کارت های بانکی عضو شبکه شتاب برای تمامی بانک ها امکان
+                  پرداخت دارند.
+                </li>
+                <li className="gift-cards__footer-help-list-item">
+                  این وبسایت دارای نماد اعتماد الکترونیکی از وزارت بازرگانی می
+                  باشد.
+                </li>
+                <li className="gift-cards__footer-help-list-item">
+                  همکاران محترم جهت دریافت پنل همکاری با ما تماس حاصل فرمایید.
+                </li>
+                <li className="gift-cards__footer-help-list-item">
+                  قیمت کالاها در این وبسایت نسبت به میزان خرید شما متغیر می
+                  باشد.
+                </li>
+                <li className="gift-cards__footer-help-list-item">
+                  تایید تلفن همراه و تلفن ثابت در این وبسایت الزامی میباشد.
+                </li>
+                <li className="gift-cards__footer-help-list-item">
+                  خواهشمند است در انتخاب کالا دقت فرمایید؛ کد تحویل داده شده
+                  تعویض ویا مرجوع نمی گردد.
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-      <Benefits />
+      <Benefits noneBG={true} />
       {/* Other products section */}
       <div className="container">
         <div className="gift-products">

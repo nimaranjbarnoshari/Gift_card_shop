@@ -1,6 +1,6 @@
 .price-box {
   position: relative;
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
 }
 .price-box__unit {
   position: absolute;
@@ -20,17 +20,3 @@
   font-size: 26px;
   line-height: 40px;
 }
-
-/* .carts-basket__footer-price-container {
-  position: relative;
-}
-.carts-basket__footer-unit {
-  position: absolute;
-  font-size: 9px;
-  color: var(--primary-color);
-  right: -20px;
-}
-.carts-basket__footer-price {
-  font-size: 26px;
-  line-height: 40px;
-} */
