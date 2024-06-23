@@ -272,7 +272,9 @@ export default function GiftCards() {
 
         {/* Pay & Help sections*/}
         <div className="gift-cards__footer">
-          <div className="gift-cards__footer-pay"></div>
+          <div className="gift-cards__footer-pay">
+            <SectionHeader title="تسویه حساب و خرید محصول" span="مرحله دوم:"/>
+          </div>
           <div className="gift-cards__footer-help"></div>
         </div>
       </div>
