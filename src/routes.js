@@ -11,6 +11,7 @@ import GiftCards from "./Pages/GiftCards/GiftCards";
 import Games from "./Pages/Games/Games";
 import Services from "./Pages/Services/Services";
 import Softwares from "./Pages/Softwares/Softwares";
+import Page404 from "./Pages/Page404/Page404";
 
 const routes = [
     {path:"/", element: <Index />},
@@ -26,6 +27,7 @@ const routes = [
     {path:"/games", element: <Games />},
     {path:"/services", element: <Services />},
     {path:"/softwares", element: <Softwares />},
+    {path:"/*", element: <Page404 />},
 ]
 
 export default routes
