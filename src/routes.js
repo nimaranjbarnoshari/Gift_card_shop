@@ -18,6 +18,8 @@ import Orders from "./Pages/Panel/Orders/Orders"
 import Tickets from "./Pages/Panel/Tickets/Tickets"
 import User from "./Pages/Panel/User/User"
 import Wallet from "./Pages/Panel/Wallet/Wallet"
+import Notifications from "./Pages/Panel/Notifications/Notifications"
+
 import { Navigate } from "react-router-dom";
 
 const routes = [
@@ -43,6 +45,7 @@ const routes = [
         {path:"tickets" , element: <Tickets />},
         {path:"user" , element: <User />},
         {path:"wallet" , element: <Wallet />},
+        {path:"notifications" , element: <Notifications />},
     ]},
 ]
 
