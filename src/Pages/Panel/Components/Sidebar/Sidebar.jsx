@@ -41,7 +41,7 @@ export default function Sidebar() {
                     : "sidebar-list__link"
                 }
               >
-                <CiWallet className="sidebar-list__icon" />
+                <BsFileText className="sidebar-list__icon" />
                 سفارشات من
               </NavLink>
             </li>
@@ -54,7 +54,7 @@ export default function Sidebar() {
                     : "sidebar-list__link"
                 }
               >
-                <BsFileText className="sidebar-list__icon" />
+                <CiWallet className="sidebar-list__icon" />
                 کیف پول
               </NavLink>
             </li>

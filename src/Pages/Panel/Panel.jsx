@@ -1,6 +1,6 @@
 import React from "react";
-import PanelTopbar from "./Topbar/PanelTopbar";
-import Sidebar from "./Sidebar/Sidebar";
+import PanelTopbar from "./Components/Topbar/PanelTopbar";
+import Sidebar from "./Components/Sidebar/Sidebar";
 import { Outlet } from "react-router-dom";
 import "./Panel.css";
 export default function Panel() {

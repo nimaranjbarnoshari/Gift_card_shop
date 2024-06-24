@@ -1,7 +1,7 @@
 import React from "react";
-import "./Topbar.css";
 import { IoSearch } from "react-icons/io5";
 
+import "./Topbar.css";
 export default function Topbar() {
   return (
     <div className="container">

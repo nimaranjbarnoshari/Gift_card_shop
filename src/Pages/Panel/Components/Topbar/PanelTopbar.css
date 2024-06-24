@@ -13,15 +13,17 @@
 .panel-topbar-right {
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 0 8px;
   height: 40px;
-  width: 174px;
+  width: 160px;
   background-color: var(--semidark-background);
   border-radius: 8px;
 }
 .panel-topbar__img {
   border-radius: 50%;
-  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  margin-left: 14px;
 }
 .panel-topbar__phone {
   color: var(--white-color);
