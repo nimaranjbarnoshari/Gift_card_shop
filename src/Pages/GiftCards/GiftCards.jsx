@@ -380,7 +380,7 @@ export default function GiftCards() {
           </div>
         </div>
       </div>
-      <Benefits noneBG={true} />
+      <Benefits background={false} />
       {/* Other products section */}
       <div className="container">
         <div className="gift-products">

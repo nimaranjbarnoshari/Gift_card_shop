@@ -20,7 +20,7 @@ export default function Index() {
       <Topbar />
       <Navbar />
       <Home />
-      <Benefits />
+      <Benefits background={true}/>
       <ProductsCategory />
       <DiscountedProducts />
       <GamesCategory />
