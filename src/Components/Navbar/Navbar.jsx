@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "./Navbar.css";
 import { Link, NavLink } from "react-router-dom";
 import { BiMenuAltRight } from "react-icons/bi";
 import { CgShoppingBag } from "react-icons/cg";
 import { PiBellRingingBold } from "react-icons/pi";
 import { TiUserOutline } from "react-icons/ti";
 import { IoClose } from "react-icons/io5";
+import "./Navbar.css";
 
 export default function Navbar() {
   const [isShowMenu, setIsShowMenue] = useState(false);

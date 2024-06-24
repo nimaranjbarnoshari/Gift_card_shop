@@ -12,6 +12,13 @@ import Games from "./Pages/Games/Games";
 import Services from "./Pages/Services/Services";
 import Softwares from "./Pages/Softwares/Softwares";
 import Page404 from "./Pages/Page404/Page404";
+import Panel from "./Pages/Panel/Panel";
+import Dashboard from "./Pages/Panel/Dashboard/Dashboard";
+import Orders from "./Pages/Panel/Orders/Orders"
+import Tickets from "./Pages/Panel/Tickets/Tickets"
+import User from "./Pages/Panel/User/User"
+import Wallet from "./Pages/Panel/Wallet/Wallet"
+import { Navigate } from "react-router-dom";
 
 const routes = [
     {path:"/", element: <Index />},
@@ -28,6 +35,15 @@ const routes = [
     {path:"/services", element: <Services />},
     {path:"/softwares", element: <Softwares />},
     {path:"/*", element: <Page404 />},
+    {path:"/panel", element: <Panel />, 
+        children:[
+        {path: "" ,element: <Navigate to="dashboard"/>},
+        {path:"dashboard" , element: <Dashboard />},
+        {path:"orders" , element: <Orders />},
+        {path:"tickets" , element: <Tickets />},
+        {path:"user" , element: <User />},
+        {path:"wallet" , element: <Wallet />},
+    ]},
 ]
 
 export default routes

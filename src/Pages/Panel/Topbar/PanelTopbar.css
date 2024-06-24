@@ -1,0 +1,9 @@
+.panel-topbar {
+  height: 90px;
+  width: calc(100vw - 300px);
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  top: 0;
+}
