@@ -3,9 +3,6 @@
     width: calc(100vw - 320px);
     height: calc(99.9vh - 110px);
     background-color: #fff;
-    color: #aaa;
     border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: #24232A;
 }
