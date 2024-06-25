@@ -1,0 +1,17 @@
+.order-box {
+  display: flex;
+}
+.order-box__icon-container {
+}
+.order-box__icon {
+  width: 44px;
+  height: 44px;
+}
+.order-box__infos {
+}
+.order-box__infos-tilte {
+  margin: 0;
+}
+.order-box__infos-desc {
+  margin: 0;
+}

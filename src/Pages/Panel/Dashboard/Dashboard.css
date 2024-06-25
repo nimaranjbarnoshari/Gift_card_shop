@@ -39,3 +39,24 @@
   font-size: 20px;
   font-weight: 700;
 }
+
+.dashboard-orders__lists {
+  overflow: hidden;
+  border-radius: 12px;
+}
+.dashboard-orders__list {
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard-orders__list-right {
+  flex: 0 0 50%;
+}
+.dashboard-orders__list-left {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  column-gap: 30px;
+}

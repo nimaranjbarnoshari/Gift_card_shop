@@ -2,6 +2,7 @@ import React from "react";
 import DashboardBox from "../Components/DashboardBox/DashboardBox";
 import DashboardLink from "../Components/DashboardLink/DashboardLink";
 import PriceBox from "../../../Components/PriceBox/PriceBox";
+import OrderBox from "../Components/OrderBox/OrderBox";
 import Chip from "../Components/Chip/Chip";
 import "./Dashboard.css";
 export default function Dashboard() {
@@ -39,9 +40,18 @@ export default function Dashboard() {
         </div>
         <div className="dashboard-orders__lists">
           <div className="dashboard-orders__list">
-            <PriceBox price="۲۵۶،۰۰۰" />
-            <Chip bg="green">تکمیل شده</Chip>
-            <DashboardLink title="مشاهده" to="/panel/orders" />
+            <div className="dashboard-orders__list-rigth">
+              <OrderBox
+                src="/images/accounts/origin.svg"
+                title="اکانت اوریجین ریجن ترکیه"
+                desc="Origin"
+              />
+            </div>
+            <div className="dashboard-orders__list-left">
+              <PriceBox price="۲۵۶،۰۰۰" isBold={true} />
+              <Chip bg="green">تکمیل شده</Chip>
+              <DashboardLink title="مشاهده" to="/panel/orders" />
+            </div>
           </div>
         </div>
       </div>
