@@ -1,5 +1,6 @@
 import React from "react";
 import DashboardBox from "../Components/DashboardBox/DashboardBox";
+import DashboardLink from "../Components/DashboardLink/DashboardLink";
 import "./Dashboard.css";
 export default function Dashboard() {
   return (
@@ -27,6 +28,9 @@ export default function Dashboard() {
             count="۱۴"
             title="تیکت های شما"
           />
+        </div>
+        <div className="">
+          <DashboardLink title="مشاهده همه" to="/panel/orders" />
         </div>
       </div>
 

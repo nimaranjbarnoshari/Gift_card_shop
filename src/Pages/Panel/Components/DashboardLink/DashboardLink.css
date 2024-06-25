@@ -1,0 +1,14 @@
+.dashboard-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.dashboard-link__title {
+  font-size: 14px;
+}
+.dashboard-link__icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
