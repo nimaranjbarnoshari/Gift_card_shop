@@ -1,6 +1,8 @@
 import React from "react";
 import DashboardBox from "../Components/DashboardBox/DashboardBox";
 import DashboardLink from "../Components/DashboardLink/DashboardLink";
+import PriceBox from "../../../Components/PriceBox/PriceBox";
+import Chip from "../Components/Chip/Chip";
 import "./Dashboard.css";
 export default function Dashboard() {
   return (
@@ -29,13 +31,23 @@ export default function Dashboard() {
             title="تیکت های شما"
           />
         </div>
-        <div className="">
+        <div className="dashboard-orders__header">
+          <h3 className="dashboard-orders__header-title">
+            لیست سفارشات اخیر شما
+          </h3>
           <DashboardLink title="مشاهده همه" to="/panel/orders" />
+        </div>
+        <div className="dashboard-orders__lists">
+          <div className="dashboard-orders__list">
+            <PriceBox price="۲۵۶،۰۰۰" />
+            <Chip bg="green">تکمیل شده</Chip>
+            <DashboardLink title="مشاهده" to="/panel/orders" />
+          </div>
         </div>
       </div>
 
       <div className="dashboard-left">
-        <h3 className="dashboard-right__title">اطلاعیه ها</h3>
+        <h3 className="dashboard-left__title">اطلاعیه ها</h3>
       </div>
     </div>
   );
