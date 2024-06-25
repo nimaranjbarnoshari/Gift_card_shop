@@ -4,6 +4,8 @@ import DashboardLink from "../Components/DashboardLink/DashboardLink";
 import PriceBox from "../../../Components/PriceBox/PriceBox";
 import OrderBox from "../Components/OrderBox/OrderBox";
 import Chip from "../Components/Chip/Chip";
+import { BsTicket } from "react-icons/bs";
+
 import "./Dashboard.css";
 export default function Dashboard() {
   return (
@@ -56,7 +58,7 @@ export default function Dashboard() {
           <div className="dashboard-orders__list">
             <div className="dashboard-orders__list-rigth">
               <OrderBox
-                src="/images/accounts/origin.svg"
+                src="/images/accounts/itunes.svg"
                 title="اکانت آتیوز ریجن آمریکا"
                 desc="itunes"
               />
@@ -67,6 +69,25 @@ export default function Dashboard() {
               <DashboardLink title="مشاهده" to="/panel/orders" />
             </div>
           </div>
+          <div className="dashboard-orders__list">
+            <div className="dashboard-orders__list-rigth">
+              <OrderBox
+                src="/images/accounts/spotify.svg"
+                title="اکانت اسپاتیفای ریجن آمریکا"
+                desc="Spotify"
+              />
+            </div>
+            <div className="dashboard-orders__list-left">
+              <PriceBox price="۲۵۶،۰۰۰" isBold={true} />
+              <Chip bg="green">تکمیل شده</Chip>
+              <DashboardLink title="مشاهده" to="/panel/orders" />
+            </div>
+          </div>
+        </div>
+        <h3 className="dashboard-tickets__title">تیکت های اخیر شما</h3>
+        <div className="dashboard-tickets__body">
+          <BsTicket className="dashboard-tickets__body-icon" />
+          <span className="dashboard-tickets__body-title">تیکتی یافت نشد!</span>
         </div>
       </div>
 
