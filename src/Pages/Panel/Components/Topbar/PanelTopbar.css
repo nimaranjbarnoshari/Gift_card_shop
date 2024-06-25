@@ -5,9 +5,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #24232b;
   left: 0;
   top: 0;
   padding-left: 20px;
+  z-index: 10;
 }
 
 .panel-topbar-right {
@@ -92,3 +94,17 @@
   height: 20px;
   transform: rotateY(180deg);
 }
+
+
+/* media query */
+@media (max-width: 1200px){
+  .panel-topbar{
+    width: calc(100vw - 250px);
+  }
+}
+@media (max-width: 992px){
+  .panel-topbar{
+    width: calc(100vw - 200px);
+  }
+}
+

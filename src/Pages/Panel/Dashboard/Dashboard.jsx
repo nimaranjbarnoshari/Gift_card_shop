@@ -59,7 +59,7 @@ export default function Dashboard() {
             <div className="dashboard-orders__list-rigth">
               <OrderBox
                 src="/images/accounts/itunes.svg"
-                title="اکانت آتیوز ریجن آمریکا"
+                title="اکانت آیتونز ریجن آمریکا"
                 desc="itunes"
               />
             </div>
@@ -93,6 +93,32 @@ export default function Dashboard() {
 
       <div className="dashboard-left">
         <h3 className="dashboard-left__title">اطلاعیه ها</h3>
+        <div className="dashboard-notices">
+          <div className="dashboard-notice unread">
+            <h3 className="dashboard-notice__title">عنوان اطلاعیه شماره سه</h3>
+            <p className="dashboard-notice__text">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است.
+            </p>
+          </div>
+          <div className="dashboard-notice">
+            <h3 className="dashboard-notice__title">عنوان اطلاعیه شماره دو</h3>
+            <p className="dashboard-notice__text">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است.
+            </p>
+          </div>
+          <div className="dashboard-notice">
+            <h3 className="dashboard-notice__title">عنوان اطلاعیه شماره یک</h3>
+            <p className="dashboard-notice__text">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

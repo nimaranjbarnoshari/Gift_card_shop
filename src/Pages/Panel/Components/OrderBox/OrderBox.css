@@ -22,3 +22,22 @@
   color: #b6b3c3;
   margin: 0;
 }
+
+/* media query */
+@media (max-width: 992px) {
+  .order-box__icon-container {
+    margin-left: 6px;
+  }
+  .order-box__icon {
+    width: 36px;
+    height: 36px;
+  }
+  .order-box__infos-tilte {
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .order-box__infos-desc {
+    font-size: 12px;
+    line-height: 24px;
+  }
+}

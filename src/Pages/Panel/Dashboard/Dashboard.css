@@ -1,5 +1,6 @@
 .dashboard {
   display: flex;
+  overflow: auto;
 }
 /* right side */
 .dashboard-right {
@@ -89,10 +90,108 @@
   background-color: #f8f8fb;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  height: 100%;
 }
 .dashboard-left__title {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 15px;
+}
+
+.dashboard-notices {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+.dashboard-notice {
+  background-color: #ededf2;
+  padding: 6px 12px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.dashboard-notice__title::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 70px;
+  border-radius: 20px;
+  background-color: #cbcbcb;
+  right: -20px;
+  bottom: 5px;
+}
+.unread .dashboard-notice__title::before {
+  background-color: #eb6740;
+}
+.dashboard-notice__title {
+  position: relative;
+  margin-right: 20px;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 700;
+}
+.dashboard-notice__text {
+  font-size: 12px;
+  line-height: 24px;
+  color: #000000;
+}
+
+/* media query */
+@media (max-width: 1400px) {
+  .dashboard-notice__title {
+    margin-right: 0;
+    font-size: 14px;
+    line-height: 28px;
+  }
+  .dashboard-notice__title::before {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .dashboard {
+    display: block;
+  }
+  .dashboard-orders__list-left {
+    column-gap: 40px;
+  }
+  .dashboard-left {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .dashboard-right__title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .dashboard-orders__header {
+    padding-left: 5px;
+  }
+  .dashboard-orders__header-title,
+  .dashboard-tickets__title {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .dashboard-orders__list {
+    height: 62px;
+    padding: 0 5px;
+  }
+  .dashboard-tickets__body {
+    min-height: 140px;
+  }
+  .dashboard-tickets__body-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .dashboard-tickets__body-title {
+    font-size: 16px;
+    line-height: 32px;
+  }
+  .dashboard-left {
+    display: none;
+  }
+}
+@media (max-width: 840px) {
+  .dashboard-orders__list-left {
+    column-gap: 15px;
+  }
 }

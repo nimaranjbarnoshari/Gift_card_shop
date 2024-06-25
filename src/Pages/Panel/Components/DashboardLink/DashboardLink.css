@@ -12,3 +12,16 @@
   height: 16px;
   margin-right: 5px;
 }
+
+/* media query */
+@media (max-width: 992px){
+  .dashboard-link__title {
+    font-size: 12px;
+  }
+  .dashboard-link__icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 2px;
+  }
+  
+}
