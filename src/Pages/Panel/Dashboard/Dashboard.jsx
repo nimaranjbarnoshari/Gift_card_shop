@@ -53,6 +53,20 @@ export default function Dashboard() {
               <DashboardLink title="مشاهده" to="/panel/orders" />
             </div>
           </div>
+          <div className="dashboard-orders__list">
+            <div className="dashboard-orders__list-rigth">
+              <OrderBox
+                src="/images/accounts/origin.svg"
+                title="اکانت آتیوز ریجن آمریکا"
+                desc="itunes"
+              />
+            </div>
+            <div className="dashboard-orders__list-left">
+              <PriceBox price="۲۵۶،۰۰۰" isBold={true} />
+              <Chip bg="orange">درحال انجام</Chip>
+              <DashboardLink title="مشاهده" to="/panel/orders" />
+            </div>
+          </div>
         </div>
       </div>
 

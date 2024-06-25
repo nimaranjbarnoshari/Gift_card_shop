@@ -1,7 +1,9 @@
 .order-box {
   display: flex;
+  align-items: center;
 }
 .order-box__icon-container {
+  margin-left: 20px;
 }
 .order-box__icon {
   width: 44px;
@@ -10,8 +12,14 @@
 .order-box__infos {
 }
 .order-box__infos-tilte {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 500;
   margin: 0;
 }
 .order-box__infos-desc {
+  font-size: 14px;
+  line-height: 26px;
+  color: #b6b3c3;
   margin: 0;
 }
