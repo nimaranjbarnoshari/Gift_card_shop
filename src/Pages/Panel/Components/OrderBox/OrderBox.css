@@ -77,11 +77,11 @@
   }
   .order-box__infos-tilte {
     font-size: 11px;
-    line-height: 22px;
+    line-height: 16px;
   }
   .order-box__infos-desc {
     font-size: 10px;
-    line-height: 18px;
+    line-height: 12px;
   }
 }
 
@@ -94,6 +94,6 @@
 }
 @media (max-width: 340px){
   .order-box__infos-tilte {
-    max-width: 80px;
+    max-width: 70px;
   }
 }

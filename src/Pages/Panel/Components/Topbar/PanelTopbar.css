@@ -163,3 +163,44 @@
     height: 16p16;
   }
 }
+
+@media (max-width: 399px) {
+  .panel-topbar {
+    padding: 0 8px;
+    height: 60px;
+  }
+  .panel-topbar-right {
+    height: 28px;
+    width: 120px;
+    padding: 0 7px;
+  }
+  .panel-topbar__img {
+    width: 24px;
+    height: 24px;
+    margin-left: 6px;
+  }
+  .panel-topbar__phone {
+    font-size: 11px;
+  }
+  .panel-topbar-left {
+    width: 172px;
+  }
+  .panel-topbar__notif-link,
+  .panel-topbar__today,
+  .panel-topbar__logout-button {
+    height: 28px;
+    width: 28px;
+  }
+  .panel-topbar__notif-alarm{
+    top: 5px;
+    right: 6px;
+  }
+  .panel-topbar__today {
+    width: 110px;
+    padding: 0 4px;
+  }
+  .panel-topbar__date,
+  .panel-topbar__time {
+    font-size: 10px;
+  }
+}

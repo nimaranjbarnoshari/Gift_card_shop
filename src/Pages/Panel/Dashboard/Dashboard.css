@@ -196,23 +196,45 @@
     column-gap: 15px;
   }
   .dashboard-right {
-    padding: 30px 20px;
+    padding: 20px;
+  }
+}
+@media (max-width: 700px) {
+  .dashboard-right__title {
+    margin-right: 25px;
+  }
+  .dashboard-right {
+    padding: 25px 10px;
   }
 }
 @media (max-width: 550px) {
-  .dashboard-right {
-    padding: 20px 10px;
+  .dashboard-right__title {
+    font-size: 18px;
+    font-weight: 600;
   }
-  .dashboard-header{
+  .dashboard-orders__header-title,
+  .dashboard-tickets__title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .dashboard-header {
     column-gap: 10px;
   }
   .dashboard-orders__list-left {
     column-gap: 10px;
   }
+  .dashboard-tickets__body-icon {
+    width: 28px;
+    height: 28px;
+  }
+  .dashboard-tickets__body-title {
+    font-size: 14px;
+    line-height: 28px;
+  }
 }
-@media (max-width: 399px){
+@media (max-width: 399px) {
   .dashboard-right {
-    padding: 20px 2px;
+    padding: 23px 2px;
   }
   .dashboard-orders__list-right {
     flex: 0 0 30%;
@@ -222,4 +244,3 @@
     column-gap: 5px;
   }
 }
-
