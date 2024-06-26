@@ -48,6 +48,7 @@
 
 .dashboard-orders__list-right {
   flex: 0 0 50%;
+  overflow: hidden;
 }
 .dashboard-orders__list-left {
   flex: 0 0 50%;
@@ -194,4 +195,31 @@
   .dashboard-orders__list-left {
     column-gap: 15px;
   }
+  .dashboard-right {
+    padding: 30px 20px;
+  }
 }
+@media (max-width: 550px) {
+  .dashboard-right {
+    padding: 20px 10px;
+  }
+  .dashboard-header{
+    column-gap: 10px;
+  }
+  .dashboard-orders__list-left {
+    column-gap: 10px;
+  }
+}
+@media (max-width: 399px){
+  .dashboard-right {
+    padding: 20px 2px;
+  }
+  .dashboard-orders__list-right {
+    flex: 0 0 30%;
+  }
+  .dashboard-orders__list-left {
+    flex: 0 0 55%;
+    column-gap: 5px;
+  }
+}
+

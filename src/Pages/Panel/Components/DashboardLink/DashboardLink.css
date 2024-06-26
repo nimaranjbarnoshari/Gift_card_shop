@@ -23,5 +23,14 @@
     height: 12px;
     margin-right: 2px;
   }
-  
+}
+@media (max-width: 550px){
+  .dashboard-link__title {
+    font-size: 11px;
+  }
+  .dashboard-link__icon {
+    width: 11px;
+    height: 11px;
+    margin-right: 2px;
+  }
 }

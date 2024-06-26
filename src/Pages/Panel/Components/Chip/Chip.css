@@ -24,3 +24,12 @@
   background-color: #e1e1e1;
   color: #a6a6a6;
 }
+
+/* media query */
+@media (max-width: 550px){
+  .chip{
+    min-width: 60px;
+    padding: 2px 4px;
+    font-size: 10px;
+  }
+}

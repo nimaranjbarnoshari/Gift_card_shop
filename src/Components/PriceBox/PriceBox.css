@@ -1,6 +1,5 @@
 .price-box {
   position: relative;
-  /* margin-bottom: 5px; */
 }
 .price-box__unit {
   position: absolute;
@@ -25,3 +24,22 @@
   font-weight: 700;
   font-size: 18px;
 }
+/* media query */
+
+@media (max-width:850px) {
+  .price-box__price-bold {
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .price-box__unit{
+    font-size: 8px;
+  }
+}
+@media (max-width:550px) {
+  .price-box__price-bold {
+    font-weight: 500;
+    font-size: 11px;
+  }
+}
+
+
