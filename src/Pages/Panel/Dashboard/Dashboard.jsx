@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import DashboardBox from "../Components/DashboardBox/DashboardBox";
 import DashboardLink from "../Components/DashboardLink/DashboardLink";
 import PriceBox from "../../../Components/PriceBox/PriceBox";
 import OrderBox from "../Components/OrderBox/OrderBox";
 import Chip from "../Components/Chip/Chip";
 import { BsTicket } from "react-icons/bs";
+import { HiSpeakerphone } from "react-icons/hi";
+
 
 import "./Dashboard.css";
 export default function Dashboard() {
+  const [isShowNotice, setIsShowNotice] = useState(true);
+
   return (
     <div className="panel-styles dashboard">
       <div className="dashboard-right">
@@ -92,7 +96,13 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <div className="dashboard-left">
+      <div className={`dashboard-left ${isShowNotice ? "show-notice" : ""}`}>
+        <button
+          className="dashboard-left__btn"
+          onClick={() => setIsShowNotice(!isShowNotice)}
+        >
+          <HiSpeakerphone className="dashboard-left__btn-icon"/>
+        </button>
         <h3 className="dashboard-left__title">اطلاعیه ها</h3>
         <div className="dashboard-notices">
           <div className="dashboard-notice unread">

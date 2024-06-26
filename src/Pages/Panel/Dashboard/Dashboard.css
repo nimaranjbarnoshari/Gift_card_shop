@@ -86,11 +86,29 @@
 
 /* left side */
 .dashboard-left {
+  position: relative;
   flex: 0 0 25%;
   padding: 24px;
   background-color: #f8f8fb;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+  transition: var(--transition);
+}
+.dashboard-left__btn {
+  position: absolute;
+  height: 50px;
+  width: 40px;
+  border: none;
+  background-color: #24232b;
+  color: var(--primary-color);
+  right: -40px;
+  top: 115px;
+  display: none;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.dashboard-left__btn-icon {
+  font-size: 32px;
 }
 .dashboard-left__title {
   font-size: 20px;
@@ -155,7 +173,25 @@
     column-gap: 40px;
   }
   .dashboard-left {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: -260px;
+    height: 100vh;
+    width: 260px;
+    z-index: 15;
+    border-radius: 0;
+    background-color: #24232b;
+  }
+  .show-notice {
+    left: 0;
+  }
+  .dashboard-left__title {
+    color: var(--white-color);
+  }
+  .dashboard-left__btn {
+    display: flex;
+    align-items: center;
+    justify-content: start;
   }
 }
 
@@ -187,9 +223,6 @@
     font-size: 16px;
     line-height: 32px;
   }
-  .dashboard-left {
-    display: none;
-  }
 }
 @media (max-width: 840px) {
   .dashboard-orders__list-left {
@@ -198,6 +231,13 @@
   .dashboard-right {
     padding: 20px;
   }
+  .dashboard-left__btn {
+    height: 40px;
+    top: 106px;
+  }
+  .dashboard-left__btn-icon {
+    font-size: 25px;
+  }
 }
 @media (max-width: 700px) {
   .dashboard-right__title {
@@ -205,6 +245,33 @@
   }
   .dashboard-right {
     padding: 25px 10px;
+  }
+  .dashboard-left {
+    padding: 24px 10px;
+    width: 200px;
+    left: -200px;
+  }
+  .show-notice {
+    left: 0;
+  }
+  .dashboard-left__btn {
+    width: 30px;
+    right: -30px;
+    top: 88px;
+  }
+  .dashboard-left__title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .dashboard-notice__title {
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 600;
+  }
+  .dashboard-notice__text {
+    font-size: 11px;
+    line-height: 22px;
+    color: #000000;
   }
 }
 @media (max-width: 550px) {
@@ -242,5 +309,8 @@
   .dashboard-orders__list-left {
     flex: 0 0 55%;
     column-gap: 5px;
+  }
+  .dashboard-left__btn {
+    top: 73px;
   }
 }
