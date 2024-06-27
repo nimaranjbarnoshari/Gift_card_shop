@@ -1,0 +1,26 @@
+.order-details {
+  padding: 20px 40px;
+  overflow: auto;
+}
+
+.order-details__link {
+  text-decoration: none;
+  color: #24232a;
+  display: flex;
+  align-items: center;
+}
+
+.order-details__link-icon {
+  font-size: 25px;
+  transform: rotateY(180deg);
+  margin-left: 8px;
+  transition: var(--transition);
+}
+.order-details__link-text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.order-details__link:hover .order-details__link-icon {
+  color: var(--primary-color);
+}
