@@ -3,15 +3,10 @@
   align-items: center;
   column-gap: 20px;
 }
-.order-box__icon-container {
-  flex: 0 0 10%;
-}
+
 .order-box__icon {
   width: 44px;
   height: 44px;
-}
-.order-box__infos {
-  flex: 0 0 calc(90%);
 }
 
 .order-box__infos-tilte {
@@ -24,6 +19,7 @@
   text-overflow: ellipsis;
 }
 .order-box__infos-desc {
+  text-align: right;
   font-size: 14px;
   line-height: 26px;
   color: #b6b3c3;
@@ -34,9 +30,6 @@
 @media (max-width: 992px) {
   .order-box {
     column-gap: 10px;
-  }
-  .order-box__infos {
-    flex: 0 0 calc(90% - 6px);
   }
   .order-box__icon {
     width: 36px;
@@ -92,7 +85,7 @@
     text-overflow: ellipsis;
   }
 }
-@media (max-width: 340px){
+@media (max-width: 340px) {
   .order-box__infos-tilte {
     max-width: 70px;
   }

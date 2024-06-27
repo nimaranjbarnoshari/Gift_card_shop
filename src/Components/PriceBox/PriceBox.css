@@ -26,20 +26,18 @@
 }
 /* media query */
 
-@media (max-width:850px) {
+@media (max-width: 850px) {
   .price-box__price-bold {
     font-weight: 700;
     font-size: 12px;
   }
-  .price-box__unit{
+  .price-box__unit {
     font-size: 8px;
   }
 }
-@media (max-width:550px) {
+@media (max-width: 550px) {
   .price-box__price-bold {
     font-weight: 500;
     font-size: 11px;
   }
 }
-
-

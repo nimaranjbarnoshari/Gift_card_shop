@@ -10,7 +10,7 @@ import { HiSpeakerphone } from "react-icons/hi";
 
 import "./Dashboard.css";
 export default function Dashboard() {
-  const [isShowNotice, setIsShowNotice] = useState(true);
+  const [isShowNotice, setIsShowNotice] = useState(false);
 
   return (
     <div className="panel-styles dashboard">

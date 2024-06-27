@@ -1,6 +1,6 @@
 import React from "react";
 import "./Chip.css";
-export default function Chip({ children, bg }) {
+export default function Chip({ children, bg, custom }) {
   const renderStyle = (exp) => {
     switch (exp) {
       case "green":
@@ -13,5 +13,5 @@ export default function Chip({ children, bg }) {
         return "chip-gray";
     }
   };
-  return <span className={`chip ${renderStyle(bg)}`}>{children}</span>;
+  return <span className={`chip ${renderStyle(bg)} ${custom ? custom : ""}`}>{children}</span>;
 }

@@ -16,7 +16,7 @@
   justify-content: center;
   align-items: center;
 }
-.dashboard-box__header::after {
+.dashboard-box__header::before {
   content: "";
   position: absolute;
   background-color: #25bb85;
@@ -26,10 +26,10 @@
   border-radius: 27px;
   z-index: 0;
 }
-.orange.dashboard-box__header::after {
+.orange.dashboard-box__header::before {
   background-color: #ed9446;
 }
-.pink.dashboard-box__header::after {
+.pink.dashboard-box__header::before {
   background-color: #ff505a;
 }
 
