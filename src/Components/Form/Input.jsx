@@ -9,9 +9,10 @@ export default function FormInput({
   id,
   className,
   src,
+  custom,
 }) {
   return (
-    <div className="form-input__container">
+    <div className={`form-input__container ${custom ? custom : ""}`}>
       <label htmlFor={id} className="form-input__label">
         {label}
       </label>
