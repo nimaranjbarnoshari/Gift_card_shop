@@ -19,7 +19,7 @@ import Tickets from "./Pages/Panel/Tickets/Tickets"
 import User from "./Pages/Panel/User/User"
 import Wallet from "./Pages/Panel/Wallet/Wallet"
 import Notifications from "./Pages/Panel/Notifications/Notifications"
-import OrderDetails from "./Pages/OrderDetails/OrderDetails";
+import OrderDetails from "./Pages/Panel/OrderDetails/OrderDetails";
 
 import { Navigate } from "react-router-dom";
 

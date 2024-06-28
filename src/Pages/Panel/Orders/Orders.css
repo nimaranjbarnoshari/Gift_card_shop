@@ -25,6 +25,7 @@
   width: 100%;
   height: 100%;
   border: none;
+  font-size: 14px;
   background-color: transparent;
   padding: 0 14px;
 }
@@ -143,6 +144,9 @@
 /* media query */
 
 @media (max-width: 700px) {
+  .orders {
+    padding: 20px;
+  }
   .orders-header__title {
     font-size: 24px;
     font-weight: 600;
@@ -198,5 +202,33 @@
   }
   .orders-table__price span:last-child {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 500px){
+  .orders-header__title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .orders-header__search {
+    width: 160px;
+    height: 34px;
+    border-radius: 5px;
+  }
+  .orders-header__search-input {
+    padding: 0 8px;
+    font-size: 12px;
+  }
+  .orders-header__search-input::placeholder {
+    font-size: 10px;
+  }
+  .orders-header__search-icon {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px){
+  .orders-header__title {
+    font-size: 16px;
   }
 }
