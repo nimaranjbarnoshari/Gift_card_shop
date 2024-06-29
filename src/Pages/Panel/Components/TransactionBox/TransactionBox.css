@@ -1,0 +1,18 @@
+.transaction-box {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eeeef9;
+}
+.transaction-box__date {
+  font-size: 13px;
+}
+.transaction-box__price {
+  background-color: transparent;
+  font-size: 14px;
+}
+.transaction-box__title {
+  font-size: 13px;
+  font-weight: 700;
+}

@@ -3,7 +3,11 @@ import Input from "../../../Components/Form/Input";
 import Button from "../../../Components/Form/‌Button";
 import "./Wallet.css";
 import WalletBox from "../Components/WalletBox/WalletBox";
+import TransactionBox from "../Components/TransactionBox/TransactionBox";
 export default function Wallet() {
+  const rechargeHandler = () => {
+    console.log("charged");
+  };
   return (
     <div className="panel-styles wallet">
       <h2 className="wallet-title">کیف پول</h2>
@@ -40,9 +44,43 @@ export default function Wallet() {
               src="/images/wallet/parsian.svg"
             />
           </div>
+          <Button onClick={rechargeHandler} className="wallet-pay__btn">
+            شارژ کیف پول
+          </Button>
         </div>
-
-        <div className="wallet-transactions"></div>
+        <div className="wallet-transactions">
+          <h3 className="wallet-transactions__title">تراکنش های اخیر شما</h3>
+          <div className="wallet-transactions__boxes">
+            <TransactionBox
+              date="۱۴۰۳/۰۴/۰۸"
+              price="۲۵۰،۰۰۰"
+              desc="درگاه پرداخت بانک سامان"
+              action="شارژ کیف پول"
+              bg="green"
+            />
+            <TransactionBox
+              date="۱۴۰۳/۰۴/۰۸"
+              price="۲۵۰،۰۰۰"
+              desc="درگاه پرداخت بانک پارسیان"
+              action="برداشت از کیف"
+              bg="pink"
+            />
+            <TransactionBox
+              date="۱۴۰۳/۰۴/۰۸"
+              price="۲۵۰،۰۰۰"
+              desc="درگاه پرداخت بانک سامان"
+              action="شارژ کیف پول"
+              bg="green"
+            />
+            <TransactionBox
+              date="۱۴۰۳/۰۴/۰۸"
+              price="۲۵۰،۰۰۰"
+              desc="درگاه پرداخت بانک پارسیان"
+              action="برداشت از کیف"
+              bg="pink"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

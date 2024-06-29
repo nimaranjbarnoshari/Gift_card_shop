@@ -29,12 +29,6 @@
   height: 553px;
 }
 
-/* left section styles */
-.wallet-transactions {
-  width: 564px;
-  height: 391px;
-}
-
 .wallet-pay__header {
   position: relative;
   padding: 14px 23px;
@@ -121,6 +115,27 @@
   font-size: 15px;
   font-weight: 700;
   margin: 0;
+}
+
+.wallet-pay__btn {
+  margin-top: 5px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+/* left section styles */
+.wallet-transactions {
+  width: 564px;
+  height: 391px;
+}
+
+.wallet-transactions__title {
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: 700;
+}
+.wallet-transactions__boxes {
+  margin-top: 20px;
 }
 /* media query */
 @media (max-width: 1400px) {
