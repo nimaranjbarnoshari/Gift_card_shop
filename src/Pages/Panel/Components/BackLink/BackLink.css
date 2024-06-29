@@ -8,7 +8,7 @@
 .back-link__icon {
   font-size: 25px;
   transform: rotateY(180deg);
-  margin-left: 8px;
+  margin-left: 2px;
   transition: var(--transition);
 }
 .back-link__text {
@@ -18,4 +18,26 @@
 
 .back-link:hover .back-link__icon {
   color: var(--primary-color);
+}
+
+/* media query */
+@media (max-width: 700px) {
+  .back-link {
+    margin-right: 15px;
+  }
+  .back-link__icon {
+    font-size: 24px;
+  }
+  .back-link__text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  .back-link__icon {
+    font-size: 22px;
+  }
+  .back-link__text {
+    font-size: 12px;
+  }
 }

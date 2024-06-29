@@ -30,7 +30,7 @@ export default function Tickets() {
               <td>
                 <div className="tickets-table__body-title-box">
                   <span className="tickets-table__body-title">
-                    عدم اتصال سرور به درگاه پرداخت
+                    عدم اتصال سرور به درگاه پرداخت وچیز های دیگه ای که نیازه و حتما باید پیگیری  شه
                   </span>
                   <span className="tickets-table__body-ticktID">
                     #124513548
