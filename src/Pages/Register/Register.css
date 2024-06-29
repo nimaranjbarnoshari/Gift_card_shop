@@ -70,7 +70,7 @@
   position: absolute;
   opacity: 0;
 }
-.checkbox-heckmark {
+.checkbox-checkmark {
   position: absolute;
   cursor: pointer;
   top: -8px;
@@ -81,7 +81,7 @@
   border: 2px solid #fff;
   border-radius: 5px;
 }
-.register-form__checkbox:checked ~ .checkbox-heckmark {
+.register-form__checkbox:checked ~ .checkbox-checkmark {
   background-color: var(--primary-color);
 }
 .register-form__checkbox-label {

@@ -1,6 +1,8 @@
 import React from "react";
-import Input from "../../../Components/Form/Input"
+import Input from "../../../Components/Form/Input";
+import Button from "../../../Components/Form/‌Button";
 import "./Wallet.css";
+import WalletBox from "../Components/WalletBox/WalletBox";
 export default function Wallet() {
   return (
     <div className="panel-styles wallet">
@@ -14,8 +16,32 @@ export default function Wallet() {
               ۵،۰۰۰،۰۰۰
             </span>
           </div>
-          
+          <div className="wallet-pay__recharge">
+            <Input
+              id="wallet_input"
+              label="مبلغ شارژ"
+              type="number"
+              custom="wallet-pay__input"
+            />
+            <span className="wallet-pay__input-unit">تومان</span>
+          </div>
+          <div className="wallet-pay__choose">
+            <h4 className="wallet-pay__choose-title">
+              بانک مورد نظر جهت پرداخت
+            </h4>
+            <WalletBox
+              id="saman"
+              label="درگاه پرداخت بانک سامان"
+              src="/images/wallet/saman.svg"
+            />
+            <WalletBox
+              id="parsian"
+              label="درگاه پرداخت بانک پارسیان"
+              src="/images/wallet/parsian.svg"
+            />
+          </div>
         </div>
+
         <div className="wallet-transactions"></div>
       </div>
     </div>

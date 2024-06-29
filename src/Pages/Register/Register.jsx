@@ -49,7 +49,7 @@ export default function Register() {
                     type="checkbox"
                     className="register-form__checkbox"
                   />
-                  <span className="checkbox-heckmark"></span>
+                  <span className="checkbox-checkmark"></span>
                 </label>
                 <label
                   htmlFor="check"

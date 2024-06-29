@@ -1,0 +1,35 @@
+.wallet-box {
+  height: 60px;
+  background-color: var(--white-color);
+  border: 1px solid #eff2f9;
+  border-radius: 8px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wallet-box__input {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.wallet-box__input-label {
+  font-size: 13px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.wallet-box__input-radio {
+  accent-color: var(--primary-color);
+  width: 16px;
+  height: 16px;
+}
+
+.wallet-box__input-radio:checked ~ .wallet-box__input-checkmark {
+  background-color: var(--primary-color);
+}
+
+.wallet-box__icon {
+  width: 59px;
+}
