@@ -33,7 +33,7 @@ export default function Orders() {
               <th>عملیات</th>
             </tr>
           </thead>
-          <tbody style={{ padding: "25px" }} className="orders-table__body">
+          <tbody className="orders-table__body">
             <tr>
               <td>
                 <div className="orders-table__couples">
@@ -53,16 +53,10 @@ export default function Orders() {
                 />
               </td>
               <td>
-                <Chip bg="green" custom="orders-table__chip">
-                  تکمیل شده
-                </Chip>
+                <Chip bg="green">تکمیل شده</Chip>
               </td>
               <td>
-                <DashboardLink
-                  title="مشاهده"
-                  to="/panel/orders/name"
-                  custom="orders-table__link"
-                />
+                <DashboardLink title="مشاهده" to="/panel/orders/name" />
               </td>
             </tr>
 
@@ -85,16 +79,10 @@ export default function Orders() {
                 />
               </td>
               <td>
-                <Chip bg="green" custom="orders-table__chip">
-                  تکمیل شده
-                </Chip>
+                <Chip bg="green">تکمیل شده</Chip>
               </td>
               <td>
-                <DashboardLink
-                  title="مشاهده"
-                  to="/panel/orders/name"
-                  custom="orders-table__link"
-                />
+                <DashboardLink title="مشاهده" to="/panel/orders/name" />
               </td>
             </tr>
 
@@ -117,16 +105,10 @@ export default function Orders() {
                 />
               </td>
               <td>
-                <Chip bg="orange" custom="orders-table__chip">
-                  در حال انجام
-                </Chip>
+                <Chip bg="orange">در حال انجام</Chip>
               </td>
               <td>
-                <DashboardLink
-                  title="مشاهده"
-                  to="/panel/orders/name"
-                  custom="orders-table__link"
-                />
+                <DashboardLink title="مشاهده" to="/panel/orders/name" />
               </td>
             </tr>
 
@@ -149,16 +131,10 @@ export default function Orders() {
                 />
               </td>
               <td>
-                <Chip bg="green" custom="orders-table__chip">
-                  تکمیل شده
-                </Chip>
+                <Chip bg="green">تکمیل شده</Chip>
               </td>
               <td>
-                <DashboardLink
-                  title="مشاهده"
-                  to="/panel/orders/name"
-                  custom="orders-table__link"
-                />
+                <DashboardLink title="مشاهده" to="/panel/orders/name" />
               </td>
             </tr>
 
@@ -181,16 +157,10 @@ export default function Orders() {
                 />
               </td>
               <td>
-                <Chip bg="orange" custom="orders-table__chip">
-                  در حال انجام
-                </Chip>
+                <Chip bg="orange">در حال انجام</Chip>
               </td>
               <td>
-                <DashboardLink
-                  title="مشاهده"
-                  to="/panel/orders/name"
-                  custom="orders-table__link"
-                />
+                <DashboardLink title="مشاهده" to="/panel/orders/name" />
               </td>
             </tr>
 
@@ -213,16 +183,10 @@ export default function Orders() {
                 />
               </td>
               <td>
-                <Chip bg="orange" custom="orders-table__chip">
-                  در حال انجام
-                </Chip>
+                <Chip bg="orange">در حال انجام</Chip>
               </td>
               <td>
-                <DashboardLink
-                  title="مشاهده"
-                  to="/panel/orders/name"
-                  custom="orders-table__link"
-                />
+                <DashboardLink title="مشاهده" to="/panel/orders/name" />
               </td>
             </tr>
 
@@ -245,16 +209,10 @@ export default function Orders() {
                 />
               </td>
               <td>
-                <Chip bg="green" custom="orders-table__chip">
-                  تکمیل شده
-                </Chip>
+                <Chip bg="green">تکمیل شده</Chip>
               </td>
               <td>
-                <DashboardLink
-                  title="مشاهده"
-                  to="/panel/orders/name"
-                  custom="orders-table__link"
-                />
+                <DashboardLink title="مشاهده" to="/panel/orders/name" />
               </td>
             </tr>
           </tbody>

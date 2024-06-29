@@ -3,9 +3,6 @@
   border-radius: 20px;
   font-size: 12px;
   min-width: 78px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .chip-green {

@@ -20,7 +20,8 @@ import User from "./Pages/Panel/User/User"
 import Wallet from "./Pages/Panel/Wallet/Wallet"
 import Notifications from "./Pages/Panel/Notifications/Notifications"
 import OrderDetails from "./Pages/Panel/OrderDetails/OrderDetails";
-
+import NewTicket from "./Pages/Panel/NewTicket/NewTicket";
+import TicketDetails from "./Pages/Panel/TicketDetails/TicketDetails";
 import { Navigate } from "react-router-dom";
 
 const routes = [
@@ -48,6 +49,8 @@ const routes = [
         {path:"user" , element: <User />},
         {path:"wallet" , element: <Wallet />},
         {path:"notifications" , element: <Notifications />},
+        {path:"new-ticket" , element: <NewTicket />},
+        {path:"tickets/:ticketID" , element: <TicketDetails />},
     ]},
 ]
 

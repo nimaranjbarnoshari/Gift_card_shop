@@ -1,8 +1,6 @@
 .dashboard-link {
   color: var(--primary-color);
   text-decoration: none;
-  display: flex;
-  align-items: center;
 }
 .dashboard-link__title {
   font-size: 14px;
@@ -14,7 +12,7 @@
 }
 
 /* media query */
-@media (max-width: 992px){
+@media (max-width: 992px) {
   .dashboard-link__title {
     font-size: 12px;
   }
@@ -24,7 +22,7 @@
     margin-right: 2px;
   }
 }
-@media (max-width: 550px){
+@media (max-width: 550px) {
   .dashboard-link__title {
     font-size: 11px;
   }

@@ -48,8 +48,6 @@
 .orders-table {
   width: 100%;
   min-width: 1100px;
-  padding: 25px;
-  overflow-x: auto;
 }
 
 .orders-table__header th {
@@ -75,7 +73,6 @@
 
 .orders-table__body {
   border: 1px solid #f8f8fb;
-  border-radius: 10px;
 }
 .orders-table__body tr:nth-child(odd) {
   background-color: #f8f8fb;
@@ -130,18 +127,6 @@
 .orders-table__price span:last-child {
   font-size: 16px;
 }
-
-.orders-table__chip {
-  margin: 0 auto;
-  max-width: 70px;
-  letter-spacing: -0.5px;
-}
-.orders-table__link {
-  display: block;
-  margin: 0 auto;
-}
-
-/* media query */
 
 @media (max-width: 700px) {
   .orders {
