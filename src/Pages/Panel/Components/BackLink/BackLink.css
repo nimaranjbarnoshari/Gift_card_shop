@@ -1,0 +1,21 @@
+.back-link {
+  text-decoration: none;
+  color: #24232a;
+  display: flex;
+  align-items: center;
+}
+
+.back-link__icon {
+  font-size: 25px;
+  transform: rotateY(180deg);
+  margin-left: 8px;
+  transition: var(--transition);
+}
+.back-link__text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.back-link:hover .back-link__icon {
+  color: var(--primary-color);
+}

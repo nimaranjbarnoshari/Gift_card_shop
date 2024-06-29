@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { TiArrowBack } from "react-icons/ti";
+import BackLink from "../Components/BackLink/BackLink";
 import PriceBox from "../../../Components/PriceBox/PriceBox";
 import Chip from "../Components/Chip/Chip";
 
@@ -8,10 +7,7 @@ import "./OrderDetails.css";
 export default function OrderDetails() {
   return (
     <div className="panel-styles order-details">
-      <Link to="/panel/orders" className="order-details__link">
-        <TiArrowBack className="order-details__link-icon" />
-        <span className="order-details__link-text">بازگشت</span>
-      </Link>
+      <BackLink to="/panel/orders"/>
       <h2 className="order-details__title">جزئیات سفارشات</h2>
       <div className="order-details__boxes">
         <div className="order-details__box">
