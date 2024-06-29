@@ -1,0 +1,65 @@
+.new-ticket {
+  padding: 20px 40px;
+  overflow: auto;
+}
+.new-ticket__header {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+.new-ticket__box {
+  width: 970px;
+  background-color: #f8f8fb;
+  border: 1px solid #f1f5fc;
+  border-radius: 15px;
+  color: #323639;
+  margin: 0 auto;
+}
+
+.new-ticket__box-header {
+  height: 70px;
+  border-bottom: 1px solid #eff2f9;
+  padding-right: 20px;
+}
+.new-ticket__box-title {
+  font-size: 16px;
+  line-height: 70px;
+  margin: 0;
+}
+
+.new-ticket__box-body {
+  padding: 20px;
+}
+.new-ticket__box-inputs {
+  display: flex;
+  column-gap: 20px;
+}
+.new-ticket__box-input-title,
+.new-ticket__box-select {
+  width: 285px;
+  height: 44px;
+  border-radius: 8px;
+  color: #323639;
+  border-color: #e7e6f1;
+  background-color: var(--white-color);
+}
+.new-ticket__box-select-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.new-ticket__box-select-container label {
+  font-size: 14px;
+}
+.new-ticket__box-select {
+}
+.new-ticket__box-textarea {
+  max-width: 928px;
+  border-color: #e7e6f1;
+  background-color: var(--white-color);
+}
+
+.new-ticket__box-btn {
+  width: 164px;
+}

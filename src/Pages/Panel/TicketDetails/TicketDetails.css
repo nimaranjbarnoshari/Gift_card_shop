@@ -18,10 +18,9 @@
   border-radius: 15px;
   border: 1px solid #f1f5fc;
   margin: 0 auto;
-  overflow: auto;
 }
 
-.ticket-details__boxes-header {
+.ticket-details__boxes-header { 
   padding: 0 44px;
   height: 70px;
   border-bottom: 1px solid #eff2f9;
