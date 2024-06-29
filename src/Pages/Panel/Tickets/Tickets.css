@@ -42,6 +42,8 @@
 }
 .tickets-table__header th:nth-child(1) {
   width: 25%;
+  text-align: right;
+  padding-right: 25px;
 }
 .tickets-table__header th:nth-child(2),
 .tickets-table__header th:nth-child(3),
@@ -80,9 +82,46 @@
   font-size: 15px;
   line-height: 32px;
   font-weight: 500;
+  text-wrap: nowrap;
 }
 .tickets-table__body-ticktID {
   font-size: 12px;
   line-height: 18px;
   opacity: 0.5;
+}
+/* media query */
+@media (max-width: 700px) {
+  .tickets {
+    padding: 20px;
+  }
+  .tickets-table {
+    width: 100%;
+    min-width: 950px;
+  }
+  .tickets-header__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 44px;
+    margin-right: 10px;
+  }
+  .tickets-header__link {
+    width: 180px;
+    height: 40px;
+    text-decoration: none;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  .tickets-header__title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 36px;
+  }
+  .tickets-header__link {
+    width: 140px;
+    height: 36px;
+    text-decoration: none;
+    font-size: 12px;
+  }
 }

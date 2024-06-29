@@ -186,6 +186,29 @@ export default function Tickets() {
                 <DashboardLink title="مشاهده" to="/panel/tickets/tiketID" />
               </td>
             </tr>
+
+            <tr>
+              <td>
+                <div className="tickets-table__body-title-box">
+                  <span className="tickets-table__body-title">
+                    عدم اتصال سرور به درگاه پرداخت
+                  </span>
+                  <span className="tickets-table__body-ticktID">
+                    #124513548
+                  </span>
+                </div>
+              </td>
+              <td>۱۴ آبان ۱۴۰۲ - ۱۴:۳۲</td>
+              <td>۲۶ خرداد ۱۴۰۳ - ۱۲:۵۲</td>
+              <td>بخش فنی سایت</td>
+              <td>متوسط</td>
+              <td>
+                <Chip bg="gray">بسته شده</Chip>
+              </td>
+              <td>
+                <DashboardLink title="مشاهده" to="/panel/tickets/tiketID" />
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
