@@ -39,8 +39,13 @@ export default function NewTicket() {
               id="textarea"
               label="متن تیکت"
               placeholder="متن تیکت را وارد کنید ..."
-              className="new-ticket__box-textarea"
+              custom="new-ticket__box-textarea"
             />
+<div className="">     
+  <div className="">
+    <span>تصویری از مشکل خود دارید؟</span>
+    <Input type="file"/>
+    </div>       
             <Button
               type="submit"
               onClick={(event) => submitHandler(event)}
@@ -48,6 +53,8 @@ export default function NewTicket() {
             >
               ارسال تیکت
             </Button>
+
+</div>
           </form>
         </div>
       </div>

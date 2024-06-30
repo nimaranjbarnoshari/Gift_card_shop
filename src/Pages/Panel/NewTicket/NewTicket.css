@@ -53,13 +53,30 @@
   font-size: 14px;
 }
 .new-ticket__box-select {
+  padding: 0 10px;
+  font-size: 12px;
+}
+
+.new-ticket__box-select option {
+  font-size: 14px;
+  color: #5b5969;
+}
+.new-ticket__box-select option:hover {
+  background-color: var(--primary-color);
 }
 .new-ticket__box-textarea {
+  margin-top: 30px;
+}
+
+.new-ticket__box-textarea textarea {
   max-width: 928px;
   border-color: #e7e6f1;
   background-color: var(--white-color);
 }
 
 .new-ticket__box-btn {
+  margin-top: 30px;
+  margin-right: 100%;
+  transform: translateX(100%);
   width: 164px;
 }
