@@ -22,11 +22,15 @@ export default function NewTicket() {
                 id="titleInput"
                 label="عنوان تیکت"
                 placeholder="عنوان را وارد کنید ..."
-                className="new-ticket__box-input-title"
+                custom="new-ticket__box-input-title"
               />
               <div className="new-ticket__box-select-container">
                 <label htmlFor="SelectBox">دپارتمان</label>
-                <select name="" id="SelectBox" className="new-ticket__box-select">
+                <select
+                  name=""
+                  id="SelectBox"
+                  className="new-ticket__box-select"
+                >
                   <option value="">یک گزینه را انتخاب کنید</option>
                   <option value="">پشتیبانی سایت</option>
                   <option value="">فنی</option>
@@ -41,20 +45,24 @@ export default function NewTicket() {
               placeholder="متن تیکت را وارد کنید ..."
               custom="new-ticket__box-textarea"
             />
-<div className="">     
-  <div className="">
-    <span>تصویری از مشکل خود دارید؟</span>
-    <Input type="file"/>
-    </div>       
-            <Button
-              type="submit"
-              onClick={(event) => submitHandler(event)}
-              className="new-ticket__box-btn"
-            >
-              ارسال تیکت
-            </Button>
-
-</div>
+            <div className="new-ticket__box-footer">
+              <div className="new-ticket__box-send">
+                <span className="new-ticket__box-send-title">
+                  تصویری از مشکل خود دارید؟
+                </span>
+                <label htmlFor="fileInput">
+                + افزودن فایل
+                  <input type="file" id="fileInput" className="new-ticket__box-send-input" />
+                </label>
+              </div>
+              <Button
+                type="submit"
+                onClick={(event) => submitHandler(event)}
+                className="new-ticket__box-btn"
+              >
+                ارسال تیکت
+              </Button>
+            </div>
           </form>
         </div>
       </div>
