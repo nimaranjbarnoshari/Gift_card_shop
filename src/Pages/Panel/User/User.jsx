@@ -3,6 +3,10 @@ import Input from "../../../Components/Form/Input";
 import Button from "../../../Components/Form/‌Button";
 import "./User.css";
 export default function User() {
+  const submitHandler = (event) => {
+    event.preventDefault();
+    console.log("submitted");
+  };
   return (
     <div className="panel-styles user-panel">
       <h2 className="user-panel__title">اطلاعات حساب کاربری</h2>
@@ -52,7 +56,11 @@ export default function User() {
             label="تکرار رمز عبور جدید"
             placeholder="رمز عبور جدید را مجددا وارد نمایید"
           />
-          <Button className="user-panel__box-btn" type="submit">
+          <Button
+            className="user-panel__box-btn"
+            type="submit"
+            onClick={(event) => submitHandler(event)}
+          >
             ثبت تغییرات
           </Button>
         </form>
