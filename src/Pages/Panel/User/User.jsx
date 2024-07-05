@@ -21,7 +21,7 @@ export default function User() {
           </div>
           <span className="user-panel__box-header-logo">لوگو</span>
         </div>
-        <form action="" className="user-panel__box-form">
+        <form action="#" className="user-panel__box-form">
           <Input
             custom="user-panel__box-input"
             label="نام کاربری"
@@ -40,9 +40,19 @@ export default function User() {
           <Input
             custom="user-panel__box-input"
             label="رمز عبور"
-            placeholder="  رمز عبور خود را وارد نمایید"
+            placeholder="رمز عبور خود را وارد نمایید"
           />
-          <Button custom="user-panel__box-btn" type="submit">
+          <Input
+            custom="user-panel__box-input"
+            label="رمز عبور جدید"
+            placeholder="رمز عبور جدید را وارد نمایید "
+          />
+          <Input
+            custom="user-panel__box-input"
+            label="تکرار رمز عبور جدید"
+            placeholder="رمز عبور جدید را مجددا وارد نمایید"
+          />
+          <Button className="user-panel__box-btn" type="submit">
             ثبت تغییرات
           </Button>
         </form>

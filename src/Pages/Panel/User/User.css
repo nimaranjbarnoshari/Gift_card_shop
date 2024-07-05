@@ -1,5 +1,6 @@
 .user-panel {
   padding: 20px 40px;
+  overflow: auto;
 }
 
 .user-panel__title {
@@ -31,11 +32,12 @@
 }
 .user-panel__box-header-img {
   border-radius: 50%;
+  width: 70px;
+  height: 70px;
 }
 .user-panel__box-header-infos {
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
 }
 .user-panel__box-header-name {
   font-size: 14px;
@@ -51,15 +53,17 @@
   position: absolute;
   background-color: var(--primary-color);
   color: var(--white-color);
-  font-size: 24px;
+  font-size: 22px;
   border-radius: 70px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+  padding-right: 30px;
   width: 115px;
-  height: 40px;
+  height: 48px;
   left: -40px;
   top: 50%;
+  letter-spacing: 1px;
   transform: translateY(-50%);
 }
 
@@ -71,4 +75,103 @@
 
 .user-panel__box-input input {
   border-color: #e7e6f1;
+  color: #24232a;
+  opacity: 0.9;
+}
+.user-panel__box-input input::placeholder {
+  opacity: 0.5;
+}
+
+/* media query */
+
+@media (max-width: 700px) {
+  .user-panel__title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 44px;
+  }
+  .user-panel__box {
+    width: 320px;
+    padding: 15px;
+  }
+  .user-panel__box-header-img {
+    width: 60px;
+    height: 60px;
+  }
+  .user-panel__box-header-name {
+    font-size: 13px;
+    line-height: 26px;
+  }
+  .user-panel__box-header-phone {
+    font-size: 14px;
+    line-height: 28px;
+  }
+  .user-panel__box-header-logo {
+    font-size: 18px;
+    border-radius: 70px;
+    width: 100px;
+    height: 40px;
+    left: -35px;
+    padding-right: 25px;
+  }
+  .user-panel__box-input input {
+    height: 40px;
+    font-size: 13px;
+  }
+  .user-panel__box-input label {
+    font-size: 13px;
+  }
+  .user-panel__box-input input::placeholder {
+    font-size: 11px;
+  }
+  .user-panel__box-btn{
+    height: 40px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  .user-panel__title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 36px;
+  }
+  .user-panel__box {
+    width: 260px;
+    padding: 10px;
+  }
+  .user-panel__box-header-img {
+    width: 50px;
+    height: 50px;
+  }
+  .user-panel__box-header-name {
+    font-size: 12px;
+    line-height: 24px;
+  }
+  .user-panel__box-header-phone {
+    font-size: 13px;
+    line-height: 26px;
+  }
+  .user-panel__box-header-logo {
+    font-size: 16px;
+    border-radius: 70px;
+    width: 80px;
+    height: 40px;
+    left: -30px;
+    padding-right: 16px;
+  }
+  .user-panel__box-input input {
+    height: 36px;
+    font-size: 12px;
+  }
+  .user-panel__box-input label {
+    font-size: 12px;
+  }
+  .user-panel__box-input input::placeholder {
+    font-size: 10px;
+  }
+  .user-panel__box-btn{
+    height: 36px;
+    font-size: 12px;
+  }
 }
