@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import GameBox from "../GameBox/GameBox";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,6 +9,13 @@ import "swiper/css/navigation";
 import "./GamesCategory.css";
 
 export default function GamesCategory() {
+  const [gamesData, setGamesData] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/games")
+      .then((res) => res.json())
+      .then((data) => setGamesData(data));
+  }, []);
   return (
     <div className="games-category">
       <div className="container">
@@ -81,38 +88,15 @@ export default function GamesCategory() {
               },
             }}
           >
-            <SwiperSlide>
-              <GameBox
-                src="/images/home/fifa24.jpg"
-                title="بازی فیفا ۲۴ (پیش خرید)"
-                price="۲۵۶،۰۰۰"
-                offPrice="۲۴۳،۲۰۰"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <GameBox
-                src="/images/home/jedi.jpg"
-                title="بازی JEDI Survivor"
-                price="۱،۱۸۰،۰۰۰"
-                offPrice="۱،۱۳۳،۰۰۰"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <GameBox
-                src="/images/home/deadspace.jpg"
-                title="بازی Dead Space"
-                price="۶،۴۹۰،۰۰۰"
-                offPrice="۶،۳۶۰،۰۰۰"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <GameBox
-                src="/images/home/warfar.jpg"
-                title="بازی Modern Warfare 2"
-                price="۳،۲۴۵،۰۰۰"
-                offPrice="۳،۱۴۸،۰۰۰"
-              />
-            </SwiperSlide>
+            {gamesData.map((game) => (
+              <SwiperSlide key={game.id}>
+                <GameBox
+                  src={game.src}
+                  title={game.title}
+                  price={game.price.toLocaleString()}
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
           <button className="games-category__boxes-button">نمایش بیشتر</button>
         </div>

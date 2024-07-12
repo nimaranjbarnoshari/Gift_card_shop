@@ -7,6 +7,16 @@
       { "id": "1", "text": "a comment about post 1", "postId": "1" },
       { "id": "2", "text": "another comment about post 1", "postId": "1" }
     ],
+    "games":[
+      {"id":"1", "src": "/images/home/fifa24.jpg", "title" : "بازی فیفا ۲۴ (پیش خرید)", "price" : 256000, "offPrice": 243200},
+
+      {"id":"2", "src": "/images/home/jedi.jpg", "title" : "بازی JEDI Survivor", "price" : 1180000 , "offPrice": 1133000},
+
+      {"id":"3", "src": "/images/home/deadspace.jpg", "title" : "بازی Dead Space", "price" : 6490000, "offPrice": 6360000},
+
+      {"id":"4", "src": "/images/home/warfar.jpg", "title" : "بازی Modern Warfare 2", "price" : 3245000, "offPrice": 3148000}
+    ],
+    
     "profile": {
       "name": "typicode"
     }
