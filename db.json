@@ -1,7 +1,6 @@
 {
-    "posts": [
-      { "id": "1", "title": "a title", "views": 100 },
-      { "id": "2", "title": "another title", "views": 200 }
+    "users": [
+      {}
     ],
     "comments": [
       { "id": "1", "text": "a comment about post 1", "postId": "1" },
@@ -9,15 +8,21 @@
     ],
     "games":[
       {"id":"1", "src": "/images/home/fifa24.jpg", "title" : "بازی فیفا ۲۴ (پیش خرید)", "price" : 256000, "offPrice": 243200},
-
       {"id":"2", "src": "/images/home/jedi.jpg", "title" : "بازی JEDI Survivor", "price" : 1180000 , "offPrice": 1133000},
-
       {"id":"3", "src": "/images/home/deadspace.jpg", "title" : "بازی Dead Space", "price" : 6490000, "offPrice": 6360000},
-
       {"id":"4", "src": "/images/home/warfar.jpg", "title" : "بازی Modern Warfare 2", "price" : 3245000, "offPrice": 3148000}
+    ], 
+    "accounts": [
+
     ],
-    
-    "profile": {
-      "name": "typicode"
-    }
+    "gifts": [],
+    "categories" : [
+      {"id": 1, "src": "/images/home/steam.jpg", "title": "انواع گیفت کارت ها", "desc": "انواع گیف کارت های استیم ، گوگل پلی ..."},
+      {"id": 2, "src": "/images/home/popgi.jpg", "title": "انواع بازی های دیجیتال", "desc": "بازی های دیجیتال پلی استیشن ، ایکس باکس و ..."},
+      {"id": 3, "src": "/images/home/coin.jpg", "title": "انواع پول و آیتم بازی", "desc": "انواع کوین های رایج بازی ها (cp) "},
+      {"id": 4, "src": "/images/home/ping.jpg", "title": "انواع خدمات و اکانت دیجیتال", "desc": "اکانت اسپاتیفای ، پریمیوم سازی تلگرام و ..."},
+      {"id": 5, "src": "/images/home/socials.jpg", "title": "انواع نرم افزار ها", "desc": "نرم افزار های کاهش پینگ و ..."},
+      {"id": 6, "src": "/images/home/accessory.jpg", "title": "انواع لوازم دیجیتال", "desc": "کنسول بازی ، موس ، کیبورد و ..."}
+    ],
+    "menus": []
   }
