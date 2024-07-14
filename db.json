@@ -13,7 +13,15 @@
       {"id":"4", "src": "/images/home/warfar.jpg", "title" : "بازی Modern Warfare 2", "price" : 3245000, "offPrice": 3148000}
     ], 
     "accounts": [
-
+      {"id": 1, "src":"/images/accounts/spotify.svg", "title":"اکانت اسپاتیفای پاندورا", "desc": "Spotify" },
+      {"id": 2, "src":"/images/accounts/google.svg", "title":"اکانت گوگل پلی", "desc": "Google Play" },
+      {"id": 3, "src":"/images/accounts/origin.svg", "title":"اکانت اوریجین", "desc": "Origin" },
+      {"id": 4, "src":"/images/accounts/amazon.svg", "title":"اکانت آمازون", "desc": "Amazon" },
+      {"id": 5, "src":"/images/accounts/netflix.svg", "title":"اکانت نتفلیکس", "desc": "Netflix" },
+      {"id": 6, "src":"/images/accounts/itunes.svg", "title":"اکانت آیتیونز", "desc": "itunes" },
+      {"id": 7, "src":"/images/accounts/battle.svg", "title":"اکانت بتل نت", "desc": "Battle net" },
+      {"id": 8, "src":"/images/accounts/razor.svg", "title":"اکانت ریزر گلد ریکستی", "desc": "Razor gold" },
+      {"id": 9, "src":"/images/accounts/nintendo.svg", "title":"اکانت نینتندو سویچ", "desc": "Nintendo" }
     ],
     "gifts": [],
     "categories" : [
