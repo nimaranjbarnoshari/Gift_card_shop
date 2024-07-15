@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { BiMenuAltRight } from "react-icons/bi";
 import { CgShoppingBag } from "react-icons/cg";
@@ -9,6 +9,13 @@ import "./Navbar.css";
 
 export default function Navbar() {
   const [isShowMenu, setIsShowMenue] = useState(false);
+  const [menus, setMenus] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/menus")
+      .then((res) => res.json())
+      .then((data) => setMenus(data));
+  }, []);
 
   return (
     <nav className="nav">
@@ -38,205 +45,40 @@ export default function Navbar() {
               }`}
             >
               <ul className="nav-menu__list-mobile-items">
-                <li className="nav-menu__list-mobile-item">
-                  <NavLink
-                    to="/"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "nav-menu__list-mobile-link nav-menu__list-mobile-link--active"
-                        : "nav-menu__list-mobile-link"
-                    }
-                  >
-                    صفحه اصلی
-                  </NavLink>
-                </li>
-                <li className="nav-menu__list-mobile-item">
-                  <NavLink
-                    to="/gift-cards"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "nav-menu__list-mobile-link nav-menu__list-mobile-link--active"
-                        : "nav-menu__list-mobile-link"
-                    }
-                  >
-                    گیفت کارت ها
-                  </NavLink>
-                </li>
-                <li className="nav-menu__list-mobile-item">
-                  <NavLink
-                    to="/games"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "nav-menu__list-mobile-link nav-menu__list-mobile-link--active"
-                        : "nav-menu__list-mobile-link"
-                    }
-                  >
-                    لیست بازی ها
-                  </NavLink>
-                </li>
-                <li className="nav-menu__list-mobile-item">
-                  <NavLink
-                    to="/services"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "nav-menu__list-mobile-link nav-menu__list-mobile-link--active"
-                        : "nav-menu__list-mobile-link"
-                    }
-                  >
-                    خدمات
-                  </NavLink>
-                </li>
-                <li className="nav-menu__list-mobile-item">
-                  <NavLink
-                    to="/softwares"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "nav-menu__list-mobile-link nav-menu__list-mobile-link--active"
-                        : "nav-menu__list-mobile-link"
-                    }
-                  >
-                    نرم افزار
-                  </NavLink>
-                </li>
-                <li className="nav-menu__list-mobile-item">
-                  <NavLink
-                    to="/blogs"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "nav-menu__list-mobile-link nav-menu__list-mobile-link--active"
-                        : "nav-menu__list-mobile-link"
-                    }
-                  >
-                    بلاگ
-                  </NavLink>
-                </li>
-                <li className="nav-menu__list-mobile-item">
-                  <NavLink
-                    to="/about-us"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "nav-menu__list-mobile-link nav-menu__list-mobile-link--active"
-                        : "nav-menu__list-mobile-link"
-                    }
-                  >
-                    درباره ما
-                  </NavLink>
-                </li>
-                <li className="nav-menu__list-mobile-item">
-                  <NavLink
-                    to="/contact-us"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "nav-menu__list-mobile-link nav-menu__list-mobile-link--active"
-                        : "nav-menu__list-mobile-link"
-                    }
-                  >
-                    تماس با ما
-                  </NavLink>
-                </li>
+                {menus.map((menu) => (
+                  <li key={menu.id} className="nav-menu__list-mobile-item">
+                    <NavLink
+                      to={menu.link}
+                      className={({ isActive }) =>
+                        isActive
+                          ? "nav-menu__list-mobile-link nav-menu__list-mobile-link--active"
+                          : "nav-menu__list-mobile-link"
+                      }
+                    >
+                      {menu.title}
+                    </NavLink>
+                  </li>
+                ))}
               </ul>
             </div>
 
             {/* tablet and laptop menu */}
             <div className="nav-menu__list">
               <ul className="nav-menu__list-items">
-                <li className="nav-menu__list-item">
-                  <NavLink
-                    to="/"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "nav-menu__list-link nav-menu__list-link--active"
-                        : "nav-menu__list-link"
-                    }
-                  >
-                    صفحه اصلی
-                  </NavLink>
-                </li>
-                <li className="nav-menu__list-item">
-                  <NavLink
-                    to="/gift-cards"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "nav-menu__list-link nav-menu__list-link--active"
-                        : "nav-menu__list-link"
-                    }
-                  >
-                    گیفت کارت ها
-                  </NavLink>
-                </li>
-                <li className="nav-menu__list-item">
-                  <NavLink
-                    to="/games"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "nav-menu__list-link nav-menu__list-link--active"
-                        : "nav-menu__list-link"
-                    }
-                  >
-                    لیست بازی ها
-                  </NavLink>
-                </li>
-
-                <li className="nav-menu__list-item">
-                  <NavLink
-                    to="/Services"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "nav-menu__list-link nav-menu__list-link--active"
-                        : "nav-menu__list-link"
-                    }
-                  >
-                    خدمات
-                  </NavLink>
-                </li>
-                <li className="nav-menu__list-item">
-                  <NavLink
-                    to="/softwares"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "nav-menu__list-link nav-menu__list-link--active"
-                        : "nav-menu__list-link"
-                    }
-                  >
-                    نرم افزار
-                  </NavLink>
-                </li>
-                <li className="nav-menu__list-item">
-                  <NavLink
-                    to="/blogs"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "nav-menu__list-link nav-menu__list-link--active"
-                        : "nav-menu__list-link"
-                    }
-                  >
-                    بلاگ
-                  </NavLink>
-                </li>
-                <li className="nav-menu__list-item">
-                  <NavLink
-                    to="/about-us"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "nav-menu__list-link nav-menu__list-link--active"
-                        : "nav-menu__list-link"
-                    }
-                  >
-                    درباره ما
-                  </NavLink>
-                </li>
-                <li className="nav-menu__list-item">
-                  <NavLink
-                    to="/contact-us"
-                    className={({ isActive }) =>
-                      isActive
-                        ? "nav-menu__list-link nav-menu__list-link--active"
-                        : "nav-menu__list-link"
-                    }
-                  >
-                    تماس با ما
-                  </NavLink>
-                </li>
+                {menus.map((menu) => (
+                  <li key={menu.id} className="nav-menu__list-item">
+                    <NavLink
+                      to={menu.link}
+                      className={({ isActive }) =>
+                        isActive
+                          ? "nav-menu__list-link nav-menu__list-link--active"
+                          : "nav-menu__list-link"
+                      }
+                    >
+                      {menu.title}
+                    </NavLink>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
