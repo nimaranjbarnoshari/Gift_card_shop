@@ -14,7 +14,7 @@ export default function Topbar() {
           className="topbar-logo"
         />
         <span className="topbar-title">
-          {ContextData.isLoggedIn ? `${ContextData.userInfos.fullName} عزیز خوش آمدید` : ""}
+          {ContextData.isLoggedIn && ContextData.userInfos ? `${ContextData.userInfos.fullName} عزیز خوش آمدید` : ""}
         </span>
         <div className="topbar-input__wrapper">
           <input

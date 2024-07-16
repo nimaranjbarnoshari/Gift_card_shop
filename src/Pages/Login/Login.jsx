@@ -9,17 +9,11 @@ export default function Login() {
 
   const contextData = useContext(AuthContext);
   const navigate = useNavigate();
-  const [allUsers, setAllUser] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:8000/users")
-      .then((res) => res.json())
-      .then((data) => {
-        setAllUser(data);
-      });
-  }, []);
+  // const [allUsers, setAllUser] = useState([]);
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
+  const allUsers = contextData.allUsers
+  
 
   const submitFormHandler = (event) => {
     event.preventDefault();
