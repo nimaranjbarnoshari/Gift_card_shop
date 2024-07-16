@@ -15,11 +15,13 @@ export default function Sidebar() {
   return (
     <div className={`sidebar ${isShowSidebar ? "show-sidebar" : ""}`}>
       <div className="sidebar-logo">
-        <img
-          src="/images/logo/logo.png"
-          alt="logo"
-          className="sidebar-logo__img"
-        />
+        <NavLink to="/">
+          <img
+            src="/images/logo/logo.png"
+            alt="logo"
+            className="sidebar-logo__img"
+          />
+        </NavLink>
         <button
           className="sidebar-button"
           onClick={() => setIsShowSidebar(!isShowSidebar)}

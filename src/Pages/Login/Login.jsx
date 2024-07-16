@@ -1,14 +1,44 @@
-import React from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Input from "../../Components/Form/Input";
 import Button from "../../Components/Form/‌Button";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import AuthContext from "../../Context/AuthContext";
 import "./Login.css";
+
 export default function Login() {
+
+  const contextData = useContext(AuthContext);
+  const navigate = useNavigate();
+  const [allUsers, setAllUser] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/users")
+      .then((res) => res.json())
+      .then((data) => {
+        setAllUser(data);
+      });
+  }, []);
+  const [phone, setPhone] = useState("");
+  const [password, setPassword] = useState("");
+
   const submitFormHandler = (event) => {
     event.preventDefault();
-    console.log("login");
+
+    const isSign = allUsers.find(
+      (user) => user.mobile === phone && user.password === password
+    );
+
+    if (isSign) {
+      contextData.login(isSign, isSign.token);
+      navigate("/");
+    } else {
+      console.log("user not find");
+    }
+    // console.log(allUsers[0].mobile);
+    // console.log(phone);
+    // console.log(password);
   };
+
   return (
     <div className="login">
       <div className="container">
@@ -36,6 +66,8 @@ export default function Login() {
                 label="شماره تماس"
                 placeholder="۰۹**ـ***ـ****"
                 className="login-form__input-phone"
+                value={phone}
+                onChange={(event) => setPhone(event.target.value)}
               />
               <Input
                 id="password"
@@ -44,6 +76,8 @@ export default function Login() {
                 placeholder="رمز عبور خود را وارد کنید"
                 src="/images/svg/unlock.svg"
                 className="login-form__input-password"
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
               />
               <div className="login-form__forget">
                 <span className="login-form__forget-text">فراموشی</span>{" "}

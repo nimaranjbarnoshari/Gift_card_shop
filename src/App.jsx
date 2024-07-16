@@ -9,9 +9,10 @@ function App() {
   const [token, setToken] = useState(null);
   const [userInfos, setUserInfos] = useState({});
 
-  const login = ({ userData, userToken }) => {
+  const login = (userData, userToken) => {
     setIsLoggedIn(true);
     setUserInfos(userData);
+    console.log(userData, userToken);
     localStorage.setItem("user", JSON.stringify({ userToken }));
   };
 
@@ -24,7 +25,6 @@ function App() {
   useEffect(() => {
     const localStorageinfo = JSON.parse(localStorage.getItem("user"));
 
-    console.log(localStorageinfo);
     if (localStorageinfo) {
     }
   }, []);
