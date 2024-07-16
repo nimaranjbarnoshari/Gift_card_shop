@@ -5,13 +5,16 @@
   margin: 26px 0;
 }
 .topbar-logo {
-  width: 151px;
-  height: 26px;
+  width: 120px;
+  height: 22px;
+}
+.topbar-title {
+  color: var(--white-color);
 }
 .topbar-input {
   background-color: var(--semidark-background);
-  width: 198px;
-  height: 44px;
+  width: 160px;
+  height: 40px;
   border: none;
   outline: none;
   border-radius: 10px;
@@ -20,29 +23,66 @@
   font-size: 12px;
 }
 
-.topbar-input__wrapper{
-    position: relative;
+.topbar-input__wrapper {
+  position: relative;
 }
 
 .topbar-input::placeholder {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
 }
 .topbar-icon {
   position: absolute;
   fill: var(--white-color);
-  width: 25px;
-  height: 25px;
-  top: 9px;
-  left: 10px;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 8px;
 }
 
+@media (min-width: 576px) {
+  .topbar-logo {
+    width: 151px;
+    height: 26px;
+  }
+
+  .topbar-title {
+    font-size: 12px;
+  }
+
+  .topbar-input {
+    width: 200px;
+  }
+  .topbar-input::placeholder {
+    font-size: 14px;
+  }
+  .topbar-icon {
+    width: 22px;
+    height: 22px;
+    left: 10px;
+  }
+}
 
 @media (min-width: 992px) {
-.topbar-input{
-  width: 244px;
+  .topbar-input {
+    width: 244px;
+    height: 44px;
+  }
+  .topbar-title {
+    font-size: 14px;
+  }
+  .topbar-input::placeholder {
+    font-size: 16px;
+  }
+  .topbar-icon {
+    width: 25px;
+    height: 25px;
+  }
 }
-.topbar-input::placeholder{
-  font-size: 16px;
-}
+
+@media (min-width: 1200px) {
+  .topbar-title {
+    font-size: 16px;
+  }
 }

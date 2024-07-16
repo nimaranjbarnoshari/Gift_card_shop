@@ -20,7 +20,8 @@
   color: var(--primary-color);
 }
 
-.nav-link__text {
+.nav-link__text,
+.nav-link__text-user {
   color: var(--white-color);
 }
 
@@ -174,7 +175,7 @@
     max-width: 540px;
     margin: 0 auto;
   }
-  .nav-link__text {
+  .nav-link__text-user {
     font-size: 12px;
   }
 }
@@ -203,7 +204,7 @@
   .nav-menu__list-link--active::after {
     transform: translateY(-20%);
   }
-  .nav-link__text {
+  .nav-link__text-user {
     font-size: 14px;
   }
 }
@@ -228,7 +229,7 @@
     color: var(--white-color);
     font-size: 28px;
   }
-  .nav-link__text {
+  .nav-link__text-user {
     font-size: 12px;
   }
   .nav-link__notification {
@@ -258,7 +259,7 @@
     height: 7px;
     transform: translateY(-30%);
   }
-  .nav-link__text {
+  .nav-link__text-user {
     font-size: 16px;
   }
 }
