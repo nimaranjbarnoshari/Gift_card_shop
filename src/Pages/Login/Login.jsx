@@ -34,9 +34,6 @@ export default function Login() {
     } else {
       console.log("user not find");
     }
-    // console.log(allUsers[0].mobile);
-    // console.log(phone);
-    // console.log(password);
   };
 
   return (

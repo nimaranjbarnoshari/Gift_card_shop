@@ -2,10 +2,11 @@ import React, { useEffect, useState, useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { BiMenuAltRight } from "react-icons/bi";
 import { CgShoppingBag } from "react-icons/cg";
-import { PiBellRingingBold } from "react-icons/pi";
+// import { PiBellRingingBold } from "react-icons/pi";
 import { TiUserOutline } from "react-icons/ti";
 import { IoClose } from "react-icons/io5";
 import AuthContext from "../../Context/AuthContext";
+import { FiLogOut } from "react-icons/fi";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -114,6 +115,18 @@ export default function Navbar() {
                 </Link>
               )}
             </div>
+            {contextData.isLoggedIn ? (
+              <div className="nav-btn">
+                <button
+                  className="panel-topbar__logout-button"
+                  onClick={() => contextData.logout()}
+                >
+                  <FiLogOut className="panel-topbar__logout-icon" />
+                </button>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </div>
