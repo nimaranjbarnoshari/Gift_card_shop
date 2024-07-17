@@ -1,19 +1,17 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import Input from "../../Components/Form/Input";
 import Button from "../../Components/Form/‌Button";
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../../Context/AuthContext";
+import Swal from "sweetalert2";
 import "./Login.css";
 
 export default function Login() {
-
   const contextData = useContext(AuthContext);
   const navigate = useNavigate();
-  // const [allUsers, setAllUser] = useState([]);
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
-  const allUsers = contextData.allUsers
-  
+  const allUsers = contextData.allUsers;
 
   const submitFormHandler = (event) => {
     event.preventDefault();
@@ -24,6 +22,23 @@ export default function Login() {
 
     if (isSign) {
       contextData.login(isSign, isSign.token);
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 5000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        },
+      });
+      Toast.fire({
+        icon: "success",
+        title: "HTML <h4 className='swal-title'> شما با موفقیت وارد شدید </h4>!",
+        html: true,
+        iconColor: "#Fd295c"
+      });
       navigate("/");
     } else {
       console.log("user not find");
