@@ -2,7 +2,6 @@ import React, { useEffect, useState, useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { BiMenuAltRight } from "react-icons/bi";
 import { CgShoppingBag } from "react-icons/cg";
-// import { PiBellRingingBold } from "react-icons/pi";
 import { TiUserOutline } from "react-icons/ti";
 import { IoClose } from "react-icons/io5";
 import AuthContext from "../../Context/AuthContext";

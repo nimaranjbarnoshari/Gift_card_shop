@@ -86,12 +86,6 @@
   text-decoration: none;
   color: var(--primary-color);
 }
-.swal2-title {
-  color: var(--primary-color);
-  font-size: 14px;
+.swal2-popup {
+  font-size: 16px !important;
 }
-/* 
-.swal-title {
-  font-size: 14px;
-  color: var(--primary-color);
-} */

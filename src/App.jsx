@@ -3,6 +3,7 @@ import { useRoutes } from "react-router-dom";
 import routes from "./routes";
 import AuthContext from "./Context/AuthContext";
 import { useEffect, useState } from "react";
+import Swal from "sweetalert2";
 
 function App() {
   const [allUsers, setAllUser] = useState([]);
@@ -17,9 +18,29 @@ function App() {
   };
 
   const logout = () => {
-    setIsLoggedIn(false);
-    setToken(null);
-    localStorage.removeItem("user");
+    Swal.fire({
+      title: "شما در حال خروج از حساب کاربری خود هستید. ادامه می دهید ؟",
+      icon: "warning",
+      iconColor: "#Fd295c",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      cancelButtonText: "خیر",
+      confirmButtonText: "بله،‌خارج می شوم",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "شما از حساب کاربری خود خارج شدید",
+          confirmButtonColor: "#Fd295c",
+          icon: "success",
+          iconColor: "#Fd295c",
+        }).then(() => {
+          setIsLoggedIn(false);
+          setToken(null);
+          localStorage.removeItem("user");
+        });
+      }
+    });
   };
 
   useEffect(() => {

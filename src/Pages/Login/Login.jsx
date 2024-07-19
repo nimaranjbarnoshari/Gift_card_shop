@@ -26,7 +26,7 @@ export default function Login() {
         toast: true,
         position: "top-end",
         showConfirmButton: false,
-        timer: 5000,
+        timer: 3000,
         timerProgressBar: true,
         didOpen: (toast) => {
           toast.onmouseenter = Swal.stopTimer;
@@ -35,13 +35,35 @@ export default function Login() {
       });
       Toast.fire({
         icon: "success",
-        title: "HTML <h4 className='swal-title'> شما با موفقیت وارد شدید </h4>!",
-        html: true,
-        iconColor: "#Fd295c"
+        iconColor: "#Fd295c",
+        title: "با موفقیت وارد شدید",
+        color: "#fd295c",
+        width: "300px",
+        padding: "20px 15px",
+        showCloseButton: true,
       });
       navigate("/");
     } else {
-      console.log("user not find");
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        },
+      });
+      Toast.fire({
+        icon: "error",
+        iconColor: "#Fd295c",
+        title: "شماره تماس یا رمز عبور اشتباه می باشد ، لطفا مجددا تلاش کنید",
+        color: "#fd295c",
+        width: "570px",
+        padding: "20px 15px",
+        showCloseButton: true,
+      });
     }
   };
 
