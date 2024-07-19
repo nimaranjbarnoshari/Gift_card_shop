@@ -50,6 +50,14 @@
   direction: ltr;
   margin-top: 5px;
 }
+.register-form__input-code {
+  margin-top: 5px;
+}
+
+.register-form__link {
+  margin-top: 150px;
+  font-size: 14px;
+}
 
 /* start checkbox */
 

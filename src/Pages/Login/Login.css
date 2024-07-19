@@ -11,7 +11,7 @@
 
 .login-box {
   width: 400px;
-  height: 540px;
+  height: 550px;
   background-color: rgba(48, 47, 57, 0.9);
   color: var(--white-color);
   border-radius: 30px;
@@ -76,7 +76,7 @@
 
 .login-form__footer {
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .login-form__foter-text {

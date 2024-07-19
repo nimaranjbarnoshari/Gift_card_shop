@@ -86,16 +86,21 @@ export default function Navbar() {
           </div>
 
           <div className="nav-menu__left">
-            <div className="nav-btn">
-              <NavLink
-                to="/carts"
-                className={({ isActive }) =>
-                  isActive ? "nav-link nav-link--active" : "nav-link"
-                }
-              >
-                <CgShoppingBag className="nav-icon" />
-              </NavLink>
-            </div>
+            {contextData.isLoggedIn ? (
+              <div className="nav-btn">
+                <NavLink
+                  to="/carts"
+                  className={({ isActive }) =>
+                    isActive ? "nav-link nav-link--active" : "nav-link"
+                  }
+                >
+                  <CgShoppingBag className="nav-icon" />
+                </NavLink>
+              </div>
+            ) : (
+              ""
+            )}
+
             {/* <div className="nav-btn">
               <Link to="#" className="nav-link nav-link__notification--wrapper">
                 <PiBellRingingBold className="nav-icon" />
