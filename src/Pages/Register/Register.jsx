@@ -56,7 +56,7 @@ export default function Register() {
   const continueSignHandler = () => {
     if (+code === sendCode) {
       console.log(true);
-      navigate("/");
+      navigate(`/register/${phone}`);
     } else {
       console.log(false);
     }

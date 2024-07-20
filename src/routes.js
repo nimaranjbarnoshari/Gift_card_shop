@@ -22,6 +22,7 @@ import Notifications from "./Pages/Panel/Notifications/Notifications"
 import OrderDetails from "./Pages/Panel/OrderDetails/OrderDetails";
 import NewTicket from "./Pages/Panel/NewTicket/NewTicket";
 import TicketDetails from "./Pages/Panel/TicketDetails/TicketDetails";
+import FinishRegister from "./Pages/FinishRegister/FinishRegister";
 import { Navigate } from "react-router-dom";
 
 const routes = [
@@ -32,6 +33,7 @@ const routes = [
     {path:"/about-us", element: <AboutUs />},
     {path:"/login", element: <Login />},
     {path:"/Register", element: <Register />},
+    {path:"/Register/:mobile", element: <FinishRegister />},
     {path:"/otp", element: <OTP />},
     {path:"/carts", element: <Carts />},
     {path:"/gift-cards", element: <GiftCards />},
