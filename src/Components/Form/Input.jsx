@@ -7,6 +7,7 @@ export default function FormInput({
   placeholder,
   label,
   id,
+  name,
   className,
   src,
   custom,
@@ -33,6 +34,7 @@ export default function FormInput({
             <div className="form-input__wrapper">
               <input
                 id={id}
+                name={name}
                 type={type}
                 placeholder={placeholder}
                 className={`form-input ${className ? className : ""}`}
@@ -44,6 +46,7 @@ export default function FormInput({
           ) : (
             <input
               id={id}
+              name={name}
               type={type}
               placeholder={placeholder}
               className={`form-input ${className ? className : ""}`}

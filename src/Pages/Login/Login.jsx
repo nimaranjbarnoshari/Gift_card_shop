@@ -95,7 +95,7 @@ export default function Login() {
                 لطفا برای ورود اطلاعات زیر را کامل کنید
               </p>
             </div>
-            <form className="login-form">
+            <form className="login-form" onSubmit={(event) => submitFormHandler(event)}>
               <Input
                 id="phone"
                 type="number"
@@ -124,7 +124,6 @@ export default function Login() {
               <Button
                 children="ورود"
                 type="submit"
-                onClick={(event) => submitFormHandler(event)}
                 className="login-form__button"
               />
             </form>

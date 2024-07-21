@@ -1,24 +1,30 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import Input from "../../Components/Form/Input";
 import Button from "../../Components/Form/‌Button";
 import { Link, useNavigate } from "react-router-dom";
-import AuthContext from "../../Context/AuthContext";
+
 import Swal from "sweetalert2";
 
 import "./Register.css";
 
 export default function Register() {
   const navigate = useNavigate();
-  const contextData = useContext(AuthContext);
   const [isChecked, setIsChecked] = useState(false);
   const [isShowCodeInput, setIsShowCodeInput] = useState(false);
   const [phone, setPhone] = useState("");
   const [code, setCode] = useState("");
   const [sendCode, setSendCode] = useState(0);
+  const [allUsers, setAllUser] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/users")
+      .then((res) => res.json())
+      .then((data) => setAllUser(data));
+  }, []);
 
   const submitFormHandler = (event) => {
     event.preventDefault();
-    const isPhone = contextData.allUsers.find((user) => user.mobile === phone);
+    const isPhone = allUsers.find((user) => user.mobile === phone);
     if (!isPhone) {
       setIsShowCodeInput(true);
       const sentCode = Math.floor(Math.random() * 100000);
@@ -58,16 +64,22 @@ export default function Register() {
       console.log(true);
       navigate(`/register/${phone}`);
     } else {
-      console.log(false);
+      Swal.fire({
+        title: " کد اشتباه است",
+        text: "لطفا مجددا کد را وارد نمایید",
+        icon: "error",
+        iconColor: "#Fd295c",
+        confirmButtonColor: "#Fd295c",
+      });
     }
   };
 
   const changePhoneHandler = () => {
-    setIsShowCodeInput(false)
-    setIsChecked(false)
-    setPhone("")
-    navigate("/register")
-  }
+    setIsShowCodeInput(false);
+    setIsChecked(false);
+    setPhone("");
+    navigate("/register");
+  };
 
   return (
     <div className="register">
@@ -160,7 +172,8 @@ export default function Register() {
                 <span className="register-form__foter-text">
                   شماره را اشتباه وارد کردید؟
                 </span>{" "}
-                <Link to=""
+                <Link
+                  to=""
                   className="register-form__footer-link"
                   onClick={changePhoneHandler}
                 >
