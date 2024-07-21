@@ -1,53 +1,6 @@
 {
   "users": [
-    {
-      "id": "1",
-      "fullName": "نیما رنجبر",
-      "mobile": "09125244154",
-      "email": "nimaranjbarnoshari@gmail.com",
-      "password": "12345678",
-      "token": "nima12345678ranjbar"
-    },
-    {
-      "id": "2",
-      "fullName": "بهناز محبوبی",
-      "mobile": "09108678094",
-      "email": "behnaz.mahbobi5963@gmail.com",
-      "password": "12345678",
-      "token": "behnaz12345678mahboubi"
-    },
-    {
-      "id": "1045",
-      "fullName": "مهران محمودی",
-      "mobile": "09113327467",
-      "email": "mehran@gmail.com",
-      "password": "12345678",
-      "token": "495720mehran590501mehran@gmail.com365448"
-    },
-    {
-      "id": "e6cc",
-      "fullName": "بهنام دارباز",
-      "mobile": "09113495231",
-      "email": "behnam__darbaz@gmail.com",
-      "password": "12345678",
-      "token": "403871behnam792538behnam__darbaz@gmail.com18431"
-    },
-    {
-      "id": "acfd",
-      "fullName": "اسماعیل صدیق",
-      "mobile": "09353452165",
-      "email": "essi@gmail.com",
-      "password": "12345678",
-      "token": "928107essi@g644190essi@gmail.com595191"
-    },
-    {
-      "id": "cb9f",
-      "fullName": "تست",
-      "mobile": "09214844154",
-      "email": "test@gmail.com",
-      "password": "123456",
-      "token": "553727test@g502176test@gmail.com528171"
-    }
+    
   ],
   "basket": [],
   "comments": [

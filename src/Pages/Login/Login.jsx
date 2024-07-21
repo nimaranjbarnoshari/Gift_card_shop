@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Input from "../../Components/Form/Input";
 import Button from "../../Components/Form/‌Button";
 import { Link, useNavigate } from "react-router-dom";
@@ -11,7 +11,15 @@ export default function Login() {
   const navigate = useNavigate();
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
-  const allUsers = contextData.allUsers;
+  const [allUsers, setAllUser] = useState([])
+
+  useEffect(() => {
+    fetch("http://localhost:8000/users")
+      .then((res) => res.json())
+      .then((data) => 
+        setAllUser(data)
+      );
+  }, []);
 
   const submitFormHandler = (event) => {
     event.preventDefault();
