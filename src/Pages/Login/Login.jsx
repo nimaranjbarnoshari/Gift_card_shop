@@ -12,8 +12,6 @@ export default function Login() {
   const contextData = useContext(AuthContext);
   const navigate = useNavigate();
   const [allUsers, setAllUser] = useState([]);
-  // const [errors, setErrors] = useState({});
-
   const formik = useFormik({
     initialValues: {
       phone: "",

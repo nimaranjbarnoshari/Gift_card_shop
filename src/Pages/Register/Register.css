@@ -49,6 +49,14 @@
   direction: ltr;
   margin-top: 5px;
 }
+
+.register-form__input-phone-err {
+  display: block;
+  font-size: 12px;
+  color: rgb(238, 62, 62);
+  margin-top: 5px;
+}
+
 .register-form__input-code {
   margin-top: 5px;
 }

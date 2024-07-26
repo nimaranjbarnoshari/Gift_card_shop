@@ -2,19 +2,20 @@ import React, { useState, useEffect } from "react";
 import Input from "../../Components/Form/Input";
 import Button from "../../Components/Form/‌Button";
 import { Link, useNavigate } from "react-router-dom";
-
 import Swal from "sweetalert2";
-
 import "./Register.css";
 
 export default function Register() {
   const navigate = useNavigate();
   const [isChecked, setIsChecked] = useState(false);
   const [isShowCodeInput, setIsShowCodeInput] = useState(false);
-  const [phone, setPhone] = useState("");
   const [code, setCode] = useState("");
   const [sendCode, setSendCode] = useState(0);
   const [allUsers, setAllUser] = useState([]);
+  const [phone, setPhone] = useState("");
+  const [phoneIsValid, setPhoneIsValid] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [showError, setShowError] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:8000/users")
@@ -22,8 +23,21 @@ export default function Register() {
       .then((data) => setAllUser(data));
   }, []);
 
-  const submitFormHandler = (event) => {
+  useEffect(() => {
+    if (!phone) {
+      setErrorMessage("وارد کردن شماره الزامی می باشد");
+    } else if (phone.match(/^(\+98|0)?9\d{9}$/)) {
+      setPhoneIsValid(true);
+      setErrorMessage("");
+    } else {
+      setPhoneIsValid(false);
+      setErrorMessage("شماره معتبر نمی باشد");
+    }
+  }, [phone]);
+
+  const submitFormHandler = async (event) => {
     event.preventDefault();
+
     const isPhone = allUsers.find((user) => user.mobile === phone);
     if (!isPhone) {
       setIsShowCodeInput(true);
@@ -61,7 +75,6 @@ export default function Register() {
 
   const continueSignHandler = () => {
     if (+code === sendCode) {
-      console.log(true);
       navigate(`/register/${phone}`);
     } else {
       Swal.fire({
@@ -105,7 +118,7 @@ export default function Register() {
               {isShowCodeInput ? (
                 <Input
                   id="code"
-                  type="number"
+                  type="text"
                   label="کد ارسالی"
                   placeholder="لطفا کد ارسالی را وارد نمایید"
                   className="register-form__input-code"
@@ -113,21 +126,33 @@ export default function Register() {
                   onChange={(event) => setCode(event.target.value)}
                 />
               ) : (
-                <Input
-                  id="phone"
-                  type="number"
-                  label="شماره تماس"
-                  placeholder="۰۹**ـ***ـ****"
-                  className="register-form__input-phone"
-                  value={phone}
-                  onChange={(event) => setPhone(event.target.value)}
-                />
+                <>
+                  <Input
+                    id="phone"
+                    type="number"
+                    label="شماره تماس"
+                    placeholder="۰۹**ـ***ـ****"
+                    className="register-form__input-phone"
+                    value={phone}
+                    onChange={(event) => {
+                      setPhone(event.target.value);
+                      setShowError(true);
+                    }}
+                  />
+                  {errorMessage && showError ? (
+                    <span className="register-form__input-phone-err">
+                      {errorMessage}
+                    </span>
+                  ) : (
+                    ""
+                  )}
+                </>
               )}
 
               {isShowCodeInput ? (
                 <Button
                   children="ادامه ثبت نام"
-                  type="button"
+                  type="submit"
                   onClick={continueSignHandler}
                   className="register-form__link"
                 />
@@ -158,10 +183,12 @@ export default function Register() {
                   </div>
 
                   <Button
-                    disabled={!isChecked}
+                    disabled={!(isChecked && phoneIsValid)}
                     children="ارسال کد"
                     type="submit"
-                    onClick={(event) => submitFormHandler(event)}
+                    onClick={(event) => {
+                      submitFormHandler(event);
+                    }}
                     className="register-form__button"
                   />
                 </>
