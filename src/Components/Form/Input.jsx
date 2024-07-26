@@ -13,6 +13,7 @@ export default function FormInput({
   custom,
   value,
   onChange,
+  onBlur
 }) {
   return (
     <div className={`form-input__container ${custom ? custom : ""}`}>
@@ -27,6 +28,7 @@ export default function FormInput({
           className={`form-textarea ${className ? className : ""}`}
           value={value}
           onChange={onChange}
+          onBlur={onBlur}
         ></textarea>
       ) : (
         <>
@@ -40,6 +42,7 @@ export default function FormInput({
                 className={`form-input ${className ? className : ""}`}
                 value={value}
                 onChange={onChange}
+                onBlur={onBlur}
               />
               <img src={src} alt="svg" className="form-input__svg" />
             </div>
@@ -52,6 +55,7 @@ export default function FormInput({
               className={`form-input ${className ? className : ""}`}
               value={value}
               onChange={onChange}
+              onBlur={onBlur}
             />
           )}
         </>

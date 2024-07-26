@@ -4,76 +4,81 @@ import Button from "../../Components/Form/‌Button";
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../../Context/AuthContext";
 import Swal from "sweetalert2";
+import { useFormik } from "formik";
+import loginSchema from "../../loginValidate";
 import "./Login.css";
 
 export default function Login() {
   const contextData = useContext(AuthContext);
   const navigate = useNavigate();
-  const [phone, setPhone] = useState("");
-  const [password, setPassword] = useState("");
-  const [allUsers, setAllUser] = useState([])
+  const [allUsers, setAllUser] = useState([]);
+  // const [errors, setErrors] = useState({});
+
+  const formik = useFormik({
+    initialValues: {
+      phone: "",
+      password: "",
+    },
+    onSubmit: async (values) => {
+      const isSign = allUsers.find(
+        (user) =>
+          user.mobile === values.phone && user.password === values.password
+      );
+
+      if (isSign) {
+        contextData.login(isSign, isSign.token);
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+          },
+        });
+        Toast.fire({
+          icon: "success",
+          iconColor: "#Fd295c",
+          title: "با موفقیت وارد شدید",
+          color: "#fd295c",
+          width: "300px",
+          padding: "20px 15px",
+          showCloseButton: true,
+        });
+        navigate("/");
+      } else {
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+          },
+        });
+        Toast.fire({
+          icon: "error",
+          iconColor: "#Fd295c",
+          title: "شماره تماس یا رمز عبور اشتباه می باشد ، لطفا مجددا تلاش کنید",
+          color: "#fd295c",
+          width: "570px",
+          padding: "20px 15px",
+          showCloseButton: true,
+        });
+      }
+    },
+    validationSchema: loginSchema,
+  });
 
   useEffect(() => {
     fetch("http://localhost:8000/users")
       .then((res) => res.json())
-      .then((data) => 
-        setAllUser(data)
-      );
+      .then((data) => setAllUser(data));
   }, []);
-
-  const submitFormHandler = (event) => {
-    event.preventDefault();
-
-    const isSign = allUsers.find(
-      (user) => user.mobile === phone && user.password === password
-    );
-
-    if (isSign) {
-      contextData.login(isSign, isSign.token);
-      const Toast = Swal.mixin({
-        toast: true,
-        position: "top-end",
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.onmouseenter = Swal.stopTimer;
-          toast.onmouseleave = Swal.resumeTimer;
-        },
-      });
-      Toast.fire({
-        icon: "success",
-        iconColor: "#Fd295c",
-        title: "با موفقیت وارد شدید",
-        color: "#fd295c",
-        width: "300px",
-        padding: "20px 15px",
-        showCloseButton: true,
-      });
-      navigate("/");
-    } else {
-      const Toast = Swal.mixin({
-        toast: true,
-        position: "top-end",
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.onmouseenter = Swal.stopTimer;
-          toast.onmouseleave = Swal.resumeTimer;
-        },
-      });
-      Toast.fire({
-        icon: "error",
-        iconColor: "#Fd295c",
-        title: "شماره تماس یا رمز عبور اشتباه می باشد ، لطفا مجددا تلاش کنید",
-        color: "#fd295c",
-        width: "570px",
-        padding: "20px 15px",
-        showCloseButton: true,
-      });
-    }
-  };
 
   return (
     <div className="login">
@@ -95,26 +100,40 @@ export default function Login() {
                 لطفا برای ورود اطلاعات زیر را کامل کنید
               </p>
             </div>
-            <form className="login-form" onSubmit={(event) => submitFormHandler(event)}>
+            <form className="login-form" onSubmit={formik.handleSubmit}>
               <Input
                 id="phone"
-                type="number"
+                name="phone"
+                type="text"
                 label="شماره تماس"
                 placeholder="۰۹**ـ***ـ****"
-                className="login-form__input-phone"
-                value={phone}
-                onChange={(event) => setPhone(event.target.value)}
+                custom="login-form__input-phone"
+                onChange={formik.handleChange}
+                value={formik.values.phone}
+                onBlur={formik.handleBlur}
               />
+              {formik.errors.phone && formik.touched.phone && (
+                <span className="login-form__input-phone-err">
+                  {formik.errors.phone}
+                </span>
+              )}
               <Input
                 id="password"
+                name="password"
                 type="password"
                 label="رمز عبور"
                 placeholder="رمز عبور خود را وارد کنید"
                 src="/images/svg/unlock.svg"
-                className="login-form__input-password"
-                value={password}
-                onChange={(event) => setPassword(event.target.value)}
+                custom="login-form__input-password"
+                onChange={formik.handleChange}
+                value={formik.values.password}
+                onBlur={formik.handleBlur}
               />
+              {formik.errors.password && formik.touched.password && (
+                <span className="login-form__input-password-err">
+                  {formik.errors.password}
+                </span>
+              )}
               <div className="login-form__forget">
                 <span className="login-form__forget-text">فراموشی</span>{" "}
                 <Link to="/otp" className="login-form__forget-link">
@@ -125,8 +144,10 @@ export default function Login() {
                 children="ورود"
                 type="submit"
                 className="login-form__button"
+                disabled={!formik.isValid}
               />
             </form>
+
             <div className="login-form__footer">
               <span className="login-form__foter-text">
                 حساب کاربری ندارید؟
