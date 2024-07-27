@@ -1,5 +1,6 @@
 .finishRegister {
     background: url("/public/images/background/bg2.jpg") center/cover no-repeat;
+    overflow: auto;
   }
   
   .finishRegister-container {

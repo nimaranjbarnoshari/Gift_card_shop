@@ -9,7 +9,6 @@ export default function FinishRegister() {
   const { mobile } = useParams();
   const contextData = useContext(AuthContext);
   const navigate = useNavigate();
-
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -82,15 +81,6 @@ export default function FinishRegister() {
               </p>
             </div>
             <form className="finishRegister-form">
-              <Input
-                id="phone"
-                type="number"
-                label="شماره تماس"
-                placeholder="۰۹**ـ***ـ****"
-                className="finishRegister-form__input-phone"
-                value={mobile}
-                // onChange={(event) => setPhone(event.target.value)}
-              />
               <Input
                 id="fullName"
                 type="text"

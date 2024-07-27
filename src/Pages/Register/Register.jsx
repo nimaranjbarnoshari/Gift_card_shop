@@ -73,7 +73,8 @@ export default function Register() {
     }
   };
 
-  const continueSignHandler = () => {
+  const continueSignHandler = (event) => {
+    event.preventDefault();
     if (+code === sendCode) {
       navigate(`/register/${phone}`);
     } else {
@@ -136,8 +137,8 @@ export default function Register() {
                     value={phone}
                     onChange={(event) => {
                       setPhone(event.target.value);
-                      setShowError(true);
                     }}
+                    onBlur={() => setShowError(true)}
                   />
                   {errorMessage && showError ? (
                     <span className="register-form__input-phone-err">
