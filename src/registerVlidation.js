@@ -20,6 +20,7 @@ const registerSchema = Yup.object().shape({
 
     confirmPassword: Yup.string()
         .oneOf([Yup.ref('password')], "تکرار رمز عبور منطبق نیست")
+        .required("وارد کردن تکرار رمز عبور الزامی می باشد")
 })
 
 export default registerSchema

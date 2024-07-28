@@ -20,7 +20,7 @@ export default function FinishRegister() {
       password: "",
       confirmPassword: "",
     },
-    onSubmit: async ({ fullName, email, password, confirmPassword }) => {
+    onSubmit: async ({ fullName, email, password }) => {
       const token =
         Math.floor(Math.random() * 1000000) +
         email.slice(0, 6) +
@@ -34,6 +34,8 @@ export default function FinishRegister() {
         email,
         password,
         token,
+        balance: 0,
+        basket: [],
       };
       console.log(user);
       const res = await fetch(`http://localhost:8000/users`, {
@@ -157,7 +159,6 @@ export default function FinishRegister() {
                 children="تکمیل ثبت نام"
                 type="submit"
                 className="finishRegister-form__link"
-                disabled={!formik.isValid}
               />
             </form>
 

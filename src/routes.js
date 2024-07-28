@@ -23,6 +23,7 @@ import OrderDetails from "./Pages/Panel/OrderDetails/OrderDetails";
 import NewTicket from "./Pages/Panel/NewTicket/NewTicket";
 import TicketDetails from "./Pages/Panel/TicketDetails/TicketDetails";
 import FinishRegister from "./Pages/FinishRegister/FinishRegister";
+import ChangePass from "./Pages/OTP/ChangePass";
 import { Navigate } from "react-router-dom";
 
 const routes = [
@@ -35,6 +36,7 @@ const routes = [
     {path:"/Register", element: <Register />},
     {path:"/Register/:mobile", element: <FinishRegister />},
     {path:"/otp", element: <OTP />},
+    {path:"/otp/:ID", element: <ChangePass />},
     {path:"/carts", element: <Carts />},
     {path:"/gift-cards", element: <GiftCards />},
     {path:"/games", element: <Games />},

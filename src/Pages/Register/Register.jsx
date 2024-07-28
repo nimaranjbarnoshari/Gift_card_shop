@@ -26,6 +26,7 @@ export default function Register() {
   useEffect(() => {
     if (!phone) {
       setErrorMessage("وارد کردن شماره الزامی می باشد");
+      setPhoneIsValid(false);
     } else if (phone.match(/^(\+98|0)?9\d{9}$/)) {
       setPhoneIsValid(true);
       setErrorMessage("");
@@ -91,6 +92,7 @@ export default function Register() {
   const changePhoneHandler = () => {
     setIsShowCodeInput(false);
     setIsChecked(false);
+    setPhoneIsValid(false);
     setPhone("");
     navigate("/register");
   };
@@ -135,9 +137,7 @@ export default function Register() {
                     placeholder="۰۹**ـ***ـ****"
                     className="register-form__input-phone"
                     value={phone}
-                    onChange={(event) => {
-                      setPhone(event.target.value);
-                    }}
+                    onChange={(event) => setPhone(event.target.value)}
                     onBlur={() => setShowError(true)}
                   />
                   {errorMessage && showError ? (
