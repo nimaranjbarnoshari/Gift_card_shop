@@ -1,32 +1,53 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import Input from "../../Components/Form/Input";
 import Button from "../../Components/Form/‌Button";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import AuthContext from "../../Context/AuthContext";
 import { useFormik } from "formik";
-import registerSchema from "../../registerVlidation";
+import { changePassSchema } from "../../registerVlidation";
+import Swal from "sweetalert2";
 
 import "./ChangePass.css";
 
 export default function ChangePass() {
+  const { ID } = useParams();
+  const contextData = useContext(AuthContext);
+  const navigate = useNavigate();
+
   const formik = useFormik({
     initialValues: {
       password: "",
       confirmPassword: "",
     },
     onSubmit: async ({ password }) => {
-      console.log(password);
-      //   const res = await fetch("http://localhost:8000/users/5cb5", {
-      //     method: "PATCH",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //     body: JSON.stringify({ password: "123123123" }),
-      //   });
-      //   const result = await res.json();
-      //   console.log(result);
+      const res = await fetch(`http://localhost:8000/users/${ID}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ password }),
+      });
+      if (res.ok) {
+        const userInfo = await res.json();
+
+        Swal.fire({
+          title: "رمز عبور شما با موفقیت تغییر یافت",
+          // text: "لطفا با رمز عبور جدید وارد شوید",
+          icon: "success",
+        }).then(() => {
+          contextData.login(userInfo, userInfo.token);
+          navigate("/");
+        });
+      } else {
+        Swal.fire({
+          title: "متاسفانه خطایی رخ داد",
+          color: "#fd295c",
+          icon: "error",
+          iconColor: "#fd295c",
+        });
+      }
     },
-    validationSchema: registerSchema,
+    validationSchema: changePassSchema,
   });
   return (
     <div className="changePass">
@@ -83,7 +104,7 @@ export default function ChangePass() {
               <Button
                 children="تغییر رمز عبور"
                 type="submit"
-                className="changePass-form__button"           
+                className="changePass-form__button"
               />
             </form>
             <div className="changePass-form__footer">

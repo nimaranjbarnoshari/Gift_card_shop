@@ -23,4 +23,15 @@ const registerSchema = Yup.object().shape({
         .required("وارد کردن تکرار رمز عبور الزامی می باشد")
 })
 
-export default registerSchema
+const changePassSchema = Yup.object().shape({
+    password: Yup.string()
+        .min(8, "رمز عبور نباید کمتر از ۸ کاراکتر باشد")
+        .max(20, "رمز  عبور نباید بیشتر از ۲۰ کاراکتر باشد")
+        .required("وارد کردن رمز عبور الزامی می باشد"),
+
+    confirmPassword: Yup.string()
+        .oneOf([Yup.ref('password')], "تکرار رمز عبور منطبق نیست")
+        .required("وارد کردن تکرار رمز عبور الزامی می باشد")
+})
+
+export  {registerSchema, changePassSchema}

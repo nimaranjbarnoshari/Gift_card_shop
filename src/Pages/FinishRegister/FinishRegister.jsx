@@ -5,7 +5,7 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import AuthContext from "../../Context/AuthContext";
 import { useFormik } from "formik";
-import registerSchema from "../../registerVlidation";
+import {registerSchema} from "../../registerVlidation";
 import "./FinishRegister.css";
 
 export default function FinishRegister() {
