@@ -5,8 +5,10 @@
       "fullName": "نیما رنجبر نوشری",
       "mobile": "09125244154",
       "email": "nimaranjbarnoshari@gmail.com",
-      "password": "13247473",
-      "token": "532423nimara543181nimaranjbarnoshari@gmail.com314027"
+      "password": "12345678",
+      "token": "532423nimara543181nimaranjbarnoshari@gmail.com314027",
+      "basket": [],
+      "tickets": []
     },
     {
       "id": "ed67",
@@ -14,7 +16,9 @@
       "mobile": "09108678094",
       "email": "behnaz.mahbobi5963@gmail.com",
       "password": "14141414",
-      "token": "658737behnaz136471behnaz.mahbobi5963@gmail.com115573"
+      "token": "658737behnaz136471behnaz.mahbobi5963@gmail.com115573",
+      "basket": [],
+      "tickets": []
     },
     {
       "id": "5805",
@@ -22,22 +26,12 @@
       "mobile": "09113477467",
       "email": "mehran@gmail.com",
       "password": "12345678",
-      "token": "586810mehran639059mehran@gmail.com255894"
+      "token": "586810mehran639059mehran@gmail.com255894",
+      "basket": [],
+      "tickets": []
     }
   ],
-  "basket": [],
-  "comments": [
-    {
-      "id": "1",
-      "text": "a comment about post 1",
-      "postId": "1"
-    },
-    {
-      "id": "2",
-      "text": "another comment about post 1",
-      "postId": "1"
-    }
-  ],
+  "comments": [],
   "games": [
     {
       "id": "1",

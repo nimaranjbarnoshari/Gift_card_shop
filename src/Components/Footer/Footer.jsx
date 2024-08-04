@@ -25,7 +25,7 @@ export default function Footer() {
 
             <div className="footer-infos__phone-wrapper">
               <FiPhone className="footer-infos__phone-icon" />
-              <h5 className="footer-infos__phone-number">۰۹۱۲۵۲۴۴۱۵۴</h5>
+              <h5 className="footer-infos__phone-number">۰۹۱۲۳۴۵۶۷۸۹</h5>
             </div>
 
             <div className="footer-infos__location-wrapper">

@@ -1,15 +1,17 @@
 import "./App.css";
-import { useRoutes } from "react-router-dom";
+import { useRoutes, useNavigate } from "react-router-dom";
 import routes from "./routes";
 import AuthContext from "./Context/AuthContext";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 
 function App() {
+  const navigate = useNavigate();
   const [allUsers, setAllUser] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [token, setToken] = useState(null);
   const [userInfos, setUserInfos] = useState({});
+  const [userBasket, setUserBasket] = useState([]);
 
   const login = (userData, token) => {
     setIsLoggedIn(true);
@@ -43,6 +45,23 @@ function App() {
     });
   };
 
+  const addToBasket = (datas, id) => {
+    const result = datas.filter((data) => id === data.id);
+    if (isLoggedIn) {
+      console.log(result);
+      
+    } else {
+      Swal.fire({
+        title: "لطفا وارد حساب کاربری خود شوید",
+        icon: "error",
+        iconColor: "#Fd295c",
+        confirmButtonColor: "#Fd295c",
+      }).then(() => {
+        navigate("/login");
+      });
+    }
+  };
+
   useEffect(() => {
     fetch("http://localhost:8000/users")
       .then((res) => res.json())
@@ -62,10 +81,19 @@ function App() {
     }
   }, [allUsers]);
 
+
   const router = useRoutes(routes);
   return (
     <AuthContext.Provider
-      value={{ isLoggedIn, token, userInfos, login, logout, allUsers }}
+      value={{
+        isLoggedIn,
+        token,
+        userInfos,
+        login,
+        logout,
+        allUsers,
+        addToBasket,
+      }}
     >
       <div className="App">{router}</div>
     </AuthContext.Provider>

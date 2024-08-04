@@ -95,6 +95,7 @@ export default function Navbar() {
                   }
                 >
                   <CgShoppingBag className="nav-icon" />
+                  {contextData.userInfos?.basket.length ? "Yes" : "No"}
                 </NavLink>
               </div>
             ) : (

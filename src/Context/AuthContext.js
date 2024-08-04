@@ -6,9 +6,10 @@ const AuthContext = createContext({
   isLoggedIn: false,
   token: null,
   userInfos: null,
-  allUsers : {},
+  allUsers: {},
   login: () => {},
-  logout: () => {}
+  logout: () => {},
+  addToBasket: () => {}
 });
 
 export default AuthContext;

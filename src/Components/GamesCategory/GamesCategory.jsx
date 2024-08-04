@@ -1,14 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import GameBox from "../GameBox/GameBox";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
+import AuthContext from "../../Context/AuthContext";
+
+
 import "swiper/css";
 import "swiper/css/navigation";
-
 import "./GamesCategory.css";
 
 export default function GamesCategory() {
+ 
+  const contextData = useContext(AuthContext);
   const [gamesData, setGamesData] = useState([]);
 
   useEffect(() => {
@@ -16,6 +20,8 @@ export default function GamesCategory() {
       .then((res) => res.json())
       .then((data) => setGamesData(data));
   }, []);
+  
+
   return (
     <div className="games-category">
       <div className="container">
@@ -91,6 +97,7 @@ export default function GamesCategory() {
             {gamesData.map((game) => (
               <SwiperSlide key={game.id}>
                 <GameBox
+                  clickHandler={() => contextData.addToBasket(gamesData,game.id)}
                   src={game.src}
                   title={game.title}
                   price={game.price.toLocaleString()}

@@ -35,7 +35,7 @@ export default function GameBox(props) {
         </p>
       </div>
 
-      <button className="game-box__button">
+      <button className="game-box__button" onClick={props.clickHandler}>
         <HiOutlineShoppingCart className="game-box__button-icon" />
         <span className="game-box__button-text">افزودن به سبد خرید</span>
       </button>

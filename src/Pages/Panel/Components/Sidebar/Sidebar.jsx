@@ -105,7 +105,7 @@ export default function Sidebar() {
           <span className="sideebar-footer__title">
             نیاز به پشتیبانی دارید؟
           </span>
-          <span className="sideebar-footer__mobile">۰۹۱۲-۵۲۴-۴۱۵۴</span>
+          <span className="sideebar-footer__mobile">۰۹۱۲-۳۴۵-۶۷۸۹</span>
         </div>
       </div>
     </div>
