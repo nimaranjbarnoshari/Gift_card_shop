@@ -114,18 +114,26 @@
   align-items: center;
 }
 
-.nav-link__notification--wrapper {
+.nav-btn__notification--wrapper {
   position: relative;
 }
 
 .nav-link__notification {
   position: absolute;
-  width: 8.4px;
-  height: 8.4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+  width: 12px;
+  height: 12px;
   background-color: var(--primary-color);
   border-radius: 50%;
   top: 4px;
   left: 22px;
+  font-size: 8px;
+}
+.nav-link__notification--hiden {
+  display: none;
 }
 
 .nav-menu__list {
@@ -233,10 +241,11 @@
     font-size: 12px;
   }
   .nav-link__notification {
-    width: 10px;
-    height: 10px;
+    width: 18px;
+    height: 18px;
     top: 4px;
-    left: 28px;
+    left: 24px;
+    font-size: 12px;
   }
   .nav-btn__login {
     width: 121px;

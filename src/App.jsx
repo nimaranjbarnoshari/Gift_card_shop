@@ -49,7 +49,6 @@ function App() {
     const result = datas.filter((data) => id === data.id);
     if (isLoggedIn) {
       console.log(result);
-      
     } else {
       Swal.fire({
         title: "لطفا وارد حساب کاربری خود شوید",
@@ -81,6 +80,13 @@ function App() {
     }
   }, [allUsers]);
 
+  useEffect(() => {
+    if (userInfos) {
+      if (Object.hasOwn(userInfos, "basket")) {
+        setUserBasket(userInfos.basket);
+      }
+    }
+  }, [userInfos]);
 
   const router = useRoutes(routes);
   return (
@@ -93,6 +99,7 @@ function App() {
         logout,
         allUsers,
         addToBasket,
+        userBasket
       }}
     >
       <div className="App">{router}</div>

@@ -87,7 +87,7 @@ export default function Navbar() {
 
           <div className="nav-menu__left">
             {contextData.isLoggedIn ? (
-              <div className="nav-btn">
+              <div className="nav-btn nav-btn__notification--wrapper">
                 <NavLink
                   to="/carts"
                   className={({ isActive }) =>
@@ -95,19 +95,21 @@ export default function Navbar() {
                   }
                 >
                   <CgShoppingBag className="nav-icon" />
-                  {contextData.userInfos?.basket.length ? "Yes" : "No"}
                 </NavLink>
+                <span
+                  className={
+                    contextData.userBasket.length
+                      ? "nav-link__notification"
+                      : "nav-link__notification--hiden"
+                  }
+                >
+                  {contextData.userBasket.length}
+                </span>
               </div>
             ) : (
               ""
             )}
 
-            {/* <div className="nav-btn">
-              <Link to="#" className="nav-link nav-link__notification--wrapper">
-                <PiBellRingingBold className="nav-icon" />
-                <span className="nav-link__notification"></span>
-              </Link>
-            </div> */}
             <div className="nav-btn nav-btn__login">
               {contextData.isLoggedIn ? (
                 <Link to="/panel" className="nav-link">

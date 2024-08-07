@@ -7,7 +7,30 @@
       "email": "nimaranjbarnoshari@gmail.com",
       "password": "12345678",
       "token": "532423nimara543181nimaranjbarnoshari@gmail.com314027",
-      "basket": [],
+      "basket": [{
+        "id": "1",
+        "src": "/images/home/fifa24.jpg",
+        "title": "بازی فیفا ۲۴ (پیش خرید)",
+        "price": 256000,
+        "offPrice": 243200,
+        "count": 1
+      },
+      {
+        "id": "2",
+        "src": "/images/home/jedi.jpg",
+        "title": "بازی JEDI Survivor",
+        "price": 1180000,
+        "offPrice": 1133000,
+        "count": 1
+      },
+      {
+        "id": "3",
+        "src": "/images/home/deadspace.jpg",
+        "title": "بازی Dead Space",
+        "price": 6490000,
+        "offPrice": 6360000,
+        "count": 1
+      }],
       "tickets": []
     },
     {

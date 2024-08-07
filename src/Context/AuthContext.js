@@ -7,6 +7,7 @@ const AuthContext = createContext({
   token: null,
   userInfos: null,
   allUsers: {},
+  userBasket: [],
   login: () => {},
   logout: () => {},
   addToBasket: () => {}

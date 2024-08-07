@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Topbar from "../../Components/Topbar/Topbar";
 import Navbar from "../../Components/Navbar/Navbar";
 import Socials from "../../Components/Socials/Socials";
@@ -6,9 +6,11 @@ import Footer from "../../Components/Footer/Footer";
 import BasketCard from "../../Components/BasketCard/BasketCard";
 import Button from "../../Components/Form/‌Button";
 import PriceBox from "../../Components/PriceBox/PriceBox";
+import AuthContext from "../../Context/AuthContext";
 
 import "./Carts.css";
 export default function Carts() {
+  const contextData = useContext(AuthContext);
   return (
     <>
       <Topbar />
@@ -23,17 +25,31 @@ export default function Carts() {
               <div className="carts-basket__header">
                 <h3 className="carts-basket__title">آیتم های خریداری شده</h3>
               </div>
-              <BasketCard
+              {contextData.userBasket.length
+                ? contextData.userBasket.map((product) => (
+                    <BasketCard
+                      cardSrc={product.src}
+                      flagSrc={product.flag ? product.flag : ""}
+                      price={product.price}
+                      count={product.count}
+                    />
+                  ))
+                : ""}
+              {/* <BasketCard
                 cardSrc="/images/svg/apple.svg"
                 flagSrc="/images/svg/usa.svg"
+                price={256000}
+                count={1}
               />
               <BasketCard
                 cardSrc="/images/svg/steam.svg"
                 flagSrc="/images/svg/usa.svg"
-              />
+                price={256000}
+                count={1}
+              /> */}
               <div className="carts-basket__footer">
                 <h4 className="carts-basket__footer-title">جمع کل سبد خرید:</h4>
-                <PriceBox price="۵۱۲،۰۰۰" isTotal={true}/>
+                <PriceBox price="۵۱۲،۰۰۰" isTotal={true} />
               </div>
             </div>
             <div className="carts-pay">
