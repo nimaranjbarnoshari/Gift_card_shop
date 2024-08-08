@@ -7,47 +7,24 @@
       "email": "nimaranjbarnoshari@gmail.com",
       "password": "12345678",
       "token": "532423nimara543181nimaranjbarnoshari@gmail.com314027",
-      "basket": [{
-        "id": "1",
-        "src": "/images/home/fifa24.jpg",
-        "title": "بازی فیفا ۲۴ (پیش خرید)",
-        "price": 256000,
-        "offPrice": 243200,
-        "count": 1
-      },
-      {
-        "id": "2",
-        "src": "/images/home/jedi.jpg",
-        "title": "بازی JEDI Survivor",
-        "price": 1180000,
-        "offPrice": 1133000,
-        "count": 1
-      },
-      {
-        "id": "3",
-        "src": "/images/home/deadspace.jpg",
-        "title": "بازی Dead Space",
-        "price": 6490000,
-        "offPrice": 6360000,
-        "count": 1
-      },
-      {
-        "id": 4,
-        "src":"/images/home/apple.jpg",
-        "title":"گیفت کارت اپل ۱۰۰ دلاری",
-        "price":6490000,
-        "flag":"/images/svg/usa.svg",
-        "count": 1
-      },
-      {
-        "id": 5,
-        "src":"/images/home/amazon.jpg",
-        "title":"گیفت کارت آمازون ۵۰ دلاری",
-        "price":3245000,
-        "flag":"/images/svg/usa.svg",
-        "count": 1
-      }
-    ],
+      "basket": [
+        {
+          "id": "f625",
+          "src": "/images/home/fifa24.jpg",
+          "title": "بازی فیفا ۲۴ (پیش خرید)",
+          "price": 256000,
+          "offPrice": 243200,
+          "count": 1
+        },
+        {
+          "id": "c3cf",
+          "src": "/images/home/deadspace.jpg",
+          "title": "بازی Dead Space",
+          "price": 6490000,
+          "offPrice": 6360000,
+          "count": 1
+        }
+      ],
       "tickets": []
     },
     {
@@ -57,7 +34,16 @@
       "email": "behnaz.mahbobi5963@gmail.com",
       "password": "14141414",
       "token": "658737behnaz136471behnaz.mahbobi5963@gmail.com115573",
-      "basket": [],
+      "basket": [
+        {
+          "id": "f625",
+          "src": "/images/home/fifa24.jpg",
+          "title": "بازی فیفا ۲۴ (پیش خرید)",
+          "price": 256000,
+          "offPrice": 243200,
+          "count": 1
+        }
+      ],
       "tickets": []
     },
     {
@@ -74,28 +60,28 @@
   "comments": [],
   "games": [
     {
-      "id": "1",
+      "id": "f625",
       "src": "/images/home/fifa24.jpg",
       "title": "بازی فیفا ۲۴ (پیش خرید)",
       "price": 256000,
       "offPrice": 243200
     },
     {
-      "id": "2",
+      "id": "774a",
       "src": "/images/home/jedi.jpg",
       "title": "بازی JEDI Survivor",
       "price": 1180000,
       "offPrice": 1133000
     },
     {
-      "id": "3",
+      "id": "c3cf",
       "src": "/images/home/deadspace.jpg",
       "title": "بازی Dead Space",
       "price": 6490000,
       "offPrice": 6360000
     },
     {
-      "id": "4",
+      "id": "773b",
       "src": "/images/home/warfar.jpg",
       "title": "بازی Modern Warfare 2",
       "price": 3245000,
@@ -104,55 +90,55 @@
   ],
   "accounts": [
     {
-      "id": "1",
+      "id": "1fbd",
       "src": "/images/accounts/spotify.svg",
       "title": "اکانت اسپاتیفای پاندورا",
       "desc": "Spotify"
     },
     {
-      "id": "2",
+      "id": "3d50",
       "src": "/images/accounts/google.svg",
       "title": "اکانت گوگل پلی",
       "desc": "Google Play"
     },
     {
-      "id": "3",
+      "id": "0852",
       "src": "/images/accounts/origin.svg",
       "title": "اکانت اوریجین",
       "desc": "Origin"
     },
     {
-      "id": "4",
+      "id": "d4bf",
       "src": "/images/accounts/amazon.svg",
       "title": "اکانت آمازون",
       "desc": "Amazon"
     },
     {
-      "id": "5",
+      "id": "c7aa",
       "src": "/images/accounts/netflix.svg",
       "title": "اکانت نتفلیکس",
       "desc": "Netflix"
     },
     {
-      "id": "6",
+      "id": "2be8",
       "src": "/images/accounts/itunes.svg",
       "title": "اکانت آیتیونز",
       "desc": "itunes"
     },
     {
-      "id": "7",
+      "id": "ad61",
       "src": "/images/accounts/battle.svg",
       "title": "اکانت بتل نت",
       "desc": "Battle net"
     },
     {
-      "id": "8",
+      "id": "b4ac",
       "src": "/images/accounts/razor.svg",
       "title": "اکانت ریزر گلد ریکستی",
       "desc": "Razor gold"
     },
     {
-      "id": "9",
+      "id": "406b",
       "src": "/images/accounts/nintendo.svg",
       "title": "اکانت نینتندو سویچ",
       "desc": "Nintendo"
@@ -161,50 +147,50 @@
   "gifts": [
     {
       "id": 1,
-      "src":"/images/home/apple.jpg",
-      "title":"گیفت کارت اپل ۱۰۰ دلاری",
-      "price":"۶،۴۹۰،۰۰۰"
+      "src": "/images/home/apple.jpg",
+      "title": "گیفت کارت اپل ۱۰۰ دلاری",
+      "price": "۶،۴۹۰،۰۰۰"
     },
     {
       "id": 2,
-      "src":"/images/home/amazon.jpg",
-      "title":"گیفت کارت آمازون ۵۰ دلاری",
-      "price":"۳،۲۴۵،۰۰۰"
+      "src": "/images/home/amazon.jpg",
+      "title": "گیفت کارت آمازون ۵۰ دلاری",
+      "price": "۳،۲۴۵،۰۰۰"
     }
-],
+  ],
   "categories": [
     {
-      "id": "1",
+      "id": "34b0",
       "src": "/images/home/steam.jpg",
       "title": "انواع گیفت کارت ها",
       "desc": "انواع گیف کارت های استیم ، گوگل پلی ..."
     },
     {
-      "id": "2",
+      "id": "192c",
       "src": "/images/home/popgi.jpg",
       "title": "انواع بازی های دیجیتال",
       "desc": "بازی های دیجیتال پلی استیشن ، ایکس باکس و ..."
     },
     {
-      "id": "3",
+      "id": "4a0b",
       "src": "/images/home/coin.jpg",
       "title": "انواع پول و آیتم بازی",
       "desc": "انواع کوین های رایج بازی ها (cp) "
     },
     {
-      "id": "4",
+      "id": "a10c",
       "src": "/images/home/ping.jpg",
       "title": "انواع خدمات و اکانت دیجیتال",
       "desc": "اکانت اسپاتیفای ، پریمیوم سازی تلگرام و ..."
     },
     {
-      "id": "5",
+      "id": "3570",
       "src": "/images/home/socials.jpg",
       "title": "انواع نرم افزار ها",
       "desc": "نرم افزار های کاهش پینگ و ..."
     },
     {
-      "id": "6",
+      "id": "a113",
       "src": "/images/home/accessory.jpg",
       "title": "انواع لوازم دیجیتال",
       "desc": "کنسول بازی ، موس ، کیبورد و ..."
@@ -212,49 +198,49 @@
   ],
   "menus": [
     {
-      "id": "1",
+      "id": "025c",
       "title": "صفحه اصلی",
       "link": "/"
     },
     {
-      "id": "2",
+      "id": "7a8c",
       "title": "گیفت کارت ها",
       "link": "/gift-cards"
     },
     {
-      "id": "3",
+      "id": "6633",
       "title": "بازی ها",
       "link": "/games"
     },
     {
-      "id": "4",
+      "id": "c03e",
       "title": "خدمات",
       "link": "/services"
     },
     {
-      "id": "5",
+      "id": "46e9",
       "title": "نرم افزار ها",
       "link": "/softwares"
     },
     {
-      "id": "6",
+      "id": "07d8",
       "title": "مقاله ها",
       "link": "/blogs"
     },
     {
-      "id": "7",
+      "id": "0537",
       "title": "درباره ما",
       "link": "/about-us"
     },
     {
-      "id": "8",
+      "id": "6477",
       "title": "تماس با ما",
       "link": "/contact-us"
     }
   ],
   "articles": [
     {
-      "id": "1",
+      "id": "9ace",
       "src": "/images/articles/battlefield.jpg",
       "date": "۱۱ اسفند,۱۴۰۲",
       "title": "انتظار ها به پایان رسید! انتشار بازی BattleField Mobile در اوایل مهرماه!",
@@ -263,7 +249,7 @@
       "writer": "نیما رنجبر"
     },
     {
-      "id": "2",
+      "id": "882a",
       "src": "/images/articles/outlaws.jpg",
       "date": "۱۹ خرداد,۱۴۰۳",
       "title": "جزئیات جدید بازی outlaws از سری بازی های محبوب استاوارز!",
@@ -272,7 +258,7 @@
       "writer": "بهناز محبوبی"
     },
     {
-      "id": "3",
+      "id": "f920",
       "src": "/images/articles/mafia.jpg",
       "date": "۲۷ اردیبهشت,۱۴۰۳",
       "title": "کد های تقلب بازی محبوب مافیا3 برای ایکس باکس وان",

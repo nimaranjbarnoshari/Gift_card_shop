@@ -49,7 +49,53 @@ function App() {
   const addToBasket = (datas, id) => {
     const result = datas.filter((data) => id === data.id);
     if (isLoggedIn) {
-      console.log(result);
+      const isProduct = userBasket.find(
+        (data) => data.title === result[0].title
+      );
+
+      if (isProduct) {
+        Swal.fire({
+          title: "این محصول در سبد خرید شما موجود است",
+          text: "در صورت تمایل، میتوانید در سبد خرید تعداد آن را افزایش دهید",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonText: "برو به سبد خرید",
+          cancelButtonText: "همینجا میمونم",
+          cancelButtonColor: "#Fd295c",
+          iconColor: "#Fd295c",
+          confirmButtonColor: "",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            navigate("/carts");
+          }
+        });
+      } else {
+        const newBasket = [...userBasket, {...result[0], count: 1}];
+        
+        fetch(`http://localhost:8000/users/${userInfos.id}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ basket: newBasket }),
+        }).then((res) => {
+          if (res.ok) {
+            console.log(result[0].title);
+            Swal.fire({
+              title: `${result[0].title} به سبد خرید شما اضافه شد`,
+              icon: "success",
+              iconColor: "#Fd295c",
+              confirmButtonColor: "#Fd295c",
+            }).then(() => {
+              fetch("http://localhost:8000/users")
+                .then((res) => res.json())
+                .then((data) => {
+                  setAllUser(data);
+                });
+            });
+          }
+        });
+      }
     } else {
       Swal.fire({
         title: "لطفا وارد حساب کاربری خود شوید",
@@ -90,14 +136,9 @@ function App() {
   }, [userInfos]);
 
   useEffect(() => {
-
     const total = userBasket.reduce((prev, curr) => {
       return prev + curr.price;
     }, 0);
-
-    // if (userBasket) {
-    //   userBasket.reduce()
-    // }
 
     setTotalPrice(total);
   }, [userBasket]);
