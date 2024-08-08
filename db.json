@@ -30,7 +30,24 @@
         "price": 6490000,
         "offPrice": 6360000,
         "count": 1
-      }],
+      },
+      {
+        "id": 4,
+        "src":"/images/home/apple.jpg",
+        "title":"گیفت کارت اپل ۱۰۰ دلاری",
+        "price":6490000,
+        "flag":"/images/svg/usa.svg",
+        "count": 1
+      },
+      {
+        "id": 5,
+        "src":"/images/home/amazon.jpg",
+        "title":"گیفت کارت آمازون ۵۰ دلاری",
+        "price":3245000,
+        "flag":"/images/svg/usa.svg",
+        "count": 1
+      }
+    ],
       "tickets": []
     },
     {
@@ -141,7 +158,20 @@
       "desc": "Nintendo"
     }
   ],
-  "gifts": [],
+  "gifts": [
+    {
+      "id": 1,
+      "src":"/images/home/apple.jpg",
+      "title":"گیفت کارت اپل ۱۰۰ دلاری",
+      "price":"۶،۴۹۰،۰۰۰"
+    },
+    {
+      "id": 2,
+      "src":"/images/home/amazon.jpg",
+      "title":"گیفت کارت آمازون ۵۰ دلاری",
+      "price":"۳،۲۴۵،۰۰۰"
+    }
+],
   "categories": [
     {
       "id": "1",

@@ -11,6 +11,7 @@ import AuthContext from "../../Context/AuthContext";
 import "./Carts.css";
 export default function Carts() {
   const contextData = useContext(AuthContext);
+
   return (
     <>
       <Topbar />
@@ -28,28 +29,22 @@ export default function Carts() {
               {contextData.userBasket.length
                 ? contextData.userBasket.map((product) => (
                     <BasketCard
+                      key={product.id}
                       cardSrc={product.src}
+                      title={product.title}
                       flagSrc={product.flag ? product.flag : ""}
                       price={product.price}
                       count={product.count}
                     />
                   ))
                 : ""}
-              {/* <BasketCard
-                cardSrc="/images/svg/apple.svg"
-                flagSrc="/images/svg/usa.svg"
-                price={256000}
-                count={1}
-              />
-              <BasketCard
-                cardSrc="/images/svg/steam.svg"
-                flagSrc="/images/svg/usa.svg"
-                price={256000}
-                count={1}
-              /> */}
+
               <div className="carts-basket__footer">
                 <h4 className="carts-basket__footer-title">جمع کل سبد خرید:</h4>
-                <PriceBox price="۵۱۲،۰۰۰" isTotal={true} />
+                <PriceBox
+                  price={contextData.totalPrice.toLocaleString()}
+                  isTotal={true}
+                />
               </div>
             </div>
             <div className="carts-pay">

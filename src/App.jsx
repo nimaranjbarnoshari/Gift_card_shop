@@ -12,6 +12,7 @@ function App() {
   const [token, setToken] = useState(null);
   const [userInfos, setUserInfos] = useState({});
   const [userBasket, setUserBasket] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const login = (userData, token) => {
     setIsLoggedIn(true);
@@ -88,6 +89,19 @@ function App() {
     }
   }, [userInfos]);
 
+  useEffect(() => {
+
+    const total = userBasket.reduce((prev, curr) => {
+      return prev + curr.price;
+    }, 0);
+
+    // if (userBasket) {
+    //   userBasket.reduce()
+    // }
+
+    setTotalPrice(total);
+  }, [userBasket]);
+
   const router = useRoutes(routes);
   return (
     <AuthContext.Provider
@@ -99,7 +113,8 @@ function App() {
         logout,
         allUsers,
         addToBasket,
-        userBasket
+        userBasket,
+        totalPrice,
       }}
     >
       <div className="App">{router}</div>

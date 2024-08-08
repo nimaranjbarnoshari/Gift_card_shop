@@ -6,6 +6,7 @@ const AuthContext = createContext({
   isLoggedIn: false,
   token: null,
   userInfos: null,
+  totalPrice: NaN,
   allUsers: {},
   userBasket: [],
   login: () => {},

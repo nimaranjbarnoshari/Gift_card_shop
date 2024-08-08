@@ -10,7 +10,11 @@
   align-items: center;
   column-gap: 10px;
 }
-
+.basket-card__icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+}
 .basket-card__infos {
   display: flex;
   flex-direction: column;
@@ -27,7 +31,6 @@
   align-items: end;
   row-gap: 10px;
 }
-
 
 /* media query */
 @media (min-width: 768px) {
