@@ -3,7 +3,7 @@ import Flag from "../Flag/Flag";
 import PriceBox from "../PriceBox/PriceBox";
 import BasketButtons from "../BasketButtons/BasketButtons";
 import "./BasketCard.css";
-export default function BasketCard({ cardSrc,title, flagSrc, price, count }) {
+export default function BasketCard({ cardSrc, title, flagSrc, price, count }) {
   return (
     <div className="basket-card">
       <div className="basket-card-right">
@@ -12,7 +12,7 @@ export default function BasketCard({ cardSrc,title, flagSrc, price, count }) {
         </div>
         <div className="basket-card__infos">
           <div className="basket-card__title">{title}</div>
-          <Flag country="آمریکا" src={flagSrc} />
+          {flagSrc ? <Flag country="آمریکا" src={flagSrc} /> : ""}
         </div>
       </div>
       <div className="basket-card-left">

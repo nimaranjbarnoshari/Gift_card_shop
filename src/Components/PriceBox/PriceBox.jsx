@@ -1,4 +1,5 @@
 import React from "react";
+import PN from "persian-number";
 import "./PriceBox.css";
 export default function PriceBox({ price, isTotal, isBold, custom }) {
   return (
@@ -11,7 +12,7 @@ export default function PriceBox({ price, isTotal, isBold, custom }) {
       <span
         className={`price-box__price ${isBold ? "price-box__price-bold" : ""}`}
       >
-        {price}
+        {PN.convertEnToPe(price)}
       </span>
     </div>
   );

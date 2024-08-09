@@ -23,6 +23,22 @@
           "price": 6490000,
           "offPrice": 6360000,
           "count": 1
+        },
+        {
+          "id": "774a",
+          "src": "/images/home/jedi.jpg",
+          "title": "بازی JEDI Survivor",
+          "price": 1180000,
+          "offPrice": 1133000,
+          "count": 1
+        },
+        {
+          "id": "773b",
+          "src": "/images/home/warfar.jpg",
+          "title": "بازی Modern Warfare 2",
+          "price": 3245000,
+          "offPrice": 3148000,
+          "count": 1
         }
       ],
       "tickets": []

@@ -7,6 +7,8 @@ import BasketCard from "../../Components/BasketCard/BasketCard";
 import Button from "../../Components/Form/‌Button";
 import PriceBox from "../../Components/PriceBox/PriceBox";
 import AuthContext from "../../Context/AuthContext";
+import PN from "persian-number";
+
 
 import "./Carts.css";
 export default function Carts() {
@@ -42,7 +44,7 @@ export default function Carts() {
               <div className="carts-basket__footer">
                 <h4 className="carts-basket__footer-title">جمع کل سبد خرید:</h4>
                 <PriceBox
-                  price={contextData.totalPrice.toLocaleString()}
+                  price={PN.convertEnToPe(contextData.totalPrice.toLocaleString())}
                   isTotal={true}
                 />
               </div>

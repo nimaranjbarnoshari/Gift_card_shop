@@ -137,7 +137,7 @@ function App() {
 
   useEffect(() => {
     const total = userBasket.reduce((prev, curr) => {
-      return prev + curr.price;
+      return prev + (curr.price * curr.count);
     }, 0);
 
     setTotalPrice(total);

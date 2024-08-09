@@ -6,6 +6,7 @@ import { TiUserOutline } from "react-icons/ti";
 import { IoClose } from "react-icons/io5";
 import AuthContext from "../../Context/AuthContext";
 import { FiLogOut } from "react-icons/fi";
+import PN from "persian-number";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -103,20 +104,19 @@ export default function Navbar() {
                       : "nav-link__notification--hiden"
                   }
                 >
-                  {contextData.userBasket.length}
+                  {PN.convertEnToPe(contextData.userBasket.length)}
                 </span>
               </div>
             ) : (
               ""
             )}
-
             <div className="nav-btn nav-btn__login">
               {contextData.isLoggedIn ? (
-                <Link to="/panel" className="nav-link">
+                <Link to="/panel" className="nav-link nav-link__login">
                   <span className="nav-link__text-user">پنل کاربری</span>
                 </Link>
               ) : (
-                <Link to="/login" className="nav-link">
+                <Link to="/login" className="nav-link nav-link__login">
                   <span className="nav-link__text">ورود | عضویت</span>
                   <TiUserOutline className="nav-icon" />
                 </Link>
