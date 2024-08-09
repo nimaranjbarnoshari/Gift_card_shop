@@ -9,35 +9,11 @@
       "token": "532423nimara543181nimaranjbarnoshari@gmail.com314027",
       "basket": [
         {
-          "id": "f625",
-          "src": "/images/home/fifa24.jpg",
-          "title": "بازی فیفا ۲۴ (پیش خرید)",
+          "id": "34d9",
+          "src": "/images/home/steam.jpg",
+          "title": "گیفت کارت استیم ۵ دلاری",
           "price": 256000,
-          "offPrice": 243200,
-          "count": 1
-        },
-        {
-          "id": "c3cf",
-          "src": "/images/home/deadspace.jpg",
-          "title": "بازی Dead Space",
-          "price": 6490000,
-          "offPrice": 6360000,
-          "count": 1
-        },
-        {
-          "id": "774a",
-          "src": "/images/home/jedi.jpg",
-          "title": "بازی JEDI Survivor",
-          "price": 1180000,
-          "offPrice": 1133000,
-          "count": 1
-        },
-        {
-          "id": "773b",
-          "src": "/images/home/warfar.jpg",
-          "title": "بازی Modern Warfare 2",
-          "price": 3245000,
-          "offPrice": 3148000,
+          "off": 5,
           "count": 1
         }
       ],
@@ -80,28 +56,28 @@
       "src": "/images/home/fifa24.jpg",
       "title": "بازی فیفا ۲۴ (پیش خرید)",
       "price": 256000,
-      "offPrice": 243200
+      "off": 0
     },
     {
       "id": "774a",
       "src": "/images/home/jedi.jpg",
       "title": "بازی JEDI Survivor",
       "price": 1180000,
-      "offPrice": 1133000
+      "off": 0
     },
     {
       "id": "c3cf",
       "src": "/images/home/deadspace.jpg",
       "title": "بازی Dead Space",
       "price": 6490000,
-      "offPrice": 6360000
+      "off": 0
     },
     {
       "id": "773b",
       "src": "/images/home/warfar.jpg",
       "title": "بازی Modern Warfare 2",
       "price": 3245000,
-      "offPrice": 3148000
+      "off": 0
     }
   ],
   "accounts": [
@@ -109,69 +85,94 @@
       "id": "1fbd",
       "src": "/images/accounts/spotify.svg",
       "title": "اکانت اسپاتیفای پاندورا",
-      "desc": "Spotify"
+      "desc": "Spotify",
+      "price": 49000
     },
     {
       "id": "3d50",
       "src": "/images/accounts/google.svg",
       "title": "اکانت گوگل پلی",
-      "desc": "Google Play"
+      "desc": "Google Play",
+      "price": 49000
     },
     {
       "id": "0852",
       "src": "/images/accounts/origin.svg",
       "title": "اکانت اوریجین",
-      "desc": "Origin"
+      "desc": "Origin",
+      "price": 49000
     },
     {
       "id": "d4bf",
       "src": "/images/accounts/amazon.svg",
       "title": "اکانت آمازون",
-      "desc": "Amazon"
+      "desc": "Amazon",
+      "price": 49000
     },
     {
       "id": "c7aa",
       "src": "/images/accounts/netflix.svg",
       "title": "اکانت نتفلیکس",
-      "desc": "Netflix"
+      "desc": "Netflix",
+      "price": 49000
     },
     {
       "id": "2be8",
       "src": "/images/accounts/itunes.svg",
       "title": "اکانت آیتیونز",
-      "desc": "itunes"
+      "desc": "itunes",
+      "price": 49000
     },
     {
       "id": "ad61",
       "src": "/images/accounts/battle.svg",
       "title": "اکانت بتل نت",
-      "desc": "Battle net"
+      "desc": "Battle net",
+      "price": 49000
     },
     {
       "id": "b4ac",
       "src": "/images/accounts/razor.svg",
       "title": "اکانت ریزر گلد ریکستی",
-      "desc": "Razor gold"
+      "desc": "Razor gold",
+      "price": 49000
     },
     {
       "id": "406b",
       "src": "/images/accounts/nintendo.svg",
       "title": "اکانت نینتندو سویچ",
-      "desc": "Nintendo"
+      "desc": "Nintendo",
+      "price": 49000
     }
   ],
   "gifts": [
     {
-      "id": 1,
-      "src": "/images/home/apple.jpg",
-      "title": "گیفت کارت اپل ۱۰۰ دلاری",
-      "price": "۶،۴۹۰،۰۰۰"
+      "id": "34d9",
+      "src": "/images/home/steam.jpg",
+      "title": "گیفت کارت استیم ۵ دلاری",
+      "price": 256000,
+      "off": 5
     },
     {
-      "id": 2,
+      "id": "ee36",
+      "src": "/images/home/google_play.jpg",
+      "title": "گیفت کارت گوگل پلی ۲۰ دلاری",
+      "price": 1180000,
+      "off": 4
+    },
+    {
+      "id": "02ce",
+      "src": "/images/home/apple.jpg",
+      "title": "گیفت کارت اپل ۱۰۰ دلاری",
+      "price": 6490000,
+      "off": 2
+    },
+    {
+      "id": "2d0c",
       "src": "/images/home/amazon.jpg",
       "title": "گیفت کارت آمازون ۵۰ دلاری",
-      "price": "۳،۲۴۵،۰۰۰"
+      "price": 3245000,
+      "off": 3
     }
   ],
   "categories": [

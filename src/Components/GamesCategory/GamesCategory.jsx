@@ -4,7 +4,7 @@ import GameBox from "../GameBox/GameBox";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import AuthContext from "../../Context/AuthContext";
-
+import { Link } from "react-router-dom";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -105,7 +105,7 @@ export default function GamesCategory() {
               </SwiperSlide>
             ))}
           </Swiper>
-          <button className="games-category__boxes-button">نمایش بیشتر</button>
+          <Link to="/games" className="games-category__boxes-button">نمایش بیشتر</Link>
         </div>
       </div>
     </div>

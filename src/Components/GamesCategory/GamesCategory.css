@@ -55,6 +55,7 @@
 
 .games-category__boxes-button {
   display: none;
+  text-decoration: none;
   width: 200px;
   height: 44px;
   border: none;
@@ -83,12 +84,11 @@
     border-bottom-right-radius: 0;
   }
 }
-@media (min-width: 992px) {
-}
-@media (min-width: 1200px) {
-}
+
 @media (min-width: 1400px) {
   .games-category__boxes-button {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

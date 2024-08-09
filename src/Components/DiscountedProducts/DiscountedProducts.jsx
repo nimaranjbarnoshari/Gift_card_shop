@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useEffect, useState, useContext } from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import GameBox from "../GameBox/GameBox";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
+import AuthContext from "../../Context/AuthContext";
+
 import "swiper/css";
 import "swiper/css/navigation";
-
 import "./DiscountedProducts.css";
 
 export default function DiscountedProducts() {
+  const contextData = useContext(AuthContext);
+  const [allGifts, setAllGifts] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/gifts")
+      .then((res) => res.json())
+      .then((data) => setAllGifts(data));
+  }, []);
   return (
     <div className="discounted-products">
       <div className="container">
@@ -48,45 +57,20 @@ export default function DiscountedProducts() {
               },
             }}
           >
-            <SwiperSlide>
-              <GameBox
-                src="/images/home/steam.jpg"
-                title="گیفت کارت استیم ۵ دلاری"
-                price="۲۵۶،۰۰۰"
-                off="۵"
-                offPrice="۲۴۳،۲۰۰"
-              />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <GameBox
-                src="/images/home/google_play.jpg"
-                title="گیفت کارت گوگل پلی ۲۰ دلاری"
-                price="۱،۱۸۰،۰۰۰"
-                off="۴"
-                offPrice="۱،۱۳۳،۰۰۰"
-              />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <GameBox
-                src="/images/home/apple.jpg"
-                title="گیفت کارت اپل ۱۰۰ دلاری"
-                price="۶،۴۹۰،۰۰۰"
-                off="۲"
-                offPrice="۶،۳۶۰،۰۰۰"
-              />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <GameBox
-                src="/images/home/amazon.jpg"
-                title="گیفت کارت آمازون ۵۰ دلاری"
-                price="۳،۲۴۵،۰۰۰"
-                off="۳"
-                offPrice="۳،۱۴۸،۰۰۰"
-              />
-            </SwiperSlide>
+            {allGifts.map((gift) => (
+              <SwiperSlide>
+                <GameBox
+                  key={gift.id}
+                  src={gift.src}
+                  title={gift.title}
+                  price={gift.price}
+                  off={gift.off}
+                  clickHandler={() =>
+                    contextData.addToBasket(allGifts, gift.id)
+                  }
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>

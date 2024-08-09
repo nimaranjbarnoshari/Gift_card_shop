@@ -64,34 +64,47 @@ function App() {
           cancelButtonColor: "#Fd295c",
           iconColor: "#Fd295c",
           confirmButtonColor: "",
-        }).then((result) => {
-          if (result.isConfirmed) {
+        }).then((answer) => {
+          if (answer.isConfirmed) {
             navigate("/carts");
           }
         });
       } else {
-        const newBasket = [...userBasket, {...result[0], count: 1}];
-        
-        fetch(`http://localhost:8000/users/${userInfos.id}`, {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ basket: newBasket }),
-        }).then((res) => {
-          if (res.ok) {
-            console.log(result[0].title);
-            Swal.fire({
-              title: `${result[0].title} به سبد خرید شما اضافه شد`,
-              icon: "success",
-              iconColor: "#Fd295c",
-              confirmButtonColor: "#Fd295c",
-            }).then(() => {
-              fetch("http://localhost:8000/users")
-                .then((res) => res.json())
-                .then((data) => {
-                  setAllUser(data);
+        const newBasket = [...userBasket, { ...result[0], count: 1 }];
+
+        Swal.fire({
+          title: `${result[0].title} را به سبد خرید اضافه میکنید؟`,
+          icon: "question",
+          confirmButtonText: "بله",
+          cancelButtonText: "خیر",
+          showCancelButton: true,
+          showCloseButton: true,
+          iconColor: "#Fd295c",
+          cancelButtonColor: "#Fd295c",
+        }).then((answer) => {
+          if (answer.isConfirmed) {
+            fetch(`http://localhost:8000/users/${userInfos.id}`, {
+              method: "PATCH",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ basket: newBasket }),
+            }).then((res) => {
+              if (res.ok) {
+                console.log(result[0].title);
+                Swal.fire({
+                  title: `${result[0].title} به سبد خرید شما اضافه شد`,
+                  icon: "success",
+                  iconColor: "#Fd295c",
+                  confirmButtonColor: "#Fd295c",
+                }).then(() => {
+                  fetch("http://localhost:8000/users")
+                    .then((res) => res.json())
+                    .then((data) => {
+                      setAllUser(data);
+                    });
                 });
+              }
             });
           }
         });
@@ -137,7 +150,7 @@ function App() {
 
   useEffect(() => {
     const total = userBasket.reduce((prev, curr) => {
-      return prev + (curr.price * curr.count);
+      return prev + curr.price * curr.count;
     }, 0);
 
     setTotalPrice(total);
