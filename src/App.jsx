@@ -91,7 +91,6 @@ function App() {
               body: JSON.stringify({ basket: newBasket }),
             }).then((res) => {
               if (res.ok) {
-                console.log(result[0].title);
                 Swal.fire({
                   title: `${result[0].title} به سبد خرید شما اضافه شد`,
                   icon: "success",
@@ -119,6 +118,68 @@ function App() {
         navigate("/login");
       });
     }
+  };
+
+  const addCount = (id) => {
+    const product = userBasket.map((item) => {
+      if (item.id === id) {
+        item.count += 1;
+      }
+      return item;
+    });
+
+    fetch(`http://localhost:8000/users/${userInfos.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ basket: product }),
+    })
+      .then((res) => {
+        if (res.ok) {
+          res.json();
+        }
+      })
+      .then((data) => {
+        fetch("http://localhost:8000/users")
+          .then((res) => res.json())
+          .then((data) => {
+            setAllUser(data);
+          });
+        console.log(data);
+      });
+
+    console.log(product);
+  };
+
+  const minusCount = (id) => {
+    const product = userBasket.map((item) => {
+      if (item.id === id) {
+        item.count -= 1;
+      }
+      return item;
+    });
+
+    fetch(`http://localhost:8000/users/${userInfos.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ basket: product }),
+    })
+      .then((res) => {
+        if (res.ok) {
+          res.json();
+        }
+      })
+      .then((data) => {
+        fetch("http://localhost:8000/users")
+          .then((res) => res.json())
+          .then((data) => {
+            setAllUser(data);
+          });
+        console.log(data);
+      });
   };
 
   useEffect(() => {
@@ -169,6 +230,8 @@ function App() {
         addToBasket,
         userBasket,
         totalPrice,
+        addCount,
+        minusCount,
       }}
     >
       <div className="App">{router}</div>

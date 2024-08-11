@@ -58,9 +58,8 @@ export default function DiscountedProducts() {
             }}
           >
             {allGifts.map((gift) => (
-              <SwiperSlide>
+              <SwiperSlide key={gift.id}>
                 <GameBox
-                  key={gift.id}
                   src={gift.src}
                   title={gift.title}
                   price={gift.price}

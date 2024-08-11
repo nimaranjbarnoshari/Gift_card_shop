@@ -14,6 +14,28 @@
           "title": "گیفت کارت استیم ۵ دلاری",
           "price": 256000,
           "off": 5,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "count": 1
+        },
+        {
+          "id": "ee36",
+          "src": "/images/home/google_play.jpg",
+          "title": "گیفت کارت گوگل پلی ۲۰ دلاری",
+          "price": 1180000,
+          "off": 4,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "count": 2
+        },
+        {
+          "id": "2d0c",
+          "src": "/images/home/amazon.jpg",
+          "title": "گیفت کارت آمازون ۵۰ دلاری",
+          "price": 3245000,
+          "off": 3,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
           "count": 1
         }
       ],
@@ -151,28 +173,36 @@
       "src": "/images/home/steam.jpg",
       "title": "گیفت کارت استیم ۵ دلاری",
       "price": 256000,
-      "off": 5
+      "off": 5,
+      "country": "آمریکا",
+      "flag": "/images/svg/usa.svg"
     },
     {
       "id": "ee36",
       "src": "/images/home/google_play.jpg",
       "title": "گیفت کارت گوگل پلی ۲۰ دلاری",
       "price": 1180000,
-      "off": 4
+      "off": 4,
+      "country": "آمریکا",
+      "flag": "/images/svg/usa.svg"
     },
     {
       "id": "02ce",
       "src": "/images/home/apple.jpg",
       "title": "گیفت کارت اپل ۱۰۰ دلاری",
       "price": 6490000,
-      "off": 2
+      "off": 2,
+      "country": "آمریکا",
+      "flag": "/images/svg/usa.svg"
     },
     {
       "id": "2d0c",
       "src": "/images/home/amazon.jpg",
       "title": "گیفت کارت آمازون ۵۰ دلاری",
       "price": 3245000,
-      "off": 3
+      "off": 3,
+      "country": "آمریکا",
+      "flag": "/images/svg/usa.svg"
     }
   ],
   "categories": [

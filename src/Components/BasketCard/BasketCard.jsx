@@ -3,7 +3,15 @@ import Flag from "../Flag/Flag";
 import PriceBox from "../PriceBox/PriceBox";
 import BasketButtons from "../BasketButtons/BasketButtons";
 import "./BasketCard.css";
-export default function BasketCard({ cardSrc, title, flagSrc, price, count }) {
+export default function BasketCard({
+  cardSrc,
+  title,
+  flagSrc,
+  price,
+  count,
+  country,
+  productID
+}) {
   return (
     <div className="basket-card">
       <div className="basket-card-right">
@@ -12,12 +20,12 @@ export default function BasketCard({ cardSrc, title, flagSrc, price, count }) {
         </div>
         <div className="basket-card__infos">
           <div className="basket-card__title">{title}</div>
-          {flagSrc ? <Flag country="آمریکا" src={flagSrc} /> : ""}
+          {flagSrc ? <Flag country={country} src={flagSrc} /> : ""}
         </div>
       </div>
       <div className="basket-card-left">
         <div className="basket-card__buttons">
-          <BasketButtons count={count} />
+          <BasketButtons count={count} productID={productID} />
         </div>
         <div className="basket-card__price-container">
           <PriceBox price={price.toLocaleString()} />
