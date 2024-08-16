@@ -10,7 +10,13 @@
   align-items: center;
   column-gap: 10px;
 }
-.basket-card__icon {
+.basket-card__delete-icon{
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.basket-card__img {
   width: 80px;
   height: 60px;
   border-radius: 5px;
@@ -41,6 +47,10 @@
     flex: 0 0 30%;
     column-gap: 40px;
   }
+  .basket-card__delete-icon{
+    font-size: 25px;
+  }
+  
   .basket-card__buttons {
     flex: 0 0 50%;
   }

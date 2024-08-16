@@ -7,38 +7,7 @@
       "email": "nimaranjbarnoshari@gmail.com",
       "password": "12345678",
       "token": "532423nimara543181nimaranjbarnoshari@gmail.com314027",
-      "basket": [
-        {
-          "id": "34d9",
-          "src": "/images/home/steam.jpg",
-          "title": "گیفت کارت استیم ۵ دلاری",
-          "price": 256000,
-          "off": 5,
-          "country": "آمریکا",
-          "flag": "/images/svg/usa.svg",
-          "count": 1
-        },
-        {
-          "id": "ee36",
-          "src": "/images/home/google_play.jpg",
-          "title": "گیفت کارت گوگل پلی ۲۰ دلاری",
-          "price": 1180000,
-          "off": 4,
-          "country": "آمریکا",
-          "flag": "/images/svg/usa.svg",
-          "count": 1
-        },
-        {
-          "id": "2d0c",
-          "src": "/images/home/amazon.jpg",
-          "title": "گیفت کارت آمازون ۵۰ دلاری",
-          "price": 3245000,
-          "off": 3,
-          "country": "آمریکا",
-          "flag": "/images/svg/usa.svg",
-          "count": 1
-        }
-      ],
+      "basket": [],
       "tickets": []
     },
     {

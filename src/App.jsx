@@ -59,8 +59,8 @@ function App() {
           text: "در صورت تمایل، میتوانید در سبد خرید تعداد آن را افزایش دهید",
           icon: "warning",
           showCancelButton: true,
-          confirmButtonText: "برو به سبد خرید",
-          cancelButtonText: "همینجا میمونم",
+          confirmButtonText: "رفتن به سبد خرید",
+          cancelButtonText: "ادامه دادن در همین صفحه",
           cancelButtonColor: "#Fd295c",
           iconColor: "#Fd295c",
           confirmButtonColor: "",
@@ -118,6 +118,47 @@ function App() {
         navigate("/login");
       });
     }
+  };
+
+  const removeFromBasket = (id, title) => {
+    Swal.fire({
+      title: `میخواهید ${title} را از سبد خرید حذف کنید؟`,
+      icon: "question",
+      confirmButtonText: "بله",
+      cancelButtonText: "انصراف",
+      showCancelButton: true,
+      showCloseButton: true,
+      iconColor: "#Fd295c",
+      cancelButtonColor: "#Fd295c",
+    }).then((answer) => {
+      if (answer.isConfirmed) {
+        const newBasket = [...userBasket].filter((basket) => basket.id !== id);
+        console.log(newBasket);
+
+        fetch(`http://localhost:8000/users/${userInfos.id}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ basket: newBasket }),
+        }).then((res) => {
+          if (res.ok) {
+            Swal.fire({
+              title: `${title} با موفقیت از سبد خرید حذف شد`,
+              icon: "success",
+              iconColor: "#Fd295c",
+              confirmButtonColor: "#Fd295c",
+            }).then(() => {
+              fetch("http://localhost:8000/users")
+                .then((res) => res.json())
+                .then((data) => {
+                  setAllUser(data);
+                });
+            });
+          }
+        });
+      }
+    });
   };
 
   const addCount = (id) => {
@@ -232,6 +273,7 @@ function App() {
         totalPrice,
         addCount,
         minusCount,
+        removeFromBasket,
       }}
     >
       <div className="App">{router}</div>

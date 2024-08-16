@@ -13,7 +13,8 @@ const AuthContext = createContext({
   logout: () => {},
   addToBasket: () => {},
   addCount: () => {},
-  minusCount: () => {}
+  minusCount: () => {},
+  removeFromBasket: () => {}
 });
 
 export default AuthContext;
