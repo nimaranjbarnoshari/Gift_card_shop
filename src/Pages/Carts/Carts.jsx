@@ -9,6 +9,7 @@ import PriceBox from "../../Components/PriceBox/PriceBox";
 import AuthContext from "../../Context/AuthContext";
 import PN from "persian-number";
 import { Navigate } from "react-router-dom";
+import { ImSad } from "react-icons/im";
 
 import "./Carts.css";
 export default function Carts() {
@@ -27,13 +28,15 @@ export default function Carts() {
               </div>
               <div className="carts-container">
                 <div className="carts-basket">
-                  <div className="carts-basket__header">
-                    <h3 className="carts-basket__title">
-                      آیتم های خریداری شده
-                    </h3>
-                  </div>
-                  {contextData.userBasket.length
-                    ? contextData.userBasket.map((product) => (
+                  {contextData.userBasket.length ? (
+                    <>
+                      <div className="carts-basket__header">
+                        <h3 className="carts-basket__title">
+                          آیتم های خریداری شده
+                        </h3>
+                      </div>
+
+                      {contextData.userBasket.map((product) => (
                         <BasketCard
                           key={product.id}
                           cardSrc={product.src}
@@ -44,20 +47,26 @@ export default function Carts() {
                           country={product.country ? product.country : ""}
                           productID={product.id}
                         />
-                      ))
-                    : ""}
+                      ))}
 
-                  <div className="carts-basket__footer">
-                    <h4 className="carts-basket__footer-title">
-                      جمع کل سبد خرید:
-                    </h4>
-                    <PriceBox
-                      price={PN.convertEnToPe(
-                        contextData.totalPrice.toLocaleString()
-                      )}
-                      isTotal={true}
-                    />
-                  </div>
+                      <div className="carts-basket__footer">
+                        <h4 className="carts-basket__footer-title">
+                          جمع کل سبد خرید:
+                        </h4>
+                        <PriceBox
+                          price={PN.convertEnToPe(
+                            contextData.totalPrice.toLocaleString()
+                          )}
+                          isTotal={true}
+                        />
+                      </div>
+                    </>
+                  ) : (
+                    <div className="carts-basket__empty">
+                      <p className="carts-basket__empty-title">هیچ محصولی در سبد خرید شما وجود ندارد</p>
+                      <ImSad className="carts-basket__empty-icon"/>
+                    </div>
+                  )}
                 </div>
                 <div className="carts-pay">
                   <h3 className="carts-pay__title">انتخاب درگاه پرداخت</h3>
@@ -80,6 +89,7 @@ export default function Carts() {
                   <Button
                     children="ثبت نهایی و پرداخت"
                     className="carts-pay__button"
+                    disabled={contextData.userBasket.length ? false : true}
                   />
                 </div>
               </div>
