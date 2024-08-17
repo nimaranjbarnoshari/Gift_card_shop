@@ -8,7 +8,8 @@
       "password": "12345678",
       "token": "532423nimara543181nimaranjbarnoshari@gmail.com314027",
       "basket": [],
-      "tickets": []
+      "tickets": [],
+      "balance": 1800000
     },
     {
       "id": "ed67",
@@ -27,7 +28,8 @@
           "count": 1
         }
       ],
-      "tickets": []
+      "tickets": [],
+      "balance": 2500000
     },
     {
       "id": "5805",
@@ -37,7 +39,8 @@
       "password": "12345678",
       "token": "586810mehran639059mehran@gmail.com255894",
       "basket": [],
-      "tickets": []
+      "tickets": [],
+      "balance": 0
     }
   ],
   "comments": [],

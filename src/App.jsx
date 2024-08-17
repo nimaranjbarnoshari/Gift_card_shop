@@ -13,6 +13,7 @@ function App() {
   const [userInfos, setUserInfos] = useState({});
   const [userBasket, setUserBasket] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [accountBalance, setAccountBalance] = useState(0);
 
   const login = (userData, token) => {
     setIsLoggedIn(true);
@@ -219,7 +220,28 @@ function App() {
           .then((data) => {
             setAllUser(data);
           });
-        console.log(data);
+      });
+  };
+
+  const chargeBalance = (amount) => {
+    fetch(`http://localhost:8000/users/${userInfos.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ balance: amount + accountBalance }),
+    })
+      .then((res) => {
+        if (res.ok) {
+          res.json();
+        }
+      })
+      .then((data) => {
+        fetch("http://localhost:8000/users")
+          .then((res) => res.json())
+          .then((data) => {
+            setAllUser(data);
+          });
       });
   };
 
@@ -246,6 +268,7 @@ function App() {
     if (userInfos) {
       if (Object.hasOwn(userInfos, "basket")) {
         setUserBasket(userInfos.basket);
+        setAccountBalance(userInfos.balance);
       }
     }
   }, [userInfos]);
@@ -274,6 +297,8 @@ function App() {
         addCount,
         minusCount,
         removeFromBasket,
+        accountBalance,
+        chargeBalance,
       }}
     >
       <div className="App">{router}</div>

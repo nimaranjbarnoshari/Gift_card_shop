@@ -7,6 +7,7 @@ const AuthContext = createContext({
   token: null,
   userInfos: null,
   totalPrice: NaN,
+  accountBalance: 0,
   allUsers: {},
   userBasket: [],
   login: () => {},
@@ -14,7 +15,8 @@ const AuthContext = createContext({
   addToBasket: () => {},
   addCount: () => {},
   minusCount: () => {},
-  removeFromBasket: () => {}
+  removeFromBasket: () => {},
+  chargeBalance: () => {}
 });
 
 export default AuthContext;

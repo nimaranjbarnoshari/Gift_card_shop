@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import Input from "../../../Components/Form/Input";
 import Button from "../../../Components/Form/‌Button";
 import "./Wallet.css";
 import WalletBox from "../Components/WalletBox/WalletBox";
 import TransactionBox from "../Components/TransactionBox/TransactionBox";
+import AuthContext from "../../../Context/AuthContext";
+import PN from "persian-number";
+
 export default function Wallet() {
-  const rechargeHandler = () => {
-    console.log("charged");
-  };
+  const contextData = useContext(AuthContext);
+  const [amount, setAmount] = useState(0);
+
   return (
     <div className="panel-styles wallet">
       <h2 className="wallet-title">کیف پول</h2>
@@ -17,7 +20,7 @@ export default function Wallet() {
             <h4 className="wallet-pay__header-title">موجودی کیف پول شما</h4>
             <span className="wallet-pay__header-ballance">
               <span className="wallet-pay__header-ballance-unit">تومان</span>{" "}
-              ۵،۰۰۰،۰۰۰
+              {PN.convertEnToPe(contextData.accountBalance.toLocaleString())}
             </span>
           </div>
           <div className="wallet-pay__recharge">
@@ -26,6 +29,8 @@ export default function Wallet() {
               label="مبلغ شارژ"
               type="number"
               custom="wallet-pay__input"
+              value={amount}
+              onChange={(event) => setAmount(event.target.value)}
             />
             <span className="wallet-pay__input-unit">تومان</span>
           </div>
@@ -44,7 +49,10 @@ export default function Wallet() {
               src="/images/wallet/parsian.svg"
             />
           </div>
-          <Button onClick={rechargeHandler} className="wallet-pay__btn">
+          <Button
+            onClick={() => contextData.chargeBalance(+amount)}
+            className="wallet-pay__btn"
+          >
             شارژ کیف پول
           </Button>
         </div>
