@@ -31,9 +31,8 @@
   column-gap: 10px;
 }
 .user-panel__box-header-img {
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
 }
 .user-panel__box-header-infos {
   display: flex;
@@ -95,8 +94,8 @@
     padding: 15px;
   }
   .user-panel__box-header-img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
   .user-panel__box-header-name {
     font-size: 13px;
@@ -137,12 +136,12 @@
     line-height: 36px;
   }
   .user-panel__box {
-    width: 260px;
+    width: 240px;
     padding: 10px;
   }
   .user-panel__box-header-img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
   .user-panel__box-header-name {
     font-size: 12px;

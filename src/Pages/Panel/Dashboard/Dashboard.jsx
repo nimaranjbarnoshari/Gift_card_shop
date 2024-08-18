@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import DashboardBox from "../Components/DashboardBox/DashboardBox";
 import DashboardLink from "../Components/DashboardLink/DashboardLink";
 import PriceBox from "../../../Components/PriceBox/PriceBox";
@@ -6,10 +6,12 @@ import OrderBox from "../Components/OrderBox/OrderBox";
 import Chip from "../Components/Chip/Chip";
 import { BsTicket } from "react-icons/bs";
 import { HiSpeakerphone } from "react-icons/hi";
-
+import AuthContext from "../../../Context/AuthContext";
+import PN from "persian-number";
 
 import "./Dashboard.css";
 export default function Dashboard() {
+  const contextData = useContext(AuthContext);
   const [isShowNotice, setIsShowNotice] = useState(false);
 
   return (
@@ -20,7 +22,7 @@ export default function Dashboard() {
           <DashboardBox
             src="/images/svg/check.svg"
             to="/panel/orders"
-            count="۲۲"
+            count={PN.convertEnToPe(contextData.userInfos.orders.length)}
             title="سفارشات تکمیل شده"
           />
           <DashboardBox
@@ -34,7 +36,7 @@ export default function Dashboard() {
             bg="pink"
             src="/images/svg/ticket.svg"
             to="/panel/orders"
-            count="۱۴"
+            count={PN.convertEnToPe(contextData.userInfos.tickets.length)}
             title="تیکت های شما"
           />
         </div>
@@ -101,7 +103,7 @@ export default function Dashboard() {
           className="dashboard-left__btn"
           onClick={() => setIsShowNotice(!isShowNotice)}
         >
-          <HiSpeakerphone className="dashboard-left__btn-icon"/>
+          <HiSpeakerphone className="dashboard-left__btn-icon" />
         </button>
         <h3 className="dashboard-left__title">اطلاعیه ها</h3>
         <div className="dashboard-notices">

@@ -11,11 +11,11 @@ export default function PanelTopbar() {
   return (
     <div className="panel-topbar">
       <div className="panel-topbar-right">
-        <img
+        {/* <img
           src="/images/user/user.jpg"
           alt="user_img"
           className="panel-topbar__img"
-        />
+        /> */}
         <span className="panel-topbar__phone">
           {contextData.userInfos.fullName}
         </span>
