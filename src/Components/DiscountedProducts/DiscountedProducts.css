@@ -40,8 +40,7 @@
 
 /* swiper styles */
 
-
-.discounted-products .swiper-slide{
+.discounted-products .swiper-slide {
   display: flex;
   justify-content: center;
 }
@@ -52,7 +51,6 @@
   background-color: transparent;
   font-size: 16px;
 }
-
 
 /* media query */
 
@@ -91,3 +89,9 @@
   }
 }
 
+@media (min-width: 1400px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}

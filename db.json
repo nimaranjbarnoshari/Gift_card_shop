@@ -18,16 +18,7 @@
       "email": "behnaz.mahbobi5963@gmail.com",
       "password": "14141414",
       "token": "658737behnaz136471behnaz.mahbobi5963@gmail.com115573",
-      "basket": [
-        {
-          "id": "f625",
-          "src": "/images/home/fifa24.jpg",
-          "title": "بازی فیفا ۲۴ (پیش خرید)",
-          "price": 256000,
-          "offPrice": 243200,
-          "count": 1
-        }
-      ],
+      "basket": [],
       "orders": [],
       "tickets": [],
       "balance": 2500000
@@ -176,6 +167,13 @@
       "off": 3,
       "country": "آمریکا",
       "flag": "/images/svg/usa.svg"
+    },
+    {
+      "id": "bdcd",
+      "src": "/images/home/netflix.jpg",
+      "title": "گیفت کارت نتفلیکس ۵۰ دلاری",
+      "price": 3245000,
+      "off": 1
     }
   ],
   "categories": [
