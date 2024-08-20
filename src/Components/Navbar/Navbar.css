@@ -232,7 +232,6 @@
   }
   .nav-menu__list-link {
     font-size: 13px;
-    /* font-weight: 600; */
   }
   .nav-menu__list-items {
     column-gap: 15px;
@@ -272,7 +271,6 @@
   }
   .nav-menu__list-link {
     font-size: 15px;
-    /* font-weight: 600; */
   }
   .nav-menu__list-link--active::after {
     height: 7px;

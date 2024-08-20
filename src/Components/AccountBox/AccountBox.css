@@ -37,8 +37,9 @@
   font-size: 12px;
   text-wrap: nowrap;
 }
-.account-box__icon-wrapper {
+.account-box__link {
   flex: 0 0 8%;
+  color: var(--white-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,7 +47,7 @@
   cursor: pointer;
 }
 .account-box__icon {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 /* media query */

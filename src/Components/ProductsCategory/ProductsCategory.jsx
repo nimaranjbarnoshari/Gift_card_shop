@@ -25,6 +25,7 @@ export default function ProductsCategory() {
               src={category.src}
               title={category.title}
               desc={category.desc}
+              href={category.href}
             />
           ))}
         </div>
