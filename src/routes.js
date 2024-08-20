@@ -42,6 +42,8 @@ const routes = [
     {path:"/games", element: <Games />},
     {path:"/services", element: <Services />},
     {path:"/softwares", element: <Softwares />},
+    {path:"/money&items", element: <Softwares />},
+    {path:"/accessories", element: <Softwares />},
     {path:"/*", element: <Page404 />},
     {path:"/panel", element: <Panel />, 
         children:[

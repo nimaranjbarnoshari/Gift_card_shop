@@ -181,37 +181,43 @@
       "id": "34b0",
       "src": "/images/home/steam.jpg",
       "title": "انواع گیفت کارت ها",
-      "desc": "انواع گیف کارت های استیم ، گوگل پلی ..."
+      "desc": "انواع گیف کارت های استیم ، گوگل پلی ...",
+      "href": "/gift-cards"
     },
     {
       "id": "192c",
       "src": "/images/home/popgi.jpg",
       "title": "انواع بازی های دیجیتال",
-      "desc": "بازی های دیجیتال پلی استیشن ، ایکس باکس و ..."
+      "desc": "بازی های دیجیتال پلی استیشن ، ایکس باکس و ...",
+      "href": "/games"
     },
     {
       "id": "4a0b",
       "src": "/images/home/coin.jpg",
       "title": "انواع پول و آیتم بازی",
-      "desc": "انواع کوین های رایج بازی ها (cp) "
+      "desc": "انواع کوین های رایج بازی ها (cp) ",
+      "href": "/money&items"
     },
     {
       "id": "a10c",
       "src": "/images/home/ping.jpg",
       "title": "انواع خدمات و اکانت دیجیتال",
-      "desc": "اکانت اسپاتیفای ، پریمیوم سازی تلگرام و ..."
+      "desc": "اکانت اسپاتیفای ، پریمیوم سازی تلگرام و ...",
+      "href": "/services"
     },
     {
       "id": "3570",
       "src": "/images/home/socials.jpg",
       "title": "انواع نرم افزار ها",
-      "desc": "نرم افزار های کاهش پینگ و ..."
+      "desc": "نرم افزار های کاهش پینگ و ...",
+      "href": "/softwares"
     },
     {
       "id": "a113",
       "src": "/images/home/accessory.jpg",
       "title": "انواع لوازم دیجیتال",
-      "desc": "کنسول بازی ، موس ، کیبورد و ..."
+      "desc": "کنسول بازی ، موس ، کیبورد و ...",
+      "href": "/gifts"
     }
   ],
   "menus": [
@@ -231,18 +237,28 @@
       "link": "/games"
     },
     {
+      "id": "cb6e",
+      "title": "پول و آیتم بازی",
+      "link": "/money&items"
+    },
+    {
       "id": "c03e",
       "title": "خدمات",
       "link": "/services"
     },
     {
       "id": "46e9",
-      "title": "نرم افزار ها",
+      "title": "نرم افزار",
       "link": "/softwares"
     },
     {
+      "id": "12eb",
+      "title": "کالای دیجیتال",
+      "link": "/accessories"
+    },
+    {
       "id": "07d8",
-      "title": "مقاله ها",
+      "title": "بلاگ",
       "link": "/blogs"
     },
     {
