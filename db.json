@@ -40,30 +40,210 @@
     {
       "id": "f625",
       "src": "/images/home/fifa24.jpg",
-      "title": "بازی فیفا ۲۴ (پیش خرید)",
+      "title": "بازی فیفا ۲۴",
       "price": 256000,
-      "off": 0
+      "off": 0,
+      "category": "ps"
     },
     {
       "id": "774a",
       "src": "/images/home/jedi.jpg",
       "title": "بازی JEDI Survivor",
       "price": 1180000,
-      "off": 0
+      "off": 0,
+      "category": "ps"
     },
     {
       "id": "c3cf",
       "src": "/images/home/deadspace.jpg",
       "title": "بازی Dead Space",
       "price": 6490000,
-      "off": 0
+      "off": 0,
+      "category": "ps"
     },
     {
       "id": "773b",
       "src": "/images/home/warfar.jpg",
       "title": "بازی Modern Warfare 2",
       "price": 3245000,
-      "off": 0
+      "off": 0,
+      "category": "ps"
+    },
+    {
+      "id": "9e22",
+      "src": "/images/home/mario-golf.jpeg",
+      "title": "بازی Mario Golf",
+      "price": 3590000,
+      "off": 0,
+      "category": "nintendo"
+    },
+    {
+      "id": "7bae",
+      "src": "/images/home/fc24.jpeg",
+      "title": "بازی FC24",
+      "price": 3490000,
+      "off": 0,
+      "category": "nintendo"
+    },
+    {
+      "id": "a186",
+      "src": "/images/home/zelda.jpeg",
+      "title": "بازی Zelda",
+      "price": 4188000,
+      "off": 0,
+      "category": "nintendo"
+    },
+    {
+      "id": "4106",
+      "src": "/images/home/descenders.jpeg",
+      "title": "بازی Descenders",
+      "price": 297000,
+      "off": 0,
+      "category": "nintendo"
+    },
+    {
+      "id": "fc8e",
+      "src": "/images/home/nba.jpeg",
+      "title": "بازی NBA 2K24 Kobe Bryant",
+      "price": 3586000,
+      "off": 0,
+      "category": "nintendo"
+    },
+    {
+      "id": "306e",
+      "src": "/images/home/bush-hockey.jpeg",
+      "title": "بازی Bush Hockey",
+      "price": 938000,
+      "off": 0,
+      "category": "nintendo"
+    },
+    {
+      "id": "5b3b",
+      "src": "/images/home/morkull.jpeg",
+      "title": "بازی Morkull Ragast's Rage League",
+      "price": 996000,
+      "off": 0,
+      "category": "nintendo"
+    },
+    {
+      "id": "a04f",
+      "src": "/images/home/god-of-war.jpeg",
+      "title": "بازی God of War",
+      "price": 4892000,
+      "off": 0,
+      "category": "ps"
+    },
+    {
+      "id": "28df",
+      "src": "/images/home/valorant.jpeg",
+      "title": "بازی Valorant",
+      "price": 1249000,
+      "off": 0,
+      "category": "ps"
+    },
+    {
+      "id": "9dfd",
+      "src": "/images/home/elden.jpeg",
+      "title": "بازی Elden Ring",
+      "price": 258400,
+      "off": 0,
+      "category": "computer"
+    },
+    {
+      "id": "f0da",
+      "src": "/images/home/hunt.jpeg",
+      "title": "بازی Hunt",
+      "price": 1249000,
+      "off": 0,
+      "category": "computer"
+    },
+    {
+      "id": "3541",
+      "src": "/images/home/call-of-duty.jpeg",
+      "title": "بازی Call of Duty 2024",
+      "price": 3847000,
+      "off": 0,
+      "category": "computer"
+    },
+    {
+      "id": "cff3",
+      "src": "/images/home/destiny.jpeg",
+      "title": "بازی Destiny 2",
+      "price": 2469000,
+      "off": 0,
+      "category": "computer"
+    },
+    {
+      "id": "8d9e",
+      "src": "/images/home/dragons.jpeg",
+      "title": "بازی Dragon's Dogma 2",
+      "price": 548000,
+      "off": 0,
+      "category": "computer"
+    },
+    {
+      "id": "9013",
+      "src": "/images/home/naraka.jpeg",
+      "title": "بازی Naraka: Bladepoint 2021",
+      "price": 369000,
+      "off": 0,
+      "category": "computer"
+    },
+    {
+      "id": "0ed7",
+      "src": "/images/home/crash.jpeg",
+      "title": "بازی Crash Bandikoot 4",
+      "price": 369000,
+      "off": 0,
+      "category": "xbox"
+    },
+    {
+      "id": "a166",
+      "src": "/images/home/mafia-xbox.jpeg",
+      "title": "بازی Mafia: Definitive Edition",
+      "price": 2986000,
+      "off": 0,
+      "category": "xbox"
+    },
+    {
+      "id": "d601",
+      "src": "/images/home/ea-sports.jpeg",
+      "title": "بازی EA Sports FC 25",
+      "price": 4890000,
+      "off": 0,
+      "category": "xbox"
+    },
+    {
+      "id": "066a",
+      "src": "/images/home/forza.jpeg",
+      "title": "بازی Forza Horizon 5 Premium Edition",
+      "price": 3258000,
+      "off": 0,
+      "category": "xbox"
+    },
+    {
+      "id": "d9c3",
+      "src": "/images/home/ride.jpeg",
+      "title": "بازی Ride 5",
+      "price": 3852000,
+      "off": 0,
+      "category": "xbox"
+    },
+    {
+      "id": "e2d8",
+      "src": "/images/home/grand-theft.jpeg",
+      "title": "بازی Grand Theft Auto",
+      "price": 1314000,
+      "off": 2,
+      "category": "xbox"
+    },
+    {
+      "id": "5839",
+      "src": "/images/home/plug-tale.jpeg",
+      "title": "بازی  A Plague Tale: Requiem",
+      "price": 1998000,
+      "off": 1,
+      "category": "xbox"
     }
   ],
   "accounts": [

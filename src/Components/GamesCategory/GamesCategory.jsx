@@ -4,23 +4,54 @@ import GameBox from "../GameBox/GameBox";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import AuthContext from "../../Context/AuthContext";
-import { Link } from "react-router-dom";
+import { ImSad } from "react-icons/im";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "./GamesCategory.css";
 
 export default function GamesCategory() {
- 
   const contextData = useContext(AuthContext);
+  const [allGamesData, setAllGamesData] = useState([]);
   const [gamesData, setGamesData] = useState([]);
+  const [isActive, setIsActive] = useState("1");
+
+  const setData = (data, filterKry) => {
+    const category = data.filter((game) => game.category === filterKry);
+    return category;
+  };
 
   useEffect(() => {
     fetch("http://localhost:8000/games")
       .then((res) => res.json())
-      .then((data) => setGamesData(data));
+      .then((data) => setAllGamesData(data));
   }, []);
-  
+
+  useEffect(() => {
+    const psGames = setData(allGamesData, "ps");
+    setGamesData(psGames);
+  }, [allGamesData]);
+
+  const psGamesHandler = () => {
+    const psGames = setData(allGamesData, "ps");
+    setGamesData(psGames);
+    setIsActive("1");
+  };
+  const xboxGamesHandler = () => {
+    const xboxGames = setData(allGamesData, "xbox");
+    setGamesData(xboxGames);
+    setIsActive("2");
+  };
+  const computerGamesHandler = () => {
+    const computerGames = setData(allGamesData, "computer");
+    setGamesData(computerGames);
+    setIsActive("3");
+  };
+  const nintendoGamesHandler = () => {
+    const nintendoGames = setData(allGamesData, "nintendo");
+    setGamesData(nintendoGames);
+    setIsActive("4");
+  };
 
   return (
     <div className="games-category">
@@ -28,7 +59,15 @@ export default function GamesCategory() {
         <SectionHeader title="دسته بندی بازی ها" />
         {/* buttons */}
         <div className="games-category__buttons-wrapper">
-          <button className="games-category__button games-category__button--active">
+          <button
+            className={
+              isActive === "1"
+                ? "games-category__button games-category__button--active"
+                : "games-category__button"
+            }
+            onClick={psGamesHandler}
+            id="1"
+          >
             <img
               src="/images/svg/PlayStation.svg"
               alt="svg"
@@ -39,7 +78,15 @@ export default function GamesCategory() {
             </span>
           </button>
 
-          <button className="games-category__button">
+          <button
+            className={
+              isActive === "2"
+                ? "games-category__button games-category__button--active"
+                : "games-category__button"
+            }
+            onClick={xboxGamesHandler}
+            id="2"
+          >
             <img
               src="/images/svg/Xbox.svg"
               alt="svg"
@@ -50,7 +97,15 @@ export default function GamesCategory() {
             </span>
           </button>
 
-          <button className="games-category__button">
+          <button
+            className={
+              isActive === "3"
+                ? "games-category__button games-category__button--active"
+                : "games-category__button"
+            }
+            onClick={computerGamesHandler}
+            id="3"
+          >
             <img
               src="/images/svg/mouse.svg"
               alt="svg"
@@ -61,7 +116,15 @@ export default function GamesCategory() {
             </span>
           </button>
 
-          <button className="games-category__button">
+          <button
+            className={
+              isActive === "4"
+                ? "games-category__button games-category__button--active"
+                : "games-category__button"
+            }
+            onClick={nintendoGamesHandler}
+            id="4"
+          >
             <img
               src="/images/svg/Nintendo.svg"
               alt="svg"
@@ -94,18 +157,29 @@ export default function GamesCategory() {
               },
             }}
           >
-            {gamesData.map((game) => (
-              <SwiperSlide key={game.id}>
-                <GameBox
-                  clickHandler={() => contextData.addToBasket(gamesData,game.id)}
-                  src={game.src}
-                  title={game.title}
-                  price={game.price.toLocaleString()}
-                />
-              </SwiperSlide>
-            ))}
+            {gamesData.length ? (
+              gamesData.map((game) => (
+                <SwiperSlide key={game.id}>
+                  <GameBox
+                    clickHandler={() =>
+                      contextData.addToBasket(gamesData, game.id)
+                    }
+                    src={game.src}
+                    title={game.title}
+                    price={game.price}
+                    off={game.off}
+                  />
+                </SwiperSlide>
+              ))
+            ) : (
+              <div className="games-category__empty">
+                <h4 className="games-category__empty-text">
+                  متاسفانه هیچ بازی در این دسته بندی وجود ندارد
+                </h4>
+                <ImSad className="games-category__empty-icon" />
+              </div>
+            )}
           </Swiper>
-          <Link to="/games" className="games-category__boxes-button">نمایش بیشتر</Link>
         </div>
       </div>
     </div>

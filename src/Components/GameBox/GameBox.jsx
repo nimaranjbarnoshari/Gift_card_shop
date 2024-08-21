@@ -29,7 +29,7 @@ export default function GameBox({ src, off, title, price, clickHandler }) {
             </>
           ) : (
             <>
-              <span>تومان</span> {PN.convertEnToPe(price)}
+              <span>تومان</span> {PN.convertEnToPe(price.toLocaleString())}
             </>
           )}
         </p>

@@ -69,6 +69,7 @@
   .discounted-products__button {
     flex: 0 0 auto;
   }
+  
 }
 @media (min-width: 992px) {
   .discounted-products__buttons-wrapper {
@@ -82,16 +83,10 @@
     border-radius: 10px;
     font-size: 14px;
   }
+  
 }
 @media (min-width: 1200px) {
   .discounted-products__buttons-wrapper {
     column-gap: 40px;
-  }
-}
-
-@media (min-width: 1400px) {
-  .swiper-button-prev,
-  .swiper-button-next {
-    display: none;
   }
 }
