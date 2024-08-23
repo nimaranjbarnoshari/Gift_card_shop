@@ -4,6 +4,7 @@ import GameBox from "../GameBox/GameBox";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import AuthContext from "../../Context/AuthContext";
+import { ImSad } from "react-icons/im";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -11,13 +12,46 @@ import "./DiscountedProducts.css";
 
 export default function DiscountedProducts() {
   const contextData = useContext(AuthContext);
-  const [allGifts, setAllGifts] = useState([]);
+  const [discountProducts, setDiscountProducts] = useState([]);
+  const [isActive, setIsActive] = useState("gifts");
 
-  useEffect(() => {
-    fetch("http://localhost:8000/gifts")
+  const fetchData = (product) => {
+    fetch(`http://localhost:8000/${product}`)
       .then((res) => res.json())
-      .then((data) => setAllGifts(data));
+      .then((datas) => {
+        const discountedProducts = datas.filter((data) => data.off !== 0);
+        setDiscountProducts(discountedProducts);
+      });
+  };
+  useEffect(() => {
+    fetchData("gifts");
   }, []);
+
+  const giftDiscount = () => {
+    fetchData("gifts");
+    setIsActive("gifts");
+  };
+  const gameDiscount = () => {
+    fetchData("games");
+    setIsActive("games");
+  };
+  const moneyDiscount = () => {
+    fetchData("money");
+    setIsActive("money");
+  };
+  const serviceDiscount = () => {
+    fetchData("services");
+    setIsActive("services");
+  };
+  const softwareDiscount = () => {
+    fetchData("softwares");
+    setIsActive("softwares");
+  };
+  const digitDiscount = () => {
+    fetchData("digits");
+    setIsActive("digits");
+  };
+
   return (
     <div className="discounted-products">
       <div className="container">
@@ -25,16 +59,66 @@ export default function DiscountedProducts() {
 
         {/* buttons */}
         <div className="discounted-products__buttons-wrapper">
-          <button className="discounted-products__button discounted-products__button--active">
+          <button
+            className={
+              isActive === "gifts"
+                ? "discounted-products__button discounted-products__button--active"
+                : "discounted-products__button"
+            }
+            onClick={giftDiscount}
+          >
             گیفت کارت
           </button>
-          <button className="discounted-products__button">بازی ها</button>
-          <button className="discounted-products__button">
+          <button
+            className={
+              isActive === "games"
+                ? "discounted-products__button discounted-products__button--active"
+                : "discounted-products__button"
+            }
+            onClick={gameDiscount}
+          >
+            بازی ها
+          </button>
+          <button
+            className={
+              isActive === "money"
+                ? "discounted-products__button discounted-products__button--active"
+                : "discounted-products__button"
+            }
+            onClick={moneyDiscount}
+          >
             پول وآیتم بازی
           </button>
-          <button className="discounted-products__button">خدمات</button>
-          <button className="discounted-products__button">نرم افزار</button>
-          <button className="discounted-products__button">کالای دیجیتال</button>
+          <button
+            className={
+              isActive === "services"
+                ? "discounted-products__button discounted-products__button--active"
+                : "discounted-products__button"
+            }
+            onClick={serviceDiscount}
+          >
+            خدمات
+          </button>
+          <button
+            className={
+              isActive === "softwares"
+                ? "discounted-products__button discounted-products__button--active"
+                : "discounted-products__button"
+            }
+            onClick={softwareDiscount}
+          >
+            نرم افزار
+          </button>
+          <button
+            className={
+              isActive === "digits"
+                ? "discounted-products__button discounted-products__button--active"
+                : "discounted-products__button"
+            }
+            onClick={digitDiscount}
+          >
+            کالای دیجیتال
+          </button>
         </div>
 
         {/* games boxes */}
@@ -42,7 +126,7 @@ export default function DiscountedProducts() {
           <Swiper
             // autoplay={true}
             modules={[Pagination, Autoplay]}
-            pagination={{  clickable: true }}
+            pagination={{ clickable: true }}
             className="mySwiper"
             loop={true}
             breakpoints={{
@@ -57,19 +141,28 @@ export default function DiscountedProducts() {
               },
             }}
           >
-            {allGifts.map((gift) => (
-              <SwiperSlide key={gift.id}>
-                <GameBox
-                  src={gift.src}
-                  title={gift.title}
-                  price={gift.price}
-                  off={gift.off}
-                  clickHandler={() =>
-                    contextData.addToBasket(allGifts, gift.id)
-                  }
-                />
-              </SwiperSlide>
-            ))}
+            {discountProducts.length ? (
+              discountProducts.map((gift) => (
+                <SwiperSlide key={gift.id}>
+                  <GameBox
+                    src={gift.src}
+                    title={gift.title}
+                    price={gift.price}
+                    off={gift.off}
+                    clickHandler={() =>
+                      contextData.addToBasket(discountProducts, gift.id)
+                    }
+                  />
+                </SwiperSlide>
+              ))
+            ) : (
+              <div className="games-category__empty">
+                <h4 className="games-category__empty-text">
+                  متاسفانه در این دسته بندی محصول تخفیف دار وجود ندارد
+                </h4>
+                <ImSad className="games-category__empty-icon" />
+              </div>
+            )}
           </Swiper>
         </div>
       </div>

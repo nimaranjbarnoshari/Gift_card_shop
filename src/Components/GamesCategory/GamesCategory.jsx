@@ -14,7 +14,7 @@ export default function GamesCategory() {
   const contextData = useContext(AuthContext);
   const [allGamesData, setAllGamesData] = useState([]);
   const [gamesData, setGamesData] = useState([]);
-  const [isActive, setIsActive] = useState("1");
+  const [isActive, setIsActive] = useState("ps");
 
   const setData = (data, filterKry) => {
     const category = data.filter((game) => game.category === filterKry);
@@ -35,25 +35,25 @@ export default function GamesCategory() {
   const psGamesHandler = () => {
     const psGames = setData(allGamesData, "ps");
     setGamesData(psGames);
-    setIsActive("1");
+    setIsActive("ps");
   };
 
   const xboxGamesHandler = () => {
     const xboxGames = setData(allGamesData, "xbox");
     setGamesData(xboxGames);
-    setIsActive("2");
+    setIsActive("xbox");
   };
 
   const computerGamesHandler = () => {
     const computerGames = setData(allGamesData, "computer");
     setGamesData(computerGames);
-    setIsActive("3");
+    setIsActive("computer");
   };
 
   const nintendoGamesHandler = () => {
     const nintendoGames = setData(allGamesData, "nintendo");
     setGamesData(nintendoGames);
-    setIsActive("4");
+    setIsActive("nintendo");
   };
 
   return (
@@ -64,12 +64,11 @@ export default function GamesCategory() {
         <div className="games-category__buttons-wrapper">
           <button
             className={
-              isActive === "1"
+              isActive === "ps"
                 ? "games-category__button games-category__button--active"
                 : "games-category__button"
             }
             onClick={psGamesHandler}
-            id="1"
           >
             <img
               src="/images/svg/PlayStation.svg"
@@ -83,12 +82,11 @@ export default function GamesCategory() {
 
           <button
             className={
-              isActive === "2"
+              isActive === "xbox"
                 ? "games-category__button games-category__button--active"
                 : "games-category__button"
             }
             onClick={xboxGamesHandler}
-            id="2"
           >
             <img
               src="/images/svg/Xbox.svg"
@@ -102,12 +100,11 @@ export default function GamesCategory() {
 
           <button
             className={
-              isActive === "3"
+              isActive === "computer"
                 ? "games-category__button games-category__button--active"
                 : "games-category__button"
             }
             onClick={computerGamesHandler}
-            id="3"
           >
             <img
               src="/images/svg/mouse.svg"
@@ -121,12 +118,11 @@ export default function GamesCategory() {
 
           <button
             className={
-              isActive === "4"
+              isActive === "nintendo"
                 ? "games-category__button games-category__button--active"
                 : "games-category__button"
             }
             onClick={nintendoGamesHandler}
-            id="4"
           >
             <img
               src="/images/svg/Nintendo.svg"

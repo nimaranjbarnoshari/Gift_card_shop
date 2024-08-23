@@ -77,7 +77,7 @@
       "src": "/images/home/deadspace.jpg",
       "title": "بازی Dead Space",
       "price": 6490000,
-      "off": 0,
+      "off": 2,
       "category": "ps"
     },
     {
@@ -117,7 +117,7 @@
       "src": "/images/home/descenders.jpeg",
       "title": "بازی Descenders",
       "price": 297000,
-      "off": 0,
+      "off": 2,
       "category": "nintendo"
     },
     {
@@ -189,7 +189,7 @@
       "src": "/images/home/destiny.jpeg",
       "title": "بازی Destiny 2",
       "price": 2469000,
-      "off": 0,
+      "off": 4,
       "category": "computer"
     },
     {
@@ -237,7 +237,7 @@
       "src": "/images/home/forza.jpeg",
       "title": "بازی Forza Horizon 5 Premium Edition",
       "price": 3258000,
-      "off": 0,
+      "off": 2,
       "category": "xbox"
     },
     {
@@ -419,6 +419,10 @@
       "href": "/gifts"
     }
   ],
+  "money": [],
+  "services": [],
+  "digits": [],
+  "softwares": [],
   "menus": [
     {
       "id": "025c",
