@@ -49,6 +49,7 @@ function App() {
 
   const addToBasket = (datas, id) => {
     const result = datas.filter((data) => id === data.id);
+
     if (isLoggedIn) {
       const isProduct = userBasket.find(
         (data) => data.title === result[0].title
@@ -71,7 +72,13 @@ function App() {
           }
         });
       } else {
-        const newBasket = [...userBasket, { ...result[0], count: 1 }];
+        const product = {...result[0]}
+        if (product.off) {
+          product.price = product.price - (product.price * product.off) / 100;
+        }
+        console.log(product.price);
+
+        const newBasket = [...userBasket, { ...product, count: 1 }];
 
         Swal.fire({
           title: `${result[0].title} را به سبد خرید اضافه میکنید؟`,
@@ -244,8 +251,6 @@ function App() {
           });
       });
   };
-
-  
 
   useEffect(() => {
     fetch("http://localhost:8000/users")
