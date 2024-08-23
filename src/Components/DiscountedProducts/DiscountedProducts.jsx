@@ -2,11 +2,11 @@ import React, { useEffect, useState, useContext } from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import GameBox from "../GameBox/GameBox";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import AuthContext from "../../Context/AuthContext";
 
 import "swiper/css";
-import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "./DiscountedProducts.css";
 
 export default function DiscountedProducts() {
@@ -41,8 +41,8 @@ export default function DiscountedProducts() {
         <div className="discounted-products__boxes">
           <Swiper
             // autoplay={true}
-            navigation={true}
-            modules={[Navigation, Autoplay]}
+            modules={[Pagination, Autoplay]}
+            pagination={{  clickable: true }}
             className="mySwiper"
             loop={true}
             breakpoints={{

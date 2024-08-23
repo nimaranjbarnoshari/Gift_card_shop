@@ -18,7 +18,26 @@
       "email": "behnaz.mahbobi5963@gmail.com",
       "password": "14141414",
       "token": "658737behnaz136471behnaz.mahbobi5963@gmail.com115573",
-      "basket": [],
+      "basket": [
+        {
+          "id": "774a",
+          "src": "/images/home/jedi.jpg",
+          "title": "بازی JEDI Survivor",
+          "price": 1180000,
+          "off": 0,
+          "category": "ps",
+          "count": 1
+        },
+        {
+          "id": "e2d8",
+          "src": "/images/home/grand-theft.jpeg",
+          "title": "بازی Grand Theft Auto",
+          "price": 1287720,
+          "off": 2,
+          "category": "xbox",
+          "count": 1
+        }
+      ],
       "orders": [],
       "tickets": [],
       "balance": 2500000

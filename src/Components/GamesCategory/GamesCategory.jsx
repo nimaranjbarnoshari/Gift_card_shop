@@ -2,12 +2,12 @@ import React, { useEffect, useState, useContext } from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import GameBox from "../GameBox/GameBox";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import AuthContext from "../../Context/AuthContext";
 import { ImSad } from "react-icons/im";
 
 import "swiper/css";
-import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "./GamesCategory.css";
 
 export default function GamesCategory() {
@@ -37,16 +37,19 @@ export default function GamesCategory() {
     setGamesData(psGames);
     setIsActive("1");
   };
+
   const xboxGamesHandler = () => {
     const xboxGames = setData(allGamesData, "xbox");
     setGamesData(xboxGames);
     setIsActive("2");
   };
+
   const computerGamesHandler = () => {
     const computerGames = setData(allGamesData, "computer");
     setGamesData(computerGames);
     setIsActive("3");
   };
+
   const nintendoGamesHandler = () => {
     const nintendoGames = setData(allGamesData, "nintendo");
     setGamesData(nintendoGames);
@@ -140,9 +143,9 @@ export default function GamesCategory() {
       <div className="games-category__boxes-wrapper">
         <div className="container">
           <Swiper
+            modules={[Pagination, Autoplay]}
             // autoplay={true}
-            navigation={true}
-            modules={[Navigation, Autoplay]}
+            pagination={{ type: "bullets", clickable: true }}
             className="mySwiper"
             loop={true}
             breakpoints={{

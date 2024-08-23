@@ -76,7 +76,6 @@ function App() {
         if (product.off) {
           product.price = product.price - (product.price * product.off) / 100;
         }
-        console.log(product.price);
 
         const newBasket = [...userBasket, { ...product, count: 1 }];
 

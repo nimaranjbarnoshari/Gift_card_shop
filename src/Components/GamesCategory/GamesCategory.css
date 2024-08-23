@@ -70,6 +70,22 @@
   margin-right: 10px;
   font-size: 18px;
 }
+.swiper{
+  padding-bottom: 30px;
+}
+
+.swiper-pagination {
+  bottom: -5px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--primary-color) !important;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+}
 
 /* media query */
 
@@ -91,7 +107,7 @@
   .games-category__empty-text {
     font-size: 14px;
   }
-  .games-category__empty-icon{
+  .games-category__empty-icon {
     font-size: 20px;
   }
 }
@@ -104,7 +120,7 @@
     font-size: 16px;
     font-weight: 500;
   }
-  .games-category__empty-icon{
+  .games-category__empty-icon {
     font-size: 22px;
   }
 }
@@ -112,7 +128,11 @@
   .games-category__empty-text {
     font-size: 18px;
   }
-  .games-category__empty-icon{
+  .games-category__empty-icon {
     font-size: 24px;
+  }
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
   }
 }
