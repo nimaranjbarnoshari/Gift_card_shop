@@ -10,9 +10,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import Flag from "../../Components/Flag/Flag";
 import GiftBox from "../../Components/GiftBox/GiftBox";
-import Button from "../../Components/Form/‌Button";
-import PriceBox from "../../Components/PriceBox/PriceBox";
-import BasketButtons from "../../Components/BasketButtons/BasketButtons";
 import AuthContext from "../../Context/AuthContext";
 
 import "./GiftCards.css";
@@ -20,7 +17,8 @@ import "./GiftCards.css";
 export default function GiftCards() {
   const contextData = useContext(AuthContext);
   const [allGifts, setAllGifts] = useState([]);
-  const [category, setCategory] = useState("apple");
+  const [categoryName, setCategoryName] = useState("apple");
+  const [category, setCategory] = useState([]);
   const [categoryGifts, setCategoryGifts] = useState([]);
 
   const chooseCategory = (category) => {
@@ -34,17 +32,25 @@ export default function GiftCards() {
     fetch("http://localhost:8000/gifts")
       .then((res) => res.json())
       .then((data) => setAllGifts(data));
+
+    fetch("http://localhost:8000/giftCategories")
+      .then((res) => res.json())
+      .then((data) => setCategory(data));
   }, []);
 
   useEffect(() => {
-    chooseCategory(category);
+    console.log(category);
+  }, [category]);
+
+  useEffect(() => {
+    chooseCategory(categoryName);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [allGifts]);
 
   useEffect(() => {
-    chooseCategory(category);
+    chooseCategory(categoryName);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [category]);
+  }, [categoryName]);
 
   return (
     <>
@@ -60,9 +66,9 @@ export default function GiftCards() {
             name=""
             id="giftsCategory"
             className="gift-cards__category-select"
-            value={category}
+            value={categoryName}
             onChange={(e) => {
-              setCategory(e.target.value);
+              setCategoryName(e.target.value);
             }}
           >
             <option value="apple" className="gift-cards__category-option">
@@ -239,7 +245,7 @@ export default function GiftCards() {
 
         {/* Choose gift card */}
         <div className="gift-cards__body">
-          <SectionHeader title="انتخاب نوع گیفت کارت" span="مرحله اول:" />
+          <SectionHeader title="انتخاب نوع گیفت کارت" />
           <div className="gift-cards__body-buttons">
             <button className="gift-cards__body-button">
               <Flag country="برزیل" src="/images/svg/brazil.svg" />
@@ -263,6 +269,7 @@ export default function GiftCards() {
           <div className="gift-cards__body-cards">
             {categoryGifts.map((gift) => (
               <GiftBox
+                key={gift.id}
                 flagSrc={gift.flag}
                 country={gift.country}
                 src={gift.icon}
@@ -280,74 +287,6 @@ export default function GiftCards() {
 
         {/* Pay & Help sections*/}
         <div className="gift-cards__footer">
-          <div className="gift-cards__footer-pay">
-            <SectionHeader title="تسویه حساب و خرید محصول" span="مرحله دوم:" />
-
-            <div className="gift-cards__footer-pay-container">
-              <div className="gift-cards__footer-pay-right">
-                <div className="gift-cards__footer-gift-box">
-                  <div className="gift-cards__footer-icon-container">
-                    <img
-                      src="/images/svg/apple.svg"
-                      alt="apple"
-                      className="gift-cards__footer-gift-box-icon"
-                    />
-                  </div>
-                  <div className="gift-cards__footer-gift-box-infos">
-                    <div className="gift-cards__footer-gift-box-title">
-                      گیفت کارت 20 دلاری اپل
-                    </div>
-                    <Flag country="آمریکا" src="/images/svg/usa.svg" />
-                  </div>
-                </div>
-                <div className="gift-cards__footer-unit-price">
-                  <span className="gift-cards__footer-unit-title">
-                    قیمت واحد:
-                  </span>
-                  <PriceBox price="۲۵۶،۰۰۰" />
-                </div>
-                <div className="gift-cards__footer-buttons">
-                  <span className="gift-cards__footer-buttons-title">
-                    افزودن تعداد محصول:
-                  </span>
-                  <BasketButtons count="۲" />
-                </div>
-                <div className="gift-cards__footer-total-price">
-                  <span className="gift-cards__footer-total-title">
-                    قیمت واحد:
-                  </span>
-                  <PriceBox price="۵۱۲،۰۰۰" isTotal={true} />
-                </div>
-              </div>
-              <div className="gift-cards__footer-pay-left">
-                <div className="gift-cards__footer-pay-choose">
-                  <h3 className="gift-cards__footer-pay-choose-title">
-                    انتخاب درگاه پرداخت
-                  </h3>
-                  <div className="gift-cards__footer-pay-choose-items">
-                    <div className="gift-cards__footer-pay-choose-item">
-                      <img
-                        src="images/svg/saman.svg"
-                        alt="saman"
-                        className="gift-cards__footer-pay-choose-icon"
-                      />
-                    </div>
-                    <div className="gift-cards__footer-pay-choose-item">
-                      <img
-                        src="images/svg/up.svg"
-                        alt="up"
-                        className="gift-cards__footer-pay-choose-icon"
-                      />
-                    </div>
-                  </div>
-                  <Button
-                    children="ثبت نهایی و پرداخت"
-                    className="gift-cards__footer-pay-choose-button"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
           <div className="gift-cards__footer-help">
             <div className="gift-cards__footer-help-header">
               <img
