@@ -161,7 +161,7 @@ export default function GamesCategory() {
                 <SwiperSlide key={game.id}>
                   <GameBox
                     clickHandler={() =>
-                      contextData.addToBasket(gamesData, game.id)
+                      contextData.addToBasket(game)
                     }
                     src={game.src}
                     title={game.title}

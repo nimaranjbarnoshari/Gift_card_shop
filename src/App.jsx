@@ -47,12 +47,11 @@ function App() {
     });
   };
 
-  const addToBasket = (datas, id) => {
-    const result = datas.filter((data) => id === data.id);
+  const addToBasket = (datas) => {
 
     if (isLoggedIn) {
       const isProduct = userBasket.find(
-        (data) => data.title === result[0].title
+        (data) => data.title === datas.title
       );
 
       if (isProduct) {
@@ -72,7 +71,7 @@ function App() {
           }
         });
       } else {
-        const product = {...result[0]}
+        const product = {...datas}
         if (product.off) {
           product.price = product.price - (product.price * product.off) / 100;
         }
@@ -80,7 +79,7 @@ function App() {
         const newBasket = [...userBasket, { ...product, count: 1 }];
 
         Swal.fire({
-          title: `${result[0].title} را به سبد خرید اضافه میکنید؟`,
+          title: `${datas.title} را به سبد خرید اضافه میکنید؟`,
           icon: "question",
           confirmButtonText: "بله",
           cancelButtonText: "خیر",
@@ -99,7 +98,7 @@ function App() {
             }).then((res) => {
               if (res.ok) {
                 Swal.fire({
-                  title: `${result[0].title} به سبد خرید شما اضافه شد`,
+                  title: `${datas.title} به سبد خرید شما اضافه شد`,
                   icon: "success",
                   iconColor: "#Fd295c",
                   confirmButtonColor: "#Fd295c",

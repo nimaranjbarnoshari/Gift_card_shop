@@ -12,7 +12,7 @@ export default function PriceBox({ price, isTotal, isBold, custom }) {
       <span
         className={`price-box__price ${isBold ? "price-box__price-bold" : ""}`}
       >
-        {PN.convertEnToPe(price)}
+        {PN.convertEnToPe(price.toLocaleString())}
       </span>
     </div>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Topbar from "../../Components/Topbar/Topbar";
 import Navbar from "../../Components/Navbar/Navbar";
 import Socials from "../../Components/Socials/Socials";
@@ -13,13 +13,75 @@ import GiftBox from "../../Components/GiftBox/GiftBox";
 import Button from "../../Components/Form/‌Button";
 import PriceBox from "../../Components/PriceBox/PriceBox";
 import BasketButtons from "../../Components/BasketButtons/BasketButtons";
+import AuthContext from "../../Context/AuthContext";
+
 import "./GiftCards.css";
+
 export default function GiftCards() {
+  const contextData = useContext(AuthContext);
+  const [allGifts, setAllGifts] = useState([]);
+  const [category, setCategory] = useState("apple");
+  const [categoryGifts, setCategoryGifts] = useState([]);
+
+  const chooseCategory = (category) => {
+    const chosenCategory = allGifts.filter(
+      (gift) => gift.category === category
+    );
+    setCategoryGifts(chosenCategory);
+  };
+
+  useEffect(() => {
+    fetch("http://localhost:8000/gifts")
+      .then((res) => res.json())
+      .then((data) => setAllGifts(data));
+  }, []);
+
+  useEffect(() => {
+    chooseCategory(category);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [allGifts]);
+
+  useEffect(() => {
+    chooseCategory(category);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [category]);
+
   return (
     <>
       <Topbar />
       <Navbar />
       <div className="container">
+        {/* choose category */}
+        <div>
+          <label htmlFor="giftsCategory" className="gift-cards__category-label">
+            انتخاب دسته بندی :
+          </label>
+          <select
+            name=""
+            id="giftsCategory"
+            className="gift-cards__category-select"
+            value={category}
+            onChange={(e) => {
+              setCategory(e.target.value);
+            }}
+          >
+            <option value="apple" className="gift-cards__category-option">
+              گیفت کارت اپل
+            </option>
+            <option value="steam" className="gift-cards__category-option">
+              گیفت کارت استیم
+            </option>
+            <option value="amazon" className="gift-cards__category-option">
+              گیفت کارت آمازون
+            </option>
+            <option value="google" className="gift-cards__category-option">
+              گیفت کارت گوگل پلی
+            </option>
+            <option value="netflix" className="gift-cards__category-option">
+              گیفت کارت نتفلیکس
+            </option>
+          </select>
+        </div>
         {/* Gifts and explanaions */}
         <div className="gift-cards__header-container">
           <div className="gift-cards__header">
@@ -199,76 +261,20 @@ export default function GiftCards() {
             </button>
           </div>
           <div className="gift-cards__body-cards">
-            <GiftBox
-              flagSrc="/images/svg/usa.svg"
-              country="آمریکا"
-              src="/images/svg/apple.svg"
-              title="گیفت کارت ۲۰ دلار"
-              price="۲۵۶،۰۰۰"
-            />
-            <GiftBox
-              flagSrc="/images/svg/usa.svg"
-              country="آمریکا"
-              src="/images/svg/apple.svg"
-              title="گیفت کارت ۲۰ دلار"
-              price="۲۵۶،۰۰۰"
-            />
-            <GiftBox
-              flagSrc="/images/svg/usa.svg"
-              country="آمریکا"
-              src="/images/svg/apple.svg"
-              title="گیفت کارت ۲۰ دلار"
-              price="۲۵۶،۰۰۰"
-            />
-            <GiftBox
-              flagSrc="/images/svg/usa.svg"
-              country="آمریکا"
-              src="/images/svg/apple.svg"
-              title="گیفت کارت ۲۰ دلار"
-              price="۲۵۶،۰۰۰"
-            />
-            <GiftBox
-              flagSrc="/images/svg/usa.svg"
-              country="آمریکا"
-              src="/images/svg/apple.svg"
-              title="گیفت کارت ۲۰ دلار"
-              price="۲۵۶،۰۰۰"
-            />
-            <GiftBox
-              flagSrc="/images/svg/usa.svg"
-              country="آمریکا"
-              src="/images/svg/apple.svg"
-              title="گیفت کارت ۲۰ دلار"
-              price="۲۵۶،۰۰۰"
-            />
-            <GiftBox
-              flagSrc="/images/svg/usa.svg"
-              country="آمریکا"
-              src="/images/svg/apple.svg"
-              title="گیفت کارت ۲۰ دلار"
-              price="۲۵۶،۰۰۰"
-            />
-            <GiftBox
-              flagSrc="/images/svg/usa.svg"
-              country="آمریکا"
-              src="/images/svg/apple.svg"
-              title="گیفت کارت ۲۰ دلار"
-              price="۲۵۶،۰۰۰"
-            />
-            <GiftBox
-              flagSrc="/images/svg/usa.svg"
-              country="آمریکا"
-              src="/images/svg/apple.svg"
-              title="گیفت کارت ۲۰ دلار"
-              price="۲۵۶،۰۰۰"
-            />
-            <GiftBox
-              flagSrc="/images/svg/usa.svg"
-              country="آمریکا"
-              src="/images/svg/apple.svg"
-              title="گیفت کارت ۲۰ دلار"
-              price="۲۵۶،۰۰۰"
-            />
+            {categoryGifts.map((gift) => (
+              <GiftBox
+                flagSrc={gift.flag}
+                country={gift.country}
+                src={gift.icon}
+                title={gift.title}
+                price={
+                  gift.off
+                    ? gift.price - (gift.price * gift.off) / 100
+                    : gift.price
+                }
+                clickHandler={() => contextData.addToBasket(gift)}
+              />
+            ))}
           </div>
         </div>
 

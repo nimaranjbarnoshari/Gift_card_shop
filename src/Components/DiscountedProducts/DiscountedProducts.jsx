@@ -142,16 +142,14 @@ export default function DiscountedProducts() {
             }}
           >
             {discountProducts.length ? (
-              discountProducts.map((gift) => (
-                <SwiperSlide key={gift.id}>
+              discountProducts.map((product) => (
+                <SwiperSlide key={product.id}>
                   <GameBox
-                    src={gift.src}
-                    title={gift.title}
-                    price={gift.price}
-                    off={gift.off}
-                    clickHandler={() =>
-                      contextData.addToBasket(discountProducts, gift.id)
-                    }
+                    src={product.src}
+                    title={product.title}
+                    price={product.price}
+                    off={product.off}
+                    clickHandler={() => contextData.addToBasket(product)}
                   />
                 </SwiperSlide>
               ))
