@@ -18,39 +18,34 @@ export default function GiftCards() {
   const contextData = useContext(AuthContext);
   const [allGifts, setAllGifts] = useState([]);
   const [categoryName, setCategoryName] = useState("apple");
-  const [category, setCategory] = useState([]);
+  const [category, setCategory] = useState({});
   const [categoryGifts, setCategoryGifts] = useState([]);
+  const [categoryRegions, setCategoryRegions] = useState([]);
 
   const chooseCategory = (category) => {
-    const chosenCategory = allGifts.filter(
+    const selectedCategory = allGifts.filter(
       (gift) => gift.category === category
     );
-    setCategoryGifts(chosenCategory);
+    setCategory(selectedCategory[0]);
   };
 
   useEffect(() => {
     fetch("http://localhost:8000/gifts")
       .then((res) => res.json())
       .then((data) => setAllGifts(data));
-
-    fetch("http://localhost:8000/giftCategories")
-      .then((res) => res.json())
-      .then((data) => setCategory(data));
   }, []);
 
   useEffect(() => {
-    console.log(category);
+    chooseCategory(categoryName);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [allGifts, categoryName]);
+
+  useEffect(() => {
+    if (category?.giftCards) {
+      setCategoryGifts(category.giftCards);
+      setCategoryRegions(category.regions);
+    }
   }, [category]);
-
-  useEffect(() => {
-    chooseCategory(categoryName);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [allGifts]);
-
-  useEffect(() => {
-    chooseCategory(categoryName);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [categoryName]);
 
   return (
     <>
@@ -126,10 +121,10 @@ export default function GiftCards() {
             <div className="gift-cards__header-infos">
               <div className="gift-cards__header-infos-top">
                 <h3 className="gift-cards__header-infos-top-title">
-                  گیفت کارت اپل
+                  {category ? category.title : ""}
                 </h3>
                 <Flag
-                  title="دسته بندی: گیفت کارت اپل"
+                  title={`دسته بندی: ${category ? category.title : ""}`}
                   src="/images/svg/category.svg"
                 />
               </div>
@@ -138,11 +133,7 @@ export default function GiftCards() {
                   توضیحات کوتاه:
                 </h3>
                 <p className="gift-cards__header-infos-body-text">
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
-                  با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و
-                  مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
-                  تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای
-                  کاربردی می باشد.
+                  {category ? category.description?.slice(0, 350) : ""}
                 </p>
               </div>
               <div className="gift-cards__header-infos-bottom">
@@ -161,12 +152,13 @@ export default function GiftCards() {
                     </span>
                   </div>
                   <div className="gift-cards__header-infos-bottom-flag-boxes">
-                    <Flag country="برزیل" src="/images/svg/brazil.svg" />
-                    <Flag country="انگلیس" src="/images/svg/england.svg" />
-                    <Flag country="ترکیه" src="/images/svg/turkey.svg" />
-                    <Flag country="فرانسه" src="/images/svg/france.svg" />
-                    <Flag country="ایتالیا" src="/images/svg/italy.svg" />
-                    <Flag country="آمریکا" src="/images/svg/usa.svg" />
+                    {categoryRegions.map((region) => (
+                      <Flag
+                        key={region.id}
+                        country={region.country}
+                        src={region.flag}
+                      />
+                    ))}
                   </div>
                 </div>
                 <div className="gift-cards__header-infos-bottom-send">
@@ -227,17 +219,7 @@ export default function GiftCards() {
                 className="gift-cards__infos-body-img"
               />
               <p className="gift-cards__infos-text">
-                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-                استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
-                در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
-                نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
-                کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
-                جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را
-                برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در
-                زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و
-                دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و
-                زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات
-                پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                {category ? category.description : ""}
               </p>
             </div>
           </div>
@@ -247,7 +229,16 @@ export default function GiftCards() {
         <div className="gift-cards__body">
           <SectionHeader title="انتخاب نوع گیفت کارت" />
           <div className="gift-cards__body-buttons">
-            <button className="gift-cards__body-button">
+            {categoryRegions.map((region) => (
+              <button className="gift-cards__body-button">
+                <Flag
+                  key={region.id}
+                  country={region.country}
+                  src={region.flag}
+                />
+              </button>
+            ))}
+            {/* <button className="gift-cards__body-button">
               <Flag country="برزیل" src="/images/svg/brazil.svg" />
             </button>
             <button className="gift-cards__body-button">
@@ -264,7 +255,7 @@ export default function GiftCards() {
             </button>
             <button className="gift-cards__body-button">
               <Flag country="آمریکا" src="/images/svg/usa.svg" />
-            </button>
+            </button> */}
           </div>
           <div className="gift-cards__body-cards">
             {categoryGifts.map((gift) => (

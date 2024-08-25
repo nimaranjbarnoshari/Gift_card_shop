@@ -38,51 +38,12 @@
           "count": 1
         },
         {
-          "id": "ee36",
-          "src": "/images/home/google_play.jpg",
-          "title": "گیفت کارت گوگل پلی ۲۰ دلاری",
-          "price": 1156400,
-          "off": 2,
-          "country": "آمریکا",
-          "flag": "/images/svg/usa.svg",
-          "category": "google",
-          "name": "گیفت کارت گوگل پلی ۲۰",
-          "icon": "/images/svg/apple.svg",
-          "count": 1
-        },
-        {
           "id": "f625",
           "src": "/images/home/fifa24.jpg",
           "title": "بازی فیفا ۲۴",
           "price": 256000,
           "off": 0,
           "category": "ps",
-          "count": 1
-        },
-        {
-          "id": "0c6f",
-          "src": "/images/home/apple.jpg",
-          "title": "گیفت کارت اپل ۵۰ دلاری",
-          "price": 3280000,
-          "off": 0,
-          "country": "آمریکا",
-          "flag": "/images/svg/usa.svg",
-          "category": "apple",
-          "name": "گیفت کارت Apple ۵۰",
-          "icon": "/images/svg/apple.svg",
-          "count": 1
-        },
-        {
-          "id": "eeac",
-          "src": "/images/home/apple.jpg",
-          "title": "گیفت کارت اپل ۱۰ دلاری",
-          "price": 608850,
-          "off": 1,
-          "country": "آمریکا",
-          "flag": "/images/svg/usa.svg",
-          "category": "apple",
-          "name": "گیفت کارت Apple ۱۰",
-          "icon": "/images/svg/apple.svg",
           "count": 1
         }
       ],
@@ -378,7 +339,7 @@
       "price": 49000
     }
   ],
-  "giftCategories": [
+  "gifts": [
     {
       "id": "d260",
       "src": "/images/home/netflix.jpg",
@@ -386,6 +347,7 @@
       "src2": "/images/home/netflix.jpg",
       "src3": "/images/home/netflix.jpg",
       "title": "گیفت کارت نتفلیکس",
+      "category": "netflix",
       "regions": [
         {
           "id": 1,
@@ -395,17 +357,110 @@
         {
           "id": 2,
           "country": "انگلیس",
-          "flag": "/images/svg/usa.svg"
+          "flag": "/images/svg/england.svg"
         },
         {
           "id": 3,
           "country": "ترکیه",
-          "flag": "/images/svg/usa.svg"
+          "flag": "/images/svg/turkey.svg"
         },
         {
           "id": 4,
           "country": "فرانسه",
-          "flag": "/images/svg/usa.svg"
+          "flag": "/images/svg/france.svg"
+        },
+        {
+          "id": 5,
+          "country": "ایتالیا",
+          "flag": "/images/svg/italy.svg"
+        },
+        {
+          "id": 6,
+          "country": "برزیل",
+          "flag": "/images/svg/brazil.svg"
+        }
+      ],
+      "giftCards": [
+        {
+          "id": "bdcd",
+          "src": "/images/home/netflix.jpg",
+          "title": "گیفت کارت نتفلیکس ۵۰ دلاری",
+          "price": 3245000,
+          "off": 0,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "netflix",
+          "name": "گیفت کارت نتفلیکس ۵۰",
+          "icon": "/images/svg/netflix.svg"
+        },
+        {
+          "id": "4f77",
+          "src": "/images/home/netflix.jpg",
+          "title": "گیفت کارت نتفلیکس ۵ دلاری",
+          "price": 332000,
+          "off": 4,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "netflix",
+          "name": "گیفت کارت نتفلیکس ۵",
+          "icon": "/images/svg/netflix.svg"
+        },
+        {
+          "id": "837f",
+          "src": "/images/home/netflix.jpg",
+          "title": "گیفت کارت نتفلیکس ۱۰ دلاری",
+          "price": 635000,
+          "off": 1,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "netflix",
+          "name": "گیفت کارت نتفلیکس ۱۰",
+          "icon": "/images/svg/netflix.svg"
+        },
+        {
+          "id": "cf19",
+          "src": "/images/home/netflix.jpg",
+          "title": "گیفت کارت نتفلیکس ۲۰ دلاری",
+          "price": 1252000,
+          "off": 1,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "netflix",
+          "name": "گیفت کارت نتفلیکس ۲۰",
+          "icon": "/images/svg/netflix.svg"
+        },
+        {
+          "id": "6ef9",
+          "src": "/images/home/netflix.jpg",
+          "title": "گیفت کارت نتفلیکس ۱۰۰ دلاری",
+          "price": 6176000,
+          "off": 0,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "name": "گیفت کارت نتفلیکس ۱۰۰",
+          "icon": "/images/svg/netflix.svg"
+        },
+        {
+          "id": "1771",
+          "src": "/images/home/netflix.jpg",
+          "title": "گیفت کارت نتفلیکس ۱۰۰ دلاری",
+          "price": 6230000,
+          "off": 0,
+          "country": "ترکیه",
+          "flag": "/images/svg/turkey.svg",
+          "name": "گیفت کارت نتفلیکس ۱۰۰",
+          "icon": "/images/svg/netflix.svg"
+        },
+        {
+          "id": "4191",
+          "src": "/images/home/netflix.jpg",
+          "title": "گیفت کارت نتفلیکس ۵۰ دلاری",
+          "price": 3280000,
+          "off": 0,
+          "country": "ترکیه",
+          "flag": "/images/svg/turkey.svg",
+          "name": "گیفت کارت نتفلیکس ۵۰",
+          "icon": "/images/svg/netflix.svg"
         }
       ],
       "description": "گیفت کارت نتفلیکس نوعی کارت پرداخت است که می‌توانید از آن برای خرید اشتراک نتفلیکس استفاده کنید.با استفاده از این کارت، می‌توانید مبلغ مشخصی را به حساب خود اضافه کنید و به تماشای فیلم‌ها و سریال‌های مختلف بپردازید.برای خرید گیفت کارت نتفلیکس، می‌توانید به فروشگاه‌های آنلاین یا فیزیکی مراجعه کنید که این نوع کارت‌ها را عرضه می‌کنند.پس از خرید، با وارد کردن کد موجود بر روی گیفت کارت در وب‌سایت یا اپلیکیشن نتفلیکس، مبلغ کارت به حساب شما اضافه خواهد شد",
@@ -435,6 +490,93 @@
       "src2": "/images/gifts/apple2.jpg",
       "src3": "/images/gifts/apple3.jpg",
       "title": "گیفت کارت اپل",
+      "category": "apple",
+      "giftCards": [
+        {
+          "id": "0c6f",
+          "src": "/images/home/apple.jpg",
+          "title": "گیفت کارت اپل ۵۰ دلاری",
+          "price": 3280000,
+          "off": 0,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "apple",
+          "name": "گیفت کارت Apple ۵۰",
+          "icon": "/images/svg/apple.svg"
+        },
+        {
+          "id": "02ce",
+          "src": "/images/home/apple.jpg",
+          "title": "گیفت کارت اپل ۱۰۰ دلاری",
+          "price": 6490000,
+          "off": 0,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "apple",
+          "name": "گیفت کارت Apple ۱۰۰",
+          "icon": "/images/svg/apple.svg"
+        },
+        {
+          "id": "8d35",
+          "src": "/images/home/apple.jpg",
+          "title": "گیفت کارت اپل ۲۰ دلاری",
+          "price": 1230000,
+          "off": 0,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "apple",
+          "name": "گیفت کارت Apple ۲۰",
+          "icon": "/images/svg/apple.svg"
+        },
+        {
+          "id": "c97d",
+          "src": "/images/home/apple.jpg",
+          "title": "گیفت کارت اپل ۴۰ دلاری",
+          "price": 2530000,
+          "off": 0,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "apple",
+          "name": "گیفت کارت Apple ۴۰",
+          "icon": "/images/svg/apple.svg"
+        },
+        {
+          "id": "eeac",
+          "src": "/images/home/apple.jpg",
+          "title": "گیفت کارت اپل ۱۰ دلاری",
+          "price": 615000,
+          "off": 1,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "apple",
+          "name": "گیفت کارت Apple ۱۰",
+          "icon": "/images/svg/apple.svg"
+        },
+        {
+          "id": "00fb",
+          "src": "/images/home/apple.jpg",
+          "title": "گیفت کارت اپل ۵ دلاری",
+          "price": 320000,
+          "off": 3,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "apple",
+          "name": "گیفت کارت Apple ۵",
+          "icon": "/images/svg/apple.svg"
+        },
+        {
+          "id": "fe4e",
+          "src": "/images/home/apple.jpg",
+          "title": "گیفت کارت اپل ۲۰۰ دلاری",
+          "price": 12248000,
+          "off": 0,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "apple",
+          "name": "گیفت کارت Apple ۲۰۰",
+          "icon": "/images/svg/apple.svg"
+        }
+      ],
       "regions": [
         {
           "id": 1,
@@ -444,17 +586,17 @@
         {
           "id": 2,
           "country": "انگلیس",
-          "flag": "/images/svg/usa.svg"
+          "flag": "/images/svg/england.svg"
         },
         {
           "id": 3,
           "country": "ترکیه",
-          "flag": "/images/svg/usa.svg"
+          "flag": "/images/svg/turkey.svg"
         },
         {
           "id": 4,
           "country": "فرانسه",
-          "flag": "/images/svg/usa.svg"
+          "flag": "/images/svg/france.svg"
         }
       ],
       "description": "گیفت کارت اپل (Apple Gift Card) یک کارت اعتباری است که می‌توانید از آن برای خرید محصولات، اپلیکیشن‌ها، موسیقی، فیلم‌ها و سایر محتویات دیجیتال از فروشگاه‌های اپل مانند App Store، iTunes Store و Apple Books استفاده کنید. این کارت‌ها معمولاً در مقادیر مختلفی مانند 15، 25، 50 و 100 دلار موجود هستند.برای استفاده از گیفت کارت اپل، کافی است کد موجود بر روی کارت را در حساب اپل خود وارد کنید. این کارت‌ها به شما این امکان را می‌دهند که بدون نیاز به کارت اعتباری، خریدهای خود را انجام دهید.",
@@ -476,309 +618,335 @@
       "comments": [],
       "usersQuestions": [],
       "questions": []
+    },
+    {
+      "id": "dc54",
+      "src": "/images/gifts/apple.jpg",
+      "src1": "/images/gifts/apple1.jpg",
+      "src2": "/images/gifts/apple2.jpg",
+      "src3": "/images/gifts/apple3.jpg",
+      "title": "گیفت کارت استیم",
+      "category": "steam",
+      "regions": [
+        {
+          "id": 1,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg"
+        },
+        {
+          "id": 2,
+          "country": "انگلیس",
+          "flag": "/images/svg/england.svg"
+        },
+        {
+          "id": 3,
+          "country": "ترکیه",
+          "flag": "/images/svg/turkey.svg"
+        },
+        {
+          "id": 4,
+          "country": "فرانسه",
+          "flag": "/images/svg/france.svg"
+        }
+      ],
+      "giftCards": [
+        {
+          "id": "34d9",
+          "src": "/images/home/steam.jpg",
+          "title": "گیفت کارت استیم ۵ دلاری",
+          "price": 326000,
+          "off": 5,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "steam",
+          "name": "گیفت کارت استیم ۵",
+          "icon": "/images/svg/steam.svg"
+        },
+        {
+          "id": "3256",
+          "src": "/images/home/steam.jpg",
+          "title": "گیفت کارت استیم ۱۰ دلاری",
+          "price": 628000,
+          "off": 2,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "steam",
+          "name": "گیفت کارت استیم ۱۰",
+          "icon": "/images/svg/steam.svg"
+        },
+        {
+          "id": "77ca",
+          "src": "/images/home/steam.jpg",
+          "title": "گیفت کارت استیم ۲۰ دلاری",
+          "price": 1249000,
+          "off": 1,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "steam",
+          "name": "گیفت کارت استیم ۲۰",
+          "icon": "/images/svg/steam.svg"
+        },
+        {
+          "id": "39eb",
+          "src": "/images/home/steam.jpg",
+          "title": "گیفت کارت استیم ۵۰ دلاری",
+          "price": 2980000,
+          "off": 0,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "steam",
+          "name": "گیفت کارت استیم ۵۰",
+          "icon": "/images/svg/steam.svg"
+        },
+        {
+          "id": "684e",
+          "src": "/images/home/steam.jpg",
+          "title": "گیفت کارت استیم ۱۰۰ دلاری",
+          "price": 5992000,
+          "off": 0,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "steam",
+          "name": "گیفت کارت استیم ۱۰۰",
+          "icon": "/images/svg/steam.svg"
+        },
+        {
+          "id": "b905",
+          "src": "/images/home/steam.jpg",
+          "title": "گیفت کارت استیم ۲۰۰ دلاری",
+          "price": 11984000,
+          "off": 0,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "steam",
+          "name": "گیفت کارت استیم ۲۰۰",
+          "icon": "/images/svg/steam.svg"
+        }
+      ],
+      "description": "گیفت کارت استیم یک کارت اعتباری است که می‌توانید از آن برای خرید بازی‌ها، نرم‌افزارها و محتوای دیجیتال دیگر در فروشگاه استیم استفاده کنید. این کارت‌ها معمولاً در مقادیر مختلفی مانند ۱۰، ۲۰، ۵۰ و ۱۰۰ دلار موجود هستند. برای استفاده از گیفت کارت، کافی است کد آن را در حساب استیم خود وارد کنید تا اعتبار به حساب شما اضافه شود.",
+      "Characteristics": [
+        "اعتبار دیجیتال: گیفت کارت‌ها به شما این امکان را می‌دهند که اعتبار دیجیتال برای خرید بازی‌ها، DLCها، نرم‌افزارها و سایر محتواهای دیجیتال در فروشگاه استیم داشته باشید.",
+        "قابلیت استفاده جهانی: گیفت کارت‌های استیم معمولاً در اکثر کشورها قابل استفاده هستند، اما ممکن است برخی محدودیت‌ها وجود داشته باشد.",
+        "گیفت کارت‌ها معمولاً با مقادیر مشخصی عرضه می‌شوند (مانند ۱۰، ۲۰، ۵۰ یا ۱۰۰ دلار) که می‌توانید بنا به نیاز خود یکی را انتخاب کنید.",
+        "استفاده آسان: برای استفاده از گیفت کارت، کافی است کد آن را در حساب استیم خود وارد کنید و موجودی خود را افزایش دهید.",
+        "عدم انقضا: گیفت کارت‌های استیم معمولاً تاریخ انقضا ندارند و شما می‌توانید تا هر زمانی که بخواهید از آن‌ها استفاده کنید.",
+        "قابلیت هدیه دادن: این کارت‌ها گزینه‌ای عالی برای هدیه دادن به عزیزان است، زیرا به آن‌ها این امکان را می‌دهند تا محصولات و محتویات مورد نظر خود را انتخاب کنند.",
+        "امنیت: گیفت کارت‌ها دارای کدهای امنیتی هستند که از سوءاستفاده جلوگیری می‌کند. بنابراین، بهتر است کدهای خود را محرمانه نگه دارید و از اشتراک‌گذاری آن‌ها به جز با افرادی که به آن‌ها اعتماد دارید، خودداری کنید."
+      ],
+      "activation": [
+        "نرم‌افزار استیم را باز کنید یا به وب‌سایت استیم (store.steampowered.com) بروید و با حساب کاربری خود وارد شوید.",
+        "در نوار بالای صفحه، بر روی گزینه 'Games' کلیک کنید.",
+        "از منوی کشویی، گزینه 'Redeem a Steam Wallet Code' را انتخاب کنید.",
+        "کد ۱۵ رقمی گیفت کارت خود را در کادر مربوطه وارد کنید. دقت کنید که کد را به درستی وارد کنید.",
+        "پس از وارد کردن کد، بر روی دکمه 'Continue' کلیک کنید. اگر کد صحیح باشد، اعتبار به حساب شما اضافه خواهد شد.",
+        "می‌توانید موجودی جدید خود را در بالای صفحه اصلی استیم مشاهده کنید."
+      ],
+      "comments": [],
+      "usersQuestions": [],
+      "questions": []
+    },
+    {
+      "id": "694f",
+      "src": "/images/gifts/apple.jpg",
+      "src1": "/images/gifts/apple1.jpg",
+      "src2": "/images/gifts/apple2.jpg",
+      "src3": "/images/gifts/apple3.jpg",
+      "title": "گیفت کارت گوگل پلی",
+      "category": "google",
+      "regions": [
+        {
+          "id": 1,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg"
+        },
+        {
+          "id": 2,
+          "country": "انگلیس",
+          "flag": "/images/svg/england.svg"
+        },
+        {
+          "id": 3,
+          "country": "ترکیه",
+          "flag": "/images/svg/turkey.svg"
+        },
+        {
+          "id": 4,
+          "country": "فرانسه",
+          "flag": "/images/svg/france.svg"
+        }
+      ],
+      "giftCards": [
+        {
+          "id": "ee36",
+          "src": "/images/home/google_play.jpg",
+          "title": "گیفت کارت گوگل پلی ۲۰ دلاری",
+          "price": 1180000,
+          "off": 2,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "google",
+          "name": "گیفت کارت گوگل پلی ۲۰",
+          "icon": "/images/svg/google-play.svg"
+        },
+        {
+          "id": "aadd",
+          "src": "/images/home/google_play.jpg",
+          "title": "گیفت کارت گوگل پلی ۵ دلاری",
+          "price": 328000,
+          "off": 5,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "google",
+          "name": "گیفت کارت گوگل پلی ۵",
+          "icon": "/images/svg/google-play.svg"
+        },
+        {
+          "id": "f10f",
+          "src": "/images/home/google_play.jpg",
+          "title": "گیفت کارت گوگل پلی ۱۰ دلاری",
+          "price": 625000,
+          "off": 1,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "google",
+          "name": "گیفت کارت گوگل پلی ۱۰",
+          "icon": "/images/svg/google-play.svg"
+        },
+        {
+          "id": "e09f",
+          "src": "/images/home/google_play.jpg",
+          "title": "گیفت کارت گوگل پلی ۵۰ دلاری",
+          "price": 3118000,
+          "off": 0,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "google",
+          "name": "گیفت کارت گوگل پلی ۵۰",
+          "icon": "/images/svg/google-play.svg"
+        }
+      ],
+      "description": "گیفت کارت گوگل پلی یک کارت اعتباری است که به شما این امکان را می‌دهد تا از فروشگاه گوگل پلی (Google Play Store) برای خرید برنامه‌ها، بازی‌ها، فیلم‌ها، موسیقی و سایر محتوای دیجیتال استفاده کنید.",
+      "Characteristics": [
+        "اعتبار دیجیتال: با استفاده از گیفت کارت، می‌توانید اعتبار دیجیتال برای خرید محتوای مختلف در گوگل پلی داشته باشید.",
+        "قابلیت استفاده جهانی: گیفت کارت‌های گوگل پلی معمولاً در اکثر کشورها قابل استفاده هستند، اما ممکن است برخی محدودیت‌ها وجود داشته باشد.",
+        "گیفت کارت‌ها معمولاً با مقادیر مشخصی عرضه می‌شوند (مانند ۱۰، ۲۰، ۵۰ یا ۱۰۰ دلار) که می‌توانید بنا به نیاز خود یکی را انتخاب کنید.",
+        "استفاده آسان: برای استفاده از گیفت کارت، کافی است کد آن را در حساب گوگل پلی خود وارد کنید و موجودی خود را افزایش دهید.",
+        "عدم انقضا: گیفت کارت‌های گوگل پلی معمولاً تاریخ انقضا ندارند و شما می‌توانید تا هر زمانی که بخواهید از آن‌ها استفاده کنید.",
+        "قابلیت هدیه دادن: این کارت‌ها گزینه‌ای عالی برای هدیه دادن به عزیزان است، زیرا به آن‌ها این امکان را می‌دهند تا محصولات و محتویات مورد نظر خود را انتخاب کنند.",
+        "امنیت: گیفت کارت‌ها دارای کدهای امنیتی هستند که از سوءاستفاده جلوگیری می‌کند. بنابراین، بهتر است کدهای خود را محرمانه نگه دارید و از اشتراک‌گذاری آن‌ها به جز با افرادی که به آن‌ها اعتماد دارید، خودداری کنید."
+      ],
+      "activation": [
+        "به فروشگاه گوگل پلی بروید و با حساب گوگل خود وارد شوید.",
+        "در منوی سمت چپ، گزینه 'Redeem' را انتخاب کنید.",
+        "کد ۱۶ رقمی گیفت کارت خود را در کادر مربوطه وارد کنید.",
+        "پس از وارد کردن کد، بر روی دکمه 'Redeem' کلیک کنید. اگر کد صحیح باشد، اعتبار به حساب شما اضافه خواهد شد."
+      ],
+      "comments": [],
+      "usersQuestions": [],
+      "questions": []
+    },
+    {
+      "id": "8367",
+      "src": "/images/gifts/apple.jpg",
+      "src1": "/images/gifts/apple1.jpg",
+      "src2": "/images/gifts/apple2.jpg",
+      "src3": "/images/gifts/apple3.jpg",
+      "title": "گیفت کارت آمازون",
+      "category": "amazon",
+      "regions": [
+        {
+          "id": 1,
+          "country": "گلوبال",
+          "flag": "/images/svg/usa.svg"
+        }
+      ],
+      "giftCards": [
+        {
+          "id": "2d0c",
+          "src": "/images/home/amazon.jpg",
+          "title": "گیفت کارت آمازون ۵۰ دلاری",
+          "price": 3245000,
+          "off": 0,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "amazon",
+          "name": "گیفت کارت آمازون ۵۰",
+          "icon": "/images/svg/amazon.svg"
+        },
+        {
+          "id": "0dd7",
+          "src": "/images/home/amazon.jpg",
+          "title": "گیفت کارت آمازون ۵ دلاری",
+          "price": 324000,
+          "off": 4,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "amazon",
+          "name": "گیفت کارت آمازون ۵",
+          "icon": "/images/svg/amazon.svg"
+        },
+        {
+          "id": "601f",
+          "src": "/images/home/amazon.jpg",
+          "title": "گیفت کارت آمازون ۱۰ دلاری",
+          "price": 618500,
+          "off": 2,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "amazon",
+          "name": "گیفت کارت آمازون ۱۰",
+          "icon": "/images/svg/amazon.svg"
+        },
+        {
+          "id": "cda4",
+          "src": "/images/home/amazon.jpg",
+          "title": "گیفت کارت آمازون ۲۰ دلاری",
+          "price": 1242000,
+          "off": 1,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "amazon",
+          "name": "گیفت کارت آمازون ۲۰",
+          "icon": "/images/svg/amazon.svg"
+        },
+        {
+          "id": "51ed",
+          "src": "/images/home/amazon.jpg",
+          "title": "گیفت کارت آمازون ۱۰۰ دلاری",
+          "price": 6218000,
+          "off": 0,
+          "country": "گلوبال",
+          "flag": "/images/svg/usa.svg",
+          "category": "amazon",
+          "name": "گیفت کارت آمازون ۱۰۰",
+          "icon": "/images/svg/amazon.svg"
+        }
+      ],
+      "description": "گیفت کارت آمازون یک کارت اعتباری است که به شما این امکان را می‌دهد تا از وب‌سایت آمازون برای خرید محصولات مختلف، از جمله کتاب‌ها، الکترونیک، لباس، و سایر کالاها استفاده کنید.",
+      "Characteristics": [
+        "اعتبار دیجیتال: با استفاده از گیفت کارت، می‌توانید اعتبار دیجیتال برای خریداز آمازون داشته باشید.",
+        "قابلیت استفاده جهانی: گیفت کارت‌های آمازون معمولاً در اکثر کشورها قابل استفاده هستند، اما ممکن است برخی محدودیت‌ها وجود داشته باشد.",
+        "گیفت کارت‌ها معمولاً با مقادیر مشخصی عرضه می‌شوند (مانند ۱۰، ۲۰، ۵۰ یا ۱۰۰ دلار) که می‌توانید بنا به نیاز خود یکی را انتخاب کنید.",
+        "استفاده آسان: برای استفاده از گیفت کارت، کافی است کد آن را در حساب آمازون خود وارد کنید و موجودی خود را افزایش دهید.",
+        "عدم انقضا: گیفت کارت‌های آمازون معمولاً تاریخ انقضا ندارند و شما می‌توانید تا هر زمانی که بخواهید از آن‌ها استفاده کنید.",
+        "قابلیت هدیه دادن: این کارت‌ها گزینه‌ای عالی برای هدیه دادن به عزیزان است، زیرا به آن‌ها این امکان را می‌دهند تا محصولات و محتویات مورد نظر خود را انتخاب کنند.",
+        "امنیت: گیفت کارت‌ها دارای کدهای امنیتی هستند که از سوءاستفاده جلوگیری می‌کند. بنابراین، بهتر است کدهای خود را محرمانه نگه دارید و از اشتراک‌گذاری آن‌ها به جز با افرادی که به آن‌ها اعتماد دارید، خودداری کنید."
+      ],
+      "activation": [
+        "به وب‌سایت آمازون بروید و با حساب کاربری خود وارد شوید.",
+        "در منوی بالای صفحه، بر روی گزینه 'Gift Cards' کلیک کنید.",
+        "از منوی کشویی، گزینه 'Redeem a Gift Card' را انتخاب کنید.",
+        "کد ۱۴ رقمی گیفت کارت خود را در کادر مربوطه وارد کنید.",
+        "پس از وارد کردن کد، بر روی دکمه 'Apply to Your Balance' کلیک کنید. اگر کد صحیح باشد، اعتبار به حساب شما اضافه خواهد شد."
+      ],
+      "comments": [],
+      "usersQuestions": [],
+      "questions": []
     }
   ],
-  "gifts": [
-    {
-      "id": "34d9",
-      "src": "/images/home/steam.jpg",
-      "title": "گیفت کارت استیم ۵ دلاری",
-      "price": 326000,
-      "off": 5,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "steam",
-      "name": "گیفت کارت استیم ۵",
-      "icon": "/images/svg/steam.svg"
-    },
-    {
-      "id": "ee36",
-      "src": "/images/home/google_play.jpg",
-      "title": "گیفت کارت گوگل پلی ۲۰ دلاری",
-      "price": 1180000,
-      "off": 2,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "google",
-      "name": "گیفت کارت گوگل پلی ۲۰",
-      "icon": "/images/svg/google-play.svg"
-    },
-    {
-      "id": "02ce",
-      "src": "/images/home/apple.jpg",
-      "title": "گیفت کارت اپل ۱۰۰ دلاری",
-      "price": 6490000,
-      "off": 0,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "apple",
-      "name": "گیفت کارت Apple ۱۰۰",
-      "icon": "/images/svg/apple.svg"
-    },
-    {
-      "id": "2d0c",
-      "src": "/images/home/amazon.jpg",
-      "title": "گیفت کارت آمازون ۵۰ دلاری",
-      "price": 3245000,
-      "off": 0,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "amazon",
-      "name": "گیفت کارت آمازون ۵۰",
-      "icon": "/images/svg/amazon.svg"
-    },
-    {
-      "id": "bdcd",
-      "src": "/images/home/netflix.jpg",
-      "title": "گیفت کارت نتفلیکس ۵۰ دلاری",
-      "price": 3245000,
-      "off": 0,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "netflix",
-      "name": "گیفت کارت نتفلیکس ۵۰",
-      "icon": "/images/svg/netflix.svg"
-    },
-    {
-      "id": "0c6f",
-      "src": "/images/home/apple.jpg",
-      "title": "گیفت کارت اپل ۵۰ دلاری",
-      "price": 3280000,
-      "off": 0,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "apple",
-      "name": "گیفت کارت Apple ۵۰",
-      "icon": "/images/svg/apple.svg"
-    },
-    {
-      "id": "8d35",
-      "src": "/images/home/apple.jpg",
-      "title": "گیفت کارت اپل ۲۰ دلاری",
-      "price": 1230000,
-      "off": 0,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "apple",
-      "name": "گیفت کارت Apple ۲۰",
-      "icon": "/images/svg/apple.svg"
-    },
-    {
-      "id": "eeac",
-      "src": "/images/home/apple.jpg",
-      "title": "گیفت کارت اپل ۱۰ دلاری",
-      "price": 615000,
-      "off": 1,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "apple",
-      "name": "گیفت کارت Apple ۱۰",
-      "icon": "/images/svg/apple.svg"
-    },
-    {
-      "id": "00fb",
-      "src": "/images/home/apple.jpg",
-      "title": "گیفت کارت اپل ۵ دلاری",
-      "price": 320000,
-      "off": 3,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "apple",
-      "name": "گیفت کارت Apple ۵",
-      "icon": "/images/svg/apple.svg"
-    },
-    {
-      "id": "fe4e",
-      "src": "/images/home/apple.jpg",
-      "title": "گیفت کارت اپل ۲۰۰ دلاری",
-      "price": 12248000,
-      "off": 0,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "apple",
-      "name": "گیفت کارت Apple ۲۰۰",
-      "icon": "/images/svg/apple.svg"
-    },
-    {
-      "id": "c97d",
-      "src": "/images/home/apple.jpg",
-      "title": "گیفت کارت اپل ۴۰ دلاری",
-      "price": 2530000,
-      "off": 0,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "apple",
-      "name": "گیفت کارت Apple ۴۰",
-      "icon": "/images/svg/apple.svg"
-    },
-    {
-      "id": "3256",
-      "src": "/images/home/steam.jpg",
-      "title": "گیفت کارت استیم ۱۰ دلاری",
-      "price": 628000,
-      "off": 2,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "steam",
-      "name": "گیفت کارت استیم ۱۰",
-      "icon": "/images/svg/steam.svg"
-    },
-    {
-      "id": "77ca",
-      "src": "/images/home/steam.jpg",
-      "title": "گیفت کارت استیم ۲۰ دلاری",
-      "price": 1249000,
-      "off": 1,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "steam",
-      "name": "گیفت کارت استیم ۲۰",
-      "icon": "/images/svg/steam.svg"
-    },
-    {
-      "id": "39eb",
-      "src": "/images/home/steam.jpg",
-      "title": "گیفت کارت استیم ۵۰ دلاری",
-      "price": 2980000,
-      "off": 0,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "steam",
-      "name": "گیفت کارت استیم ۵۰",
-      "icon": "/images/svg/steam.svg"
-    },
-    {
-      "id": "684e",
-      "src": "/images/home/steam.jpg",
-      "title": "گیفت کارت استیم ۱۰۰ دلاری",
-      "price": 5992000,
-      "off": 0,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "steam",
-      "name": "گیفت کارت استیم ۱۰۰",
-      "icon": "/images/svg/steam.svg"
-    },
-    {
-      "id": "b905",
-      "src": "/images/home/steam.jpg",
-      "title": "گیفت کارت استیم ۲۰۰ دلاری",
-      "price": 11984000,
-      "off": 0,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "steam",
-      "name": "گیفت کارت استیم ۲۰۰",
-      "icon": "/images/svg/steam.svg"
-    },
-    {
-      "id": "0dd7",
-      "src": "/images/home/amazon.jpg",
-      "title": "گیفت کارت آمازون ۵ دلاری",
-      "price": 324000,
-      "off": 4,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "amazon",
-      "name": "گیفت کارت آمازون ۵",
-      "icon": "/images/svg/amazon.svg"
-    },
-    {
-      "id": "aadd",
-      "src": "/images/home/google_play.jpg",
-      "title": "گیفت کارت گوگل پلی ۵ دلاری",
-      "price": 328000,
-      "off": 5,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "google",
-      "name": "گیفت کارت گوگل پلی ۵",
-      "icon": "/images/svg/google-play.svg"
-    },
-    {
-      "id": "4f77",
-      "src": "/images/home/netflix.jpg",
-      "title": "گیفت کارت نتفلیکس ۵ دلاری",
-      "price": 332000,
-      "off": 4,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "netflix",
-      "name": "گیفت کارت نتفلیکس ۵",
-      "icon": "/images/svg/netflix.svg"
-    },
-    {
-      "id": "601f",
-      "src": "/images/home/amazon.jpg",
-      "title": "گیفت کارت آمازون ۱۰ دلاری",
-      "price": 618500,
-      "off": 2,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "amazon",
-      "name": "گیفت کارت آمازون ۱۰",
-      "icon": "/images/svg/amazon.svg"
-    },
-    {
-      "id": "f10f",
-      "src": "/images/home/google_play.jpg",
-      "title": "گیفت کارت گوگل پلی ۱۰ دلاری",
-      "price": 625000,
-      "off": 1,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "google",
-      "name": "گیفت کارت گوگل پلی ۱۰",
-      "icon": "/images/svg/google-play.svg"
-    },
-    {
-      "id": "837f",
-      "src": "/images/home/netflix.jpg",
-      "title": "گیفت کارت نتفلیکس ۱۰ دلاری",
-      "price": 635000,
-      "off": 1,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "netflix",
-      "name": "گیفت کارت نتفلیکس ۱۰",
-      "icon": "/images/svg/netflix.svg"
-    },
-    {
-      "id": "cda4",
-      "src": "/images/home/amazon.jpg",
-      "title": "گیفت کارت آمازون ۲۰ دلاری",
-      "price": 1242000,
-      "off": 1,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "amazon",
-      "name": "گیفت کارت آمازون ۲۰",
-      "icon": "/images/svg/amazon.svg"
-    },
-    {
-      "id": "e09f",
-      "src": "/images/home/google_play.jpg",
-      "title": "گیفت کارت گوگل پلی ۵۰ دلاری",
-      "price": 3118000,
-      "off": 0,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "google",
-      "name": "گیفت کارت گوگل پلی ۵۰",
-      "icon": "/images/svg/google-play.svg"
-    },
-    {
-      "id": "cf19",
-      "src": "/images/home/netflix.jpg",
-      "title": "گیفت کارت نتفلیکس ۲۰ دلاری",
-      "price": 1252000,
-      "off": 1,
-      "country": "آمریکا",
-      "flag": "/images/svg/usa.svg",
-      "category": "netflix",
-      "name": "گیفت کارت نتفلیکس ۲۰",
-      "icon": "/images/svg/netflix.svg"
-    }
+  "test": [
+    
+    
   ],
   "categories": [
     {

@@ -19,8 +19,20 @@ export default function DiscountedProducts() {
     fetch(`http://localhost:8000/${product}`)
       .then((res) => res.json())
       .then((datas) => {
-        const discountedProducts = datas.filter((data) => data.off !== 0);
-        setDiscountProducts(discountedProducts);
+        if (product === "gifts") {
+          const discountedGifts = [];
+          datas.forEach((data) => {
+            data.giftCards.forEach((eachData) => {
+              if (eachData.off) {
+                discountedGifts.push(eachData);
+              }
+            });
+          });
+          setDiscountProducts(discountedGifts);
+        } else {
+          const discountedProducts = datas.filter((data) => data.off !== 0);
+          setDiscountProducts(discountedProducts);
+        }
       });
   };
   useEffect(() => {
