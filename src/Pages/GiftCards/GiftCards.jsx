@@ -22,6 +22,7 @@ export default function GiftCards() {
   const [categoryGifts, setCategoryGifts] = useState([]);
   const [categoryRegions, setCategoryRegions] = useState([]);
   const [region, setRegion] = useState("");
+  const [isActive, setIsActive] = useState("description");
 
   const chooseCategory = (category) => {
     const selectedCategory = allGifts.filter(
@@ -104,7 +105,7 @@ export default function GiftCards() {
             <div className="gift-cards__header-img-container">
               <div className="gift-cards__header-top-img-box">
                 <img
-                  src="/images/gifts/apple.jpg"
+                  src={category?.src}
                   alt="giftCard"
                   className="gift-cards__header-top-img"
                 />
@@ -113,21 +114,21 @@ export default function GiftCards() {
                 <div className="gift-cards__header-bottom-img-box">
                   <img
                     className="gift-cards__header-bottom-img"
-                    src="/images/gifts/apple1.jpg"
+                    src={category?.src1}
                     alt="gift-cards__header-bottom-img-container"
                   />
                 </div>
                 <div className="gift-cards__header-bottom-img-box">
                   <img
                     className="gift-cards__header-bottom-img"
-                    src="/images/gifts/apple2.jpg"
+                    src={category?.src2}
                     alt="gift-cards__header-bottom-img-container"
                   />
                 </div>
                 <div className="gift-cards__header-bottom-img-box">
                   <img
                     className="gift-cards__header-bottom-img"
-                    src="/images/gifts/apple3.jpg"
+                    src={category?.src3}
                     alt="gift-cards__header-bottom-img-container"
                   />
                 </div>
@@ -197,32 +198,74 @@ export default function GiftCards() {
           <div className="gift-cards__infos">
             <div className="gift-cards__infos-header">
               <div className="gift-cards__infos-header-box">
-                <button className="gift-cards__infos-header-button gift-cards__infos-header-button--active">
+                <button
+                  className={
+                    isActive === "description"
+                      ? "gift-cards__infos-header-button gift-cards__infos-header-button--active"
+                      : "gift-cards__infos-header-button"
+                  }
+                  onClick={() => setIsActive("description")}
+                >
                   توضیحات
                 </button>
               </div>
               <div className="gift-cards__infos-header-box">
-                <button className="gift-cards__infos-header-button">
+                <button
+                  className={
+                    isActive === "Characteristics"
+                      ? "gift-cards__infos-header-button gift-cards__infos-header-button--active"
+                      : "gift-cards__infos-header-button"
+                  }
+                  onClick={() => setIsActive("Characteristics")}
+                >
                   خصوصیات
                 </button>
               </div>
               <div className="gift-cards__infos-header-box">
-                <button className="gift-cards__infos-header-button">
+                <button
+                  className={
+                    isActive === "comments"
+                      ? "gift-cards__infos-header-button gift-cards__infos-header-button--active"
+                      : "gift-cards__infos-header-button"
+                  }
+                  onClick={() => setIsActive("comments")}
+                >
                   نظرات
                 </button>
               </div>
               <div className="gift-cards__infos-header-box">
-                <button className="gift-cards__infos-header-button">
+                <button
+                  className={
+                    isActive === "usersQuestions"
+                      ? "gift-cards__infos-header-button gift-cards__infos-header-button--active"
+                      : "gift-cards__infos-header-button"
+                  }
+                  onClick={() => setIsActive("usersQuestions")}
+                >
                   سوالات کاربران
                 </button>
               </div>
               <div className="gift-cards__infos-header-box">
-                <button className="gift-cards__infos-header-button">
+                <button
+                  className={
+                    isActive === "questions"
+                      ? "gift-cards__infos-header-button gift-cards__infos-header-button--active"
+                      : "gift-cards__infos-header-button"
+                  }
+                  onClick={() => setIsActive("questions")}
+                >
                   سوالات متداول
                 </button>
               </div>
               <div className="gift-cards__infos-header-box">
-                <button className="gift-cards__infos-header-button">
+                <button
+                  className={
+                    isActive === "activation"
+                      ? "gift-cards__infos-header-button gift-cards__infos-header-button--active"
+                      : "gift-cards__infos-header-button"
+                  }
+                  onClick={() => setIsActive("activation")}
+                >
                   فعال سازی
                 </button>
               </div>
