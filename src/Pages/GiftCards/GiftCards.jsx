@@ -21,6 +21,7 @@ export default function GiftCards() {
   const [category, setCategory] = useState({});
   const [categoryGifts, setCategoryGifts] = useState([]);
   const [categoryRegions, setCategoryRegions] = useState([]);
+  const [region, setRegion] = useState("");
 
   const chooseCategory = (category) => {
     const selectedCategory = allGifts.filter(
@@ -42,10 +43,24 @@ export default function GiftCards() {
 
   useEffect(() => {
     if (category?.giftCards) {
-      setCategoryGifts(category.giftCards);
       setCategoryRegions(category.regions);
     }
   }, [category]);
+
+  useEffect(() => {
+    if (categoryRegions[0]?.country) {
+      setRegion(categoryRegions[0].country);
+    }
+  }, [categoryRegions]);
+
+  useEffect(() => {
+    if (region) {
+      const shownGiftCards = category.giftCards.filter(
+        (gift) => gift.country === region
+      );
+      setCategoryGifts(shownGiftCards);
+    }
+  }, [region, category]);
 
   return (
     <>
@@ -230,32 +245,14 @@ export default function GiftCards() {
           <SectionHeader title="انتخاب نوع گیفت کارت" />
           <div className="gift-cards__body-buttons">
             {categoryRegions.map((region) => (
-              <button className="gift-cards__body-button">
-                <Flag
-                  key={region.id}
-                  country={region.country}
-                  src={region.flag}
-                />
+              <button
+                key={region.id}
+                className="gift-cards__body-button"
+                onClick={() => setRegion(region.country)}
+              >
+                <Flag country={region.country} src={region.flag} />
               </button>
             ))}
-            {/* <button className="gift-cards__body-button">
-              <Flag country="برزیل" src="/images/svg/brazil.svg" />
-            </button>
-            <button className="gift-cards__body-button">
-              <Flag country="انگلیس" src="/images/svg/england.svg" />
-            </button>
-            <button className="gift-cards__body-button">
-              <Flag country="ترکیه" src="/images/svg/turkey.svg" />
-            </button>
-            <button className="gift-cards__body-button">
-              <Flag country="فرانسه" src="/images/svg/france.svg" />
-            </button>
-            <button className="gift-cards__body-button">
-              <Flag country="ایتالیا" src="/images/svg/italy.svg" />
-            </button>
-            <button className="gift-cards__body-button">
-              <Flag country="آمریکا" src="/images/svg/usa.svg" />
-            </button> */}
           </div>
           <div className="gift-cards__body-cards">
             {categoryGifts.map((gift) => (
