@@ -39,6 +39,9 @@
 }
 
 /* swiper styles */
+.discounted-products__boxes .swiper{
+  padding-bottom: 30px;
+}
 
 .discounted-products .swiper-slide {
   display: flex;

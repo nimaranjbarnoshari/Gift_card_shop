@@ -48,11 +48,8 @@ function App() {
   };
 
   const addToBasket = (datas) => {
-
     if (isLoggedIn) {
-      const isProduct = userBasket.find(
-        (data) => data.title === datas.title
-      );
+      const isProduct = userBasket.find((data) => data.title === datas.title);
 
       if (isProduct) {
         Swal.fire({
@@ -71,7 +68,7 @@ function App() {
           }
         });
       } else {
-        const product = {...datas}
+        const product = { ...datas };
         if (product.off) {
           product.price = product.price - (product.price * product.off) / 100;
         }
@@ -139,7 +136,6 @@ function App() {
     }).then((answer) => {
       if (answer.isConfirmed) {
         const newBasket = [...userBasket].filter((basket) => basket.id !== id);
-        console.log(newBasket);
 
         fetch(`http://localhost:8000/users/${userInfos.id}`, {
           method: "PATCH",
@@ -229,25 +225,45 @@ function App() {
   };
 
   const chargeBalance = (amount) => {
-    fetch(`http://localhost:8000/users/${userInfos.id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ balance: amount + accountBalance }),
-    })
-      .then((res) => {
-        if (res.ok) {
-          res.json();
-        }
-      })
-      .then((data) => {
-        fetch("http://localhost:8000/users")
-          .then((res) => res.json())
+    Swal.fire({
+      title: `شما در حال واریز مبلغ ${amount.toLocaleString()} به کیف پول خود هستید`,
+      text: "آیا ادامه می دهید؟",
+      icon: "question",
+      confirmButtonText: "بله",
+      cancelButtonText: "انصراف",
+      showCancelButton: true,
+      showCloseButton: true,
+      iconColor: "#Fd295c",
+      cancelButtonColor: "#Fd295c",
+    }).then((answer) => {
+      if (answer.isConfirmed) {
+        fetch(`http://localhost:8000/users/${userInfos.id}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ balance: amount + accountBalance }),
+        })
+          .then((res) => {
+            if (res.ok) {
+              res.json();
+            }
+          })
           .then((data) => {
-            setAllUser(data);
+            fetch("http://localhost:8000/users")
+              .then((res) => res.json())
+              .then((data) => {
+                Swal.fire({
+                  title: `کیف پول شما به مبلغ ${amount.toLocaleString()} شارژ شد.`,
+                  showConfirmButton: true,
+                  confirmButtonColor: "#Fd295c",
+                }).then(() => {
+                  setAllUser(data);
+                });
+              });
           });
-      });
+      }
+    });
   };
 
   useEffect(() => {

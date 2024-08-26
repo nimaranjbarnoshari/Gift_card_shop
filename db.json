@@ -9,7 +9,8 @@
       "token": "532423nimara543181nimaranjbarnoshari@gmail.com314027",
       "basket": [],
       "tickets": [],
-      "balance": 1800000
+      "balance": 1800000,
+      "pay": []
     },
     {
       "id": "ed67",
@@ -49,7 +50,8 @@
       ],
       "orders": [],
       "tickets": [],
-      "balance": 2500000
+      "balance": 5000000,
+      "pay": []
     },
     {
       "id": "5805",
@@ -60,7 +62,8 @@
       "token": "586810mehran639059mehran@gmail.com255894",
       "basket": [],
       "tickets": [],
-      "balance": 0
+      "balance": 0,
+      "pay": []
     }
   ],
   "comments": [],
@@ -944,10 +947,7 @@
       "questions": []
     }
   ],
-  "test": [
-    
-    
-  ],
+  "test": [],
   "categories": [
     {
       "id": "34b0",
