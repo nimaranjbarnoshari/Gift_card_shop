@@ -65,6 +65,13 @@ export default function GiftCards() {
     }
   }, [region, category]);
 
+  useEffect(() => {
+    if (category) {
+      console.log(category[isActive]);
+      console.log(typeof category[isActive]);
+    }
+  }, [isActive, category]);
+
   return (
     <>
       <Topbar />
@@ -278,9 +285,28 @@ export default function GiftCards() {
                 alt="text_bg"
                 className="gift-cards__infos-body-img"
               />
-              <p className="gift-cards__infos-text">
-                {category ? category.description : ""}
-              </p>
+              {category ? (
+                typeof category[isActive] === "string" ? (
+                  <p className="gift-cards__infos-text">
+                    {category[isActive]}
+                  </p>
+                ) : (
+                  <ul className="gift-cards__infos-list">
+                    {category[isActive]
+                      ? category[isActive].map((item, index) => (
+                          <li
+                            key={index + 1}
+                            className="gift-cards__infos-list-item"
+                          >
+                            {item}
+                          </li>
+                        ))
+                      : ""}
+                  </ul>
+                )
+              ) : (
+                ""
+              )}
             </div>
           </div>
         </div>
@@ -295,7 +321,15 @@ export default function GiftCards() {
                 className="gift-cards__body-button"
                 onClick={() => setRegion(region.country)}
               >
-                <Flag country={region.country} src={region.flag} custom={isRegionActive === region.country ? "gift-cards__body-flag--active" : ""}/>
+                <Flag
+                  country={region.country}
+                  src={region.flag}
+                  custom={
+                    isRegionActive === region.country
+                      ? "gift-cards__body-flag--active"
+                      : ""
+                  }
+                />
               </button>
             ))}
           </div>
