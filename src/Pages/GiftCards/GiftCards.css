@@ -192,6 +192,10 @@
   border: none;
   color: var(--white-color);
 }
+.gift-cards__body-flag--active{
+background-color: rgba(253, 41, 92, 0.5);
+}
+
 .gift-cards__body-cards {
   display: flex;
   flex-wrap: wrap;
@@ -267,6 +271,7 @@
   .gift-cards__body-buttons {
     max-width: 300px;
   }
+
   .gift-cards__footer-help {
     padding: 24px 5px;
   }

@@ -23,6 +23,7 @@ export default function GiftCards() {
   const [categoryRegions, setCategoryRegions] = useState([]);
   const [region, setRegion] = useState("");
   const [isActive, setIsActive] = useState("description");
+  const [isRegionActive, setIsRegionActive] = useState("");
 
   const chooseCategory = (category) => {
     const selectedCategory = allGifts.filter(
@@ -60,6 +61,7 @@ export default function GiftCards() {
         (gift) => gift.country === region
       );
       setCategoryGifts(shownGiftCards);
+      setIsRegionActive(region);
     }
   }, [region, category]);
 
@@ -293,7 +295,7 @@ export default function GiftCards() {
                 className="gift-cards__body-button"
                 onClick={() => setRegion(region.country)}
               >
-                <Flag country={region.country} src={region.flag} />
+                <Flag country={region.country} src={region.flag} custom={isRegionActive === region.country ? "gift-cards__body-flag--active" : ""}/>
               </button>
             ))}
           </div>
