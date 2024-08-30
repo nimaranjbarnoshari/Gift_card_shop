@@ -7,12 +7,14 @@ import Benefits from "../../Components/Benefits/Benefits";
 import SectionHeader from "../../Components/SectionHeader/SectionHeader";
 import GameBox from "../../Components/GameBox/GameBox";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import Flag from "../../Components/Flag/Flag";
 import GiftBox from "../../Components/GiftBox/GiftBox";
 import AuthContext from "../../Context/AuthContext";
 import Accordion from "react-bootstrap/Accordion";
 
+import "swiper/css";
+import "swiper/css/pagination";
 import "./GiftCards.css";
 
 export default function GiftCards() {
@@ -25,6 +27,7 @@ export default function GiftCards() {
   const [region, setRegion] = useState("");
   const [isActive, setIsActive] = useState("description");
   const [isRegionActive, setIsRegionActive] = useState("");
+  const [allGames, setAllGames] = useState([]);
 
   const chooseCategory = (category) => {
     const selectedCategory = allGifts.filter(
@@ -37,6 +40,10 @@ export default function GiftCards() {
     fetch("http://localhost:8000/gifts")
       .then((res) => res.json())
       .then((data) => setAllGifts(data));
+
+    fetch("http://localhost:8000/games")
+      .then((res) => res.json())
+      .then((data) => setAllGames(data));
   }, []);
 
   useEffect(() => {
@@ -338,7 +345,11 @@ export default function GiftCards() {
                 ? isActive === "questions" && (
                     <Accordion>
                       {category[isActive].map((question, index) => (
-                        <Accordion.Item key={question.id} eventKey={index}>
+                        <Accordion.Item
+                          key={question.id}
+                          eventKey={index}
+                          className="border-0"
+                        >
                           <Accordion.Header>
                             {question.question}
                           </Accordion.Header>
@@ -446,14 +457,15 @@ export default function GiftCards() {
         </div>
       </div>
       <Benefits background={false} />
+
       {/* Other products section */}
       <div className="container">
-        <div className="gift-products">
+        <div className="gift-cards__other-products">
           <SectionHeader title="دیگر محصولات" />
           <Swiper
+            modules={[Pagination, Autoplay]}
             // autoplay={true}
-            navigation={true}
-            modules={[Navigation, Autoplay]}
+            pagination={{ type: "bullets", clickable: true }}
             className="mySwiper"
             loop={true}
             breakpoints={{
@@ -468,37 +480,21 @@ export default function GiftCards() {
               },
             }}
           >
-            <SwiperSlide>
-              <GameBox
-                src="/images/home/fifa24.jpg"
-                title="بازی فیفا ۲۴ (پیش خرید)"
-                price="۲۵۶،۰۰۰"
-              />
-            </SwiperSlide>
+            {allGames.length
+              ? allGames.slice(0,7).map((game) => (
+                  <SwiperSlide key={game.id}>
+                    <GameBox
+                      clickHandler={() => contextData.addToBasket(game)}
+                      src={game.src}
+                      title={game.title}
+                      price={game.price}
+                      off={game.off}
+                    />
+                  </SwiperSlide>
+                ))
+              : ""}
 
-            <SwiperSlide>
-              <GameBox
-                src="/images/home/jedi.jpg"
-                title="بازی JEDI Survivor"
-                price="۱،۱۸۰،۰۰۰"
-              />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <GameBox
-                src="/images/home/deadspace.jpg"
-                title="بازی Dead Space"
-                price="۶،۴۹۰،۰۰۰"
-              />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <GameBox
-                src="/images/home/warfar.jpg"
-                title="بازی Modern Warfare 2"
-                price="۳،۲۴۵،۰۰۰"
-              />
-            </SwiperSlide>
+            
           </Swiper>
         </div>
       </div>

@@ -217,13 +217,8 @@
 
 .accordion-item {
   margin-bottom: 15px;
-  border: none;
   background-color: transparent;
 }
-
-/* .accordion-header {
-
-} */
 
 .accordion-collapse {
   color: var(--white-color);
@@ -235,6 +230,7 @@
   font-size: 14px;
   font-weight: 500;
   color: var(--white-color);
+  height: 50px;
 }
 
 .accordion-button::after {
@@ -249,6 +245,10 @@
 .accordion-button:not(.collapsed) {
   color: var(--white-color);
   background-color: transparent;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
   box-shadow: none;
 }
 
@@ -325,22 +325,19 @@
 }
 /* Other products section styles */
 
-.gift-products {
+.gift-cards__other-products {
   margin-bottom: 80px;
 }
 
 /* swiper styles */
 
-.gift-products .swiper-slide {
+.gift-cards__other-products .swiper-slide {
   display: flex;
   justify-content: center;
 }
 
-.gift-products .swiper-button-next::after,
-.gift-products .swiper-button-prev::after {
-  color: var(--white-color);
-  background-color: transparent;
-  font-size: 16px;
+.gift-cards__other-products .swiper {
+  padding-bottom: 30px;
 }
 
 /* media query */
