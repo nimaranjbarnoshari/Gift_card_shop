@@ -39,7 +39,7 @@ export default function ContactUs() {
                 <CommunicationBox
                   src="/images/svg/whatsapp.svg"
                   title="واتس اپ:"
-                  text="09214844154"
+                  text="۰۹۲۱۴۸۴۴۱۵۴"
                 />
                 <CommunicationBox
                   src="/images/svg/instagram.svg"
@@ -59,7 +59,7 @@ export default function ContactUs() {
                 <CommunicationBox
                   src="/images/svg/telephone.svg"
                   title="تلفن تماس:"
-                  text="09125244154"
+                  text="۰۹۱۲۵۲۴۴۱۵۴"
                 />
                 <CommunicationBox
                   src="/images/svg/location.svg"

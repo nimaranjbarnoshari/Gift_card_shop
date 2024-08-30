@@ -481,7 +481,7 @@ export default function GiftCards() {
             }}
           >
             {allGames.length
-              ? allGames.slice(0,7).map((game) => (
+              ? allGames.slice(0,8).map((game) => (
                   <SwiperSlide key={game.id}>
                     <GameBox
                       clickHandler={() => contextData.addToBasket(game)}

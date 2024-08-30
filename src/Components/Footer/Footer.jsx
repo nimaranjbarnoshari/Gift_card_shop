@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import { FiPhone } from "react-icons/fi";
 import { CiLocationOn } from "react-icons/ci";
@@ -10,6 +10,35 @@ import { FaInstagram } from "react-icons/fa";
 
 import "./Footer.css";
 export default function Footer() {
+  const [allGamesData, setAllGamesData] = useState([]);
+  const [allaccounts, setAllaccounts] = useState([]);
+  const [giftsCategory, setGiftsCategory] = useState([]);
+  const [allGifts, setAllGifts] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/games")
+      .then((res) => res.json())
+      .then((data) => setAllGamesData(data));
+    fetch("http://localhost:8000/accounts")
+      .then((res) => res.json())
+      .then((data) => setAllaccounts(data));
+    fetch("http://localhost:8000/gifts")
+      .then((res) => res.json())
+      .then((data) => setGiftsCategory(data));
+  }, []);
+
+  useEffect(() => {
+    const giftCards = [];
+    giftsCategory.forEach((gift) => {
+      gift.giftCards.forEach((eachGift, index) => {
+        if (index <= 1) {
+          giftCards.push(eachGift);
+        }
+      });
+    });
+    setAllGifts(giftCards);
+  }, [giftsCategory]);
+
   return (
     <footer className="footer">
       <div className="container">
@@ -25,7 +54,7 @@ export default function Footer() {
 
             <div className="footer-infos__phone-wrapper">
               <FiPhone className="footer-infos__phone-icon" />
-              <h5 className="footer-infos__phone-number">۰۹۱۲۳۴۵۶۷۸۹</h5>
+              <h5 className="footer-infos__phone-number">۰۹۱۲۵۲۴۴۱۵۴</h5>
             </div>
 
             <div className="footer-infos__location-wrapper">
@@ -50,123 +79,45 @@ export default function Footer() {
 
           <div className="footer-lists">
             <div className="footer-lists__wrapper">
-              <SectionHeader title="گیفت کارت ها" footer={true} />
+              <SectionHeader title="بازی ها" footer={true} />
               <ul className="footer-lists__items">
-                <li className="footer-lists__item">
-                  <Link to="#" className="footer-lists__link">
-                    گیفت کارت Steam
-                  </Link>
-                </li>
-                <li className="footer-lists__item">
-                  <Link to="#" className="footer-lists__link">
-                    گیفت کارت Amazon
-                  </Link>
-                </li>
-                <li className="footer-lists__item">
-                  <Link to="#" className="footer-lists__link">
-                    گیفت کارت Apple
-                  </Link>
-                </li>
-                <li className="footer-lists__item">
-                  <Link to="#" className="footer-lists__link">
-                    گیفت کارت Googleplay
-                  </Link>
-                </li>
-                <li className="footer-lists__item">
-                  <Link to="#" className="footer-lists__link">
-                    گیفت کارت Steam
-                  </Link>
-                </li>
-                <li className="footer-lists__item">
-                  <Link to="#" className="footer-lists__link">
-                    گیفت کارت Amazon
-                  </Link>
-                </li>
-                <li className="footer-lists__item">
-                  <Link to="#" className="footer-lists__link">
-                    گیفت کارت Apple
-                  </Link>
-                </li>
+                {allGamesData.length
+                  ? allGamesData.slice(0, 7).map((game) => (
+                      <li key={game.id} className="footer-lists__item">
+                        <Link to="#" className="footer-lists__link">
+                          {game.title}
+                        </Link>
+                      </li>
+                    ))
+                  : ""}
               </ul>
             </div>
             <div className="footer-lists__wrapper">
-              <SectionHeader title="کالا های دیجیتال" footer={true} />
+              <SectionHeader title="گیفت کارت ها" footer={true} />
               <ul className="footer-lists__items">
-                <li className="footer-lists__item">
-                  <Link to="#" className="footer-lists__link">
-                    گیفت کارت Steam
-                  </Link>
-                </li>
-                <li className="footer-lists__item">
-                  <Link to="#" className="footer-lists__link">
-                    گیفت کارت Amazon
-                  </Link>
-                </li>
-                <li className="footer-lists__item">
-                  <Link to="#" className="footer-lists__link">
-                    گیفت کارت Apple
-                  </Link>
-                </li>
-                <li className="footer-lists__item">
-                  <Link to="#" className="footer-lists__link">
-                    گیفت کارت Googleplay
-                  </Link>
-                </li>
-                <li className="footer-lists__item">
-                  <Link to="#" className="footer-lists__link">
-                    گیفت کارت Steam
-                  </Link>
-                </li>
-                <li className="footer-lists__item">
-                  <Link to="#" className="footer-lists__link">
-                    گیفت کارت Amazon
-                  </Link>
-                </li>
-                <li className="footer-lists__item">
-                  <Link to="#" className="footer-lists__link">
-                    گیفت کارت Apple
-                  </Link>
-                </li>
+                {allGifts.length
+                  ? allGifts.slice(0, 7).map((gift) => (
+                      <li key={gift.id} className="footer-lists__item">
+                        <Link to="#" className="footer-lists__link">
+                          {gift.title}
+                        </Link>
+                      </li>
+                    ))
+                  : ""}
               </ul>
             </div>
             <div className="footer-lists__wrapper">
               <SectionHeader title="خدمات و اکانت ها" footer={true} />
               <ul className="footer-lists__items">
-                <li className="footer-lists__item">
-                  <Link to="#" className="footer-lists__link">
-                    گیفت کارت Steam
-                  </Link>
-                </li>
-                <li className="footer-lists__item">
-                  <Link to="#" className="footer-lists__link">
-                    گیفت کارت Amazon
-                  </Link>
-                </li>
-                <li className="footer-lists__item">
-                  <Link to="#" className="footer-lists__link">
-                    گیفت کارت Apple
-                  </Link>
-                </li>
-                <li className="footer-lists__item">
-                  <Link to="#" className="footer-lists__link">
-                    گیفت کارت Googleplay
-                  </Link>
-                </li>
-                <li className="footer-lists__item">
-                  <Link to="#" className="footer-lists__link">
-                    گیفت کارت Steam
-                  </Link>
-                </li>
-                <li className="footer-lists__item">
-                  <Link to="#" className="footer-lists__link">
-                    گیفت کارت Amazon
-                  </Link>
-                </li>
-                <li className="footer-lists__item">
-                  <Link to="#" className="footer-lists__link">
-                    گیفت کارت Apple
-                  </Link>
-                </li>
+                {allaccounts.length
+                  ? allaccounts.slice(0, 7).map((account) => (
+                      <li key={account.id} className="footer-lists__item">
+                        <Link to="#" className="footer-lists__link">
+                          {account.title}
+                        </Link>
+                      </li>
+                    ))
+                  : ""}
               </ul>
             </div>
           </div>
