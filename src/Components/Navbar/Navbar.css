@@ -138,7 +138,7 @@
   border-radius: 50%;
   top: 4px;
   left: 22px;
-  font-size: 8px;
+  font-size: 10px;
 }
 .nav-link__notification--hiden {
   display: none;
@@ -194,6 +194,13 @@
   .nav-link__text-user {
     font-size: 12px;
   }
+  .nav-link__notification {
+    width: 14px;
+    height: 14px;
+    top: 2px;
+    left: 20px;
+    font-size: 12px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -223,6 +230,12 @@
   .nav-link__text-user {
     font-size: 14px;
   }
+  .nav-link__notification {
+    width: 14px;
+    height: 14px;
+    left: 20px;
+    font-size: 12px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -251,9 +264,8 @@
   .nav-link__notification {
     width: 18px;
     height: 18px;
-    top: 4px;
-    left: 24px;
-    font-size: 12px;
+    left: 22px;
+    font-size: 14px;
   }
 
   .nav-btn__login {
