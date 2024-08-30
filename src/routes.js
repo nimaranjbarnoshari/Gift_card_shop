@@ -38,7 +38,7 @@ const routes = [
     {path:"/otp", element: <OTP />},
     {path:"/otp/:ID", element: <ChangePass />},
     {path:"/carts", element: <Carts />},
-    {path:"/gift-cards", element: <GiftCards />},
+    {path:"/gift-cards/:category?/:country?", element: <GiftCards />},
     {path:"/games", element: <Games />},
     {path:"/services", element: <Services />},
     {path:"/softwares", element: <Softwares />},

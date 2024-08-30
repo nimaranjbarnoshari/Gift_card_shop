@@ -9,32 +9,32 @@ export default function Benefits({ background }) {
         <div className="benefits-wrapper">
           <BenefitBox
             bg={background}
-            src="images/svg/verify.svg"
+            src="/images/svg/verify.svg"
             title="تضمین اصالت کالا"
           />
           <BenefitBox
             bg={background}
-            src="images/svg/dollar-circle.svg"
+            src="/images/svg/dollar-circle.svg"
             title="تضمین بهترین قیمت"
           />
           <BenefitBox
             bg={background}
-            src="images/svg/wallet-check.svg"
+            src="/images/svg/wallet-check.svg"
             title="خرید آسان و ایمن"
           />
           <BenefitBox
             bg={background}
-            src="images/svg/box-time.svg"
+            src="/images/svg/box-time.svg"
             title="تحویل سریع و آنی"
           />
           <BenefitBox
             bg={background}
-            src="images/svg/headphone.svg"
+            src="/images/svg/headphone.svg"
             title="پشتیبانی سریع تلفنی"
           />
           <BenefitBox
             bg={background}
-            src="images/svg/empty-wallet-change.svg"
+            src="/images/svg/empty-wallet-change.svg"
             title="ضمانت عودت وجه"
           />
         </div>

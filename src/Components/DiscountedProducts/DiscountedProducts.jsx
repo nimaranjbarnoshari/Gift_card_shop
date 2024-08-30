@@ -158,6 +158,7 @@ export default function DiscountedProducts() {
                 <SwiperSlide key={product.id}>
                   <GameBox
                     src={product.src}
+                    link={product.link ? product.link : "#"}
                     title={product.title}
                     price={product.price}
                     off={product.off}

@@ -372,7 +372,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "apple",
           "name": "گیفت کارت اپل ۵۰",
-          "icon": "/images/svg/apple.svg"
+          "icon": "/images/svg/apple.svg",
+          "link": "gift-cards/apple/آمریکا"
         },
         {
           "id": "02ce",
@@ -384,7 +385,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "apple",
           "name": "گیفت کارت اپل ۱۰۰",
-          "icon": "/images/svg/apple.svg"
+          "icon": "/images/svg/apple.svg",
+          "link": "gift-cards/apple/آمریکا"
         },
         {
           "id": "8d35",
@@ -396,7 +398,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "apple",
           "name": "گیفت کارت اپل ۲۰",
-          "icon": "/images/svg/apple.svg"
+          "icon": "/images/svg/apple.svg",
+          "link": "gift-cards/apple/آمریکا"
         },
         {
           "id": "c97d",
@@ -408,7 +411,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "apple",
           "name": "گیفت کارت اپل ۴۰",
-          "icon": "/images/svg/apple.svg"
+          "icon": "/images/svg/apple.svg",
+          "link": "gift-cards/apple/آمریکا"
         },
         {
           "id": "eeac",
@@ -420,7 +424,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "apple",
           "name": "گیفت کارت اپل ۱۰",
-          "icon": "/images/svg/apple.svg"
+          "icon": "/images/svg/apple.svg",
+          "link": "gift-cards/apple/آمریکا"
         },
         {
           "id": "00fb",
@@ -432,7 +437,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "apple",
           "name": "گیفت کارت اپل ۵",
-          "icon": "/images/svg/apple.svg"
+          "icon": "/images/svg/apple.svg",
+          "link": "gift-cards/apple/آمریکا"
         },
         {
           "id": "fe4e",
@@ -444,7 +450,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "apple",
           "name": "گیفت کارت اپل ۲۰۰",
-          "icon": "/images/svg/apple.svg"
+          "icon": "/images/svg/apple.svg",
+          "link": "gift-cards/apple/آمریکا"
         }
       ],
       "regions": [
@@ -556,7 +563,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "netflix",
           "name": "گیفت کارت نتفلیکس ۵۰",
-          "icon": "/images/svg/netflix.svg"
+          "icon": "/images/svg/netflix.svg",
+          "link": "gift-cards/netflix/آمریکا"
         },
         {
           "id": "4f77",
@@ -568,7 +576,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "netflix",
           "name": "گیفت کارت نتفلیکس ۵",
-          "icon": "/images/svg/netflix.svg"
+          "icon": "/images/svg/netflix.svg",
+          "link": "gift-cards/netflix/آمریکا"
         },
         {
           "id": "837f",
@@ -580,7 +589,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "netflix",
           "name": "گیفت کارت نتفلیکس ۱۰",
-          "icon": "/images/svg/netflix.svg"
+          "icon": "/images/svg/netflix.svg",
+          "link": "gift-cards/netflix/آمریکا"
         },
         {
           "id": "cf19",
@@ -592,7 +602,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "netflix",
           "name": "گیفت کارت نتفلیکس ۲۰",
-          "icon": "/images/svg/netflix.svg"
+          "icon": "/images/svg/netflix.svg",
+          "link": "gift-cards/netflix/آمریکا"
         },
         {
           "id": "6ef9",
@@ -603,18 +614,20 @@
           "country": "آمریکا",
           "flag": "/images/svg/usa.svg",
           "name": "گیفت کارت نتفلیکس ۱۰۰",
-          "icon": "/images/svg/netflix.svg"
+          "icon": "/images/svg/netflix.svg",
+          "link": "gift-cards/netflix/آمریکا"
         },
         {
           "id": "1771",
           "src": "/images/home/netflix.jpg",
           "title": "گیفت کارت نتفلیکس ۵۰۰ لیری",
-          "price": 980000,
-          "off": 0,
+          "price": 990000,
+          "off": 1,
           "country": "ترکیه",
           "flag": "/images/svg/turkey.svg",
           "name": "گیفت کارت نتفلیکس ۵۰۰",
-          "icon": "/images/svg/netflix.svg"
+          "icon": "/images/svg/netflix.svg",
+          "link": "gift-cards/netflix/ترکیه"
         },
         {
           "id": "4191",
@@ -625,7 +638,8 @@
           "country": "ترکیه",
           "flag": "/images/svg/turkey.svg",
           "name": "گیفت کارت نتفلیکس ۱۰۰۰",
-          "icon": "/images/svg/netflix.svg"
+          "icon": "/images/svg/netflix.svg",
+          "link": "gift-cards/netflix/ترکیه"
         },
         {
           "id": "95bd",
@@ -636,7 +650,8 @@
           "country": "ترکیه",
           "flag": "/images/svg/turkey.svg",
           "name": "گیفت کارت نتفلیکس ۲۰۰۰",
-          "icon": "/images/svg/netflix.svg"
+          "icon": "/images/svg/netflix.svg",
+          "link": "gift-cards/netflix/ترکیه"
         },
         {
           "id": "4161",
@@ -647,7 +662,8 @@
           "country": "ترکیه",
           "flag": "/images/svg/turkey.svg",
           "name": "گیفت کارت نتفلیکس ۵۰۰۰",
-          "icon": "/images/svg/netflix.svg"
+          "icon": "/images/svg/netflix.svg",
+          "link": "gift-cards/netflix/ترکیه"
         }
       ],
       "description": "گیفت کارت نتفلیکس نوعی کارت پرداخت است که می‌توانید از آن برای خرید اشتراک نتفلیکس استفاده کنید.با استفاده از این کارت، می‌توانید مبلغ مشخصی را به حساب خود اضافه کنید و به تماشای فیلم‌ها و سریال‌های مختلف بپردازید.برای خرید گیفت کارت نتفلیکس، می‌توانید به فروشگاه‌های آنلاین یا فیزیکی مراجعه کنید که این نوع کارت‌ها را عرضه می‌کنند.پس از خرید، با وارد کردن کد موجود بر روی گیفت کارت در وب‌سایت یا اپلیکیشن نتفلیکس، مبلغ کارت به حساب شما اضافه خواهد شد",

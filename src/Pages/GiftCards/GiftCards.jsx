@@ -12,15 +12,21 @@ import Flag from "../../Components/Flag/Flag";
 import GiftBox from "../../Components/GiftBox/GiftBox";
 import AuthContext from "../../Context/AuthContext";
 import Accordion from "react-bootstrap/Accordion";
+import { useParams } from "react-router-dom";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "./GiftCards.css";
 
 export default function GiftCards() {
+  const params = useParams();
+  const paramsCategory = params.category;
+  const paramsCountry = params.country;
   const contextData = useContext(AuthContext);
   const [allGifts, setAllGifts] = useState([]);
-  const [categoryName, setCategoryName] = useState("apple");
+  const [categoryName, setCategoryName] = useState(
+    paramsCategory ? paramsCategory : "apple"
+  );
   const [category, setCategory] = useState({});
   const [categoryGifts, setCategoryGifts] = useState([]);
   const [categoryRegions, setCategoryRegions] = useState([]);
@@ -36,6 +42,10 @@ export default function GiftCards() {
     setCategory(selectedCategory[0]);
   };
 
+  const isEmptyObject = (obj) => {
+    return JSON.stringify(obj) === "{}";
+  };
+
   useEffect(() => {
     fetch("http://localhost:8000/gifts")
       .then((res) => res.json())
@@ -45,6 +55,11 @@ export default function GiftCards() {
       .then((res) => res.json())
       .then((data) => setAllGames(data));
   }, []);
+
+  useEffect(() => {
+    setIsRegionActive(paramsCountry);
+    setRegion(paramsCountry);
+  }, [paramsCountry]);
 
   useEffect(() => {
     chooseCategory(categoryName);
@@ -58,16 +73,20 @@ export default function GiftCards() {
   }, [category]);
 
   useEffect(() => {
-    if (categoryRegions[0]?.country) {
-      setRegion(categoryRegions[0].country);
+    if (isEmptyObject(params)) {
+      if (categoryRegions[0]?.country) {
+        setRegion(categoryRegions[0].country);
+      }
     }
-  }, [categoryRegions]);
+  }, [categoryRegions, params]);
 
   useEffect(() => {
-    if (region) {
+    if (category?.giftCards) {
       const shownGiftCards = category.giftCards.filter(
         (gift) => gift.country === region
       );
+      console.log(region);
+
       setCategoryGifts(shownGiftCards);
       setIsRegionActive(region);
     }
@@ -456,6 +475,7 @@ export default function GiftCards() {
           </div>
         </div>
       </div>
+
       <Benefits background={false} />
 
       {/* Other products section */}
@@ -481,7 +501,7 @@ export default function GiftCards() {
             }}
           >
             {allGames.length
-              ? allGames.slice(0,8).map((game) => (
+              ? allGames.slice(0, 8).map((game) => (
                   <SwiperSlide key={game.id}>
                     <GameBox
                       clickHandler={() => contextData.addToBasket(game)}
@@ -493,8 +513,6 @@ export default function GiftCards() {
                   </SwiperSlide>
                 ))
               : ""}
-
-            
           </Swiper>
         </div>
       </div>
