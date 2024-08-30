@@ -11,6 +11,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 import Flag from "../../Components/Flag/Flag";
 import GiftBox from "../../Components/GiftBox/GiftBox";
 import AuthContext from "../../Context/AuthContext";
+import Accordion from "react-bootstrap/Accordion";
 
 import "./GiftCards.css";
 
@@ -65,22 +66,15 @@ export default function GiftCards() {
     }
   }, [region, category]);
 
-  useEffect(() => {
-    if (category) {
-      console.log(category[isActive]);
-      console.log(typeof category[isActive]);
-    }
-  }, [isActive, category]);
-
   return (
     <>
       <Topbar />
       <Navbar />
       <div className="container">
         {/* choose category */}
-        <div>
+        <div className="gift-cards__category">
           <label htmlFor="giftsCategory" className="gift-cards__category-label">
-            انتخاب دسته بندی :
+            انتخاب گیفت کارت :
           </label>
           <select
             name=""
@@ -158,7 +152,8 @@ export default function GiftCards() {
                   توضیحات کوتاه:
                 </h3>
                 <p className="gift-cards__header-infos-body-text">
-                  {category ? category.description?.slice(0, 350) : ""}
+                  {category ? category.description?.slice(0, 150) : ""}
+                  {"..."}
                 </p>
               </div>
               <div className="gift-cards__header-infos-bottom">
@@ -285,28 +280,86 @@ export default function GiftCards() {
                 alt="text_bg"
                 className="gift-cards__infos-body-img"
               />
-              {category ? (
-                typeof category[isActive] === "string" ? (
-                  <p className="gift-cards__infos-text">
-                    {category[isActive]}
-                  </p>
-                ) : (
-                  <ul className="gift-cards__infos-list">
-                    {category[isActive]
-                      ? category[isActive].map((item, index) => (
-                          <li
-                            key={index + 1}
-                            className="gift-cards__infos-list-item"
-                          >
+
+              {category
+                ? isActive === "description" && (
+                    <p className="gift-cards__infos-text">
+                      {category[isActive]}
+                    </p>
+                  )
+                : ""}
+
+              {category
+                ? isActive === "Characteristics" &&
+                  (category[isActive]
+                    ? category[isActive].map((item, index) => (
+                        <ul key={index + 1} className="gift-cards__infos-list">
+                          <li className="gift-cards__infos-list-item">
                             {item}
                           </li>
-                        ))
-                      : ""}
-                  </ul>
-                )
-              ) : (
-                ""
-              )}
+                        </ul>
+                      ))
+                    : "")
+                : ""}
+              {category
+                ? isActive === "comments" &&
+                  (category[isActive].length ? (
+                    category[isActive].map((item, index) => (
+                      <ul key={index + 1} className="gift-cards__infos-list">
+                        <li className="gift-cards__infos-list-item">{item}</li>
+                      </ul>
+                    ))
+                  ) : (
+                    <p className="gift-cards__infos-noComment">
+                      هنوز هیچ نظری برای این گیفت کارت ثبت نشده است
+                    </p>
+                  ))
+                : ""}
+              {category
+                ? isActive === "usersQuestions" &&
+                  (category[isActive].length ? (
+                    category[isActive].map((item, index) => (
+                      <ul className="gift-cards__infos-list">
+                        <li
+                          key={index + 1}
+                          className="gift-cards__infos-list-item"
+                        >
+                          {item}
+                        </li>
+                      </ul>
+                    ))
+                  ) : (
+                    <p className="gift-cards__infos-noComment">
+                      هنوز هیچ سوالی در مورد این گیفت کارت پرسیده نشده است
+                    </p>
+                  ))
+                : ""}
+              {category
+                ? isActive === "questions" && (
+                    <Accordion>
+                      {category[isActive].map((question, index) => (
+                        <Accordion.Item key={question.id} eventKey={index}>
+                          <Accordion.Header>
+                            {question.question}
+                          </Accordion.Header>
+                          <Accordion.Body>{question.answer}</Accordion.Body>
+                        </Accordion.Item>
+                      ))}
+                    </Accordion>
+                  )
+                : ""}
+              {category
+                ? isActive === "activation" &&
+                  (category[isActive]
+                    ? category[isActive].map((item, index) => (
+                        <ul key={index + 1} className="gift-cards__infos-list">
+                          <li className="gift-cards__infos-list-item">
+                            {item}
+                          </li>
+                        </ul>
+                      ))
+                    : "")
+                : ""}
             </div>
           </div>
         </div>
