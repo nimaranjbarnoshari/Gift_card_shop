@@ -8,6 +8,7 @@
       "password": "12345678",
       "token": "532423nimara543181nimaranjbarnoshari@gmail.com314027",
       "basket": [],
+      "orders": [],
       "tickets": [],
       "balance": 1800000,
       "pay": []
@@ -70,6 +71,7 @@
       "password": "12345678",
       "token": "586810mehran639059mehran@gmail.com255894",
       "basket": [],
+      "orders": [],
       "tickets": [],
       "balance": 0,
       "pay": []
@@ -352,7 +354,6 @@
     }
   ],
   "gifts": [
-   
     {
       "id": "000d",
       "src": "/images/gifts/apple.jpg",
@@ -632,20 +633,20 @@
         {
           "id": "4191",
           "src": "/images/home/netflix.jpg",
-          "title": "گیفت کارت نتفلیکس ۱۰۰۰ لیری ",
-          "price": 1975000,
+          "title": "گیفت کارت نتفلیکس ۲۰۰ لیری ",
+          "price": 389000,
           "off": 0,
           "country": "ترکیه",
           "flag": "/images/svg/turkey.svg",
-          "name": "گیفت کارت نتفلیکس ۱۰۰۰",
+          "name": "گیفت کارت نتفلیکس ۲۰۰",
           "icon": "/images/svg/netflix.svg",
           "link": "gift-cards/netflix/ترکیه"
         },
         {
           "id": "95bd",
           "src": "/images/home/netflix.jpg",
-          "title": "گیفت کارت نتفلیکس ۲۰۰۰ لیری",
-          "price": 3960000,
+          "title": "گیفت کارت نتفلیکس ۱۰۰ لیری",
+          "price": 196000,
           "off": 0,
           "country": "ترکیه",
           "flag": "/images/svg/turkey.svg",
@@ -656,12 +657,12 @@
         {
           "id": "4161",
           "src": "/images/home/netflix.jpg",
-          "title": "گیفت کارت نتفلیکس ۵۰۰۰ لیری",
-          "price": 9700000,
+          "title": "گیفت کارت نتفلیکس ۵۰ لیری",
+          "price": 99500,
           "off": 0,
           "country": "ترکیه",
           "flag": "/images/svg/turkey.svg",
-          "name": "گیفت کارت نتفلیکس ۵۰۰۰",
+          "name": "گیفت کارت نتفلیکس ۵۰",
           "icon": "/images/svg/netflix.svg",
           "link": "gift-cards/netflix/ترکیه"
         }
@@ -718,18 +719,13 @@
         },
         {
           "id": 2,
-          "country": "انگلیس",
+          "country": "اروپا",
           "flag": "/images/svg/england.svg"
         },
         {
           "id": 3,
-          "country": "ترکیه",
+          "country": "گلوبال",
           "flag": "/images/svg/turkey.svg"
-        },
-        {
-          "id": 4,
-          "country": "فرانسه",
-          "flag": "/images/svg/france.svg"
         }
       ],
       "giftCards": [
@@ -859,19 +855,9 @@
           "flag": "/images/svg/usa.svg"
         },
         {
-          "id": 2,
-          "country": "انگلیس",
-          "flag": "/images/svg/england.svg"
-        },
-        {
           "id": 3,
           "country": "ترکیه",
           "flag": "/images/svg/turkey.svg"
-        },
-        {
-          "id": 4,
-          "country": "فرانسه",
-          "flag": "/images/svg/france.svg"
         }
       ],
       "giftCards": [
@@ -971,7 +957,7 @@
       "regions": [
         {
           "id": 1,
-          "country": "گلوبال",
+          "country": "آمریکا",
           "flag": "/images/svg/usa.svg"
         }
       ],
@@ -982,7 +968,7 @@
           "title": "گیفت کارت آمازون ۵۰ دلاری",
           "price": 3245000,
           "off": 0,
-          "country": "گلوبال",
+          "country": "آمریکا",
           "flag": "/images/svg/usa.svg",
           "category": "amazon",
           "name": "گیفت کارت آمازون ۵۰",
@@ -1006,7 +992,7 @@
           "title": "گیفت کارت آمازون ۱۰ دلاری",
           "price": 618500,
           "off": 2,
-          "country": "گلوبال",
+          "country": "آمریکا",
           "flag": "/images/svg/usa.svg",
           "category": "amazon",
           "name": "گیفت کارت آمازون ۱۰",
@@ -1018,7 +1004,7 @@
           "title": "گیفت کارت آمازون ۲۰ دلاری",
           "price": 1242000,
           "off": 1,
-          "country": "گلوبال",
+          "country": "آمریکا",
           "flag": "/images/svg/usa.svg",
           "category": "amazon",
           "name": "گیفت کارت آمازون ۲۰",
@@ -1030,7 +1016,7 @@
           "title": "گیفت کارت آمازون ۱۰۰ دلاری",
           "price": 6218000,
           "off": 0,
-          "country": "گلوبال",
+          "country": "آمریکا",
           "flag": "/images/svg/usa.svg",
           "category": "amazon",
           "name": "گیفت کارت آمازون ۱۰۰",
