@@ -14,6 +14,34 @@ function App() {
   const [userBasket, setUserBasket] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [accountBalance, setAccountBalance] = useState(0);
+  const [allGamesData, setAllGamesData] = useState([]);
+  const [allaccounts, setAllaccounts] = useState([]);
+  const [giftsCategory, setGiftsCategory] = useState([]);
+  const [allGifts, setAllGifts] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/games")
+      .then((res) => res.json())
+      .then((data) => setAllGamesData(data));
+    fetch("http://localhost:8000/accounts")
+      .then((res) => res.json())
+      .then((data) => setAllaccounts(data));
+    fetch("http://localhost:8000/gifts")
+      .then((res) => res.json())
+      .then((data) => setGiftsCategory(data));
+  }, []);
+
+  useEffect(() => {
+    const giftCards = [];
+    giftsCategory.forEach((gift) => {
+      gift.giftCards.forEach((eachGift, index) => {
+        if (index <= 1) {
+          giftCards.push(eachGift);
+        }
+      });
+    });
+    setAllGifts(giftCards);
+  }, [giftsCategory]);
 
   const login = (userData, token) => {
     setIsLoggedIn(true);
@@ -320,6 +348,10 @@ function App() {
         removeFromBasket,
         accountBalance,
         chargeBalance,
+        allGamesData,
+        allaccounts,
+        allGifts,
+        giftsCategory
       }}
     >
       <div className="App">{router}</div>

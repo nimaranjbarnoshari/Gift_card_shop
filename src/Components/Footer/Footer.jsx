@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import { FiPhone } from "react-icons/fi";
 import { CiLocationOn } from "react-icons/ci";
@@ -7,37 +7,11 @@ import { FaWhatsapp } from "react-icons/fa";
 import { AiOutlineYoutube } from "react-icons/ai";
 import { FiTwitter } from "react-icons/fi";
 import { FaInstagram } from "react-icons/fa";
+import AuthContext from "../../Context/AuthContext";
 
 import "./Footer.css";
 export default function Footer() {
-  const [allGamesData, setAllGamesData] = useState([]);
-  const [allaccounts, setAllaccounts] = useState([]);
-  const [giftsCategory, setGiftsCategory] = useState([]);
-  const [allGifts, setAllGifts] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:8000/games")
-      .then((res) => res.json())
-      .then((data) => setAllGamesData(data));
-    fetch("http://localhost:8000/accounts")
-      .then((res) => res.json())
-      .then((data) => setAllaccounts(data));
-    fetch("http://localhost:8000/gifts")
-      .then((res) => res.json())
-      .then((data) => setGiftsCategory(data));
-  }, []);
-
-  useEffect(() => {
-    const giftCards = [];
-    giftsCategory.forEach((gift) => {
-      gift.giftCards.forEach((eachGift, index) => {
-        if (index <= 1) {
-          giftCards.push(eachGift);
-        }
-      });
-    });
-    setAllGifts(giftCards);
-  }, [giftsCategory]);
+  const { allGamesData, allaccounts, allGifts } = useContext(AuthContext);
 
   return (
     <footer className="footer">
@@ -81,10 +55,10 @@ export default function Footer() {
             <div className="footer-lists__wrapper">
               <SectionHeader title="بازی ها" footer={true} />
               <ul className="footer-lists__items">
-                {allGamesData.length
+                {allGamesData?.length
                   ? allGamesData.slice(0, 7).map((game) => (
                       <li key={game.id} className="footer-lists__item">
-                        <Link to="#" className="footer-lists__link">
+                        <Link to={game?.link} className="footer-lists__link">
                           {game.title}
                         </Link>
                       </li>
@@ -95,10 +69,10 @@ export default function Footer() {
             <div className="footer-lists__wrapper">
               <SectionHeader title="گیفت کارت ها" footer={true} />
               <ul className="footer-lists__items">
-                {allGifts.length
+                {allGifts?.length
                   ? allGifts.slice(0, 7).map((gift) => (
                       <li key={gift.id} className="footer-lists__item">
-                        <Link to="#" className="footer-lists__link">
+                        <Link to={gift?.link} className="footer-lists__link">
                           {gift.title}
                         </Link>
                       </li>
@@ -109,10 +83,10 @@ export default function Footer() {
             <div className="footer-lists__wrapper">
               <SectionHeader title="خدمات و اکانت ها" footer={true} />
               <ul className="footer-lists__items">
-                {allaccounts.length
+                {allaccounts?.length
                   ? allaccounts.slice(0, 7).map((account) => (
                       <li key={account.id} className="footer-lists__item">
-                        <Link to="#" className="footer-lists__link">
+                        <Link to={account?.link} className="footer-lists__link">
                           {account.title}
                         </Link>
                       </li>

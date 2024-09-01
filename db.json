@@ -374,7 +374,7 @@
           "category": "apple",
           "name": "گیفت کارت اپل ۵۰",
           "icon": "/images/svg/apple.svg",
-          "link": "gift-cards/apple/آمریکا"
+          "link": "/gift-cards/apple/آمریکا"
         },
         {
           "id": "02ce",
@@ -387,7 +387,7 @@
           "category": "apple",
           "name": "گیفت کارت اپل ۱۰۰",
           "icon": "/images/svg/apple.svg",
-          "link": "gift-cards/apple/آمریکا"
+          "link": "/gift-cards/apple/آمریکا"
         },
         {
           "id": "8d35",
@@ -400,7 +400,7 @@
           "category": "apple",
           "name": "گیفت کارت اپل ۲۰",
           "icon": "/images/svg/apple.svg",
-          "link": "gift-cards/apple/آمریکا"
+          "link": "/gift-cards/apple/آمریکا"
         },
         {
           "id": "c97d",
@@ -413,7 +413,7 @@
           "category": "apple",
           "name": "گیفت کارت اپل ۴۰",
           "icon": "/images/svg/apple.svg",
-          "link": "gift-cards/apple/آمریکا"
+          "link": "/gift-cards/apple/آمریکا"
         },
         {
           "id": "eeac",
@@ -426,7 +426,7 @@
           "category": "apple",
           "name": "گیفت کارت اپل ۱۰",
           "icon": "/images/svg/apple.svg",
-          "link": "gift-cards/apple/آمریکا"
+          "link": "/gift-cards/apple/آمریکا"
         },
         {
           "id": "00fb",
@@ -439,7 +439,7 @@
           "category": "apple",
           "name": "گیفت کارت اپل ۵",
           "icon": "/images/svg/apple.svg",
-          "link": "gift-cards/apple/آمریکا"
+          "link": "/gift-cards/apple/آمریکا"
         },
         {
           "id": "fe4e",
@@ -452,7 +452,7 @@
           "category": "apple",
           "name": "گیفت کارت اپل ۲۰۰",
           "icon": "/images/svg/apple.svg",
-          "link": "gift-cards/apple/آمریکا"
+          "link": "/gift-cards/apple/آمریکا"
         }
       ],
       "regions": [
@@ -565,7 +565,7 @@
           "category": "netflix",
           "name": "گیفت کارت نتفلیکس ۵۰",
           "icon": "/images/svg/netflix.svg",
-          "link": "gift-cards/netflix/آمریکا"
+          "link": "/gift-cards/netflix/آمریکا"
         },
         {
           "id": "4f77",
@@ -578,7 +578,7 @@
           "category": "netflix",
           "name": "گیفت کارت نتفلیکس ۵",
           "icon": "/images/svg/netflix.svg",
-          "link": "gift-cards/netflix/آمریکا"
+          "link": "/gift-cards/netflix/آمریکا"
         },
         {
           "id": "837f",
@@ -591,7 +591,7 @@
           "category": "netflix",
           "name": "گیفت کارت نتفلیکس ۱۰",
           "icon": "/images/svg/netflix.svg",
-          "link": "gift-cards/netflix/آمریکا"
+          "link": "/gift-cards/netflix/آمریکا"
         },
         {
           "id": "cf19",
@@ -604,7 +604,7 @@
           "category": "netflix",
           "name": "گیفت کارت نتفلیکس ۲۰",
           "icon": "/images/svg/netflix.svg",
-          "link": "gift-cards/netflix/آمریکا"
+          "link": "/gift-cards/netflix/آمریکا"
         },
         {
           "id": "6ef9",
@@ -616,7 +616,7 @@
           "flag": "/images/svg/usa.svg",
           "name": "گیفت کارت نتفلیکس ۱۰۰",
           "icon": "/images/svg/netflix.svg",
-          "link": "gift-cards/netflix/آمریکا"
+          "link": "/gift-cards/netflix/آمریکا"
         },
         {
           "id": "1771",
@@ -628,7 +628,7 @@
           "flag": "/images/svg/turkey.svg",
           "name": "گیفت کارت نتفلیکس ۵۰۰",
           "icon": "/images/svg/netflix.svg",
-          "link": "gift-cards/netflix/ترکیه"
+          "link": "/gift-cards/netflix/ترکیه"
         },
         {
           "id": "4191",
@@ -640,7 +640,7 @@
           "flag": "/images/svg/turkey.svg",
           "name": "گیفت کارت نتفلیکس ۲۰۰",
           "icon": "/images/svg/netflix.svg",
-          "link": "gift-cards/netflix/ترکیه"
+          "link": "/gift-cards/netflix/ترکیه"
         },
         {
           "id": "95bd",
@@ -652,7 +652,7 @@
           "flag": "/images/svg/turkey.svg",
           "name": "گیفت کارت نتفلیکس ۲۰۰۰",
           "icon": "/images/svg/netflix.svg",
-          "link": "gift-cards/netflix/ترکیه"
+          "link": "/gift-cards/netflix/ترکیه"
         },
         {
           "id": "4161",
@@ -664,7 +664,7 @@
           "flag": "/images/svg/turkey.svg",
           "name": "گیفت کارت نتفلیکس ۵۰",
           "icon": "/images/svg/netflix.svg",
-          "link": "gift-cards/netflix/ترکیه"
+          "link": "/gift-cards/netflix/ترکیه"
         }
       ],
       "description": "گیفت کارت نتفلیکس نوعی کارت پرداخت است که می‌توانید از آن برای خرید اشتراک نتفلیکس استفاده کنید.با استفاده از این کارت، می‌توانید مبلغ مشخصی را به حساب خود اضافه کنید و به تماشای فیلم‌ها و سریال‌های مختلف بپردازید.برای خرید گیفت کارت نتفلیکس، می‌توانید به فروشگاه‌های آنلاین یا فیزیکی مراجعه کنید که این نوع کارت‌ها را عرضه می‌کنند.پس از خرید، با وارد کردن کد موجود بر روی گیفت کارت در وب‌سایت یا اپلیکیشن نتفلیکس، مبلغ کارت به حساب شما اضافه خواهد شد",
@@ -725,7 +725,7 @@
         {
           "id": 3,
           "country": "گلوبال",
-          "flag": "/images/svg/turkey.svg"
+          "flag": "/images/svg/globe.svg"
         }
       ],
       "giftCards": [
@@ -739,7 +739,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "steam",
           "name": "گیفت کارت استیم ۵",
-          "icon": "/images/svg/steam.svg"
+          "icon": "/images/svg/steam.svg",
+          "link": "/gift-cards/steam/آمریکا"
         },
         {
           "id": "3256",
@@ -751,7 +752,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "steam",
           "name": "گیفت کارت استیم ۱۰",
-          "icon": "/images/svg/steam.svg"
+          "icon": "/images/svg/steam.svg",
+          "link": "/gift-cards/steam/آمریکا"
         },
         {
           "id": "77ca",
@@ -763,7 +765,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "steam",
           "name": "گیفت کارت استیم ۲۰",
-          "icon": "/images/svg/steam.svg"
+          "icon": "/images/svg/steam.svg",
+          "link": "/gift-cards/steam/آمریکا"
         },
         {
           "id": "39eb",
@@ -775,7 +778,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "steam",
           "name": "گیفت کارت استیم ۵۰",
-          "icon": "/images/svg/steam.svg"
+          "icon": "/images/svg/steam.svg",
+          "link": "/gift-cards/steam/آمریکا"
         },
         {
           "id": "684e",
@@ -787,7 +791,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "steam",
           "name": "گیفت کارت استیم ۱۰۰",
-          "icon": "/images/svg/steam.svg"
+          "icon": "/images/svg/steam.svg",
+          "link": "/gift-cards/steam/آمریکا"
         },
         {
           "id": "b905",
@@ -799,7 +804,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "steam",
           "name": "گیفت کارت استیم ۲۰۰",
-          "icon": "/images/svg/steam.svg"
+          "icon": "/images/svg/steam.svg",
+          "link": "/gift-cards/steam/آمریکا"
         }
       ],
       "description": "گیفت کارت استیم یک کارت اعتباری است که می‌توانید از آن برای خرید بازی‌ها، نرم‌افزارها و محتوای دیجیتال دیگر در فروشگاه استیم استفاده کنید. این کارت‌ها معمولاً در مقادیر مختلفی مانند ۱۰، ۲۰، ۵۰ و ۱۰۰ دلار موجود هستند. برای استفاده از گیفت کارت، کافی است کد آن را در حساب استیم خود وارد کنید تا اعتبار به حساب شما اضافه شود.",
@@ -871,7 +877,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "google",
           "name": "گیفت کارت گوگل پلی ۲۰",
-          "icon": "/images/svg/google-play.svg"
+          "icon": "/images/svg/google-play.svg",
+          "link": "/gift-cards/google/آمریکا"
         },
         {
           "id": "aadd",
@@ -883,7 +890,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "google",
           "name": "گیفت کارت گوگل پلی ۵",
-          "icon": "/images/svg/google-play.svg"
+          "icon": "/images/svg/google-play.svg",
+          "link": "/gift-cards/google/آمریکا"
         },
         {
           "id": "f10f",
@@ -895,7 +903,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "google",
           "name": "گیفت کارت گوگل پلی ۱۰",
-          "icon": "/images/svg/google-play.svg"
+          "icon": "/images/svg/google-play.svg",
+          "link": "/gift-cards/google/آمریکا"
         },
         {
           "id": "e09f",
@@ -907,7 +916,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "google",
           "name": "گیفت کارت گوگل پلی ۵۰",
-          "icon": "/images/svg/google-play.svg"
+          "icon": "/images/svg/google-play.svg",
+          "link": "/gift-cards/google/آمریکا"
         }
       ],
       "description": "گیفت کارت گوگل پلی یک کارت اعتباری است که به شما این امکان را می‌دهد تا از فروشگاه گوگل پلی (Google Play Store) برای خرید برنامه‌ها، بازی‌ها، فیلم‌ها، موسیقی و سایر محتوای دیجیتال استفاده کنید.",
@@ -972,7 +982,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "amazon",
           "name": "گیفت کارت آمازون ۵۰",
-          "icon": "/images/svg/amazon.svg"
+          "icon": "/images/svg/amazon.svg",
+          "link": "/gift-cards/amazon/آمریکا"
         },
         {
           "id": "0dd7",
@@ -982,9 +993,10 @@
           "off": 4,
           "country": "آمریکا",
           "flag": "/images/svg/usa.svg",
-          "category": "گلوبال",
+          "category": "amazon",
           "name": "گیفت کارت آمازون ۵",
-          "icon": "/images/svg/amazon.svg"
+          "icon": "/images/svg/amazon.svg",
+          "link": "/gift-cards/amazon/آمریکا"
         },
         {
           "id": "601f",
@@ -996,7 +1008,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "amazon",
           "name": "گیفت کارت آمازون ۱۰",
-          "icon": "/images/svg/amazon.svg"
+          "icon": "/images/svg/amazon.svg",
+          "link": "/gift-cards/amazon/آمریکا"
         },
         {
           "id": "cda4",
@@ -1008,7 +1021,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "amazon",
           "name": "گیفت کارت آمازون ۲۰",
-          "icon": "/images/svg/amazon.svg"
+          "icon": "/images/svg/amazon.svg",
+          "link": "/gift-cards/amazon/آمریکا"
         },
         {
           "id": "51ed",
@@ -1020,7 +1034,8 @@
           "flag": "/images/svg/usa.svg",
           "category": "amazon",
           "name": "گیفت کارت آمازون ۱۰۰",
-          "icon": "/images/svg/amazon.svg"
+          "icon": "/images/svg/amazon.svg",
+          "link": "/gift-cards/amazon/آمریکا"
         }
       ],
       "description": "گیفت کارت آمازون یک کارت اعتباری است که به شما این امکان را می‌دهد تا از وب‌سایت آمازون برای خرید محصولات مختلف، از جمله کتاب‌ها، الکترونیک، لباس، و سایر کالاها استفاده کنید.",
