@@ -45,10 +45,12 @@ export default function GiftCards() {
     return JSON.stringify(obj) === "{}";
   };
 
-  useEffect(() => {
-    console.log(giftsCategory);
-    setCategoryName("apple");
-  }, [giftsCategory]);
+  // useEffect(() => {
+  //   console.log(giftsCategory);
+  //   console.log(categoryName);
+
+  //   setCategoryName("apple");
+  // }, [giftsCategory]);
 
   useEffect(() => {
     setIsRegionActive(paramsCountry);
@@ -63,8 +65,8 @@ export default function GiftCards() {
 
   useEffect(() => {
     chooseCategory(categoryName);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [categoryGifts, categoryName]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [categoryGifts, categoryName, giftsCategory]);
 
   useEffect(() => {
     if (category?.giftCards) {

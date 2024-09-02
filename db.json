@@ -7,7 +7,50 @@
       "email": "nimaranjbarnoshari@gmail.com",
       "password": "12345678",
       "token": "532423nimara543181nimaranjbarnoshari@gmail.com314027",
-      "basket": [],
+      "basket": [
+        {
+          "id": "ee36",
+          "src": "/images/home/google_play.jpg",
+          "title": "گیفت کارت گوگل پلی ۲۰ دلاری",
+          "price": 1156400,
+          "off": 2,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "google",
+          "name": "گیفت کارت گوگل پلی ۲۰",
+          "icon": "/images/svg/google-play.svg",
+          "link": "/gift-cards/google/آمریکا",
+          "count": 1
+        },
+        {
+          "id": "aadd",
+          "src": "/images/home/google_play.jpg",
+          "title": "گیفت کارت گوگل پلی ۵ دلاری",
+          "price": 311600,
+          "off": 5,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "google",
+          "name": "گیفت کارت گوگل پلی ۵",
+          "icon": "/images/svg/google-play.svg",
+          "link": "/gift-cards/google/آمریکا",
+          "count": 1
+        },
+        {
+          "id": "bdcd",
+          "src": "/images/home/netflix.jpg",
+          "title": "گیفت کارت نتفلیکس ۵۰ دلاری",
+          "price": 3245000,
+          "off": 0,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "netflix",
+          "name": "گیفت کارت نتفلیکس ۵۰",
+          "icon": "/images/svg/netflix.svg",
+          "link": "/gift-cards/netflix/آمریکا",
+          "count": 1
+        }
+      ],
       "orders": [],
       "tickets": [],
       "balance": 1800000,
@@ -74,6 +117,19 @@
       "orders": [],
       "tickets": [],
       "balance": 0,
+      "pay": []
+    },
+    {
+      "id": "7e6c",
+      "fullName": "رضا کاظمی",
+      "mobile": "09112243506",
+      "email": "rezakazaemi@gmail.com",
+      "password": "12345678",
+      "token": "395718rezaka726949rezakazaemi@gmail.com862029",
+      "balance": 1000000,
+      "basket": [],
+      "tickets": [],
+      "orders": [],
       "pay": []
     }
   ],
