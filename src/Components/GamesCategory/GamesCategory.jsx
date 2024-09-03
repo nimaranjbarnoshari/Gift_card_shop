@@ -12,46 +12,42 @@ import "./GamesCategory.css";
 
 export default function GamesCategory() {
   const contextData = useContext(AuthContext);
-  const [allGamesData, setAllGamesData] = useState([]);
+  const [allGamesData, setAllGamesData] = useState(
+    contextData.allGamesData ? contextData.allGamesData : []
+  );
   const [gamesData, setGamesData] = useState([]);
   const [isActive, setIsActive] = useState("ps");
 
-  const setData = (data, filterKry) => {
-    const category = data.filter((game) => game.category === filterKry);
-    return category;
-  };
+  useEffect(() => {
+    setAllGamesData(contextData.allGamesData);
+  }, [contextData.allGamesData]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/games")
-      .then((res) => res.json())
-      .then((data) => setAllGamesData(data));
-  }, []);
-
-  useEffect(() => {
-    const psGames = setData(allGamesData, "ps");
+    const psGames = contextData.setData(allGamesData, "ps");
     setGamesData(psGames);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [allGamesData]);
 
-  const psGamesHandler = () => {
-    const psGames = setData(allGamesData, "ps");
+  function psGamesHandler() {
+    const psGames = contextData.setData(allGamesData, "ps");
     setGamesData(psGames);
     setIsActive("ps");
-  };
+  }
 
   const xboxGamesHandler = () => {
-    const xboxGames = setData(allGamesData, "xbox");
+    const xboxGames = contextData.setData(allGamesData, "xbox");
     setGamesData(xboxGames);
     setIsActive("xbox");
   };
 
   const computerGamesHandler = () => {
-    const computerGames = setData(allGamesData, "computer");
+    const computerGames = contextData.setData(allGamesData, "computer");
     setGamesData(computerGames);
     setIsActive("computer");
   };
 
   const nintendoGamesHandler = () => {
-    const nintendoGames = setData(allGamesData, "nintendo");
+    const nintendoGames = contextData.setData(allGamesData, "nintendo");
     setGamesData(nintendoGames);
     setIsActive("nintendo");
   };
@@ -140,7 +136,7 @@ export default function GamesCategory() {
         <div className="container">
           <Swiper
             modules={[Pagination, Autoplay]}
-            autoplay={true}
+            // autoplay={true}
             pagination={{ type: "bullets", clickable: true }}
             className="mySwiper"
             loop={true}
@@ -160,9 +156,7 @@ export default function GamesCategory() {
               gamesData.map((game) => (
                 <SwiperSlide key={game.id}>
                   <GameBox
-                    clickHandler={() =>
-                      contextData.addToBasket(game)
-                    }
+                    clickHandler={() => contextData.addToBasket(game)}
                     src={game.src}
                     title={game.title}
                     price={game.price}

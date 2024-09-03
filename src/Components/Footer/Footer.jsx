@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import { FiPhone } from "react-icons/fi";
 import { CiLocationOn } from "react-icons/ci";

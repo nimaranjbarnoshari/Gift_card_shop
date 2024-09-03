@@ -45,13 +45,6 @@ export default function GiftCards() {
     return JSON.stringify(obj) === "{}";
   };
 
-  // useEffect(() => {
-  //   console.log(giftsCategory);
-  //   console.log(categoryName);
-
-  //   setCategoryName("apple");
-  // }, [giftsCategory]);
-
   useEffect(() => {
     setIsRegionActive(paramsCountry);
     setRegion(paramsCountry);

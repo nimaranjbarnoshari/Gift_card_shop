@@ -43,6 +43,11 @@ function App() {
     setAllGifts(giftCards);
   }, [giftsCategory]);
 
+  const setData = (data, filterKry) => {
+    const category = data.filter((game) => game.category === filterKry);
+    return category;
+  };
+
   const login = (userData, token) => {
     setIsLoggedIn(true);
     setUserInfos(userData);
@@ -351,7 +356,8 @@ function App() {
         allGamesData,
         allaccounts,
         allGifts,
-        giftsCategory
+        giftsCategory,
+        setData
       }}
     >
       <div className="App">{router}</div>

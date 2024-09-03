@@ -14,6 +14,7 @@ const AuthContext = createContext({
   allGamesData: [],
   allaccounts: [],
   allGifts: [],
+  setData: () => {},
   login: () => {},
   logout: () => {},
   addToBasket: () => {},

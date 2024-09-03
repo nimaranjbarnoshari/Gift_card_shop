@@ -14,7 +14,7 @@ export default function Home() {
         <div className="home-row">
           <div className="home-slider__wrapper">
             <Swiper
-              autoplay={true}
+              // autoplay={true}
               navigation={true}
               modules={[Navigation, Autoplay]}
               className="mySwiper"

@@ -136,7 +136,7 @@ export default function DiscountedProducts() {
         {/* games boxes */}
         <div className="discounted-products__boxes">
           <Swiper
-            autoplay={true}
+            // autoplay={true}
             modules={[Pagination, Autoplay]}
             pagination={{ clickable: true }}
             className="mySwiper"
