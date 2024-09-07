@@ -7,7 +7,17 @@
       "email": "nimaranjbarnoshari@gmail.com",
       "password": "12345678",
       "token": "532423nimara543181nimaranjbarnoshari@gmail.com314027",
-      "basket": [],
+      "basket": [
+        {
+          "id": "066a",
+          "src": "/images/home/forza.jpeg",
+          "title": "بازی Forza Horizon 5 Premium Edition",
+          "price": 3192840,
+          "off": 2,
+          "category": "xbox",
+          "count": 1
+        }
+      ],
       "orders": [],
       "tickets": [],
       "balance": 1800000,

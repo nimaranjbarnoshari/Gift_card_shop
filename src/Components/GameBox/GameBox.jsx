@@ -5,6 +5,7 @@ import PN from "persian-number";
 import { Link } from "react-router-dom";
 
 export default function GameBox({
+  custom,
   src,
   off,
   title,
@@ -13,7 +14,7 @@ export default function GameBox({
   link,
 }) {
   return (
-    <div className="game-box">
+    <div className={custom ? `game-box ${custom}` : "game-box"}>
       <Link to={link ? link : "#"}>
         <img src={src} alt="box_img" className="game-box__img" />
       </Link>
