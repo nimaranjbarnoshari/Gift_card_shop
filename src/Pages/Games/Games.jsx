@@ -6,6 +6,7 @@ import Footer from "../../Components/Footer/Footer";
 import SectionHeader from "../../Components/SectionHeader/SectionHeader";
 import AuthContext from "../../Context/AuthContext";
 import GameBox from "../../Components/GameBox/GameBox";
+import Benefits from "../../Components/Benefits/Benefits";
 
 import "./Games.css";
 export default function Games() {
@@ -23,10 +24,12 @@ export default function Games() {
 
   useEffect(() => {
     chooseCategory();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     chooseCategory();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [categoryName]);
 
   return (
@@ -89,6 +92,8 @@ export default function Games() {
               />
             ))}
           </div>
+
+          <Benefits background={false} />
         </div>
       </div>
       <Socials />

@@ -25,7 +25,7 @@ export default function GamesCategory() {
   useEffect(() => {
     const psGames = contextData.setData(allGamesData, "ps");
     setGamesData(psGames);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [allGamesData]);
 
   function psGamesHandler() {
@@ -153,7 +153,7 @@ export default function GamesCategory() {
             }}
           >
             {gamesData.length ? (
-              gamesData.map((game) => (
+              gamesData.slice(0, 6).map((game) => (
                 <SwiperSlide key={game.id}>
                   <GameBox
                     clickHandler={() => contextData.addToBasket(game)}

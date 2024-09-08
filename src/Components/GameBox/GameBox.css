@@ -5,6 +5,7 @@
   background-color: var(--dark-background);
   border-radius: 15px;
   color: var(--white-color);
+  overflow: hidden;
 }
 
 .game-box__img {
@@ -13,12 +14,13 @@
   border-radius: 10px;
 }
 
-.game-box__link{
+.game-box__link {
   text-decoration: none;
   color: var(--white-color);
 }
 
 .game-box__title {
+  text-wrap: nowrap;
   font-size: 16px;
   font-weight: 500;
   margin-top: 16px;
@@ -99,7 +101,7 @@
   margin-top: 15px;
   transition: var(--transition);
 }
-.game-box__button:hover{
+.game-box__button:hover {
   background-color: #494857;
 }
 .game-box__button-icon {
