@@ -24,6 +24,8 @@ import NewTicket from "./Pages/Panel/NewTicket/NewTicket";
 import TicketDetails from "./Pages/Panel/TicketDetails/TicketDetails";
 import FinishRegister from "./Pages/FinishRegister/FinishRegister";
 import ChangePass from "./Pages/OTP/ChangePass";
+import Accessories from "./Pages/Accessories/Accessories"
+import MoneyItems from "./Pages/MoneyItems/MoneyItems"
 import { Navigate } from "react-router-dom";
 
 const routes = [
@@ -42,8 +44,8 @@ const routes = [
     {path:"/games", element: <Games />},
     {path:"/services", element: <Services />},
     {path:"/softwares", element: <Softwares />},
-    {path:"/money&items", element: <Softwares />},
-    {path:"/accessories", element: <Softwares />},
+    {path:"/money&items", element: <MoneyItems />},
+    {path:"/accessories", element: <Accessories />},
     {path:"/*", element: <Page404 />},
     {path:"/panel", element: <Panel />, 
         children:[

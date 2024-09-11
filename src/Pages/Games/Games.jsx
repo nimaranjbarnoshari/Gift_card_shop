@@ -93,7 +93,7 @@ export default function Games() {
             ))}
           </div>
 
-          <Benefits background={true} />
+          <Benefits background={false} />
 
           <div className="container">
             <div className="gift-cards__other-products">
