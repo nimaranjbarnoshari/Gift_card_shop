@@ -2,9 +2,9 @@ import React from "react";
 import "./Benefits.css";
 import BenefitBox from "../BenefitBox/BenefitBox";
 
-export default function Benefits({ background }) {
+export default function Benefits({ background, custom }) {
   return (
-    <section className="benefits">
+    <section className={custom ? `benefits ${custom}` : "benefits"}>
       <div className="container">
         <div className="benefits-wrapper">
           <BenefitBox

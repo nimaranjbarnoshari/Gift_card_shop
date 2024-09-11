@@ -39,6 +39,11 @@
   margin: 0 auto;
 }
 
+.games__benefits {
+  background-color: var(--semidark-background);
+  padding: 20px 0;
+}
+
 /* media queries */
 
 @media (min-width: 576px) {
@@ -61,6 +66,11 @@
   .games__box-custom {
     flex-basis: calc(50% - 20px);
   }
+
+  /* .games__benefits {
+    margin: 90px 0;
+    padding: 20px 0;
+  } */
 }
 
 @media (min-width: 992px) {
@@ -102,6 +112,11 @@
   .games__box-custom {
     flex-basis: calc(25% - 15px);
   }
+
+  .games__benefits {
+    margin: 100px 0;
+    padding: 40px 0;
+  }
 }
 
 @media (min-width: 1400px) {
@@ -112,5 +127,9 @@
 
   .games__box-custom {
     flex-basis: calc(25% - 30px);
+  }
+
+  .games__benefits {
+    margin: 120px 0;
   }
 }

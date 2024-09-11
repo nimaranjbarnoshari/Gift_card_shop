@@ -92,9 +92,11 @@ export default function Games() {
               />
             ))}
           </div>
+        </div>
 
-          <Benefits background={false} />
+        <Benefits background={false} custom="games__benefits" />
 
+        <div className="container">
           <div className="container">
             <div className="gift-cards__other-products">
               <SectionHeader title="دیگر محصولات" />
