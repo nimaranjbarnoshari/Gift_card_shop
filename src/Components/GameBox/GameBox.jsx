@@ -15,12 +15,21 @@ export default function GameBox({
 }) {
   return (
     <div className={custom ? `game-box ${custom}` : "game-box"}>
-      <Link to={link ? link : "#"}>
-        <img src={src} alt="box_img" className="game-box__img" />
-      </Link>
-      <Link to={link ? link : "#"} className="game-box__link">
-        <h3 className="game-box__title">{title}</h3>
-      </Link>
+      {link ? (
+        <>
+          <Link to={link}>
+            <img src={src} alt="box_img" className="game-box__img" />
+          </Link>
+          <Link to={link} className="game-box__link">
+            <h3 className="game-box__title">{title}</h3>
+          </Link>
+        </>
+      ) : (
+        <>
+          <img src={src} alt="box_img" className="game-box__img" />
+          <h3 className="game-box__title">{title}</h3>
+        </>
+      )}
       {off ? (
         <p className="game-box__last-price">
           <span>تومان</span> {PN.convertEnToPe(price.toLocaleString())}
