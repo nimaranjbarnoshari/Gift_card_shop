@@ -32,6 +32,7 @@ export default function Services() {
         </p>
 
         <SectionHeader title="اکانت ها" />
+        
         <div className="games__box-container">
           {contextData.allaccounts.map((account) => (
             <GameBox

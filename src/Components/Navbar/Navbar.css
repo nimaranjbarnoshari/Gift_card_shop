@@ -53,7 +53,7 @@
 }
 
 .nav-btn__login {
-  width: 102px;
+  width: 80px;
   height: 37px;
 }
 .nav-menu__right {
@@ -222,7 +222,7 @@
     margin: 0;
     display: flex;
     align-items: center;
-    column-gap: 9px;
+    column-gap: 8px;
   }
   .nav-menu__list-link--active::after {
     transform: translateY(-20%);
@@ -247,7 +247,7 @@
     font-size: 13px;
   }
   .nav-menu__list-items {
-    column-gap: 15px;
+    column-gap: 14px;
   }
   .nav-btn {
     width: 44px;
@@ -269,7 +269,7 @@
   }
 
   .nav-btn__login {
-    width: 121px;
+    width: 100px;
     height: 44px;
   }
 }
@@ -290,6 +290,10 @@
   }
   .nav-link__text-user {
     font-size: 16px;
+  }
+  .nav-btn__login {
+    width: 120px;
+    height: 44px;
   }
 }
 
