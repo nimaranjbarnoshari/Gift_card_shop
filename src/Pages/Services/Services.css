@@ -1,0 +1,40 @@
+.services__info {
+  color: var(--white-color);
+  font-size: 12px;
+  line-height: 24px;
+  margin-bottom: 60px;
+}
+
+.services__custom-box img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 20px auto 50px auto;
+  }
+
+@media (min-width: 576px) {
+  .services__info {
+    font-size: 13px;
+    line-height: 26px;
+  }
+}
+@media (min-width: 768px) {
+    .services__info {
+        font-size: 14px;
+        line-height: 28px;
+      }
+}
+@media (min-width: 992px) {
+    .services__info {
+        font-size: 15px;
+        line-height: 30px;
+      }
+}
+@media (min-width: 1200px) {
+    .services__info {
+        font-size: 16px;
+        line-height: 32px;
+      }
+}
+@media (min-width: 1400px) {
+}

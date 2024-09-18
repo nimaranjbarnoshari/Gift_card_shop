@@ -84,6 +84,7 @@ export default function Games() {
               <GameBox
                 key={game.id}
                 custom="games__box-custom"
+                link={game.link ? game.link : null}
                 title={game.title}
                 src={game.src}
                 off={game.off}

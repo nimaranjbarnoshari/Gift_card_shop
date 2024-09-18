@@ -52,7 +52,7 @@ export default function DiscountedProducts() {
     setIsActive("money");
   };
   const serviceDiscount = () => {
-    fetchData("services");
+    fetchData("accounts");
     setIsActive("services");
   };
   const softwareDiscount = () => {
@@ -157,8 +157,9 @@ export default function DiscountedProducts() {
               discountProducts.map((product) => (
                 <SwiperSlide key={product.id}>
                   <GameBox
+                    custom={isActive === "services" ? "discounted-products__custom-box" : ""}
                     src={product.src}
-                    link={product.link ? product.link : "#"}
+                    link={product.link ? product.link : null}
                     title={product.title}
                     price={product.price}
                     off={product.off}

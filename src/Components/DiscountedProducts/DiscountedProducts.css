@@ -38,8 +38,15 @@
   margin-top: 40px;
 }
 
+.discounted-products__custom-box img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 20px auto 50px auto;
+}
+
 /* swiper styles */
-.discounted-products__boxes .swiper{
+.discounted-products__boxes .swiper {
   padding-bottom: 30px;
 }
 
@@ -72,7 +79,6 @@
   .discounted-products__button {
     flex: 0 0 auto;
   }
-  
 }
 @media (min-width: 992px) {
   .discounted-products__buttons-wrapper {
@@ -86,7 +92,6 @@
     border-radius: 10px;
     font-size: 14px;
   }
-  
 }
 @media (min-width: 1200px) {
   .discounted-products__buttons-wrapper {

@@ -9,12 +9,12 @@
       "token": "532423nimara543181nimaranjbarnoshari@gmail.com314027",
       "basket": [
         {
-          "id": "066a",
-          "src": "/images/home/forza.jpeg",
-          "title": "بازی Forza Horizon 5 Premium Edition",
-          "price": 3192840,
-          "off": 2,
-          "category": "xbox",
+          "id": "f625",
+          "src": "/images/home/fifa24.jpg",
+          "title": "بازی فیفا ۲۴",
+          "price": 256000,
+          "off": 0,
+          "category": "ps",
           "count": 1
         }
       ],
@@ -330,63 +330,73 @@
       "src": "/images/accounts/spotify.svg",
       "title": "اکانت اسپاتیفای پاندورا",
       "desc": "Spotify",
-      "price": 49000
+      "price": 1140000,
+      "off": 3,
+      "link": "/"
     },
     {
       "id": "3d50",
       "src": "/images/accounts/google.svg",
       "title": "اکانت گوگل پلی",
       "desc": "Google Play",
-      "price": 49000
+      "price": 1490000,
+      "off": 0
     },
     {
       "id": "0852",
       "src": "/images/accounts/origin.svg",
       "title": "اکانت اوریجین",
       "desc": "Origin",
-      "price": 49000
+      "price": 2420000,
+      "off": 4
     },
     {
       "id": "d4bf",
       "src": "/images/accounts/amazon.svg",
       "title": "اکانت آمازون",
       "desc": "Amazon",
-      "price": 49000
+      "price": 59000,
+      "off": 0
     },
     {
       "id": "c7aa",
       "src": "/images/accounts/netflix.svg",
       "title": "اکانت نتفلیکس",
       "desc": "Netflix",
-      "price": 49000
+      "price": 189000,
+      "off": 0
     },
     {
       "id": "2be8",
       "src": "/images/accounts/itunes.svg",
       "title": "اکانت آیتیونز",
       "desc": "itunes",
-      "price": 49000
+      "price": 890000,
+      "off": 0
     },
     {
       "id": "ad61",
       "src": "/images/accounts/battle.svg",
       "title": "اکانت بتل نت",
       "desc": "Battle net",
-      "price": 49000
+      "price": 2780000,
+      "off": 0
     },
     {
       "id": "b4ac",
       "src": "/images/accounts/razor.svg",
       "title": "اکانت ریزر گلد ریکستی",
       "desc": "Razor gold",
-      "price": 49000
+      "price": 3200000,
+      "off": 5
     },
     {
       "id": "406b",
       "src": "/images/accounts/nintendo.svg",
       "title": "اکانت نینتندو سویچ",
       "desc": "Nintendo",
-      "price": 49000
+      "price": 1180000,
+      "off": 1
     }
   ],
   "gifts": [
@@ -1154,7 +1164,7 @@
       "src": "/images/home/accessory.jpg",
       "title": "انواع لوازم دیجیتال",
       "desc": "کنسول بازی ، موس ، کیبورد و ...",
-      "href": "/gifts"
+      "href": "/accessories"
     }
   ],
   "money": [],
