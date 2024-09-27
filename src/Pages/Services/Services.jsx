@@ -21,7 +21,7 @@ export default function Services() {
       <Topbar />
       <Navbar />
       <div className="container">
-        <SectionHeader title="خدمات" />
+        <SectionHeader title="خدمات" custom="accessory-header"/>
         <p className="services__info">
           درباره خدمات: لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
           چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و

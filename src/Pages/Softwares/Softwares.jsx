@@ -21,7 +21,7 @@ export default function Softwares() {
       <Topbar />
       <Navbar />
       <div className="container">
-        <SectionHeader title="نرم افزارها" />
+        <SectionHeader title="نرم افزارها" custom="accessory-header"/>
 
         <div className="games__box-container">
           {contextData.allSoftwares.map((account) => (

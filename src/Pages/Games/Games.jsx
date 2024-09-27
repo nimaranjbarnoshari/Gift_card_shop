@@ -15,20 +15,22 @@ import "swiper/css/pagination";
 import "./Games.css";
 export default function Games() {
   const contextData = useContext(AuthContext);
-  const [categoryName, setCategoryName] = useState("ps");
+  const [categoryName, setCategoryName] = useState("all");
   const [categoryGames, setCategoryGames] = useState([]);
 
   const chooseCategory = () => {
-    const games = contextData.allGamesData.filter(
-      (game) => game.category === categoryName
-    );
-
-    setCategoryGames(games);
+    if (categoryName === "all") {
+      setCategoryGames(contextData.allGamesData);
+    } else {
+      const games = contextData.allGamesData.filter(
+        (game) => game.category === categoryName
+      );
+      setCategoryGames(games);
+    }
   };
 
   useEffect(() => {
     chooseCategory();
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [categoryName, contextData.allGamesData]);
 
@@ -51,6 +53,9 @@ export default function Games() {
                 setCategoryName(e.target.value);
               }}
             >
+              <option value="all" className="games__category-option">
+                همه بازی ها
+              </option>
               <option value="ps" className="games__category-option">
                 بازی های پلی استیشن
               </option>
@@ -75,7 +80,7 @@ export default function Games() {
                 ? "بازی های کامپیوتر"
                 : categoryName === "nintendo"
                 ? "بازی های نینتندو"
-                : null
+                : "همه بازی ها"
             }
           />
 
