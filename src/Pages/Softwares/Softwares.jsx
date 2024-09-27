@@ -21,11 +21,12 @@ export default function Softwares() {
       <Topbar />
       <Navbar />
       <div className="container">
-        <SectionHeader title="نرم افزارها" custom="accessory-header"/>
+        <SectionHeader title="نرم افزارها" custom="accessory-header" />
 
         <div className="games__box-container">
           {contextData.allSoftwares.map((account) => (
             <GameBox
+              custom="software_gameBox"
               key={account.id}
               link={account.link ? account.link : null}
               title={account.title}

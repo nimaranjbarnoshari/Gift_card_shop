@@ -561,10 +561,10 @@
     },
     {
       "id": "d260",
-      "src": "/images/gifts/apple.jpg",
-      "src1": "/images/gifts/apple1.jpg",
-      "src2": "/images/gifts/apple2.jpg",
-      "src3": "/images/gifts/apple3.jpg",
+      "src": "/images/home/netflix.jpg",
+      "src1": "/images/home/netflix.jpg",
+      "src2": "/images/home/netflix.jpg",
+      "src3": "/images/home/netflix.jpg",
       "title": "گیفت کارت نتفلیکس",
       "category": "netflix",
       "regions": [
@@ -751,10 +751,10 @@
     },
     {
       "id": "dc54",
-      "src": "/images/gifts/apple.jpg",
-      "src1": "/images/gifts/apple1.jpg",
-      "src2": "/images/gifts/apple2.jpg",
-      "src3": "/images/gifts/apple3.jpg",
+      "src": "/images/home/steam.jpg",
+      "src1": "/images/home/steam.jpg",
+      "src2": "/images/home/steam.jpg",
+      "src3": "/images/home/steam.jpg",
       "title": "گیفت کارت استیم",
       "category": "steam",
       "regions": [
@@ -894,10 +894,10 @@
     },
     {
       "id": "694f",
-      "src": "/images/gifts/apple.jpg",
-      "src1": "/images/gifts/apple1.jpg",
-      "src2": "/images/gifts/apple2.jpg",
-      "src3": "/images/gifts/apple3.jpg",
+      "src": "/images/gifts/google.jpg",
+      "src1": "/images/gifts/google.jpg",
+      "src2": "/images/gifts/google.jpg",
+      "src3": "/images/gifts/google.jpg",
       "title": "گیفت کارت گوگل پلی",
       "category": "google",
       "regions": [
@@ -1004,10 +1004,10 @@
     },
     {
       "id": "8367",
-      "src": "/images/gifts/apple.jpg",
-      "src1": "/images/gifts/apple1.jpg",
-      "src2": "/images/gifts/apple2.jpg",
-      "src3": "/images/gifts/apple3.jpg",
+      "src": "/images/home/amazon.jpg",
+      "src1": "/images/home/amazon.jpg",
+      "src2": "/images/home/amazon.jpg",
+      "src3": "/images/home/amazon.jpg",
       "title": "گیفت کارت آمازون",
       "category": "amazon",
       "regions": [
