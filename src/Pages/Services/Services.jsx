@@ -7,8 +7,13 @@ import SectionHeader from "../../Components/SectionHeader/SectionHeader";
 import AuthContext from "../../Context/AuthContext";
 import GameBox from "../../Components/GameBox/GameBox";
 import Benefits from "../../Components/Benefits/Benefits";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
 
+import "swiper/css";
+import "swiper/css/pagination";
 import "./Services.css";
+
 export default function Services() {
   const contextData = useContext(AuthContext);
   return (
@@ -49,7 +54,46 @@ export default function Services() {
         </div>
       </div>
 
-      <Benefits background={false} custom="games__benefits"/>
+      <Benefits background={false} custom="games__benefits" />
+
+      <div className="container">
+        <div className="gift-cards__other-products">
+          <SectionHeader title="دیگر محصولات" />
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            // autoplay={true}
+            pagination={{ type: "bullets", clickable: true }}
+            className="mySwiper"
+            loop={true}
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+              },
+              992: {
+                slidesPerView: 3,
+              },
+              1400: {
+                slidesPerView: 4,
+              },
+            }}
+          >
+            {contextData.allSoftwares?.length
+              ? contextData.allSoftwares.slice(0, 8).map((game) => (
+                  <SwiperSlide key={game.id}>
+                    <GameBox
+                      clickHandler={() => contextData.addToBasket(game)}
+                      src={game.src}
+                      title={game.title}
+                      price={game.price}
+                      off={game.off}
+                      link={game.link}
+                    />
+                  </SwiperSlide>
+                ))
+              : ""}
+          </Swiper>
+        </div>
+      </div>
       <Socials />
       <Footer />
     </>
