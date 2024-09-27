@@ -32,7 +32,7 @@ export default function Services() {
         </p>
 
         <SectionHeader title="اکانت ها" />
-        
+
         <div className="games__box-container">
           {contextData.allaccounts.map((account) => (
             <GameBox
@@ -47,9 +47,9 @@ export default function Services() {
             />
           ))}
         </div>
-
-        <Benefits background={false} />
       </div>
+
+      <Benefits background={false} custom="games__benefits"/>
       <Socials />
       <Footer />
     </>

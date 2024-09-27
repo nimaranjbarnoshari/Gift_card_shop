@@ -89,7 +89,7 @@ export default function DiscountedProducts() {
             }
             onClick={gameDiscount}
           >
-            بازی ها
+            بازی
           </button>
           <button
             className={
@@ -109,7 +109,7 @@ export default function DiscountedProducts() {
             }
             onClick={serviceDiscount}
           >
-            خدمات
+            خدمات و اکانت
           </button>
           <button
             className={

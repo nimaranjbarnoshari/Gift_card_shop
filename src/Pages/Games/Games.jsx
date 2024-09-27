@@ -98,43 +98,41 @@ export default function Games() {
         <Benefits background={false} custom="games__benefits" />
 
         <div className="container">
-          <div className="container">
-            <div className="gift-cards__other-products">
-              <SectionHeader title="دیگر محصولات" />
-              <Swiper
-                modules={[Pagination, Autoplay]}
-                // autoplay={true}
-                pagination={{ type: "bullets", clickable: true }}
-                className="mySwiper"
-                loop={true}
-                breakpoints={{
-                  768: {
-                    slidesPerView: 2,
-                  },
-                  992: {
-                    slidesPerView: 3,
-                  },
-                  1400: {
-                    slidesPerView: 4,
-                  },
-                }}
-              >
-                {contextData.allGifts?.length
-                  ? contextData.allGifts.map((game) => (
-                      <SwiperSlide key={game.id}>
-                        <GameBox
-                          clickHandler={() => contextData.addToBasket(game)}
-                          src={game.src}
-                          title={game.title}
-                          price={game.price}
-                          off={game.off}
-                          link={game.link}
-                        />
-                      </SwiperSlide>
-                    ))
-                  : ""}
-              </Swiper>
-            </div>
+          <div className="gift-cards__other-products">
+            <SectionHeader title="دیگر محصولات" />
+            <Swiper
+              modules={[Pagination, Autoplay]}
+              // autoplay={true}
+              pagination={{ type: "bullets", clickable: true }}
+              className="mySwiper"
+              loop={true}
+              breakpoints={{
+                768: {
+                  slidesPerView: 2,
+                },
+                992: {
+                  slidesPerView: 3,
+                },
+                1400: {
+                  slidesPerView: 4,
+                },
+              }}
+            >
+              {contextData.allGifts?.length
+                ? contextData.allGifts.map((game) => (
+                    <SwiperSlide key={game.id}>
+                      <GameBox
+                        clickHandler={() => contextData.addToBasket(game)}
+                        src={game.src}
+                        title={game.title}
+                        price={game.price}
+                        off={game.off}
+                        link={game.link}
+                      />
+                    </SwiperSlide>
+                  ))
+                : ""}
+            </Swiper>
           </div>
         </div>
       </div>

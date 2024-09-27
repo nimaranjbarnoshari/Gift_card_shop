@@ -18,6 +18,7 @@ function App() {
   const [allaccounts, setAllaccounts] = useState([]);
   const [giftsCategory, setGiftsCategory] = useState([]);
   const [allGifts, setAllGifts] = useState([]);
+  const [allSoftwares, setAllSoftwares] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:8000/games")
@@ -29,6 +30,9 @@ function App() {
     fetch("http://localhost:8000/gifts")
       .then((res) => res.json())
       .then((data) => setGiftsCategory(data));
+    fetch("http://localhost:8000/softwares")
+      .then((res) => res.json())
+      .then((data) => setAllSoftwares(data));
   }, []);
 
   useEffect(() => {
@@ -357,7 +361,8 @@ function App() {
         allaccounts,
         allGifts,
         giftsCategory,
-        setData
+        setData,
+        allSoftwares
       }}
     >
       <div className="App">{router}</div>

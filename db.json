@@ -380,7 +380,7 @@
       "title": "اکانت بتل نت",
       "desc": "Battle net",
       "price": 2780000,
-      "off": 0
+      "off": 5
     },
     {
       "id": "b4ac",
@@ -1170,7 +1170,80 @@
   "money": [],
   "services": [],
   "digits": [],
-  "softwares": [],
+  "softwares": [
+    {
+      "id": "8949",
+      "src": "/images/home/netflix.jpg",
+      "title": "نرم افزار Office 2023",
+      "price": 141000,
+      "off": 0,
+      "icon": "/images/svg/netflix.svg"
+    },
+    {
+      "id": "47c9",
+      "src": "/images/home/netflix.jpg",
+      "title": "نرم افزار Photoshop 2024",
+      "price": 49000,
+      "off": 0,
+      "icon": "/images/svg/netflix.svg"
+    },
+    {
+      "id": "5c78",
+      "src": "/images/home/netflix.jpg",
+      "title": "نرم افزار Illustrator 2024",
+      "price": 45000,
+      "off": 0,
+      "icon": "/images/svg/netflix.svg"
+    },
+    {
+      "id": "562b",
+      "src": "/images/home/netflix.jpg",
+      "title": "مجموعه نرم افزار JB Pack 2024",
+      "price": 920000,
+      "off": 5,
+      "icon": "/images/svg/netflix.svg"
+    },
+    {
+      "id": "dae7",
+      "src": "/images/home/netflix.jpg",
+      "title": "مجموعه نرم افزاری Mac 2017 iGerdoo",
+      "price": 198000,
+      "off": 10,
+      "icon": "/images/svg/netflix.svg"
+    },
+    {
+      "id": "4ab8",
+      "src": "/images/home/netflix.jpg",
+      "title": "سیستم عامل Windows 10+11",
+      "price": 96000,
+      "off": 5,
+      "icon": "/images/svg/netflix.svg"
+    },
+    {
+      "id": "5110",
+      "src": "/images/home/netflix.jpg",
+      "title": "نرم افزار Adobe Creative Cloud 2024",
+      "price": 96000,
+      "off": 8,
+      "icon": "/images/svg/netflix.svg"
+    },
+    {
+      "id": "3669",
+      "src": "/images/home/netflix.jpg",
+      "title": "نرم افزار 3DsMax 2025",
+      "price": 78000,
+      "off": 6,
+      "icon": "/images/svg/netflix.svg"
+    },
+    {
+      "id": "5d0f",
+      "src": "/images/home/netflix.jpg",
+      "title": "نرم افزار Matlab 2022b + Simulink",
+      "price": 88000,
+      "off": 7,
+      "icon": "/images/svg/netflix.svg"
+    }
+  ],
   "menus": [
     {
       "id": "025c",
