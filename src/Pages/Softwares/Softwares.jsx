@@ -27,7 +27,6 @@ export default function Softwares() {
           {contextData.allSoftwares.map((account) => (
             <GameBox
               key={account.id}
-              // custom="accounts__box-custom services__custom-box"
               link={account.link ? account.link : null}
               title={account.title}
               src={account.src}

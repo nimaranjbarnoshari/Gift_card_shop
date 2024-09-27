@@ -1167,8 +1167,64 @@
       "href": "/accessories"
     }
   ],
-  "money": [],
-  "services": [],
+  "money": [
+    {
+      "id": "baa5",
+      "src": "/images/home/pubg60.jpg",
+      "title": "خرید ۶۰ یوسی پابجی با آیدی",
+      "price": 60000,
+      "off": 0
+    },
+    {
+      "id": "27c0",
+      "src": "/images/home/pubg325.webp",
+      "title": "خرید ۳۲۵ یوسی پابجی با آیدی",
+      "price": 310000,
+      "off": 1
+    },
+    {
+      "id": "966e",
+      "src": "/images/home/pubg660.jpg",
+      "title": "خرید ۶۶۰ یوسی پابجی با آیدی",
+      "price": 640000,
+      "off": 0
+    },
+    {
+      "id": "681e",
+      "src": "/images/home/pubgrp.jpg",
+      "title": "خرید RP پابجی با آیدی",
+      "price": 860000,
+      "off": 1
+    },
+    {
+      "id": "88b8",
+      "src": "/images/home/pubg1800.jpg",
+      "title": "خرید ۱۸۰۰ یوسی پابجی با آیدی",
+      "price": 1650000,
+      "off": 1
+    },
+    {
+      "id": "6e4a",
+      "src": "/images/home/pubgelite.webp",
+      "title": "خرید Elite RP پابجی با آیدی",
+      "price": 2200000,
+      "off": 2
+    },
+    {
+      "id": "fd2f",
+      "src": "/images/home/pubg3850.jpeg",
+      "title": "خرید ۳۸۵۰یوسی پابجی با آیدی",
+      "price": 3500000,
+      "off": 0
+    },
+    {
+      "id": "01d0",
+      "src": "/images/home/pubg8100.webp",
+      "title": "خرید ۸۱۰۰ یوسی پابجی با آیدی",
+      "price": 6580000,
+      "off": 1
+    }
+  ],
   "digits": [
     {
       "id": "73ef",
@@ -1302,7 +1358,7 @@
   "softwares": [
     {
       "id": "562b",
-      "src": "/images/home/netflix.jpg",
+      "src": "/images/home/gbpack.webp",
       "title": "مجموعه نرم افزار JB Pack 2024",
       "price": 920000,
       "off": 5,
@@ -1310,15 +1366,15 @@
     },
     {
       "id": "5c78",
-      "src": "/images/home/netflix.jpg",
-      "title": "نرم افزار Illustrator 2024",
-      "price": 45000,
+      "src": "/images/home/revit.webp",
+      "title": "نرم افزار Revit collection",
+      "price": 98000,
       "off": 0,
       "icon": "/images/svg/netflix.svg"
     },
     {
       "id": "dae7",
-      "src": "/images/home/netflix.jpg",
+      "src": "/images/home/mac.webp",
       "title": "مجموعه نرم افزاری Mac 2017 iGerdoo",
       "price": 198000,
       "off": 10,
@@ -1326,7 +1382,7 @@
     },
     {
       "id": "4ab8",
-      "src": "/images/home/netflix.jpg",
+      "src": "/images/home/windows.webp",
       "title": "سیستم عامل Windows 10+11",
       "price": 96000,
       "off": 5,
@@ -1334,15 +1390,15 @@
     },
     {
       "id": "8949",
-      "src": "/images/home/netflix.jpg",
-      "title": "نرم افزار Office 2023",
+      "src": "/images/home/office.webp",
+      "title": "نرم افزار Office Professional Plus",
       "price": 141000,
       "off": 0,
       "icon": "/images/svg/netflix.svg"
     },
     {
       "id": "5110",
-      "src": "/images/home/netflix.jpg",
+      "src": "/images/home/creative.webp",
       "title": "نرم افزار Adobe Creative Cloud 2024",
       "price": 96000,
       "off": 8,
@@ -1350,15 +1406,15 @@
     },
     {
       "id": "3669",
-      "src": "/images/home/netflix.jpg",
-      "title": "نرم افزار 3DsMax 2025",
+      "src": "/images/home/3dmax.webp",
+      "title": "نرم افزار 3DsMax 2024",
       "price": 78000,
       "off": 6,
       "icon": "/images/svg/netflix.svg"
     },
     {
       "id": "47c9",
-      "src": "/images/home/netflix.jpg",
+      "src": "/images/home/photoshop.webp",
       "title": "نرم افزار Photoshop 2024",
       "price": 49000,
       "off": 0,
@@ -1366,10 +1422,18 @@
     },
     {
       "id": "5d0f",
-      "src": "/images/home/netflix.jpg",
+      "src": "/images/home/matlab.webp",
       "title": "نرم افزار Matlab 2022b + Simulink",
       "price": 88000,
       "off": 7,
+      "icon": "/images/svg/netflix.svg"
+    },
+    {
+      "id": "25e8",
+      "src": "/images/home/autocad.webp",
+      "title": "نرم افزار اتوکد 2025",
+      "price": 70000,
+      "off": 0,
       "icon": "/images/svg/netflix.svg"
     }
   ],
