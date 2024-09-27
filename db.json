@@ -1169,7 +1169,136 @@
   ],
   "money": [],
   "services": [],
-  "digits": [],
+  "digits": [
+    {
+      "id": "73ef",
+      "src": "/images/home/xbox-all.webp",
+      "title": "دسته بازی ایکس باکس وان مدل All Series",
+      "price": 3200000,
+      "off": 0,
+      "category": "joystick"
+    },
+    {
+      "id": "8dca",
+      "src": "/images/home/rgb.webp",
+      "title": "دسته بازی مدل RGB BSP-PO5",
+      "price": 1490000,
+      "off": 1,
+      "category": "joystick"
+    },
+    {
+      "id": "cef7",
+      "src": "/images/home/tgz.webp",
+      "title": "دسته بازی بی سیم مدل TGZ-850M",
+      "price": 720000,
+      "off": 0,
+      "category": "joystick"
+    },
+    {
+      "id": "7f09",
+      "src": "/images/home/asus-rog.webp",
+      "title": "دسته بازی ایسوس ASUS ROG Raikiri Pro",
+      "price": 10800000,
+      "off": 2,
+      "category": "joystick"
+    },
+    {
+      "id": "6cbb",
+      "src": "/images/home/samsung1.webp",
+      "title": "مانیتور هوشمند سامسونگ سایز 32 اینچ",
+      "price": 14880000,
+      "off": 0,
+      "category": "monitor"
+    },
+    {
+      "id": "3178",
+      "src": "/images/home/asus1.webp",
+      "title": "مانیتور ایسوس سایز 31.5 اینچ",
+      "price": 17800000,
+      "off": 4,
+      "category": "monitor"
+    },
+    {
+      "id": "4896",
+      "src": "/images/home/mi.webp",
+      "title": "مانیتور شیائومی سایز 27 اینچ",
+      "price": 7986000,
+      "off": 1,
+      "category": "monitor"
+    },
+    {
+      "id": "dd87",
+      "src": "/images/home/msi.webp",
+      "title": "مانیتور MSI سایز 27 اینچ",
+      "price": 11690000,
+      "off": 0,
+      "category": "monitor"
+    },
+    {
+      "id": "2c72",
+      "src": "/images/home/samsung2.webp",
+      "title": "مانیتور خمیده سامسونگ سایز 32 اینچ",
+      "price": 11600000,
+      "off": 3,
+      "category": "monitor"
+    },
+    {
+      "id": "cc9f",
+      "src": "/images/home/asus2.webp",
+      "title": "مانیتور ایسوس 65 اینچ",
+      "price": 139200000,
+      "off": 0,
+      "category": "monitor"
+    },
+    {
+      "id": "03a0",
+      "src": "/images/home/razor.webp",
+      "title": "هدست ریزر مدل X10",
+      "price": 3740000,
+      "off": 0,
+      "category": "headset"
+    },
+    {
+      "id": "6c86",
+      "src": "/images/home/sony.webp",
+      "title": "هدست بلوتوثی سونی",
+      "price": 11480000,
+      "off": 4,
+      "category": "headset"
+    },
+    {
+      "id": "7ff2",
+      "src": "/images/home/razor1.webp",
+      "title": "هدست ریزر مدل V3 X",
+      "price": 4980000,
+      "off": 0,
+      "category": "headset"
+    },
+    {
+      "id": "87d1",
+      "src": "/images/home/onikuma.webp",
+      "title": "هدست اونیکوما مدل k10 Pro",
+      "price": 1100000,
+      "off": 2,
+      "category": "headset"
+    },
+    {
+      "id": "06f4",
+      "src": "/images/home/tesko.webp",
+      "title": "هدست تسکو مدل GH5160",
+      "price": 1600000,
+      "off": 0,
+      "category": "headset"
+    },
+    {
+      "id": "47c0",
+      "src": "/images/home/kotion.webp",
+      "title": "هدست کوشن ایچ مدل G2000",
+      "price": 1790000,
+      "off": 1,
+      "category": "headset"
+    }
+  ],
   "softwares": [
     {
       "id": "562b",

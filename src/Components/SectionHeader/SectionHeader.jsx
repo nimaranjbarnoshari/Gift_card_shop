@@ -1,12 +1,12 @@
 import React from "react";
 import "./SectionHeader.css";
 
-export default function SectionHeader({ title, off, footer, span }) {
+export default function SectionHeader({ title, off, footer, span, custom }) {
   return (
     <div
-      className={`section-header ${footer ? "footer-header" : ""} ${
-        span ? "span-header" : ""
-      }`}
+      className={`section-header ${custom ? custom : ""} ${
+        footer ? "footer-header" : ""
+      } ${span ? "span-header" : ""}`}
     >
       <div className="section-header__wrapper">
         <h2
