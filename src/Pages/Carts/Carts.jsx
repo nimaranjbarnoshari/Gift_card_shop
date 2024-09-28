@@ -63,33 +63,28 @@ export default function Carts() {
                     </>
                   ) : (
                     <div className="carts-basket__empty">
-                      <p className="carts-basket__empty-title">هیچ محصولی در سبد خرید شما وجود ندارد</p>
-                      <ImSad className="carts-basket__empty-icon"/>
+                      <p className="carts-basket__empty-title">
+                        هیچ محصولی در سبد خرید شما وجود ندارد
+                      </p>
+                      <ImSad className="carts-basket__empty-icon" />
                     </div>
                   )}
                 </div>
                 <div className="carts-pay">
-                  <h3 className="carts-pay__title">انتخاب درگاه پرداخت</h3>
+                  <h3 className="carts-pay__title">موجودی کیف پول شما</h3>
                   <div className="carts-pay__items">
-                    <div className="carts-pay__item">
-                      <img
-                        src="images/svg/saman.svg"
-                        alt="saman"
-                        className="carts-pay__icon"
-                      />
-                    </div>
-                    <div className="carts-pay__item">
-                      <img
-                        src="images/svg/up.svg"
-                        alt="up"
-                        className="carts-pay__icon"
-                      />
-                    </div>
+                    <span className="carts-pay__ballance">
+                      {PN.convertEnToPe(
+                        contextData.accountBalance.toLocaleString()
+                      )}
+                    </span>
+                    <span className="carts-pay__ballance-unit">تومان</span>
                   </div>
                   <Button
                     children="ثبت نهایی و پرداخت"
                     className="carts-pay__button"
                     disabled={contextData.userBasket.length ? false : true}
+                    onClick={() => contextData.payHandler()}
                   />
                 </div>
               </div>

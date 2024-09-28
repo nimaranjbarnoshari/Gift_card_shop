@@ -4,6 +4,7 @@ import routes from "./routes";
 import AuthContext from "./Context/AuthContext";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import PN from "persian-number";
 
 function App() {
   const navigate = useNavigate();
@@ -12,6 +13,7 @@ function App() {
   const [token, setToken] = useState(null);
   const [userInfos, setUserInfos] = useState({});
   const [userBasket, setUserBasket] = useState([]);
+  const [userOrders, setUserOrders] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [accountBalance, setAccountBalance] = useState(0);
   const [allGamesData, setAllGamesData] = useState([]);
@@ -234,10 +236,7 @@ function App() {
           .then((data) => {
             setAllUser(data);
           });
-        console.log(data);
       });
-
-    console.log(product);
   };
 
   const minusCount = (id) => {
@@ -311,6 +310,70 @@ function App() {
     });
   };
 
+  const payHandler = () => {
+    if (accountBalance >= totalPrice) {
+      Swal.fire({
+        title: `شما در حال پرداخت مبلغ ${PN.convertEnToPe(
+          totalPrice.toLocaleString()
+        )} تومان از کیف پول خود هستید. ادامه می دهید؟`,
+        icon: "question",
+        confirmButtonText: "بله",
+        cancelButtonText: "انصراف",
+        showCancelButton: true,
+        showCloseButton: true,
+        iconColor: "#Fd295c",
+        cancelButtonColor: "#Fd295c",
+      }).then((answer) => {
+        if (answer.isConfirmed) {
+          const newBallance = accountBalance - totalPrice;
+          const newOrders = [...userOrders, ...userBasket];
+
+          fetch(`http://localhost:8000/users/${userInfos.id}`, {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              orders: newOrders,
+              balance: newBallance,
+              basket: [],
+            }),
+          })
+            .then((res) => {
+              if (res.ok) {
+                res.json();
+              }
+            })
+            .then((data) => {
+              fetch("http://localhost:8000/users")
+                .then((res) => res.json())
+                .then((data) => {
+                  Swal.fire({
+                    title: "خرید شما با موفقیت انجام شد",
+                    showConfirmButton: true,
+                    confirmButtonColor: "#Fd295c",
+                  }).then(() => {
+                    setAllUser(data);
+                  });
+                });
+            });
+
+          console.log(newOrders);
+
+          console.log(newBallance.toLocaleString());
+        }
+      });
+    } else {
+      Swal.fire({
+        title: "موجودی کیف پول شما برای پرداخت کافی نمی باشد",
+        text: "لطفا موجودی کیف پول خود را از پنل کاربری افزایش دهید",
+        confirmButtonColor: "#Fd295c",
+        icon: "warning",
+        iconColor: "#Fd295c",
+      });
+    }
+  };
+
   useEffect(() => {
     fetch("http://localhost:8000/users")
       .then((res) => res.json())
@@ -336,6 +399,7 @@ function App() {
         setUserBasket(userInfos.basket);
         setAccountBalance(userInfos.balance);
       }
+      setUserOrders(userInfos.orders);
     }
   }, [userInfos]);
 
@@ -372,7 +436,8 @@ function App() {
         setData,
         allSoftwares,
         allAccessories,
-        allMoney
+        allMoney,
+        payHandler,
       }}
     >
       <div className="App">{router}</div>

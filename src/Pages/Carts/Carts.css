@@ -72,24 +72,27 @@
   align-items: center;
 }
 .carts-pay__title {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 21px;
   margin-bottom: 30px;
 }
 .carts-pay__items {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
   margin-bottom: 60px;
 }
-.carts-pay__item {
-  cursor: pointer;
+.carts-pay__ballance {
+  font-size: 34px;
+  margin-left: 10px;
+}
+.carts-pay__ballance-unit {
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 500;
 }
 .carts-pay__button {
   max-width: 300px;
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
   .carts-basket__empty {
     height: 120px;
   }

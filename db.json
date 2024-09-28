@@ -7,7 +7,8 @@
       "email": "nimaranjbarnoshari@gmail.com",
       "password": "12345678",
       "token": "532423nimara543181nimaranjbarnoshari@gmail.com314027",
-      "basket": [
+      "basket": [],
+      "orders": [
         {
           "id": "f625",
           "src": "/images/home/fifa24.jpg",
@@ -16,11 +17,19 @@
           "off": 0,
           "category": "ps",
           "count": 1
+        },
+        {
+          "id": "774a",
+          "src": "/images/home/jedi.jpg",
+          "title": "بازی JEDI Survivor",
+          "price": 1180000,
+          "off": 0,
+          "category": "ps",
+          "count": 1
         }
       ],
-      "orders": [],
       "tickets": [],
-      "balance": 1800000,
+      "balance": 5364000,
       "pay": []
     },
     {
