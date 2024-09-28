@@ -70,19 +70,7 @@ export default function Games() {
               </option>
             </select>
           </div>
-          {/* <SectionHeader
-            title={
-              categoryName === "ps"
-                ? "بازی های  پلی استیشن"
-                : categoryName === "xbox"
-                ? "بازی های ایکس باکس"
-                : categoryName === "computer"
-                ? "بازی های کامپیوتر"
-                : categoryName === "nintendo"
-                ? "بازی های نینتندو"
-                : "بازی ها"
-            }
-          /> */}
+     
 
           <div className="games__box-container">
             {categoryGames.map((game) => (

@@ -27,6 +27,7 @@ export default function Digits() {
           {contextData.allMoney.map((money) => (
             <GameBox
               key={money.id}
+              custom="games__box-custom"
               link={money.link ? money.link : null}
               title={money.title}
               src={money.src}

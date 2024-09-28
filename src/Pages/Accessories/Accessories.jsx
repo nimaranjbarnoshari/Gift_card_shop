@@ -29,6 +29,7 @@ export default function Digits() {
             .map((accessory) => (
               <GameBox
                 key={accessory.id}
+                custom="games__box-custom"
                 link={accessory.link ? accessory.link : null}
                 title={accessory.title}
                 src={accessory.src}
@@ -47,6 +48,7 @@ export default function Digits() {
             .map((accessory) => (
               <GameBox
                 key={accessory.id}
+                custom="games__box-custom"
                 link={accessory.link ? accessory.link : null}
                 title={accessory.title}
                 src={accessory.src}
@@ -65,6 +67,7 @@ export default function Digits() {
             .map((accessory) => (
               <GameBox
                 key={accessory.id}
+                custom="games__box-custom"
                 link={accessory.link ? accessory.link : null}
                 title={accessory.title}
                 src={accessory.src}
