@@ -59,34 +59,15 @@ export default function Wallet() {
         <div className="wallet-transactions">
           <h3 className="wallet-transactions__title">تراکنش های اخیر شما</h3>
           <div className="wallet-transactions__boxes">
-            <TransactionBox
-              date="۱۴۰۳/۰۴/۰۸"
-              price="۲۵۰،۰۰۰"
-              desc="درگاه پرداخت بانک سامان"
-              action="شارژ کیف پول"
-              bg="green"
-            />
-            <TransactionBox
-              date="۱۴۰۳/۰۴/۰۸"
-              price="۲۵۰،۰۰۰"
-              desc="درگاه پرداخت بانک پارسیان"
-              action="برداشت از کیف"
-              bg="pink"
-            />
-            <TransactionBox
-              date="۱۴۰۳/۰۴/۰۸"
-              price="۲۵۰،۰۰۰"
-              desc="درگاه پرداخت بانک سامان"
-              action="شارژ کیف پول"
-              bg="green"
-            />
-            <TransactionBox
-              date="۱۴۰۳/۰۴/۰۸"
-              price="۲۵۰،۰۰۰"
-              desc="درگاه پرداخت بانک پارسیان"
-              action="برداشت از کیف"
-              bg="pink"
-            />
+            {contextData.userPays.map((pay) => (
+              <TransactionBox
+                date={pay.date}
+                price={pay.amount}
+                desc={pay.portal}
+                action={pay.transaction}
+                bg={pay.transaction === "شارژ کیف پول" ? "green" : "pink"}
+              />
+            ))}
           </div>
         </div>
       </div>

@@ -14,6 +14,7 @@ function App() {
   const [userInfos, setUserInfos] = useState({});
   const [userBasket, setUserBasket] = useState([]);
   const [userOrders, setUserOrders] = useState([]);
+  const [userPays, setUserPays] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [accountBalance, setAccountBalance] = useState(0);
   const [allGamesData, setAllGamesData] = useState([]);
@@ -281,12 +282,29 @@ function App() {
       cancelButtonColor: "#Fd295c",
     }).then((answer) => {
       if (answer.isConfirmed) {
+        const date = new Date().toLocaleDateString("fa-IR");
+        const newPays = [
+          ...userPays,
+          {
+            id:
+              Math.ceil(Math.random() * 100000) +
+              Math.ceil(Math.random() * 10000) +
+              Math.ceil(Math.random() * 1000),
+            date,
+            amount,
+            portal: "درگاه پرداخت بانک سامان",
+            transaction: "شارژ کیف پول",
+          },
+        ];
         fetch(`http://localhost:8000/users/${userInfos.id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ balance: amount + accountBalance }),
+          body: JSON.stringify({
+            balance: amount + accountBalance,
+            pays: newPays,
+          }),
         })
           .then((res) => {
             if (res.ok) {
@@ -327,6 +345,20 @@ function App() {
         if (answer.isConfirmed) {
           const newBallance = accountBalance - totalPrice;
           const newOrders = [...userOrders, ...userBasket];
+          const date = new Date().toLocaleDateString("fa-IR");
+          const newPays = [
+            ...userPays,
+            {
+              id:
+                Math.ceil(Math.random() * 100000) +
+                Math.ceil(Math.random() * 10000) +
+                Math.ceil(Math.random() * 1000),
+              date,
+              amount: totalPrice,
+              portal: "سفارش شماره فلان",
+              transaction: "برداشت از کیف پول",
+            },
+          ];
 
           fetch(`http://localhost:8000/users/${userInfos.id}`, {
             method: "PATCH",
@@ -337,6 +369,7 @@ function App() {
               orders: newOrders,
               balance: newBallance,
               basket: [],
+              pays: newPays,
             }),
           })
             .then((res) => {
@@ -400,6 +433,7 @@ function App() {
         setAccountBalance(userInfos.balance);
       }
       setUserOrders(userInfos.orders);
+      setUserPays(userInfos.pays);
     }
   }, [userInfos]);
 
@@ -438,6 +472,7 @@ function App() {
         allAccessories,
         allMoney,
         payHandler,
+        userPays,
       }}
     >
       <div className="App">{router}</div>

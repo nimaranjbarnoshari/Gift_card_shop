@@ -17,6 +17,7 @@ const AuthContext = createContext({
   allSoftwares: [],
   allAccessories: [],
   allMoney: [],
+  userPays: [],
   setData: () => {},
   login: () => {},
   logout: () => {},
