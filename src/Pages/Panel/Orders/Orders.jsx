@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { IoSearchOutline } from "react-icons/io5";
 import OrderBox from "../Components/OrderBox/OrderBox";
 import PriceBox from "../../../Components/PriceBox/PriceBox";
 import Chip from "../Components/Chip/Chip";
 import DashboardLink from "../Components/DashboardLink/DashboardLink";
-import { PiShoppingBag } from "react-icons/pi";
+import AuthContext from "../../../Context/AuthContext";
+// import { PiShoppingBag } from "react-icons/pi";
 
 import "./Orders.css";
 export default function Orders() {
+  const contextData = useContext(AuthContext);
   return (
     <div className="panel-styles orders">
       <div className="orders-header">
@@ -34,7 +36,7 @@ export default function Orders() {
             </tr>
           </thead>
           <tbody className="orders-table__body">
-            <tr>
+            {/* <tr>
               <td>
                 <div className="orders-table__couples">
                   <PiShoppingBag className="orders-table__couples-icon" />
@@ -58,163 +60,35 @@ export default function Orders() {
               <td>
                 <DashboardLink title="مشاهده" to="/panel/orders/name" />
               </td>
-            </tr>
+            </tr> */}
 
-            <tr>
-              <td>
-                <OrderBox
-                  custom="orders-table__oreder-box"
-                  src="/images/accounts/itunes.svg"
-                  title="اکانت آتیوز ریجن آمریکا"
-                  desc="itunes"
-                />
-              </td>
-              <td>#124513548</td>
-              <td>۱۴ آبان ۱۴۰۲ - ۱۴:۳۲</td>
-              <td>
-                <PriceBox
-                  isBold={true}
-                  price="۲۵۶،۰۰۰"
-                  custom="orders-table__price"
-                />
-              </td>
-              <td>
-                <Chip bg="green">تکمیل شده</Chip>
-              </td>
-              <td>
-                <DashboardLink title="مشاهده" to="/panel/orders/name" />
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <OrderBox
-                  custom="orders-table__oreder-box"
-                  src="/images/accounts/spotify.svg"
-                  title="اکانت اسپاتیفای ریجن آمریکا"
-                  desc="Spotify"
-                />
-              </td>
-              <td>#124513548</td>
-              <td>۱۴ آبان ۱۴۰۲ - ۱۴:۳۲</td>
-              <td>
-                <PriceBox
-                  isBold={true}
-                  price="۲۵۶،۰۰۰"
-                  custom="orders-table__price"
-                />
-              </td>
-              <td>
-                <Chip bg="orange">در حال انجام</Chip>
-              </td>
-              <td>
-                <DashboardLink title="مشاهده" to="/panel/orders/name" />
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <OrderBox
-                  custom="orders-table__oreder-box"
-                  src="/images/accounts/origin.svg"
-                  title="اکانت اوریجین ریجن ترکیه"
-                  desc="Origin"
-                />
-              </td>
-              <td>#124513548</td>
-              <td>۱۴ آبان ۱۴۰۲ - ۱۴:۳۲</td>
-              <td>
-                <PriceBox
-                  isBold={true}
-                  price="۲۵۶،۰۰۰"
-                  custom="orders-table__price"
-                />
-              </td>
-              <td>
-                <Chip bg="green">تکمیل شده</Chip>
-              </td>
-              <td>
-                <DashboardLink title="مشاهده" to="/panel/orders/name" />
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <OrderBox
-                  custom="orders-table__oreder-box"
-                  src="/images/accounts/itunes.svg"
-                  title="اکانت آتیوز ریجن آمریکا"
-                  desc="itunes"
-                />
-              </td>
-              <td>#124513548</td>
-              <td>۱۴ آبان ۱۴۰۲ - ۱۴:۳۲</td>
-              <td>
-                <PriceBox
-                  isBold={true}
-                  price="۲۵۶،۰۰۰"
-                  custom="orders-table__price"
-                />
-              </td>
-              <td>
-                <Chip bg="orange">در حال انجام</Chip>
-              </td>
-              <td>
-                <DashboardLink title="مشاهده" to="/panel/orders/name" />
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <OrderBox
-                  custom="orders-table__oreder-box"
-                  src="/images/accounts/spotify.svg"
-                  title="اکانت اسپاتیفای ریجن آمریکا"
-                  desc="Spotify"
-                />
-              </td>
-              <td>#124513548</td>
-              <td>۱۴ آبان ۱۴۰۲ - ۱۴:۳۲</td>
-              <td>
-                <PriceBox
-                  isBold={true}
-                  price="۲۵۶،۰۰۰"
-                  custom="orders-table__price"
-                />
-              </td>
-              <td>
-                <Chip bg="orange">در حال انجام</Chip>
-              </td>
-              <td>
-                <DashboardLink title="مشاهده" to="/panel/orders/name" />
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <OrderBox
-                  custom="orders-table__oreder-box"
-                  src="/images/accounts/origin.svg"
-                  title="اکانت اوریجین ریجن ترکیه"
-                  desc="Origin"
-                />
-              </td>
-              <td>#124513548</td>
-              <td>۱۴ آبان ۱۴۰۲ - ۱۴:۳۲</td>
-              <td>
-                <PriceBox
-                  isBold={true}
-                  price="۲۵۶،۰۰۰"
-                  custom="orders-table__price"
-                />
-              </td>
-              <td>
-                <Chip bg="green">تکمیل شده</Chip>
-              </td>
-              <td>
-                <DashboardLink title="مشاهده" to="/panel/orders/name" />
-              </td>
-            </tr>
+            {[...contextData.userOrders].reverse().map((order) => (
+              <tr>
+                <td>
+                  <OrderBox
+                    custom="orders-table__oreder-box"
+                    src={order.src}
+                    title={order.title}
+                    desc={order.category}
+                  />
+                </td>
+                <td>#124513548</td>
+                <td>۱۴ آبان ۱۴۰۲ - ۱۴:۳۲</td>
+                <td>
+                  <PriceBox
+                    isBold={true}
+                    price={order.price}
+                    custom="orders-table__price"
+                  />
+                </td>
+                <td>
+                  <Chip bg="green">تکمیل شده</Chip>
+                </td>
+                <td>
+                  <DashboardLink title="مشاهده" to="/panel/orders/name" />
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>

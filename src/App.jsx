@@ -270,6 +270,7 @@ function App() {
   };
 
   const chargeBalance = (amount) => {
+    
     Swal.fire({
       title: `شما در حال واریز مبلغ ${amount.toLocaleString()} به کیف پول خود هستید`,
       text: "آیا ادامه می دهید؟",
@@ -473,6 +474,7 @@ function App() {
         allMoney,
         payHandler,
         userPays,
+        userOrders
       }}
     >
       <div className="App">{router}</div>

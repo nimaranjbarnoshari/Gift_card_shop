@@ -29,7 +29,7 @@ export default function Dashboard() {
             bg="orange"
             src="/images/svg/loader.svg"
             to="/panel/orders"
-            count="۵"
+            count="۰"
             title="سفارشات در حال انجام"
           />
           <DashboardBox
@@ -47,21 +47,27 @@ export default function Dashboard() {
           <DashboardLink title="مشاهده همه" to="/panel/orders" />
         </div>
         <div className="dashboard-orders__lists">
-          <div className="dashboard-orders__list">
-            <div className="dashboard-orders__list-rigth">
-              <OrderBox
-                src="/images/accounts/origin.svg"
-                title="اکانت اوریجین ریجن ترکیه"
-                desc="Origin"
-              />
-            </div>
-            <div className="dashboard-orders__list-left">
-              <PriceBox price="۲۵۶،۰۰۰" isBold={true} />
-              <Chip bg="green">تکمیل شده</Chip>
-              <DashboardLink title="مشاهده" to="/panel/orders" />
-            </div>
-          </div>
-          <div className="dashboard-orders__list">
+          {[...contextData.userOrders]
+            .reverse()
+            .slice(0, 3)
+            .map((order) => (
+              <div className="dashboard-orders__list">
+                <div className="dashboard-orders__list-rigth">
+                  <OrderBox
+                    src={order.src}
+                    title={order.title}
+                    desc={order.category}
+                  />
+                </div>
+                <div className="dashboard-orders__list-left">
+                  <PriceBox price={order.price} isBold={true} />
+                  <Chip bg="green">تکمیل شده</Chip>
+                  <DashboardLink title="مشاهده" to="/panel/orders" />
+                </div>
+              </div>
+            ))}
+
+          {/* <div className="dashboard-orders__list">
             <div className="dashboard-orders__list-rigth">
               <OrderBox
                 src="/images/accounts/itunes.svg"
@@ -89,7 +95,7 @@ export default function Dashboard() {
               <Chip bg="green">تکمیل شده</Chip>
               <DashboardLink title="مشاهده" to="/panel/orders" />
             </div>
-          </div>
+          </div> */}
         </div>
         <h3 className="dashboard-tickets__title">تیکت های اخیر شما</h3>
         <div className="dashboard-tickets__body">
