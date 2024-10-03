@@ -66,36 +66,6 @@ export default function Dashboard() {
                 </div>
               </div>
             ))}
-
-          {/* <div className="dashboard-orders__list">
-            <div className="dashboard-orders__list-rigth">
-              <OrderBox
-                src="/images/accounts/itunes.svg"
-                title="اکانت آیتونز ریجن آمریکا"
-                // title="اکانت آیتونز ریجن آمریکا"
-                desc="itunes"
-              />
-            </div>
-            <div className="dashboard-orders__list-left">
-              <PriceBox price="۲۵۶،۰۰۰" isBold={true} />
-              <Chip bg="orange">درحال انجام</Chip>
-              <DashboardLink title="مشاهده" to="/panel/orders" />
-            </div>
-          </div>
-          <div className="dashboard-orders__list">
-            <div className="dashboard-orders__list-rigth">
-              <OrderBox
-                src="/images/accounts/spotify.svg"
-                title="اکانت اسپاتیفای ریجن آمریکا"
-                desc="Spotify"
-              />
-            </div>
-            <div className="dashboard-orders__list-left">
-              <PriceBox price="۲۵۶،۰۰۰" isBold={true} />
-              <Chip bg="green">تکمیل شده</Chip>
-              <DashboardLink title="مشاهده" to="/panel/orders" />
-            </div>
-          </div> */}
         </div>
         <h3 className="dashboard-tickets__title">تیکت های اخیر شما</h3>
         <div className="dashboard-tickets__body">

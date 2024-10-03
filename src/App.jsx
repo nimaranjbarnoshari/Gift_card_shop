@@ -15,6 +15,7 @@ function App() {
   const [userBasket, setUserBasket] = useState([]);
   const [userOrders, setUserOrders] = useState([]);
   const [userPays, setUserPays] = useState([]);
+  const [userTickets, setUserTickets] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [accountBalance, setAccountBalance] = useState(0);
   const [allGamesData, setAllGamesData] = useState([]);
@@ -435,6 +436,7 @@ function App() {
       }
       setUserOrders(userInfos.orders);
       setUserPays(userInfos.pays);
+      setUserTickets(userInfos.tickets)
     }
   }, [userInfos]);
 
@@ -474,7 +476,8 @@ function App() {
         allMoney,
         payHandler,
         userPays,
-        userOrders
+        userOrders,
+        userTickets
       }}
     >
       <div className="App">{router}</div>
