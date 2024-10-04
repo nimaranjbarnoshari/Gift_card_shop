@@ -79,6 +79,10 @@
   height: 42px;
   transform: rotateZ(-40deg);
 }
+.dashboard-order__body-icon {
+  width: 42px;
+  height: 42px;
+}
 .dashboard-tickets__body-title {
   font-size: 20px;
   line-height: 40px;
@@ -215,7 +219,8 @@
   .dashboard-tickets__body {
     min-height: 140px;
   }
-  .dashboard-tickets__body-icon {
+  .dashboard-tickets__body-icon,
+  .dashboard-order__body-icon {
     width: 32px;
     height: 32px;
   }
@@ -290,7 +295,8 @@
   .dashboard-orders__list-left {
     column-gap: 10px;
   }
-  .dashboard-tickets__body-icon {
+  .dashboard-tickets__body-icon,
+  .dashboard-order__body-icon {
     width: 28px;
     height: 28px;
   }

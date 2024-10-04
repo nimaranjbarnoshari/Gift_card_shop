@@ -6,6 +6,7 @@ import OrderBox from "../Components/OrderBox/OrderBox";
 import Chip from "../Components/Chip/Chip";
 import { BsTicket } from "react-icons/bs";
 import { HiSpeakerphone } from "react-icons/hi";
+import { SlBasket } from "react-icons/sl";
 import AuthContext from "../../../Context/AuthContext";
 import PN from "persian-number";
 
@@ -44,28 +45,41 @@ export default function Dashboard() {
           <h3 className="dashboard-orders__header-title">
             لیست سفارشات اخیر شما
           </h3>
-          <DashboardLink title="مشاهده همه" to="/panel/orders" />
+          {contextData.userOrders.length ? (
+            <DashboardLink title="مشاهده همه" to="/panel/orders" />
+          ) : (
+            ""
+          )}
         </div>
         <div className="dashboard-orders__lists">
-          {[...contextData.userOrders]
-            .reverse()
-            .slice(0, 3)
-            .map((order) => (
-              <div className="dashboard-orders__list">
-                <div className="dashboard-orders__list-rigth">
-                  <OrderBox
-                    src={order.src}
-                    title={order.title}
-                    desc={order.category}
-                  />
+          {contextData.userOrders.length ? (
+            [...contextData.userOrders]
+              .reverse()
+              .slice(0, 3)
+              .map((order) => (
+                <div className="dashboard-orders__list">
+                  <div className="dashboard-orders__list-rigth">
+                    <OrderBox
+                      src={order.src}
+                      title={order.title}
+                      desc={order.category}
+                    />
+                  </div>
+                  <div className="dashboard-orders__list-left">
+                    <PriceBox price={order.price} isBold={true} />
+                    <Chip bg="green">تکمیل شده</Chip>
+                    <DashboardLink title="مشاهده" to="/panel/orders" />
+                  </div>
                 </div>
-                <div className="dashboard-orders__list-left">
-                  <PriceBox price={order.price} isBold={true} />
-                  <Chip bg="green">تکمیل شده</Chip>
-                  <DashboardLink title="مشاهده" to="/panel/orders" />
-                </div>
-              </div>
-            ))}
+              ))
+          ) : (
+            <div className="dashboard-tickets__body">
+              <SlBasket className="dashboard-order__body-icon" />
+              <span className="dashboard-tickets__body-title">
+                سفارشی یافت نشد!
+              </span>
+            </div>
+          )}
         </div>
         <h3 className="dashboard-tickets__title">تیکت های اخیر شما</h3>
         <div className="dashboard-tickets__body">
