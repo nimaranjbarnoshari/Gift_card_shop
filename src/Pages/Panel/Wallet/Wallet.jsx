@@ -6,6 +6,7 @@ import WalletBox from "../Components/WalletBox/WalletBox";
 import TransactionBox from "../Components/TransactionBox/TransactionBox";
 import AuthContext from "../../../Context/AuthContext";
 import PN from "persian-number";
+import { MdOutlinePayment } from "react-icons/md";
 
 export default function Wallet() {
   const contextData = useContext(AuthContext);
@@ -59,15 +60,27 @@ export default function Wallet() {
         <div className="wallet-transactions">
           <h3 className="wallet-transactions__title">تراکنش های اخیر شما</h3>
           <div className="wallet-transactions__boxes">
-            {contextData.userPays.map((pay) => (
-              <TransactionBox
-                date={pay.date}
-                price={pay.amount}
-                desc={pay.portal}
-                action={pay.transaction}
-                bg={pay.transaction === "شارژ کیف پول" ? "green" : "pink"}
-              />
-            ))}
+            {contextData.userPays.length ? (
+              contextData.userPays
+                .reverse()
+                .slice(0, 10)
+                .map((pay) => (
+                  <TransactionBox
+                    date={pay.date}
+                    price={pay.amount}
+                    desc={pay.portal}
+                    action={pay.transaction}
+                    bg={pay.transaction === "شارژ کیف پول" ? "green" : "pink"}
+                  />
+                ))
+            ) : (
+              <div className="dashboard-tickets__body">
+                <MdOutlinePayment className="dashboard-order__body-icon" />
+                <span className="dashboard-tickets__body-title">
+                  شما تا کنون تراکنشی نداشته اید!
+                </span>
+              </div>
+            )}
           </div>
         </div>
       </div>
