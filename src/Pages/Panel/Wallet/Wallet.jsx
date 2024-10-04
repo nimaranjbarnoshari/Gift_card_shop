@@ -10,7 +10,7 @@ import { MdOutlinePayment } from "react-icons/md";
 
 export default function Wallet() {
   const contextData = useContext(AuthContext);
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState("");
 
   return (
     <div className="panel-styles wallet">
@@ -61,9 +61,9 @@ export default function Wallet() {
           <h3 className="wallet-transactions__title">تراکنش های اخیر شما</h3>
           <div className="wallet-transactions__boxes">
             {contextData.userPays.length ? (
-              contextData.userPays
+              [...contextData.userPays]
                 .reverse()
-                .slice(0, 10)
+                .slice(0, 7)
                 .map((pay) => (
                   <TransactionBox
                     date={pay.date}

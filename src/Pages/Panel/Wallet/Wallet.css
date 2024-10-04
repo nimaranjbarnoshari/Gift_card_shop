@@ -126,7 +126,7 @@
 /* left section styles */
 .wallet-transactions {
   width: 564px;
-  height: 391px;
+  min-height: 391px;
 }
 
 .wallet-transactions__title {
