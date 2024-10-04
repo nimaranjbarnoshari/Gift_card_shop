@@ -275,7 +275,7 @@ function App() {
       });
   };
 
-  const chargeBalance = (amount) => {
+  const chargeBalance = (amount, portal) => {
     Swal.fire({
       title: `شما در حال واریز مبلغ ${amount.toLocaleString()} به کیف پول خود هستید`,
       text: "آیا ادامه می دهید؟",
@@ -298,7 +298,7 @@ function App() {
               Math.ceil(Math.random() * 1000),
             date,
             amount,
-            portal: "درگاه پرداخت بانک سامان",
+            portal,
             transaction: "شارژ کیف پول",
           },
         ];
@@ -374,7 +374,9 @@ function App() {
           if (userBasket.length >= 2) {
             userBasket.map((basket) => {
               return (
-                (basket.payNumber = random), (basket.totalPay = totalPrice), (basket.orderNumber = random1)
+                (basket.payNumber = random),
+                (basket.totalPay = totalPrice),
+                (basket.orderNumber = random1)
               );
             });
           } else {

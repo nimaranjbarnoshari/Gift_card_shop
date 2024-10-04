@@ -1,15 +1,18 @@
 import React from "react";
 import "./WalletBox.css";
-export default function WalletBox({ id, label, src }) {
+export default function WalletBox({ id, label, src, onChange }) {
   return (
     <div className="wallet-box">
       <div className="wallet-box__input">
-          <input
-            id={id}
-            type="radio"
-            className="wallet-box__input-radio"
-            name="choose_bank"
-          />
+        <input
+          id={id}
+          type="radio"
+          className="wallet-box__input-radio"
+          name="choose_bank"
+          onChange={() => {
+            onChange();
+          }}
+        />
         <label htmlFor={id} className="wallet-box__input-label">
           {label}
         </label>

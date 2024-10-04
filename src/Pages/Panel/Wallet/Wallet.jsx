@@ -1,16 +1,19 @@
 import React, { useContext, useState } from "react";
 import Input from "../../../Components/Form/Input";
 import Button from "../../../Components/Form/‌Button";
-import "./Wallet.css";
 import WalletBox from "../Components/WalletBox/WalletBox";
 import TransactionBox from "../Components/TransactionBox/TransactionBox";
 import AuthContext from "../../../Context/AuthContext";
 import PN from "persian-number";
 import { MdOutlinePayment } from "react-icons/md";
+import Swal from "sweetalert2";
+
+import "./Wallet.css";
 
 export default function Wallet() {
   const contextData = useContext(AuthContext);
   const [amount, setAmount] = useState("");
+  const [radioValue, setRadioValue] = useState("");
 
   return (
     <div className="panel-styles wallet">
@@ -43,16 +46,39 @@ export default function Wallet() {
               id="saman"
               label="درگاه پرداخت بانک سامان"
               src="/images/wallet/saman.svg"
+              onChange={() => setRadioValue("درگاه پرداخت بانک سامان")}
             />
             <WalletBox
               id="parsian"
               label="درگاه پرداخت بانک پارسیان"
               src="/images/wallet/parsian.svg"
+              onChange={() => setRadioValue("درگاه پرداخت بانک پارسیان")}
             />
           </div>
           <Button
             onClick={() => {
-              contextData.chargeBalance(+amount);
+              radioValue
+                ? amount
+                  ? +amount >= 50000
+                    ? contextData.chargeBalance(+amount, radioValue)
+                    : Swal.fire({
+                        title: "حداقل مبلغ پرداختی پنجاه هزار تومان می باشد",
+                        icon: "error",
+                        iconColor: "#Fd295c",
+                        confirmButtonColor: "#Fd295c",
+                      })
+                  : Swal.fire({
+                      title: "لطفا مبلغی را جهت پرداخت وارد نمایید",
+                      icon: "error",
+                      iconColor: "#Fd295c",
+                      confirmButtonColor: "#Fd295c",
+                    })
+                : Swal.fire({
+                    title: "لطفا یک درگاه جهت پرداخت انتخاب نمایید",
+                    icon: "error",
+                    iconColor: "#Fd295c",
+                    confirmButtonColor: "#Fd295c",
+                  });
               setAmount("");
             }}
             className="wallet-pay__btn"
