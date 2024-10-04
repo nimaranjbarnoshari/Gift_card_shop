@@ -351,10 +351,12 @@ function App() {
         if (answer.isConfirmed) {
           const newBallance = accountBalance - totalPrice;
           const date = new Date().toLocaleDateString("fa-IR");
-          const random = `#${Math.ceil(Math.random() * 1000)}
-            ${Math.ceil(Math.random() * 1000)}
-            ${Math.ceil(Math.random() * 1000)}
-          }`;
+          const random = `#${Math.ceil(Math.random() * 1000)}${Math.ceil(
+            Math.random() * 1000
+          )}${Math.ceil(Math.random() * 1000)}`;
+          const random1 = `#${Math.ceil(Math.random() * 1000)}${Math.ceil(
+            Math.random() * 1000
+          )}`;
           const newPays = [
             ...userPays,
             {
@@ -365,16 +367,18 @@ function App() {
               }`,
               date,
               amount: totalPrice,
-              payNumber: `سفارش${random}`,
+              portal: `Order ${random}`,
               transaction: "برداشت از کیف پول",
             },
           ];
           if (userBasket.length >= 2) {
             userBasket.map((basket) => {
-              return (basket.payNumber = random);
+              return (
+                (basket.payNumber = random), (basket.totalPay = totalPrice), (basket.orderNumber = random1)
+              );
             });
           } else {
-            userBasket.payNumber = random;
+            userBasket[0].payNumber = random;
           }
 
           const newOrders =
@@ -412,10 +416,6 @@ function App() {
                   });
                 });
             });
-
-          console.log(newOrders);
-
-          console.log(newBallance.toLocaleString());
         }
       });
     } else {

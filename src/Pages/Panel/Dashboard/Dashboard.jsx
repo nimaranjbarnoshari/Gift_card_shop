@@ -9,6 +9,7 @@ import { HiSpeakerphone } from "react-icons/hi";
 import { SlBasket } from "react-icons/sl";
 import AuthContext from "../../../Context/AuthContext";
 import PN from "persian-number";
+import { PiShoppingBag } from "react-icons/pi";
 
 import "./Dashboard.css";
 export default function Dashboard() {
@@ -56,22 +57,40 @@ export default function Dashboard() {
             [...contextData.userOrders]
               .reverse()
               .slice(0, 3)
-              .map((order) => (
-                <div className="dashboard-orders__list">
-                  <div className="dashboard-orders__list-rigth">
-                    <OrderBox
-                      src={order.src}
-                      title={order.title}
-                      desc={order.category}
-                    />
+              .map((order) =>
+                order.constructor === Array ? (
+                  <div key={order[0].id} className="dashboard-orders__list">
+                    <div className="dashboard-orders__list-rigth">
+                      <div className="orders-table__couples">
+                        <PiShoppingBag className="orders-table__couples-icon" />
+                        <span className="orders-table__couples-text">
+                          {`سفارشات شماره ${order[0].orderNumber}`}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="dashboard-orders__list-left">
+                      <PriceBox price={order[0].totalPay} isBold={true} />
+                      <Chip bg="green">تکمیل شده</Chip>
+                      <DashboardLink title="مشاهده" to="/panel/orders" />
+                    </div>
                   </div>
-                  <div className="dashboard-orders__list-left">
-                    <PriceBox price={order.price} isBold={true} />
-                    <Chip bg="green">تکمیل شده</Chip>
-                    <DashboardLink title="مشاهده" to="/panel/orders" />
+                ) : (
+                  <div key={order.id} className="dashboard-orders__list">
+                    <div className="dashboard-orders__list-rigth">
+                      <OrderBox
+                        src={order.src}
+                        title={order.title}
+                        desc={order.category}
+                      />
+                    </div>
+                    <div className="dashboard-orders__list-left">
+                      <PriceBox price={order.price} isBold={true} />
+                      <Chip bg="green">تکمیل شده</Chip>
+                      <DashboardLink title="مشاهده" to="/panel/orders" />
+                    </div>
                   </div>
-                </div>
-              ))
+                )
+              )
           ) : (
             <div className="dashboard-tickets__body">
               <SlBasket className="dashboard-order__body-icon" />

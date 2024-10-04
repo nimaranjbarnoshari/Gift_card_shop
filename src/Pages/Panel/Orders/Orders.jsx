@@ -6,11 +6,12 @@ import Chip from "../Components/Chip/Chip";
 import DashboardLink from "../Components/DashboardLink/DashboardLink";
 import AuthContext from "../../../Context/AuthContext";
 import { SlBasket } from "react-icons/sl";
-// import { PiShoppingBag } from "react-icons/pi";
+import { PiShoppingBag } from "react-icons/pi";
 
 import "./Orders.css";
 export default function Orders() {
   const contextData = useContext(AuthContext);
+
   return (
     <div className="panel-styles orders">
       <div className="orders-header">
@@ -39,59 +40,61 @@ export default function Orders() {
               </tr>
             </thead>
             <tbody className="orders-table__body">
-              {/* <tr>
-               <td>
-                 <div className="orders-table__couples">
-                   <PiShoppingBag className="orders-table__couples-icon" />
-                   <span className="orders-table__couples-text">
-                     سفارشات شماره 123123#
-                   </span>
-                 </div>
-               </td>
-               <td>#124513548</td>
-               <td>۱۴ آبان ۱۴۰۲ - ۱۴:۳۲</td>
-               <td>
-                 <PriceBox
-                   isBold={true}
-                   price="۲،۳۷۴،۰۰۰"
-                   custom="orders-table__price"
-                 />
-               </td>
-               <td>
-                 <Chip bg="green">تکمیل شده</Chip>
-               </td>
-               <td>
-                 <DashboardLink title="مشاهده" to="/panel/orders/name" />
-               </td>
-             </tr> */}
-
-              {[...contextData.userOrders].reverse().map((order) => (
-                <tr>
-                  <td>
-                    <OrderBox
-                      custom="orders-table__oreder-box"
-                      src={order.src}
-                      title={order.title}
-                      desc={order.category}
-                    />
-                  </td>
-                  <td>#124513548</td>
-                  <td>۱۴ آبان ۱۴۰۲ - ۱۴:۳۲</td>
-                  <td>
-                    <PriceBox
-                      isBold={true}
-                      price={order.price}
-                      custom="orders-table__price"
-                    />
-                  </td>
-                  <td>
-                    <Chip bg="green">تکمیل شده</Chip>
-                  </td>
-                  <td>
-                    <DashboardLink title="مشاهده" to="/panel/orders/name" />
-                  </td>
-                </tr>
-              ))}
+              {[...contextData.userOrders].reverse().map((order) =>
+                order.constructor === Array ? (
+                  <tr key={order[0].id}>
+                    <td>
+                      <div className="orders-table__couples">
+                        <PiShoppingBag className="orders-table__couples-icon" />
+                        <span className="orders-table__couples-text">
+                          {`سفارشات شماره ${order[0].orderNumber}`}
+                        </span>
+                      </div>
+                    </td>
+                    <td>{order[0].payNumber}</td>
+                    <td>۱۴ آبان ۱۴۰۲ - ۱۴:۳۲</td>
+                    <td>
+                      <PriceBox
+                        isBold={true}
+                        price={order[0].totalPay}
+                        custom="orders-table__price"
+                      />
+                    </td>
+                    <td>
+                      <Chip bg="green">تکمیل شده</Chip>
+                    </td>
+                    <td>
+                      <DashboardLink title="مشاهده" to="/panel/orders/name" />
+                    </td>
+                  </tr>
+                ) : (
+                  <tr key={order.id}>
+                    <td>
+                      <OrderBox
+                        custom="orders-table__oreder-box"
+                        src={order.src}
+                        title={order.title}
+                        desc={order.category}
+                      />
+                    </td>
+                    <td>#124513548</td>
+                    <td>۱۴ آبان ۱۴۰۲ - ۱۴:۳۲</td>
+                    <td>
+                      <PriceBox
+                        isBold={true}
+                        price={order.price}
+                        custom="orders-table__price"
+                      />
+                    </td>
+                    <td>
+                      <Chip bg="green">تکمیل شده</Chip>
+                    </td>
+                    <td>
+                      <DashboardLink title="مشاهده" to="/panel/orders/name" />
+                    </td>
+                  </tr>
+                )
+              )}
             </tbody>
           </table>
         </div>

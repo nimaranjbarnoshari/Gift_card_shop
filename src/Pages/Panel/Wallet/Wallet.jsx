@@ -51,7 +51,10 @@ export default function Wallet() {
             />
           </div>
           <Button
-            onClick={() => contextData.chargeBalance(+amount)}
+            onClick={() => {
+              contextData.chargeBalance(+amount);
+              setAmount("");
+            }}
             className="wallet-pay__btn"
           >
             شارژ کیف پول
@@ -66,6 +69,7 @@ export default function Wallet() {
                 .slice(0, 7)
                 .map((pay) => (
                   <TransactionBox
+                    key={pay.id}
                     date={pay.date}
                     price={pay.amount}
                     desc={pay.portal}

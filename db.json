@@ -8,11 +8,73 @@
       "password": "12345678",
       "token": "532423nimara543181nimaranjbarnoshari@gmail.com314027",
       "basket": [],
-      "orders": [],
+      "orders": [
+        {
+          "id": "z95776131",
+          "src": "/images/home/apple.jpg",
+          "title": "گیفت کارت اپل ۲۰ دلاری",
+          "price": 1230000,
+          "off": 0,
+          "country": "آمریکا",
+          "flag": "/images/svg/usa.svg",
+          "category": "apple",
+          "name": "گیفت کارت اپل ۲۰",
+          "icon": "/images/svg/apple.svg",
+          "link": "/gift-cards/apple/آمریکا",
+          "count": 1,
+          "payNumber": "#68586932"
+        },
+        [
+          {
+            "id": "z28131021",
+            "src": "/images/home/jedi.jpg",
+            "title": "بازی JEDI Survivor",
+            "price": 1180000,
+            "off": 0,
+            "category": "ps",
+            "count": 1,
+            "payNumber": "#274556300",
+            "totalPay": 4670000,
+            "orderNumber": "#372748"
+          },
+          {
+            "id": "z15306781",
+            "src": "/images/home/fc24.jpeg",
+            "title": "بازی FC24",
+            "price": 3490000,
+            "off": 0,
+            "category": "nintendo",
+            "count": 1,
+            "payNumber": "#274556300",
+            "totalPay": 4670000,
+            "orderNumber": "#372748"
+          }
+        ]
+      ],
       "tickets": [],
-      "balance": 66000000,
+      "balance": 4100000,
       "pays": [
-        
+        {
+          "id": 96764,
+          "date": "۱۴۰۳/۷/۱۳",
+          "amount": 10000000,
+          "portal": "درگاه پرداخت بانک سامان",
+          "transaction": "شارژ کیف پول"
+        },
+        {
+          "id": "p59934",
+          "date": "۱۴۰۳/۷/۱۳",
+          "amount": 1230000,
+          "portal": "Order #68586932",
+          "transaction": "برداشت از کیف پول"
+        },
+        {
+          "id": "p6419",
+          "date": "۱۴۰۳/۷/۱۳",
+          "amount": 4670000,
+          "portal": "Order #274556300",
+          "transaction": "برداشت از کیف پول"
+        }
       ]
     },
     {
