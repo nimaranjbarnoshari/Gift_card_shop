@@ -121,8 +121,13 @@ function App() {
         if (product.off) {
           product.price = product.price - (product.price * product.off) / 100;
         }
+        const newProducts = { ...product };
+        const random = `${Math.floor(Math.random() * 10000)}${Math.floor(
+          Math.random() * 10000
+        )}`;
+        newProducts.id = `z${random}`;
 
-        const newBasket = [...userBasket, { ...product, count: 1 }];
+        const newBasket = [...userBasket, { ...newProducts, count: 1 }];
 
         Swal.fire({
           title: `${datas.title} را به سبد خرید اضافه میکنید؟`,
@@ -271,7 +276,6 @@ function App() {
   };
 
   const chargeBalance = (amount) => {
-    
     Swal.fire({
       title: `شما در حال واریز مبلغ ${amount.toLocaleString()} به کیف پول خود هستید`,
       text: "آیا ادامه می دهید؟",
@@ -346,21 +350,37 @@ function App() {
       }).then((answer) => {
         if (answer.isConfirmed) {
           const newBallance = accountBalance - totalPrice;
-          const newOrders = [...userOrders, ...userBasket];
           const date = new Date().toLocaleDateString("fa-IR");
+          const random = `#${Math.ceil(Math.random() * 1000)}
+            ${Math.ceil(Math.random() * 1000)}
+            ${Math.ceil(Math.random() * 1000)}
+          }`;
           const newPays = [
             ...userPays,
             {
-              id:
+              id: `p${
                 Math.ceil(Math.random() * 100000) +
                 Math.ceil(Math.random() * 10000) +
-                Math.ceil(Math.random() * 1000),
+                Math.ceil(Math.random() * 1000)
+              }`,
               date,
               amount: totalPrice,
-              portal: "سفارش شماره فلان",
+              payNumber: `سفارش${random}`,
               transaction: "برداشت از کیف پول",
             },
           ];
+          if (userBasket.length >= 2) {
+            userBasket.map((basket) => {
+              return (basket.payNumber = random);
+            });
+          } else {
+            userBasket.payNumber = random;
+          }
+
+          const newOrders =
+            userBasket.length >= 2
+              ? [...userOrders, [...userBasket]]
+              : [...userOrders, ...userBasket];
 
           fetch(`http://localhost:8000/users/${userInfos.id}`, {
             method: "PATCH",
@@ -436,7 +456,7 @@ function App() {
       }
       setUserOrders(userInfos.orders);
       setUserPays(userInfos.pays);
-      setUserTickets(userInfos.tickets)
+      setUserTickets(userInfos.tickets);
     }
   }, [userInfos]);
 
@@ -477,7 +497,7 @@ function App() {
         payHandler,
         userPays,
         userOrders,
-        userTickets
+        userTickets,
       }}
     >
       <div className="App">{router}</div>
