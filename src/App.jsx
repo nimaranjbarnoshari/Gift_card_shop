@@ -351,6 +351,8 @@ function App() {
         if (answer.isConfirmed) {
           const newBallance = accountBalance - totalPrice;
           const date = new Date().toLocaleDateString("fa-IR");
+          const hours = new Date().getHours();
+          const minutes = new Date().getMinutes();
           const random = `#${Math.ceil(Math.random() * 1000)}${Math.ceil(
             Math.random() * 1000
           )}${Math.ceil(Math.random() * 1000)}`;
@@ -376,11 +378,17 @@ function App() {
               return (
                 (basket.payNumber = random),
                 (basket.totalPay = totalPrice),
-                (basket.orderNumber = random1)
+                (basket.orderNumber = random1),
+                (basket.date = date),
+                (basket.hours = hours),
+                (basket.minutes = minutes)
               );
             });
           } else {
             userBasket[0].payNumber = random;
+            userBasket[0].date = date;
+            userBasket[0].hours = hours;
+            userBasket[0].minutes = minutes;
           }
 
           const newOrders =

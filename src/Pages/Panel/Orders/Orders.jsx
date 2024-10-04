@@ -7,6 +7,7 @@ import DashboardLink from "../Components/DashboardLink/DashboardLink";
 import AuthContext from "../../../Context/AuthContext";
 import { SlBasket } from "react-icons/sl";
 import { PiShoppingBag } from "react-icons/pi";
+import PN from "persian-number";
 
 import "./Orders.css";
 export default function Orders() {
@@ -52,7 +53,9 @@ export default function Orders() {
                       </div>
                     </td>
                     <td>{order[0].payNumber}</td>
-                    <td>۱۴ آبان ۱۴۰۲ - ۱۴:۳۲</td>
+                    <td>{`${order[0].date} - ${PN.convertEnToPe(
+                      order[0].hours
+                    )}:${PN.convertEnToPe(order[0].minutes)}`}</td>
                     <td>
                       <PriceBox
                         isBold={true}
@@ -77,8 +80,10 @@ export default function Orders() {
                         desc={order.category}
                       />
                     </td>
-                    <td>#124513548</td>
-                    <td>۱۴ آبان ۱۴۰۲ - ۱۴:۳۲</td>
+                    <td>{order.payNumber}</td>
+                    <td>{`${order.date} - ${PN.convertEnToPe(
+                      order.hours
+                    )}:${PN.convertEnToPe(order.minutes)}`}</td>
                     <td>
                       <PriceBox
                         isBold={true}
