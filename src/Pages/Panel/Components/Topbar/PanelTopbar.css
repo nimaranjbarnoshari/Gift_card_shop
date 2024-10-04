@@ -83,6 +83,7 @@
 }
 .panel-topbar__date,
 .panel-topbar__time {
+  /* direction: ltr; */
   font-size: 14px;
 }
 

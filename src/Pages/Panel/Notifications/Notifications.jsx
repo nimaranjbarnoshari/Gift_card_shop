@@ -3,7 +3,7 @@ import "./Notifications.css";
 export default function Notifications() {
   return (
     <div className="panel-styles dashboard">
-      <h2>Notifications</h2>
+      <h2 className="m-auto fs-1 fw-bold">Notifications</h2>
     </div>
   );
 }
