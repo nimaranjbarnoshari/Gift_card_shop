@@ -20,6 +20,7 @@ const AuthContext = createContext({
   userPays: [],
   userOrders: [],
   userTickets: [],
+  userNotifications: [],
   setData: () => {},
   login: () => {},
   logout: () => {},

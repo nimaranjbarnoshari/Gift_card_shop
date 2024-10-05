@@ -39,6 +39,7 @@ export default function FinishRegister() {
         tickets: [],
         orders: [],
         pays: [],
+        notifications: [],
       };
       console.log(user);
       const res = await fetch(`http://localhost:8000/users`, {

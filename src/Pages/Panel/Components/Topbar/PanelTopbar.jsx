@@ -37,7 +37,11 @@ export default function PanelTopbar() {
           }
         >
           <PiBellRingingBold className="panel-topbar__notif-icon" />
-          <span className="panel-topbar__notif-alarm"></span>
+          {contextData.userNotifications.length ? (
+            <span className="panel-topbar__notif-alarm"></span>
+          ) : (
+            ""
+          )}
         </NavLink>
         <div className="panel-topbar__today">
           <CiCalendar className="panel-topbar__icon" />

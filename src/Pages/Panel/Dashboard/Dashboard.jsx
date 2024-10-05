@@ -10,6 +10,7 @@ import { SlBasket } from "react-icons/sl";
 import AuthContext from "../../../Context/AuthContext";
 import PN from "persian-number";
 import { PiShoppingBag } from "react-icons/pi";
+import { IoIosNotifications } from "react-icons/io";
 
 import "./Dashboard.css";
 export default function Dashboard() {
@@ -115,32 +116,29 @@ export default function Dashboard() {
           <HiSpeakerphone className="dashboard-left__btn-icon" />
         </button>
         <h3 className="dashboard-left__title">اطلاعیه ها</h3>
-        <div className="dashboard-notices">
-          <div className="dashboard-notice unread">
-            <h3 className="dashboard-notice__title">عنوان اطلاعیه شماره سه</h3>
-            <p className="dashboard-notice__text">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است.
-            </p>
+        {contextData.userNotifications.length ? (
+          <div className="dashboard-notices">
+            {contextData.userNotifications.map((notif) => (
+              <div key={notif.id} className="dashboard-notice unread">
+                <h3 className="dashboard-notice__title">
+                  عنوان اطلاعیه شماره سه
+                </h3>
+                <p className="dashboard-notice__text">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است.
+                </p>
+              </div>
+            ))}
           </div>
-          <div className="dashboard-notice">
-            <h3 className="dashboard-notice__title">عنوان اطلاعیه شماره دو</h3>
-            <p className="dashboard-notice__text">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است.
-            </p>
+        ) : (
+          <div className="dashboard-tickets__body">
+            <IoIosNotifications className="dashboard-order__body-icon" />
+            <span className="dashboard-tickets__body-title">
+              اطلاعیه ای یافت نشد!
+            </span>
           </div>
-          <div className="dashboard-notice">
-            <h3 className="dashboard-notice__title">عنوان اطلاعیه شماره یک</h3>
-            <p className="dashboard-notice__text">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است.
-            </p>
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );

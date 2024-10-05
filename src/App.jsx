@@ -16,6 +16,7 @@ function App() {
   const [userOrders, setUserOrders] = useState([]);
   const [userPays, setUserPays] = useState([]);
   const [userTickets, setUserTickets] = useState([]);
+  const [userNotifications, setUserNotifications] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [accountBalance, setAccountBalance] = useState(0);
   const [allGamesData, setAllGamesData] = useState([]);
@@ -467,6 +468,7 @@ function App() {
       setUserOrders(userInfos.orders);
       setUserPays(userInfos.pays);
       setUserTickets(userInfos.tickets);
+      setUserNotifications(userInfos.notifications);
     }
   }, [userInfos]);
 
@@ -508,6 +510,7 @@ function App() {
         userPays,
         userOrders,
         userTickets,
+        userNotifications
       }}
     >
       <div className="App">{router}</div>
