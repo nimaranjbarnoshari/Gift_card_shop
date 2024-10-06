@@ -26,7 +26,10 @@
   flex-shrink: 0;
 }
 .order-details__box-img {
-  width: 100%;
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  height: 180px;
   border-radius: 10px;
 }
 .order-details__box-row {

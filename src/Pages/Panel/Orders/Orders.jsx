@@ -67,7 +67,10 @@ export default function Orders() {
                       <Chip bg="green">تکمیل شده</Chip>
                     </td>
                     <td>
-                      <DashboardLink title="مشاهده" to="/panel/orders/name" />
+                      <DashboardLink
+                        title="مشاهده"
+                        to={`/panel/orders/${order[0].id}`}
+                      />
                     </td>
                   </tr>
                 ) : (
@@ -95,7 +98,10 @@ export default function Orders() {
                       <Chip bg="green">تکمیل شده</Chip>
                     </td>
                     <td>
-                      <DashboardLink title="مشاهده" to="/panel/orders/name" />
+                      <DashboardLink
+                        title="مشاهده"
+                        to={`/panel/orders/${order.id}`}
+                      />
                     </td>
                   </tr>
                 )

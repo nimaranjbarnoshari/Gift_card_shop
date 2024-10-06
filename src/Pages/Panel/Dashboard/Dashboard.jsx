@@ -72,7 +72,10 @@ export default function Dashboard() {
                     <div className="dashboard-orders__list-left">
                       <PriceBox price={order[0].totalPay} isBold={true} />
                       <Chip bg="green">تکمیل شده</Chip>
-                      <DashboardLink title="مشاهده" to="/panel/orders" />
+                      <DashboardLink
+                        title="مشاهده"
+                        to={`/panel/orders/${order[0].id}`}
+                      />
                     </div>
                   </div>
                 ) : (
@@ -87,7 +90,10 @@ export default function Dashboard() {
                     <div className="dashboard-orders__list-left">
                       <PriceBox price={order.price} isBold={true} />
                       <Chip bg="green">تکمیل شده</Chip>
-                      <DashboardLink title="مشاهده" to="/panel/orders" />
+                      <DashboardLink
+                        title="مشاهده"
+                        to={`/panel/orders/${order.id}`}
+                      />
                     </div>
                   </div>
                 )
