@@ -31,7 +31,7 @@ import { Navigate } from "react-router-dom";
 const routes = [
     {path:"/", element: <Index />},
     {path:"/blogs", element: <Blogs />},
-    {path:"/blogs/:blogName", element: <BlogInfos />},
+    {path:"/blogs/:blogID", element: <BlogInfos />},
     {path:"/contact-us", element: <ContactUs />},
     {path:"/about-us", element: <AboutUs />},
     {path:"/login", element: <Login />},

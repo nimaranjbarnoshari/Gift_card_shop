@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Topbar from "../../Components/Topbar/Topbar";
 import Navbar from "../../Components/Navbar/Navbar";
 import Socials from "../../Components/Socials/Socials";
 import Footer from "../../Components/Footer/Footer";
 import { TiArrowBack } from "react-icons/ti";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaTelegram } from "react-icons/fa";
@@ -12,14 +12,28 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import Input from "../../Components/Form/Input";
 import Button from "../../Components/Form/‌Button";
 import CommentBox from "../../Components/CommentBox/CommentBox";
+import AuthContext from "../../Context/AuthContext";
 
 import "./BlogInfos.css";
 
 export default function BlogInfos() {
+  const contextData = useContext(AuthContext);
+  const { blogID } = useParams();
+  const [articleInfo, setArticleInfo] = useState({});
+
   const sendComment = (event) => {
     event.preventDefault();
-    console.log("Comment sent");
+    console.log(blogID);
+    console.log(articleInfo);
   };
+
+  useEffect(() => {
+    const filteredArticle = contextData.articles.filter(
+      (article) => article.id === blogID
+    );
+    setArticleInfo(filteredArticle[0]);
+  }, [contextData.articles, blogID]);
+
   return (
     <>
       <Topbar />
@@ -40,8 +54,7 @@ export default function BlogInfos() {
             <div className="blog-infos">
               <div className="blog-infos__header">
                 <h2 className="blog-infos__header-title">
-                  انتظار ها به پایان رسید! انتشار بازی BattleField Mobile در
-                  اوایل مهرماه!
+                  {articleInfo.title}
                 </h2>
               </div>
 
@@ -50,39 +63,13 @@ export default function BlogInfos() {
                 <div className="blog-infos__body-img-container">
                   <img
                     className="blog-infos__body-img"
-                    src="/images/articles/battlefield.jpg"
+                    src={articleInfo.src}
                     alt="blogs_info_img"
                   />
                 </div>
                 <div className="blog-infos__body-text-container">
-                  <p className="blog-infos__body-text">
-                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
-                    با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه
-                    و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
-                    تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای
-                    کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و
-                    آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم
-                    افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص
-                    طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این
-                    صورت می توان امید داشت که تمام و دشواری موجود در ارائه
-                    راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
-                    شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل
-                    دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-                  </p>
-                  <p className="blog-infos__body-text">
-                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
-                    با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه
-                    و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
-                    تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای
-                    کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و
-                    آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم
-                    افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص
-                    طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این
-                    صورت می توان امید داشت که تمام و دشواری موجود در ارائه
-                    راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
-                    شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل
-                    دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-                  </p>
+                  <p className="blog-infos__body-text">{articleInfo.desc}</p>
+                  <p className="blog-infos__body-text">{articleInfo.desc1}</p>
                 </div>
                 <div className="blog-infos__body-footer">
                   <div className="blog-infos__body-footer-right">
@@ -196,7 +183,7 @@ export default function BlogInfos() {
               />
               <div className="blog-writer__name-container">
                 <span>نویسنده:</span>
-                <span className="blog-writer__name">نیما رنجبر</span>
+                <span className="blog-writer__name">{articleInfo.writer}</span>
               </div>
               <div className="blog-writer__socials">
                 <Link to="#" className="blog-writer__link">

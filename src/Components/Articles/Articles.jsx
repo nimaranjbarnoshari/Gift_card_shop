@@ -1,16 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import ArticleBox from "../ArticleBox/ArticleBox";
 import ArticlesBanner from "../ArticlesBanner/ArticlesBanner";
+import AuthContext from "../../Context/AuthContext";
 
 import "./Articles.css";
 export default function Articles({ reverse, marginBottom }) {
-  const [articles, setArticles] = useState([]);
+  const contextData = useContext(AuthContext);
 
-  useEffect(() => {
-    fetch("http://localhost:8000/articles")
-      .then((res) => res.json())
-      .then((allArticles) => setArticles(allArticles));
-  }, []);
   return (
     <section
       className={`articles ${marginBottom ? "articles-custom__margin" : ""}`}
@@ -31,13 +27,13 @@ export default function Articles({ reverse, marginBottom }) {
           </div>
 
           <div className="articles-left">
-            {articles.map((article) => (
+            {contextData.articles.map((article) => (
               <ArticleBox
                 key={article.id}
                 src={article.src}
                 title={article.title}
                 date={article.date}
-                blogName={article.name}
+                blogID={article.id}
               />
             ))}
           </div>

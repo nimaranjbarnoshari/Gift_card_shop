@@ -21,6 +21,7 @@ const AuthContext = createContext({
   userOrders: [],
   userTickets: [],
   userNotifications: [],
+  articles: [],
   setData: () => {},
   login: () => {},
   logout: () => {},

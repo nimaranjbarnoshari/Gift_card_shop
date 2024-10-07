@@ -4,7 +4,7 @@ import { BsClock } from "react-icons/bs";
 
 import "./ArticleBox.css";
 
-export default function ArticleBox({ src, title, date, blogName }) {
+export default function ArticleBox({ src, title, date, blogID }) {
   return (
     <div className="article-box">
       <div className="article-box__img-wrapper">
@@ -18,7 +18,7 @@ export default function ArticleBox({ src, title, date, blogName }) {
             <BsClock className="article-box__info-icon" />
             <span className="article-box__info-text">{date}</span>
           </div>
-          <Link to={`/blogs/${blogName}`} className="article-box__info-link">
+          <Link to={`/blogs/${blogID}`} className="article-box__info-link">
             ادامه مطلب
           </Link>
         </div>

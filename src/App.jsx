@@ -26,6 +26,7 @@ function App() {
   const [allSoftwares, setAllSoftwares] = useState([]);
   const [allAccessories, setAllAccessories] = useState([]);
   const [allMoney, setAllMoney] = useState([]);
+  const [articles, setArticles] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:8000/games")
@@ -46,6 +47,9 @@ function App() {
     fetch("http://localhost:8000/money")
       .then((res) => res.json())
       .then((data) => setAllMoney(data));
+      fetch("http://localhost:8000/articles")
+      .then((res) => res.json())
+      .then((allArticles) => setArticles(allArticles));
   }, []);
 
   useEffect(() => {
@@ -510,7 +514,8 @@ function App() {
         userPays,
         userOrders,
         userTickets,
-        userNotifications
+        userNotifications,
+        articles
       }}
     >
       <div className="App">{router}</div>
