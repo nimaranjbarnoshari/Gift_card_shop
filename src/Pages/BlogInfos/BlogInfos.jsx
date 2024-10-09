@@ -34,9 +34,6 @@ export default function BlogInfos() {
     setArticleInfo(filteredArticle[0]);
   }, [contextData.articles, blogID]);
 
-  useEffect(() => {
-    console.log(articleInfo);
-  }, [articleInfo]);
   return (
     <>
       <Topbar />
@@ -57,7 +54,7 @@ export default function BlogInfos() {
             <div className="blog-infos">
               <div className="blog-infos__header">
                 <h2 className="blog-infos__header-title">
-                  {articleInfo.title}
+                  {articleInfo ? articleInfo.title : ""}
                 </h2>
               </div>
 
@@ -66,13 +63,17 @@ export default function BlogInfos() {
                 <div className="blog-infos__body-img-container">
                   <img
                     className="blog-infos__body-img"
-                    src={articleInfo.src}
+                    src={articleInfo ? articleInfo.src : ""}
                     alt="blogs_info_img"
                   />
                 </div>
                 <div className="blog-infos__body-text-container">
-                  <p className="blog-infos__body-text">{articleInfo.desc}</p>
-                  <p className="blog-infos__body-text">{articleInfo.desc1}</p>
+                  <p className="blog-infos__body-text">
+                    {articleInfo ? articleInfo.desc : ""}
+                  </p>
+                  <p className="blog-infos__body-text">
+                    {articleInfo ? articleInfo.desc1 : ""}
+                  </p>
                 </div>
                 <div className="blog-infos__body-footer">
                   <div className="blog-infos__body-footer-right">
@@ -130,14 +131,19 @@ export default function BlogInfos() {
                     </Button>
                   </form>
                   <div className="blog-comments__body">
-                    {articleInfo.comments &&
+                    {articleInfo.comments && articleInfo.comments.length ? (
                       articleInfo.comments.map((comment) => (
                         <CommentBox
                           text={comment.body}
                           date={comment.date}
                           name={comment.name}
                         />
-                      ))}
+                      ))
+                    ) : (
+                      <h3 className="blog-comments__body-empty">
+                        هنوز نظری برای این مقاله ثبت نشده
+                      </h3>
+                    )}
                   </div>
                 </div>
               </div>

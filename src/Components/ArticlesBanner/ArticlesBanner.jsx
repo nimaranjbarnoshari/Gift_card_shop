@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import "./ArticlesBanner.css";
 
-export default function ArticlesBanner({ title, date, blogName }) {
+export default function ArticlesBanner({ title, date, blogID }) {
   return (
     <div className="articles-banner">
       <h4 className="articles-banner__title">{title}</h4>
@@ -13,7 +13,7 @@ export default function ArticlesBanner({ title, date, blogName }) {
           <BsClock className="articles-banner__info-icon" />
           <span className="articles-banner__info-text">{date}</span>
         </div>
-        <Link to={`/blogs/${blogName}`} className="articles-banner__info-link">
+        <Link to={`/blogs/${blogID}`} className="articles-banner__info-link">
           ادامه مطلب
         </Link>
       </div>

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ArticleBox from "../ArticleBox/ArticleBox";
 import ArticlesBanner from "../ArticlesBanner/ArticlesBanner";
 import AuthContext from "../../Context/AuthContext";
@@ -6,6 +6,19 @@ import AuthContext from "../../Context/AuthContext";
 import "./Articles.css";
 export default function Articles({ reverse, marginBottom }) {
   const contextData = useContext(AuthContext);
+  const [simpleArticles, setSimpleArticles] = useState([]);
+  const [bannerArticles, setBannerArticles] = useState({});
+
+  useEffect(() => {
+    const banner = contextData.articles.filter(
+      (article) => article.kind === "banner"
+    );
+    const simples = contextData.articles.filter(
+      (article) => article.kind === "simple"
+    );
+    setBannerArticles(banner[0]);
+    setSimpleArticles(simples);
+  }, [contextData]);
 
   return (
     <section
@@ -19,15 +32,14 @@ export default function Articles({ reverse, marginBottom }) {
         >
           <div className="articles-right">
             <ArticlesBanner
-              title="جزئیات آپدیت جدید بازی Super Mario برای پلی استیشن ( آپدیت نهایی بازی و
-                    رفع باگ های عجیب کاربران )"
-              date="۲۳ آبان,۱۴۰۲"
-              blogName="mario"
+              title={bannerArticles ? bannerArticles.title : ""}
+              date={bannerArticles ? bannerArticles.date : ""}
+              blogID={bannerArticles ? bannerArticles.id : ""}
             />
           </div>
 
           <div className="articles-left">
-            {contextData.articles.map((article) => (
+            {simpleArticles.map((article) => (
               <ArticleBox
                 key={article.id}
                 src={article.src}

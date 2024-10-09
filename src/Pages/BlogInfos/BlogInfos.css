@@ -43,6 +43,7 @@
 /* header */
 .blog-infos__header {
   height: 60px;
+  padding: 0 20px;
   background-color: var(--dark-background);
   display: flex;
   justify-content: center;
@@ -146,12 +147,15 @@
   padding: 20px;
 }
 
-
 .blog-comments__body {
   display: flex;
   flex-direction: column;
   row-gap: 15px;
   padding: 10px 20px;
+}
+
+.blog-comments__body-empty {
+  margin: 20px auto;
 }
 
 /* end main section */
