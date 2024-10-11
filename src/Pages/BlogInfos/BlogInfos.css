@@ -147,6 +147,10 @@
   padding: 20px;
 }
 
+.blog-comments__input input {
+  color: gray;
+}
+
 .blog-comments__body {
   display: flex;
   flex-direction: column;

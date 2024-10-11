@@ -30,7 +30,8 @@ const AuthContext = createContext({
   minusCount: () => {},
   removeFromBasket: () => {},
   chargeBalance: () => {},
-  payHandler: () => {}
+  payHandler: () => {},
+  sendComments: () => {}
 });
 
 export default AuthContext;

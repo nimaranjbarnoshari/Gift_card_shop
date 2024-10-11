@@ -47,7 +47,7 @@ function App() {
     fetch("http://localhost:8000/money")
       .then((res) => res.json())
       .then((data) => setAllMoney(data));
-      fetch("http://localhost:8000/articles")
+    fetch("http://localhost:8000/articles")
       .then((res) => res.json())
       .then((allArticles) => setArticles(allArticles));
   }, []);
@@ -444,6 +444,45 @@ function App() {
     }
   };
 
+  const sendComments = (blogID, comments) => {
+    Swal.fire({
+      title: "شما در حال ثبت نظر هستید. ادامه می دهید؟",
+      icon: "question",
+      confirmButtonText: "بله",
+      cancelButtonText: "انصراف",
+      showCancelButton: true,
+      showCloseButton: true,
+      iconColor: "#Fd295c",
+      cancelButtonColor: "#Fd295c",
+    }).then((answer) => {
+      if (answer.isConfirmed) {
+        fetch(`http://localhost:8000/articles/${blogID}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            comments,
+          }),
+        }).then((res) => {
+          if (res.ok) {
+            Swal.fire({
+              title:
+                "نظر شما با موفقیت ثبت شد و بعد از تایید ادمین سایت نمایش داده می شود",
+              icon: "success",
+              iconColor: "#Fd295c",
+              confirmButtonColor: "#Fd295c",
+            }).then(() => {
+              fetch("http://localhost:8000/articles")
+                .then((res) => res.json())
+                .then((allArticles) => setArticles(allArticles));
+            });
+          }
+        });
+      }
+    });
+  };
+
   useEffect(() => {
     fetch("http://localhost:8000/users")
       .then((res) => res.json())
@@ -515,7 +554,8 @@ function App() {
         userOrders,
         userTickets,
         userNotifications,
-        articles
+        articles,
+        sendComments,
       }}
     >
       <div className="App">{router}</div>
