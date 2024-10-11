@@ -15,6 +15,7 @@ import CommentBox from "../../Components/CommentBox/CommentBox";
 import AuthContext from "../../Context/AuthContext";
 import { useFormik } from "formik";
 import commentSchema from "../../commentValidation";
+// import { FaUserCircle } from "react-icons/fa";
 
 import "./BlogInfos.css";
 
@@ -52,7 +53,7 @@ export default function BlogInfos() {
           name: values.fullName,
           email: values.email,
           body: values.textarea,
-          isConfirmed: false
+          isConfirmed: false,
         },
       ]);
     },
@@ -73,7 +74,7 @@ export default function BlogInfos() {
         name: fullName,
         email,
         body: formik.values.textarea,
-        isConfirmed: false
+        isConfirmed: false,
       },
     ]);
   };
@@ -282,7 +283,7 @@ export default function BlogInfos() {
             {/* left section */}
             <div className="blog-writer">
               <img
-                src="/images/articles/writer.jpg"
+                src="/images/svg/person.svg"
                 alt="writer_image"
                 className="blog-writer__img"
               />

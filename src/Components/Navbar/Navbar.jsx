@@ -110,7 +110,13 @@ export default function Navbar() {
             ) : (
               ""
             )}
-            <div className="nav-btn nav-btn__login">
+            <div
+              className={
+                contextData.isLoggedIn
+                  ? "nav-btn nav-btn__login loggined"
+                  : "nav-btn nav-btn__login"
+              }
+            >
               {contextData.isLoggedIn ? (
                 <Link to="/panel" className="nav-link nav-link__login">
                   <span className="nav-link__text-user">پنل کاربری</span>

@@ -56,6 +56,10 @@
   width: 100px;
   height: 37px;
 }
+.loggined {
+  width: 80px;
+}
+
 .nav-menu__right {
   height: 100%;
   display: flex;
