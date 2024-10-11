@@ -80,18 +80,21 @@ export default function BlogInfos() {
                     <span className="blog-infos__body-footer-date-container">
                       نوشته شده در تاریخ:
                       <span className="blog-infos__body-footer-date">
-                        ۱۴ آبان ۱۴۰۲
+                        {articleInfo ? articleInfo.date : ""}
                       </span>
                     </span>
                   </div>
                   <div className="blog-infos__body-footer-left">
-                    <span className="blog-infos__body-footer-tag">
-                      بازی کامپیوتر
-                    </span>
-                    <span className="blog-infos__body-footer-tag">بتلفیلد</span>
-                    <span className="blog-infos__body-footer-tag">
-                      بازی اکشن
-                    </span>
+                    {articleInfo?.tags
+                      ? articleInfo.tags.map((tag, index) => (
+                          <span
+                            key={index + 1}
+                            className="blog-infos__body-footer-tag"
+                          >
+                            {tag}
+                          </span>
+                        ))
+                      : ""}
                   </div>
                 </div>
               </div>
@@ -131,9 +134,10 @@ export default function BlogInfos() {
                     </Button>
                   </form>
                   <div className="blog-comments__body">
-                    {articleInfo.comments && articleInfo.comments.length ? (
+                    {articleInfo?.comments && articleInfo?.comments.length ? (
                       articleInfo.comments.map((comment) => (
                         <CommentBox
+                          key={comment.id}
                           text={comment.body}
                           date={comment.date}
                           name={comment.name}
@@ -160,7 +164,7 @@ export default function BlogInfos() {
               />
               <div className="blog-writer__name-container">
                 <span>نویسنده:</span>
-                <span className="blog-writer__name">{articleInfo.writer}</span>
+                <span className="blog-writer__name">{articleInfo?.writer}</span>
               </div>
               <div className="blog-writer__socials">
                 <Link to="#" className="blog-writer__link">
