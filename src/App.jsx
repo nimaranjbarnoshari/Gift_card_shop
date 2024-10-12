@@ -483,6 +483,63 @@ function App() {
     });
   };
 
+  const changePassword = (values) => {
+    if (values.password === userInfos.password) {
+      Swal.fire({
+        title: `شما در حال تغییر رمز عبور حساب کاربری خود هستید`,
+        text: "آیا ادامه می دهید؟",
+        icon: "question",
+        confirmButtonText: "بله",
+        cancelButtonText: "انصراف",
+        showCancelButton: true,
+        showCloseButton: true,
+        iconColor: "#Fd295c",
+        cancelButtonColor: "#Fd295c",
+      }).then((answer) => {
+        if (answer.isConfirmed) {
+          fetch(`http://localhost:8000/users/${userInfos.id}`, {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              password: values.newPassword,
+            }),
+          })
+            .then((res) => {
+              if (res.ok) {
+                res.json();
+              }
+            })
+            .then((data) => {
+              fetch("http://localhost:8000/users")
+                .then((res) => res.json())
+                .then((data) => {
+                  Swal.fire({
+                    title: `رمز عبور شما با موفقیت تغییر یافت.`,
+                    showConfirmButton: true,
+                    icon: "success",
+                    confirmButtonColor: "#Fd295c",
+                    iconColor: "#fd295c",
+                  }).then(() => {
+                    setAllUser(data);
+                  });
+                });
+            });
+        }
+      });
+    } else {
+      Swal.fire({
+        title: `رمز عبور فعلی شما اشتباه است.`,
+        text: "لطفا رمز عبور را اصلاح کرده و مجددا تلاش کنید",
+        showConfirmButton: true,
+        icon: "error",
+        confirmButtonColor: "#Fd295c",
+        iconColor: "#fd295c",
+      });
+    }
+  };
+
   useEffect(() => {
     fetch("http://localhost:8000/users")
       .then((res) => res.json())
@@ -556,6 +613,7 @@ function App() {
         userNotifications,
         articles,
         sendComments,
+        changePassword,
       }}
     >
       <div className="App">{router}</div>

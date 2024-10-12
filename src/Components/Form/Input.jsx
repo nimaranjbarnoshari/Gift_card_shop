@@ -13,7 +13,8 @@ export default function FormInput({
   custom,
   value,
   onChange,
-  onBlur
+  onBlur,
+  disable,
 }) {
   return (
     <div className={`form-input__container ${custom ? custom : ""}`}>
@@ -43,6 +44,7 @@ export default function FormInput({
                 value={value}
                 onChange={onChange}
                 onBlur={onBlur}
+                disabled={disable ? "disabled" : ""}
               />
               <img src={src} alt="svg" className="form-input__svg" />
             </div>
@@ -56,6 +58,7 @@ export default function FormInput({
               value={value}
               onChange={onChange}
               onBlur={onBlur}
+              disabled={disable ? "disabled" : ""}
             />
           )}
         </>

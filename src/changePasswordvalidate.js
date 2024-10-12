@@ -12,8 +12,7 @@ const changePasswordSchema = Yup.object().shape({
         .max(20, "رمز  عبور جدید نباید بیشتر از ۲۰ کاراکتر باشد")
         .required("وارد کردن رمز عبور جدید الزامی می باشد"),
 
-
-    confirmNewPassword: Yup.string()
+    repeatPassword: Yup.string()
         .oneOf([Yup.ref('newPassword')], "تکرار رمز عبور جدید منطبق نیست")
         .required("وارد کردن تکرار رمز عبور  جدید الزامی می باشد")
 

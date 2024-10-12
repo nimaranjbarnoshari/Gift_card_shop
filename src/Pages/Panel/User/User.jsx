@@ -15,18 +15,17 @@ export default function User() {
     initialValues: {
       password: "",
       newPassword: "",
-      confirmNewPassword: "",
+      repeatPassword: "",
     },
     onSubmit: async (values) => {
-      console.log(values);
+      contextData.changePassword(values);
+      values.password = "";
+      values.newPassword = "";
+      values.repeatPassword = "";
     },
     validationSchema: changePasswordSchema,
   });
 
-  // const submitHandler = (event) => {
-  //   event.preventDefault();
-  //   console.log("submitted");
-  // };
   return (
     <div className="panel-styles user-panel">
       <h2 className="user-panel__title">اطلاعات حساب کاربری</h2>
@@ -46,11 +45,13 @@ export default function User() {
           <span className="user-panel__box-header-logo">لوگو</span>
         </div>
         <form className="user-panel__box-form" onSubmit={formik.handleSubmit}>
-          {/* <Input
+          <Input
+            id="phone"
             custom="user-panel__box-input"
             label="شماره تماس"
-            placeholder="شماره تماس فعلی"
+            placeholder="شماره تماس"
             value={PN.convertEnToPe(contextData.userInfos.mobile)}
+            disable={true}
           />
           <Input
             id="email"
@@ -58,12 +59,14 @@ export default function User() {
             label="آدرس ایمیل"
             placeholder="آدرس ایمیل فعلی"
             value={contextData.userInfos.email}
-          /> */}
+            disable={true}
+          />
           <Input
             id="password"
             custom="user-panel__box-input"
             label="رمز عبور"
-            placeholder="رمز عبور خود را وارد نمایید"
+            placeholder="رمز عبور فعلی خود را وارد نمایید"
+            type="password"
             value={formik.values.password}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
@@ -74,12 +77,13 @@ export default function User() {
             </span>
           )}
           <Input
-            id="new_password"
+            id="newPassword"
             custom="user-panel__box-input"
             label="رمز عبور جدید"
             placeholder="رمز عبور جدید را وارد نمایید "
-            onChange={formik.handleChange}
+            type="password"
             value={formik.values.newPassword}
+            onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
           {formik.errors.newPassword && formik.touched.newPassword && (
@@ -87,21 +91,22 @@ export default function User() {
               {formik.errors.newPassword}
             </span>
           )}
+
           <Input
-            id="repeat_new_password"
+            id="repeatPassword"
             custom="user-panel__box-input"
             label="تکرار رمز عبور جدید"
             placeholder="رمز عبور جدید را مجددا وارد نمایید"
+            type="password"
+            value={formik.values.repeatPassword}
             onChange={formik.handleChange}
-            value={formik.values.confirmNewPassword}
             onBlur={formik.handleBlur}
           />
-          {formik.errors.confirmNewPassword &&
-            formik.touched.confirmNewPassword && (
-              <span className="login-form__input-password-err">
-                {formik.errors.confirmNewPassword}
-              </span>
-            )}
+          {formik.errors.repeatPassword && formik.touched.repeatPassword && (
+            <span className="login-form__input-password-err">
+              {formik.errors.repeatPassword}
+            </span>
+          )}
           <Button
             className="user-panel__box-btn"
             type="submit"

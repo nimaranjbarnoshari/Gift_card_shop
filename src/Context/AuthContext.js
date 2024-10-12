@@ -31,7 +31,8 @@ const AuthContext = createContext({
   removeFromBasket: () => {},
   chargeBalance: () => {},
   payHandler: () => {},
-  sendComments: () => {}
+  sendComments: () => {},
+  changePassword: () => {}
 });
 
 export default AuthContext;
