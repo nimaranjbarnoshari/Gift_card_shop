@@ -16,7 +16,7 @@ export default function DiscountedProducts() {
   const [isActive, setIsActive] = useState("gifts");
 
   const fetchData = (product) => {
-    fetch(`http://localhost:8000/${product}`)
+    fetch(`${contextData.back_url}${product}`)
       .then((res) => res.json())
       .then((datas) => {
         if (product === "gifts") {
@@ -35,8 +35,10 @@ export default function DiscountedProducts() {
         }
       });
   };
+
   useEffect(() => {
     fetchData("gifts");
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const giftDiscount = () => {
@@ -157,7 +159,11 @@ export default function DiscountedProducts() {
               discountProducts.map((product) => (
                 <SwiperSlide key={product.id}>
                   <GameBox
-                    custom={isActive === "services" ? "discounted-products__custom-box" : ""}
+                    custom={
+                      isActive === "services"
+                        ? "discounted-products__custom-box"
+                        : ""
+                    }
                     src={product.src}
                     link={product.link ? product.link : null}
                     title={product.title}

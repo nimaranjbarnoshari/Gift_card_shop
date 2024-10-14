@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import AccountBox from "../AccountBox/AccountBox";
+import AuthContext from "../../Context/AuthContext";
 
 import "./AccountsSection.css";
-
 export default function AccountsSection() {
+  const contextData = useContext(AuthContext);
   const [allAcconts, setAllAcounts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/accounts")
+    fetch(`${contextData.back_url}accounts`)
       .then((res) => res.json())
       .then((accounts) => setAllAcounts(accounts));
-  }, []);
+  }, [contextData]);
   return (
     <section className="accounts">
       <div className="container">

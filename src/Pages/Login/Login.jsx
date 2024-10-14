@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import Input from "../../Components/Form/Input";
 import Button from "../../Components/Form/‌Button";
 import { Link, useNavigate } from "react-router-dom";
@@ -11,14 +11,13 @@ import "./Login.css";
 export default function Login() {
   const contextData = useContext(AuthContext);
   const navigate = useNavigate();
-  const [allUsers, setAllUser] = useState([]);
   const formik = useFormik({
     initialValues: {
       phone: "",
       password: "",
     },
     onSubmit: async (values) => {
-      const isSign = allUsers.find(
+      const isSign = contextData.allUsers.find(
         (user) =>
           user.mobile === values.phone && user.password === values.password
       );
@@ -71,12 +70,6 @@ export default function Login() {
     },
     validationSchema: loginSchema,
   });
-
-  useEffect(() => {
-    fetch("http://localhost:8000/users")
-      .then((res) => res.json())
-      .then((data) => setAllUser(data));
-  }, []);
 
   return (
     <div className="login">

@@ -28,26 +28,37 @@ function App() {
   const [allMoney, setAllMoney] = useState([]);
   const [articles, setArticles] = useState([]);
 
+  const back_url = "http://localhost:9000/";
   useEffect(() => {
-    fetch("http://localhost:8000/games")
+    fetch(`${back_url}users`)
+      .then((res) => res.json())
+      .then((data) => setAllUser(data));
+
+    fetch(`${back_url}games`)
       .then((res) => res.json())
       .then((data) => setAllGamesData(data));
-    fetch("http://localhost:8000/accounts")
+
+    fetch(`${back_url}accounts`)
       .then((res) => res.json())
       .then((data) => setAllaccounts(data));
-    fetch("http://localhost:8000/gifts")
+
+    fetch(`${back_url}gifts`)
       .then((res) => res.json())
       .then((data) => setGiftsCategory(data));
-    fetch("http://localhost:8000/softwares")
+
+    fetch(`${back_url}softwares`)
       .then((res) => res.json())
       .then((data) => setAllSoftwares(data));
-    fetch("http://localhost:8000/digits")
+
+    fetch(`${back_url}digits`)
       .then((res) => res.json())
       .then((data) => setAllAccessories(data));
-    fetch("http://localhost:8000/money")
+
+    fetch(`${back_url}money`)
       .then((res) => res.json())
       .then((data) => setAllMoney(data));
-    fetch("http://localhost:8000/articles")
+
+    fetch(`${back_url}articles`)
       .then((res) => res.json())
       .then((allArticles) => setArticles(allArticles));
   }, []);
@@ -540,13 +551,6 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    fetch("http://localhost:8000/users")
-      .then((res) => res.json())
-      .then((data) => {
-        setAllUser(data);
-      });
-  }, []);
 
   useEffect(() => {
     const localStorageinfo = JSON.parse(localStorage.getItem("user"));
@@ -614,6 +618,7 @@ function App() {
         articles,
         sendComments,
         changePassword,
+        back_url
       }}
     >
       <div className="App">{router}</div>

@@ -15,10 +15,10 @@ export default function Navbar() {
   const contextData = useContext(AuthContext);
 
   useEffect(() => {
-    fetch("http://localhost:8000/menus")
+    fetch(`${contextData.back_url}menus`)
       .then((res) => res.json())
       .then((data) => setMenus(data));
-  }, []);
+  }, [contextData]);
 
   return (
     <nav className="nav">

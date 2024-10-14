@@ -8,6 +8,7 @@ const AuthContext = createContext({
   userInfos: null,
   totalPrice: NaN,
   accountBalance: 0,
+  back_url: "",
   allUsers: {},
   userBasket: [],
   giftsCategory: [],

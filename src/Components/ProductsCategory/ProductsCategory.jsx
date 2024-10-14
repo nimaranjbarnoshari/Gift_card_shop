@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from "react";
-import "./ProductsCategory.css";
+import React, { useContext, useEffect, useState } from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import AccountBox from "../AccountBox/AccountBox";
+import AuthContext from "../../Context/AuthContext";
 
+import "./ProductsCategory.css";
 export default function ProductsCategory() {
   const [categories, setCategories] = useState([]);
-
+  const contextData = useContext(AuthContext);
   useEffect(() => {
-    fetch("http://localhost:8000/categories")
+    fetch(`${contextData.back_url}categories`)
       .then((res) => res.json())
       .then((allCategories) => {
-        setCategories(allCategories);   
+        setCategories(allCategories);
       });
   }, []);
   return (

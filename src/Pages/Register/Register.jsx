@@ -1,27 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Input from "../../Components/Form/Input";
 import Button from "../../Components/Form/‌Button";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import AuthContext from "../../Context/AuthContext";
 import "./Register.css";
 
 export default function Register() {
+  const contextData = useContext(AuthContext);
   const navigate = useNavigate();
   const [isChecked, setIsChecked] = useState(false);
   const [isShowCodeInput, setIsShowCodeInput] = useState(false);
   const [code, setCode] = useState("");
   const [sendCode, setSendCode] = useState(0);
-  const [allUsers, setAllUser] = useState([]);
   const [phone, setPhone] = useState("");
   const [phoneIsValid, setPhoneIsValid] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [showError, setShowError] = useState(false);
 
-  useEffect(() => {
-    fetch("http://localhost:8000/users")
-      .then((res) => res.json())
-      .then((data) => setAllUser(data));
-  }, []);
 
   useEffect(() => {
     if (!phone) {
@@ -39,7 +35,7 @@ export default function Register() {
   const submitFormHandler = async (event) => {
     event.preventDefault();
 
-    const isPhone = allUsers.find((user) => user.mobile === phone);
+    const isPhone = contextData.allUsers.find((user) => user.mobile === phone);
     if (!isPhone) {
       setIsShowCodeInput(true);
       const sentCode = Math.floor(Math.random() * 100000);
