@@ -19,9 +19,6 @@ export default function User() {
     },
     onSubmit: async (values) => {
       contextData.changePassword(values);
-      values.password = "";
-      values.newPassword = "";
-      values.repeatPassword = "";
     },
     validationSchema: changePasswordSchema,
   });

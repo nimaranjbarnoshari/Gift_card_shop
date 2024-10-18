@@ -27,8 +27,7 @@ function App() {
   const [allAccessories, setAllAccessories] = useState([]);
   const [allMoney, setAllMoney] = useState([]);
   const [articles, setArticles] = useState([]);
-
-  const back_url = "http://localhost:9000/";
+  const back_url = "https://back.nima-ranjbar.ir/";
   useEffect(() => {
     fetch(`${back_url}users`)
       .then((res) => res.json())
@@ -156,7 +155,7 @@ function App() {
           cancelButtonColor: "#Fd295c",
         }).then((answer) => {
           if (answer.isConfirmed) {
-            fetch(`http://localhost:8000/users/${userInfos.id}`, {
+            fetch(`${back_url}users/${userInfos.id}`, {
               method: "PATCH",
               headers: {
                 "Content-Type": "application/json",
@@ -170,7 +169,7 @@ function App() {
                   iconColor: "#Fd295c",
                   confirmButtonColor: "#Fd295c",
                 }).then(() => {
-                  fetch("http://localhost:8000/users")
+                  fetch(`${back_url}users`)
                     .then((res) => res.json())
                     .then((data) => {
                       setAllUser(data);
@@ -207,7 +206,7 @@ function App() {
       if (answer.isConfirmed) {
         const newBasket = [...userBasket].filter((basket) => basket.id !== id);
 
-        fetch(`http://localhost:8000/users/${userInfos.id}`, {
+        fetch(`${back_url}users/${userInfos.id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
@@ -221,7 +220,7 @@ function App() {
               iconColor: "#Fd295c",
               confirmButtonColor: "#Fd295c",
             }).then(() => {
-              fetch("http://localhost:8000/users")
+              fetch(`${back_url}users`)
                 .then((res) => res.json())
                 .then((data) => {
                   setAllUser(data);
@@ -241,7 +240,7 @@ function App() {
       return item;
     });
 
-    fetch(`http://localhost:8000/users/${userInfos.id}`, {
+    fetch(`${back_url}users/${userInfos.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -254,7 +253,7 @@ function App() {
         }
       })
       .then((data) => {
-        fetch("http://localhost:8000/users")
+        fetch(`${back_url}users`)
           .then((res) => res.json())
           .then((data) => {
             setAllUser(data);
@@ -270,7 +269,7 @@ function App() {
       return item;
     });
 
-    fetch(`http://localhost:8000/users/${userInfos.id}`, {
+    fetch(`${back_url}users/${userInfos.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -283,7 +282,7 @@ function App() {
         }
       })
       .then((data) => {
-        fetch("http://localhost:8000/users")
+        fetch(`${back_url}users`)
           .then((res) => res.json())
           .then((data) => {
             setAllUser(data);
@@ -318,7 +317,7 @@ function App() {
             transaction: "شارژ کیف پول",
           },
         ];
-        fetch(`http://localhost:8000/users/${userInfos.id}`, {
+        fetch(`${back_url}users/${userInfos.id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
@@ -334,7 +333,7 @@ function App() {
             }
           })
           .then((data) => {
-            fetch("http://localhost:8000/users")
+            fetch(`${back_url}users`)
               .then((res) => res.json())
               .then((data) => {
                 Swal.fire({
@@ -412,7 +411,7 @@ function App() {
               ? [...userOrders, [...userBasket]]
               : [...userOrders, ...userBasket];
 
-          fetch(`http://localhost:8000/users/${userInfos.id}`, {
+          fetch(`${back_url}users/${userInfos.id}`, {
             method: "PATCH",
             headers: {
               "Content-Type": "application/json",
@@ -430,7 +429,7 @@ function App() {
               }
             })
             .then((data) => {
-              fetch("http://localhost:8000/users")
+              fetch(`${back_url}users`)
                 .then((res) => res.json())
                 .then((data) => {
                   Swal.fire({
@@ -467,7 +466,7 @@ function App() {
       cancelButtonColor: "#Fd295c",
     }).then((answer) => {
       if (answer.isConfirmed) {
-        fetch(`http://localhost:8000/articles/${blogID}`, {
+        fetch(`${back_url}articles/${blogID}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
@@ -484,7 +483,7 @@ function App() {
               iconColor: "#Fd295c",
               confirmButtonColor: "#Fd295c",
             }).then(() => {
-              fetch("http://localhost:8000/articles")
+              fetch(`${back_url}articles`)
                 .then((res) => res.json())
                 .then((allArticles) => setArticles(allArticles));
             });
@@ -507,8 +506,10 @@ function App() {
         iconColor: "#Fd295c",
         cancelButtonColor: "#Fd295c",
       }).then((answer) => {
+        console.log(values);
+        
         if (answer.isConfirmed) {
-          fetch(`http://localhost:8000/users/${userInfos.id}`, {
+          fetch(`${back_url}users/${userInfos.id}`, {
             method: "PATCH",
             headers: {
               "Content-Type": "application/json",
@@ -523,7 +524,7 @@ function App() {
               }
             })
             .then((data) => {
-              fetch("http://localhost:8000/users")
+              fetch(`${back_url}users`)
                 .then((res) => res.json())
                 .then((data) => {
                   Swal.fire({
@@ -550,7 +551,6 @@ function App() {
       });
     }
   };
-
 
   useEffect(() => {
     const localStorageinfo = JSON.parse(localStorage.getItem("user"));
@@ -618,7 +618,7 @@ function App() {
         articles,
         sendComments,
         changePassword,
-        back_url
+        back_url,
       }}
     >
       <div className="App">{router}</div>

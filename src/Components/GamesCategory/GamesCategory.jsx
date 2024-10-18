@@ -136,7 +136,7 @@ export default function GamesCategory() {
         <div className="container">
           <Swiper
             modules={[Pagination, Autoplay]}
-            // autoplay={true}
+            autoplay={true}
             pagination={{ type: "bullets", clickable: true }}
             className="mySwiper"
             loop={true}

@@ -17,7 +17,7 @@ export default function Sidebar() {
       <div className="sidebar-logo">
         <NavLink to="/">
           <img
-            src="/images/logo/logo.png"
+            src="/images/logo/Logo.png"
             alt="logo"
             className="sidebar-logo__img"
           />

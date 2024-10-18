@@ -61,7 +61,7 @@ export default function Services() {
           <SectionHeader title="دیگر محصولات" />
           <Swiper
             modules={[Pagination, Autoplay]}
-            // autoplay={true}
+            autoplay={true}
             pagination={{ type: "bullets", clickable: true }}
             className="mySwiper"
             loop={true}

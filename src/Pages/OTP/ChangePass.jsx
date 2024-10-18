@@ -20,7 +20,7 @@ export default function ChangePass() {
       confirmPassword: "",
     },
     onSubmit: async ({ password }) => {
-      const res = await fetch(`http://localhost:8000/users/${ID}`, {
+      const res = await fetch(`${contextData.back_url}users/${ID}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -58,7 +58,7 @@ export default function ChangePass() {
               <div className="changePass-box__header-logo">
                 <Link to="/">
                   <img
-                    src="/images/logo/logo.png"
+                    src="/images/logo/Logo.png"
                     alt="logo"
                     className="changePass-box__header-img"
                   />

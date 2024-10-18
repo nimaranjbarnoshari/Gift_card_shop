@@ -13,7 +13,7 @@ export default function ProductsCategory() {
       .then((allCategories) => {
         setCategories(allCategories);
       });
-  }, []);
+  }, [contextData]);
   return (
     <section className="products-category">
       <div className="container">

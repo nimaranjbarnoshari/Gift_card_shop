@@ -80,7 +80,7 @@ export default function Login() {
               <div className="login-box__header-logo">
                 <Link to="/">
                   <img
-                    src="/images/logo/logo.png"
+                    src="/images/logo/Logo.png"
                     alt="logo"
                     className="login-box__header-img"
                   />

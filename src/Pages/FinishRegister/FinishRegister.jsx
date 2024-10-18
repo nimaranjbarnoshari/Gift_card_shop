@@ -41,8 +41,8 @@ export default function FinishRegister() {
         pays: [],
         notifications: [],
       };
-      console.log(user);
-      const res = await fetch(`http://localhost:8000/users`, {
+
+      const res = await fetch(`${contextData.back_url}users`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -81,7 +81,7 @@ export default function FinishRegister() {
               <div className="finishRegister-box__header-logo">
                 <Link to="/">
                   <img
-                    src="/images/logo/logo.png"
+                    src="/images/logo/Logo.png"
                     alt="logo"
                     className="finishRegister-box__header-img"
                   />

@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Input from "../../Components/Form/Input";
 import Button from "../../Components/Form/‌Button";
 import { Link, useNavigate } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import Swal from "sweetalert2";
+import AuthContext from "../../Context/AuthContext";
 
 import "./OTP.css";
 export default function OTP() {
+  const contextData = useContext(AuthContext);
   const navigate = useNavigate();
   const [allUsers, setAllUser] = useState({});
   const [phone, setPhone] = useState("");
@@ -19,7 +21,7 @@ export default function OTP() {
   const [ID, setID] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:8000/users")
+    fetch(`${contextData.back_url}users`)
       .then((res) => res.json())
       .then((data) => setAllUser(data));
   }, []);
@@ -106,7 +108,7 @@ export default function OTP() {
               <div className="otp-box__header-logo">
                 <Link to="/">
                   <img
-                    src="/images/logo/logo.png"
+                    src="/images/logo/Logo.png"
                     alt="logo"
                     className="otp-box__header-img"
                   />

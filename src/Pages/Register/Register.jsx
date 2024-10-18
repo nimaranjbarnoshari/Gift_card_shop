@@ -102,7 +102,7 @@ export default function Register() {
               <div className="register-box__header-logo">
                 <Link to="/">
                   <img
-                    src="/images/logo/logo.png"
+                    src="/images/logo/Logo.png"
                     alt="logo"
                     className="register-box__header-img"
                   />
